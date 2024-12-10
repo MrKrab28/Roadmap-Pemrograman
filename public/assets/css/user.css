@@ -1,0 +1,200 @@
+/* Reset CSS */
+@font-face {
+    font-family: 'Fira Code';
+    src: url('file:///D:/Fira_Code_v6.2/FiraCode-Regular.woff2') format('woff2'),
+        url('file:///D:/Fira_Code_v6.2/FiraCode-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    /* font-family: Arial, sans-serif; */
+    font-family: 'Fira Code', monospace;
+    background-color: #121212;
+    /* Warna latar belakang untuk dark mode */
+    color: #ffffff;
+    /* Warna teks untuk dark mode */
+}
+
+
+
+.container {
+    width: 100% !important;
+    margin: 0 auto !important;
+    max-width: 1600px !important;
+}
+
+.header {
+    background-color: #121212 !important;
+    /* Warna latar belakang header */
+    padding: 20px 0 !important;
+    margin-bottom: 20px !important;
+    /* Ubah jarak antara header dan hero */
+}
+
+.navbar {
+    display: flex !important;
+    justify-content: space-between !important;
+    justify-content: end;
+    align-items: center !important;
+    padding: 10px 0 !important;
+}
+
+.navbar .logo {
+    font-size: 1.8rem !important;
+    color: #ffffff !important;
+    text-decoration: none !important;
+}
+
+.navbar .logo span {
+    color: #29b6f6;
+    /* Warna aksen untuk span */
+}
+
+.nav-links {
+    list-style: none !important;
+    display: flex !important;
+    gap: 20px !important;
+}
+
+.nav-links .nav-link {
+    text-decoration: none !important;
+    color: #ffffff !important;
+    font-size: 1rem !important;
+    transition: all 0.3s ease !important;
+}
+
+.nav-links .nav-link:hover {
+    color: #29b6f6 !important;
+    /* Warna aksen saat hover */
+}
+
+.hero {
+    background-color: #121212;
+    /* Warna latar belakang hero */
+    padding: 0px 0;
+    /* Sesuaikan padding sesuai kebutuhan */
+    margin-top: 0px;
+    /* Ubah jarak antara header dan hero */
+}
+
+.hero-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.hero-text {
+    flex: 1;
+    padding: 0 0px;
+    /* Sesuaikan padding sesuai kebutuhan */
+}
+
+.hero-image {
+    flex: 1;
+    text-align: center;
+}
+
+.main-title {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.sub-title {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.btn-main {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #29b6f6;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-main:hover {
+    background-color: #0277bd;
+    /* Warna aksen saat hover */
+}
+
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+    }
+
+   
+
+    .hero {
+        padding: 100px 0;
+        /* Padding untuk layar mobile */
+        margin-top: 10px;
+        /* Ubah jarak antara header dan hero di layar mobile */
+    }
+
+    .hero-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-text,
+    .hero-image {
+        width: 100%;
+    }
+
+    .main-title {
+        font-size: 2.5rem;
+    }
+
+    .sub-title {
+        font-size: 1rem;
+    }
+
+    .btn-main {
+        font-size: 1rem;
+    }
+
+    .roadmap {
+        padding: 50px 0;
+    }
+
+    .roadmap-title {
+        font-size: 2rem;
+        margin-bottom: 30px;
+        text-align: center;
+    }
+
+    .roadmap-steps {
+        display: flex;
+        justify-content: space-around;
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    .roadmap-step {
+        flex: 1;
+        background-color: #1f1f1f;
+        padding: 20px;
+        border-radius: 10px;
+        text-align: center;
+    }
+
+    .step-title {
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+    }
+
+    .step-description {
+        font-size: 1rem;
+        color: #cccccc;
+    }
+}

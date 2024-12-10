@@ -4,228 +4,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Belajar Pemrograman</title>
+    <title >@{{  Artisan.Compass }}</title>
+
     <link rel="stylesheet" href="styles.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
-    <style>
-        /* Reset CSS */
-        @font-face {
-            font-family: 'Fira Code';
-            src: url('file:///D:/Fira_Code_v6.2/FiraCode-Regular.woff2') format('woff2'),
-                url('file:///D:/Fira_Code_v6.2/FiraCode-Regular.woff') format('woff');
-            font-weight: normal;
-            font-style: normal;
-        }
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ asset('assets/css/user.css') }}">
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
 
-        body {
-            /* font-family: Arial, sans-serif; */
-            font-family: 'Fira Code', monospace;
-            background-color: #121212;
-            /* Warna latar belakang untuk dark mode */
-            color: #ffffff;
-            /* Warna teks untuk dark mode */
-        }
-
-        /* code {
-    font-family: 'Fira Code', monospace;
-}
-
-pre {
-    font-family: 'Fira Code', monospace;
-} */
-
-        .container {
-            width: 100% !important;
-            margin: 0 auto !important;
-            max-width: 1200px !important;
-        }
-
-        .header {
-            background-color: #121212 !important;
-            /* Warna latar belakang header */
-            padding: 20px 0 !important;
-            margin-bottom: 20px !important;
-            /* Ubah jarak antara header dan hero */
-        }
-
-        .navbar {
-            display: flex !important;
-            justify-content: space-between !important;
-            justify-content: end;
-            align-items: center !important;
-            padding: 10px 0 !important;
-        }
-
-        .navbar .logo {
-            font-size: 1.8rem !important;
-            color: #ffffff !important;
-            text-decoration: none !important;
-        }
-
-        .navbar .logo span {
-            color: #29b6f6;
-            /* Warna aksen untuk span */
-        }
-
-        .nav-links {
-            list-style: none !important;
-            display: flex !important;
-            gap: 20px !important;
-        }
-
-        .nav-links .nav-link {
-            text-decoration: none !important;
-            color: #ffffff !important;
-            font-size: 1rem !important;
-            transition: all 0.3s ease !important;
-        }
-
-        .nav-links .nav-link:hover {
-            color: #29b6f6 !important;
-            /* Warna aksen saat hover */
-        }
-
-        .hero {
-            background-color: #121212;
-            /* Warna latar belakang hero */
-            padding: 0px 0;
-            /* Sesuaikan padding sesuai kebutuhan */
-            margin-top: 0px;
-            /* Ubah jarak antara header dan hero */
-        }
-
-        .hero-content {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .hero-text {
-            flex: 1;
-            padding: 0 0px;
-            /* Sesuaikan padding sesuai kebutuhan */
-        }
-
-        .hero-image {
-            flex: 1;
-            text-align: center;
-        }
-
-        .main-title {
-            font-size: 3rem;
-            margin-bottom: 20px;
-        }
-
-        .sub-title {
-            font-size: 1.2rem;
-            margin-bottom: 30px;
-        }
-
-        .btn-main {
-            display: inline-block;
-            padding: 12px 24px;
-            background-color: #29b6f6;
-            color: #ffffff;
-            text-decoration: none;
-            font-size: 1.1rem;
-            border-radius: 5px;
-            transition: background-color 0.3s ease;
-        }
-
-        .btn-main:hover {
-            background-color: #0277bd;
-            /* Warna aksen saat hover */
-        }
-
-        @media (max-width: 768px) {
-            .container {
-                width: 90%;
-            }
-
-            .navbar {
-                /* flex-direction: column !important;
-                align-items: flex-start !important; */
-            }
-
-            .nav-links {
-                /* margin-top: 20px !important;
-                flex-direction: column !important; */
-            }
-
-            .hero {
-                padding: 100px 0;
-                /* Padding untuk layar mobile */
-                margin-top: 10px;
-                /* Ubah jarak antara header dan hero di layar mobile */
-            }
-
-            .hero-content {
-                flex-direction: column;
-                text-align: center;
-            }
-
-            .hero-text,
-            .hero-image {
-                width: 100%;
-            }
-
-            .main-title {
-                font-size: 2.5rem;
-            }
-
-            .sub-title {
-                font-size: 1rem;
-            }
-
-            .btn-main {
-                font-size: 1rem;
-            }
-
-            roadmap {
-                padding: 50px 0;
-            }
-
-            .roadmap-title {
-                font-size: 2rem;
-                margin-bottom: 30px;
-                text-align: center;
-            }
-
-            .roadmap-steps {
-                display: flex;
-                justify-content: space-around;
-                align-items: flex-start;
-                gap: 20px;
-            }
-
-            .roadmap-step {
-                flex: 1;
-                background-color: #1f1f1f;
-                padding: 20px;
-                border-radius: 10px;
-                text-align: center;
-            }
-
-            .step-title {
-                font-size: 1.5rem;
-                margin-bottom: 10px;
-            }
-
-            .step-description {
-                font-size: 1rem;
-                color: #cccccc;
-            }
-        }
-    </style>
 </head>
 
 <body>
@@ -238,7 +27,7 @@ pre {
     <!-- <header class="header"> -->
     <nav class="navbar bg-dark border-bottom border-body navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
         <div class="container">
-            <a href="#" style="font-family: Arial, sans-serif; font-weight: 1000;" class="logo">{{
+            <a href="#" style="font-family: Fira Code; font-weight: 1000;" class="logo"> @{{
                 Artisan<span>.</span><span>Compass</span> }}</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -247,13 +36,24 @@ pre {
             <!-- <div class="navbar-nav"> -->
             <div class="collapse navbar-collapse" id="navbarNav">
 
-                <ul class="navbar-nav ms-auto">
+                <ul class="navbar-nav ms-auto" style="font-family: Fira Code; font-weight: 1000;">
 
                     <li class="nav-item"><a href="#" class="nav-link active"><b>Beranda</b></a></li>
                     <li class="nav-item"><a href="#" class="nav-link"><b>Kursus</b></a></li>
                     <li class="nav-item"><a href="#" class="nav-link"><b>Tentang Kami</b></a></li>
                     <li class="nav-item"><a href="#" class="nav-link"><b>Blog</b></a></li>
                     <li class="nav-item"><a href="#" class="nav-link"><b>Kontak</b></a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <b>User</b>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
+                            <li><a class="dropdown-item" href="#">Profil</a></li>
+                            <li><a class="dropdown-item" href="#">Login</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#">Logout</a></li>
+                        </ul>
+                    </li>
                 </ul>
             </div>
             <!-- </div> -->
@@ -269,7 +69,7 @@ pre {
                     <a href="#course" class="btn-main">Mulai Belajar Sekarang</a>
                 </div>
                 <div class="hero-image">
-                    <img src="testingcopy.png" alt="Gambar Hero"> <!-- Ganti dengan URL gambar sesuai kebutuhan -->
+                    <img src="{{ asset('assets/images/testingcopy.png') }}" alt="Gambar Hero"> <!-- Ganti dengan URL gambar sesuai kebutuhan -->
                 </div>
             </div>
         </div>
@@ -460,6 +260,7 @@ pre {
     </section>
 
 
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>

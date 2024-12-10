@@ -5003,9 +5003,9 @@ table.dataTable>thead .sorting_desc_disabled::after {
 }
 
 .auth-bg {
-    background-image: url(../images/auth-bg.jpg);
+    background-image: url(../images/testingcopy.png);
     background-position: center;
-    background-size: cover;
+    background-size: contain;
     background-repeat: no-repeat
 }
 
