@@ -47,7 +47,7 @@ body {
 }
 
 .navbar .logo {
-    font-size: 1.8rem !important;
+    font-size: 1.5rem !important;
     color: #ffffff !important;
     text-decoration: none !important;
 }
@@ -132,7 +132,7 @@ body {
         width: 90%;
     }
 
-   
+
 
     .hero {
         padding: 100px 0;

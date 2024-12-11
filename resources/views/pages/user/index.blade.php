@@ -6,15 +6,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title >@{{  Artisan.Compass }}</title>
 
-    <link rel="stylesheet" href="styles.css">
+
+
+
+
+
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    {{-- <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}"> --}}
+    {{-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"> --}}
+    <link href="{{ asset('assets/css/app.min.css') }}" id="app-style" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('assets/css/bootstrap.min.css') }}" id="bootstrap-style" rel="stylesheet" type="text/css" />
+
+
+    <link href="{{ asset('assets/css/icons.min.css') }}" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" href="{{ asset('assets/css/user.css') }}">
-
-
 </head>
 
 <body>
@@ -36,22 +44,22 @@
             <!-- <div class="navbar-nav"> -->
             <div class="collapse navbar-collapse" id="navbarNav">
 
-                <ul class="navbar-nav ms-auto" style="font-family: Fira Code; font-weight: 1000;">
+                <ul class="navbar-nav ms-auto " style="font-family: Fira Code; font-weight: 500;font-size: 15px;">
 
-                    <li class="nav-item"><a href="#" class="nav-link active"><b>Beranda</b></a></li>
+                    <li class="nav-item "><a href="#" class="nav-link active"><b>Beranda</b></a></li>
                     <li class="nav-item"><a href="#" class="nav-link"><b>Kursus</b></a></li>
                     <li class="nav-item"><a href="#" class="nav-link"><b>Tentang Kami</b></a></li>
                     <li class="nav-item"><a href="#" class="nav-link"><b>Blog</b></a></li>
                     <li class="nav-item"><a href="#" class="nav-link"><b>Kontak</b></a></li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            <b>User</b>
+                            <i data-feather="user" class=""> </i><span>User</span>
                         </a>
-                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
-                            <li><a class="dropdown-item" href="#">Profil</a></li>
-                            <li><a class="dropdown-item" href="#">Login</a></li>
+                        <ul class="dropdown-menu dropdown-menu-end bg-dark" aria-labelledby="userDropdown">
+                            <li><a class="dropdown-item" href="#"> <i data-feather="save" class="me-2"> </i><span> PROFILE</span></a></li>
+                            <li><a class="dropdown-item" href="#"> <i data-feather="log-in" class="me-2"> </i><span> LOGIN</span></a></li>
                             <li><hr class="dropdown-divider"></li>
-                            <li><a class="dropdown-item" href="#">Logout</a></li>
+                            <li><a class="dropdown-item" href="#"> <i data-feather="log-out" class="me-2"> </i><span> LOGOUT</span></a></li>
                         </ul>
                     </li>
                 </ul>
@@ -63,10 +71,10 @@
         <div class="container">
             <div class="hero-content" data-aos="zoom-in" data-aos-duration="1000">
                 <div class="hero-text">
-                    <h1 class="main-title">Join & Learn Website Programming with Us!</h1>
+                    <h1 class="main-title text-light">Join & Learn Website Programming with Us!</h1>
                     <p class="sub-title">Temukan Roadmap Pemrograman dan sumber belajar yang komprehensif untuk
                         memulai karier sebagai Web Developer.</p>
-                    <a href="#course" class="btn-main">Mulai Belajar Sekarang</a>
+                    <a href="#course" class="btn-main"><i data-feather="mail"></i><span data-key="t-email">Mulai Belajar Sekarang</span></a>
                 </div>
                 <div class="hero-image">
                     <img src="{{ asset('assets/images/testingcopy.png') }}" alt="Gambar Hero"> <!-- Ganti dengan URL gambar sesuai kebutuhan -->
@@ -259,18 +267,30 @@
         </footer>
     </section>
 
+    <script src="{{ asset('assets/libs/jquery/jquery.min.js') }}"></script>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="{{ asset('assets/libs/metismenu/metisMenu.min.js') }}"></script>
+
+    <script src="{{ asset('assets/libs/feather-icons/feather.min.js') }}"></script>
 
 
+    <script src="{{ asset('assets/js/app.js') }}"></script>
+
+
+
+
+
+{{-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script> --}}
+<script src="{{ asset('assets/libs/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+<script src="{{ asset('assets/libs/feather-icons/feather.min.js') }}"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init();
     </script>
 
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></s >
+    {{-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></s > --}}
 </body >
 
 </html >
