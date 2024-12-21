@@ -35,7 +35,13 @@
                                 <div class="d-flex flex-column h-100">
                                     <div class="mb-4 mb-md-5 text-center">
                                         <a href="index.html" class="d-block auth-logo">
-                                            <img src="assets/images/logo-sm.svg" alt="" height="28"> <span class="logo-txt">Dason</span>
+                                            <img src="{{ asset('assets/images/login-logo.png') }}" alt="" height="28">
+                                            <div class="d-flex">
+
+
+                                                <span class="logo-txt">Artisan</span>
+                                            </div>
+                                            <span class="logo-txt">Compass</span>
                                         </a>
                                     </div>
                                     <div class="auth-content my-auto">
@@ -80,35 +86,10 @@
                                             </div>
                                         </form>
 
-                                        <div class="mt-4 pt-2 text-center">
-                                            <div class="signin-other-title">
-                                                <h5 class="font-size-14 mb-3 text-muted fw-medium">- Sign in with -</h5>
-                                            </div>
 
-                                            <ul class="list-inline mb-0">
-                                                <li class="list-inline-item">
-                                                    <a href="javascript:void()"
-                                                        class="social-list-item bg-primary text-white border-primary">
-                                                        <i class="mdi mdi-facebook"></i>
-                                                    </a>
-                                                </li>
-                                                <li class="list-inline-item">
-                                                    <a href="javascript:void()"
-                                                        class="social-list-item bg-info text-white border-info">
-                                                        <i class="mdi mdi-twitter"></i>
-                                                    </a>
-                                                </li>
-                                                <li class="list-inline-item">
-                                                    <a href="javascript:void()"
-                                                        class="social-list-item bg-danger text-white border-danger">
-                                                        <i class="mdi mdi-google"></i>
-                                                    </a>
-                                                </li>
-                                            </ul>
-                                        </div>
 
                                         <div class="mt-5 text-center">
-                                            <p class="text-muted mb-0">Don't have an account ? <a href="auth-register.html"
+                                            <p class="text-muted mb-0">Don't have an account ? <a href="{{ route('register') }}"
                                                     class="text-primary fw-semibold"> Signup now </a> </p>
                                         </div>
                                     </div>
