@@ -2,10 +2,11 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\User\HomeController;
 
-// Route::get('/dashboard', function () {
-//     return view('components.admin.layout');
-// });
+Route::get('/welcome', function () {
+    return view('welcome');
+});
 
 Route::middleware(['guest:user,admin'])->group(function () {
 
@@ -17,5 +18,7 @@ Route::middleware(['guest:user,admin'])->group(function () {
 });
 
 Route::middleware('auth:user')->group(function () {
-   Route::get('/logout-user', [AuthController::class, 'logout'])->name('logout');
+    Route::get('/logout-user', [AuthController::class, 'logout'])->name('logout');
+
+    Route::get('/user/index', [HomeController::class, 'index'])->name('user.index');
 });

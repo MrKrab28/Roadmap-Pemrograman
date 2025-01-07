@@ -25,7 +25,7 @@
     <nav class="navbar bg-dark border-bottom border-body navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
         <div class="container">
             <a href="#" style="font-family: Fira Code; font-weight: 1000;" class="logo">
-                @{{ Artisan < span > . < /span><span>Compass</span > }}</a>
+                @{{ Artisan <span> . </span><span>Compass</span > }}</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
