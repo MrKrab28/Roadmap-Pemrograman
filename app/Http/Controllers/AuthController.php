@@ -35,7 +35,7 @@ class AuthController extends Controller
         return view('auth.login')->with('success', 'Registrasi Berhasil');
     }
 
-   
+
     public function authenticate(Request $request)
     {
         $remember = $request->remember ? true : false;
@@ -73,5 +73,20 @@ class AuthController extends Controller
         // $request->session()->regenerateToken();
 
         return redirect()->route('login');
+    }
+
+    public function register(Request $request)
+    {
+        $data = $request->validate([
+            'nama' => 'required|string|max:255',
+            'email' => 'required|string|email|max:255|unique:users',
+            'password' => 'required',
+          
+        ]);
+
+        $data['password'] = bcrypt($data['password']);
+        User::create($data);
+
+        return redirect()->route('login')->with('success', 'Registrasi Berhasil');
     }
 }
