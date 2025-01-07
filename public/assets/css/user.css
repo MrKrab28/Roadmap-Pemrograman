@@ -15,7 +15,7 @@
 
 body {
     /* font-family: Arial, sans-serif; */
-    font-family: 'Fira Code', monospace;
+    font-family: 'cascadia Code', monospace;
     background-color: #121212;
     /* Warna latar belakang untuk dark mode */
     color: #ffffff;
@@ -43,7 +43,7 @@ body {
     justify-content: space-between !important;
     justify-content: end;
     align-items: center !important;
-    padding: 10px 0 !important;
+    padding: 5px 0 !important;
 }
 
 .navbar .logo {
@@ -124,6 +124,7 @@ body {
 
 .btn-main:hover {
     background-color: #0277bd;
+    color: #ffffff;
     /* Warna aksen saat hover */
 }
 
