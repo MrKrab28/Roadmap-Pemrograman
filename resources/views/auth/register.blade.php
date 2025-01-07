@@ -149,14 +149,18 @@
                                         <div class="carousel-inner">
                                             <div class="carousel-item active">
                                                 <div class="testi-contain text-center text-white">
-                                                    <i class="bx bxs-quote-alt-left text-success display-6"></i>
+                                                    <i class="bx bxs-quote-alt-left text-success display-6">
+                                                        <img src="assets/images/users/avatar-2.jpg"
+                                                        class="avatar-md img-fluid rounded-circle d-block" alt="..."></i>
                                                     <h4 class="mt-4 fw-medium lh-base text-white">“I feel confident
                                                         imposing change
                                                         on myself. It's a lot more progressing fun than looking back.
                                                         That's why
                                                         I ultricies enim
                                                         at malesuada nibh diam on tortor neaded to throw curve balls.”
+
                                                     </h4>
+
                                                     <div class="mt-4 pt-1 pb-5 mb-5">
                                                         <h5 class="font-size-16 text-white">Richard Drews
                                                         </h5>
