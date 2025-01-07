@@ -3,9 +3,9 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 
-Route::get('/', function () {
-    return view('components.admin.layout');
-});
+// Route::get('/dashboard', function () {
+//     return view('components.admin.layout');
+// });
 
 Route::middleware(['guest:user,admin'])->group(function () {
 
@@ -14,4 +14,8 @@ Route::middleware(['guest:user,admin'])->group(function () {
     Route::get('/register', [AuthController::class, 'regis'])->name('register');
     Route::post('/auth', [AuthController::class, 'authenticate'])->name('authenticate');
     Route::post('/register', [AuthController::class, 'registerUser'])->name('registerUser');
+});
+
+Route::middleware('auth:user')->group(function () {
+   Route::get('/logout-user', [AuthController::class, 'logout'])->name('logout');
 });

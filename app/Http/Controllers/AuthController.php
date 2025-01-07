@@ -8,9 +8,9 @@ class AuthController extends Controller
 {
     public function login()
     {
-
         return view('auth.login');
     }
+
 
     public function regis()
     {
@@ -34,6 +34,8 @@ class AuthController extends Controller
 
         return view('auth.login')->with('success', 'Registrasi Berhasil');
     }
+
+   
     public function authenticate(Request $request)
     {
         $remember = $request->remember ? true : false;
@@ -69,6 +71,7 @@ class AuthController extends Controller
         Auth::guard('user')->logout();
         // $request->session()->invalidate();
         // $request->session()->regenerateToken();
+
         return redirect()->route('login');
     }
 }

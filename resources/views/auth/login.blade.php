@@ -34,7 +34,7 @@
                             <div class="w-100">
                                 <div class="d-flex flex-column h-100">
                                     <div class="mb-4 mb-md-5 text-center">
-                                        <img src="{{ asset('assets/images/login-logo.png') }}" alt="" height="28">
+                                        <img src="{{ asset('assets/images/login-logo.png') }}" alt="" height="100">
                                         <a href="index.html" class="d-block auth-logo">
 
 
@@ -42,24 +42,25 @@
 
 
                                         </a>
-                                        <span class="logo-txt text-dark fs-1">Artisan Compass</span>
+                                        <span class="logo-txt  fs-1">Artisan Compass</span>
                                     </div>
                                     <div class="auth-content my-auto">
                                         <div class="text-center">
                                             <h5 class="mb-0">Login Page</h5>
                                             <p class="text-muted mt-2">Sign in to continue</p>
                                         </div>
-                                        <form class="mt-4 pt-2" action="index.html">
+                                        <form class="mt-4 pt-2" action="{{ route('authenticate') }}" method="POST">
+                                            @csrf
                                             <div class="form-floating form-floating-custom mb-4">
-                                                <input type="text" class="form-control" id="input-username" placeholder="Enter User Name">
-                                                <label for="input-username">Username</label>
+                                                <input type="text" class="form-control" name="email" id="input-email" placeholder="Enter your email">
+                                                <label for="input-email">email</label>
                                                 <div class="form-floating-icon">
                                                    <i data-feather="users"></i>
                                                 </div>
                                             </div>
 
                                             <div class="form-floating form-floating-custom mb-4 auth-pass-inputgroup">
-                                                <input type="password" class="form-control pe-5" id="password-input" placeholder="Enter Password">
+                                                <input type="password" class="form-control pe-5" id="password-input" name="password" placeholder="Enter Password">
 
                                                 <button type="button" class="btn btn-link position-absolute h-100 end-0 top-0" id="password-addon">
                                                     <i class="mdi mdi-eye-outline font-size-18 text-muted"></i>
@@ -70,17 +71,7 @@
                                                 </div>
                                             </div>
 
-                                            <div class="row mb-4">
-                                                <div class="col">
-                                                    <div class="form-check font-size-15">
-                                                        <input class="form-check-input" type="checkbox" id="remember-check">
-                                                        <label class="form-check-label font-size-13" for="remember-check">
-                                                            Remember me
-                                                        </label>
-                                                    </div>
-                                                </div>
 
-                                            </div>
                                             <div class="mb-3">
                                                 <button class="btn btn-primary w-100 waves-effect waves-light" type="submit">Log In</button>
                                             </div>
@@ -204,7 +195,7 @@
 
 
         <!-- Right Sidebar -->
-       
+
         <!-- /Right-bar -->
 
         <!-- Right bar overlay-->
