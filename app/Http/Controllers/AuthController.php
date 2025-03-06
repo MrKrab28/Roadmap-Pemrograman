@@ -17,23 +17,7 @@ class AuthController extends Controller
         return view('auth.register');
     }
 
-    public function registerUser(Request $request)
-    {
-        $data  = $request->validate([
-            'nama' => 'required|string|max:255',
-            'email' => 'required|string|email|max:255|unique:users',
-            'password' => 'required',
-            'jk' => 'required',
-            'no_hp' => 'required|min:11',
-        ]);
 
-        $data['password'] = bcrypt($data['password']);
-        User::create($data);
-
-
-
-        return view('auth.login')->with('success', 'Registrasi Berhasil');
-    }
 
 
     public function authenticate(Request $request)
@@ -75,13 +59,13 @@ class AuthController extends Controller
         return redirect()->route('login');
     }
 
-    public function register(Request $request)
+    public function registerUser(Request $request)
     {
         $data = $request->validate([
             'nama' => 'required|string|max:255',
             'email' => 'required|string|email|max:255|unique:users',
             'password' => 'required',
-          
+
         ]);
 
         $data['password'] = bcrypt($data['password']);

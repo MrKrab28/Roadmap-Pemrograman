@@ -63,15 +63,11 @@
                 </li>
 
                 <li>
-                    <a href="javascript: void(0);" class="has-arrow">
+                    <a href="{{ route('admin.user-index') }}" >
                         <i data-feather="users"></i>
-                        <span data-key="t-contacts">Contacts</span>
+                        <span data-key="t-contacts">Users</span>
                     </a>
-                    <ul class="sub-menu" aria-expanded="false">
-                        <li><a href="apps-contacts-grid.html" data-key="t-user-grid">User Grid</a></li>
-                        <li><a href="apps-contacts-list.html" data-key="t-user-list">User List</a></li>
-                        <li><a href="apps-contacts-profile.html" data-key="t-profile">Profile</a></li>
-                    </ul>
+
                 </li>
 
                 <li>

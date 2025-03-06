@@ -10,10 +10,10 @@
     <meta content="Themesbrand" name="author" />
     <!-- App favicon -->
     {{-- <link rel="shortcut icon" href="{{ asset('assets/images/favicon.ico') }}"> --}}
-
+    <link rel="shortcut icon" href="{{ asset('assets/testingcopy.ico') }}">
     <!-- plugin css -->
-    <link href="{{ asset('assets/libs/admin-resources/jquery.vectormap/jquery-jvectormap-1.2.2.css') }}" rel="stylesheet"
-        type="text/css" />
+    <link href="{{ asset('assets/libs/admin-resources/jquery.vectormap/jquery-jvectormap-1.2.2.css') }}"
+        rel="stylesheet" type="text/css" />
 
     <!-- preloader css -->
     {{-- <link rel="stylesheet" href="{{ asset('assets/css/preloader.min.css') }}" type="text/css" /> --}}
