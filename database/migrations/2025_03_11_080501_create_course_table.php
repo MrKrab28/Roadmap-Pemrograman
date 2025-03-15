@@ -11,9 +11,15 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('bahasa', function (Blueprint $table) {
+        Schema::create('course', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
+            $table->foreignId('category_id');
+            $table->string('judul');
+            $table->string('gambar');
+
+            $table->foreign('category_id')->references('id')->on('category')->onUpdate('cascade')->onDelete('cascade');
+
         });
     }
 
@@ -22,6 +28,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('bahasa');
+        Schema::dropIfExists('course');
     }
 };

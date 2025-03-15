@@ -21,7 +21,8 @@
             <div class="card">
                 <div class="card-header">
                     <h4 class="card-title">Table Edit</h4>
-                    <p class="card-title-desc">Table Edits is a lightweight jQuery plugin for making table rows editable.</p>
+                    <p class="card-title-desc">Table Edits is a lightweight jQuery plugin for making table rows editable.
+                    </p>
                 </div>
                 <div class="card-body">
 
@@ -29,28 +30,36 @@
                         <table class="table table-editable table-nowrap align-middle table-edits">
                             <thead>
                                 <tr>
-                                    <th>ID</th>
-                                    <th>Name</th>
-                                    <th>Age</th>
-                                    <th>Gender</th>
-                                    <th>Edit</th>
+                                    <th>No</th>
+                                    <th>Nama</th>
+                                    <th>Email</th>
+                                    <th>Jurusan</th>
+                                    <th></th>
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr data-id="1">
-                                    <td data-field="id" style="width: 80px">1</td>
-                                    <td data-field="name">David McHenry</td>
-                                    <td data-field="age">24</td>
-                                    <td data-field="gender">Male</td>
-                                    <td style="width: 100px">
-                                        <a class="btn btn-outline-secondary btn-sm edit" title="Edit">
-                                            <i class="fas fa-pencil-alt"></i>
-                                        </a>
-                                    </td>
-                                </tr>
-                               
+                                @foreach ($users as $user)
+                                    <tr data-id="1">
+                                        <td data-field="id">{{ $loop->iteration }}</td>
+                                        <td data-field="name">{{ $user->nama }}</td>
+                                        <td data-field="age">{{ $user->email }}</td>
+                                        <td data-field="gender">{{ $user->jurusan }}</td>
+                                        <td style="width: 100px" class="">
+                                            <a href="{{ route('admin.user-edit', $user) }}"
+                                                class="btn btn-outline-primary btn-sm edit" title="Edit">
+                                                <i class="fas fa-pencil-alt"></i>
+                                            </a>
+
+                                        </td>
+                                    </tr>
+                                @endforeach
+
+
                             </tbody>
-                            </table>
+                        </table>
+                        <x-component.datatable id="" >
+                            
+                        </x-component.datatable>
                     </div>
 
                 </div>
