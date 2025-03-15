@@ -59,7 +59,7 @@ Route::middleware('auth:admin')->group(function () {
     Route::delete('quizzes/delete/{quis}', [QuisController::class, 'delete'])->name('admin.quis-delete');
 
 
-
+    
 
 });
 
