@@ -3,7 +3,7 @@
         <div class="col-12">
             <div class="page-title-box d-sm-flex align-items-center justify-content-between">
                 <h4 class="mb-sm-0 font-size-18" style="font-family: Cascadia Code; font-weight: 1000;">
-                    User</h4>
+                    USER</h4>
 
                 {{-- <div class="page-title-right">
                     <ol class="breadcrumb m-0">
@@ -21,7 +21,7 @@
         <div class="col-12">
             <div class="card">
                 <div class="card-header">
-                    <h4 class="card-title">USER</h4>
+                    <h4 class="card-title">Users</h4>
                     <x-form.modal label="New User" size="modal-l" title="Form User"
                         action="{{ route('admin.user-store') }}" method="POST" autocomplete="off">
                         <div class="row">
@@ -104,18 +104,5 @@
                 </div>
             </div>
         </div> <!-- end col -->
-    </div>
-
-    <!-- end row-->
-
-    <div class="row">
-
-        <!-- end col -->
-
-
-        <!-- end col -->
-
-
-        <!-- end col -->
     </div>
 </x-admin.layout>

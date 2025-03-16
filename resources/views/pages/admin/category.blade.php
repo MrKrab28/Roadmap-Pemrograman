@@ -2,15 +2,8 @@
     <div class="row">
         <div class="col-12">
             <div class="page-title-box d-sm-flex align-items-center justify-content-between">
-                <h4 class="mb-sm-0 font-size-18">Category</h4>
-
-                {{-- <div class="page-title-right">
-                    <ol class="breadcrumb m-0">
-                        <li class="breadcrumb-item"><a href="javascript: void(0);">Dashboard</a></li>
-                        <li class="breadcrumb-item active">Welcome !</li>
-                    </ol>
-                </div> --}}
-
+                <h4 class="mb-sm-0 font-size-18" style="font-family: Cascadia Code; font-weight: 1000;">
+                    CATEGORY</h4>
             </div>
         </div>
     </div>
@@ -20,32 +13,36 @@
         <div class="col-12">
             <div class="card">
                 <div class="card-header">
-                    <h4 class="card-title">Table Edit</h4>
-                    <p class="card-title-desc">Table Edits is a lightweight jQuery plugin for making table rows editable.
+                    <h4 class="card-title">Categories</h4>
+                    <x-form.modal label="New Category" size="modal-l" title="Form User"
+                        action="{{ route('admin.category-store') }}" method="POST" autocomplete="off">
+                        <div class="row">
+                            <x-form.input label="Category" name="nama" id="namaInput" :required="true" />
+                            <x-form.textarea label="Deskripsi" name="deskripsi" id="deskripsiInput" :required="true" :rows="5" />
+                        </div>
+                    </x-form.modal>
+                    <p class="card-title-desc">
                     </p>
                 </div>
                 <div class="card-body">
-
                     <div class="table-responsive">
-                        <table class="table table-editable table-nowrap align-middle table-edits">
+                        <x-component.datatable id="CategoryTable">
                             <thead>
-                                <tr>
-                                    <th>No</th>
-                                    <th>Nama</th>
-                                    <th>Email</th>
-                                    <th>Jurusan</th>
-                                    <th></th>
-                                </tr>
+                                <th>#</th>
+                                <th>Category</th>
+                                <th>Deskripsi</th>
+
+                                <th></th>
                             </thead>
                             <tbody>
-                                @foreach ($users as $user)
+                                @foreach ($categories as $category)
                                     <tr data-id="1">
                                         <td data-field="id">{{ $loop->iteration }}</td>
-                                        <td data-field="name">{{ $user->nama }}</td>
-                                        <td data-field="age">{{ $user->email }}</td>
-                                        <td data-field="gender">{{ $user->jurusan }}</td>
+                                        <td data-field="name">{{ $category->nama }}</td>
+                                        <td data-field="age">{{ Str::limit($category->deskripsi, 100) }}</td>
+
                                         <td style="width: 100px" class="">
-                                            <a href="{{ route('admin.user-edit', $user) }}"
+                                            <a href="{{ route('admin.category-edit', $category) }}"
                                                 class="btn btn-outline-primary btn-sm edit" title="Edit">
                                                 <i class="fas fa-pencil-alt"></i>
                                             </a>
@@ -53,11 +50,7 @@
                                         </td>
                                     </tr>
                                 @endforeach
-
-
                             </tbody>
-                        </table>
-                        <x-component.datatable id="" >
 
                         </x-component.datatable>
                     </div>
