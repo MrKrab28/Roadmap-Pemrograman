@@ -14,8 +14,9 @@ class UserController extends Controller
         return view('pages.admin.user', compact('users'));
     }
 
-    public function store(){
-        $data = request()->validate([
+    public function store(Request $request)
+    {
+        $data = $request->validate([
             'nama' => 'required',
             'email' => 'required',
             'password' => 'required',
@@ -26,23 +27,32 @@ class UserController extends Controller
         return redirect()->route('admin.user-store')->with('success', 'User Berhasil Ditambahkan');
     }
 
-    public function edit(User $user){
+    public function edit(User $user)
+    {
         return view('pages.admin.user-edit', compact('user'));
     }
 
-    public function update(User $user){
-        $data = request()->validate([
-            'nama' => 'required',
-            'email' => 'required',
-            'password' => 'required',
-        ]);
+    public function update(User $user, Request $request)
+    {
+        $user = User::find($user->id);
+        $user->nama = $request->nama;
 
-        $user->update($data);
+        $user->email = $request->email;
 
-        return redirect()->route('admin.user-update')->with('success', 'User Berhasil Diupdate');
+        if ($request->password) {
+
+            $user->password = bcrypt($request->password);
+        }
+
+        $user->update();
+
+
+
+        return redirect()->back()->with('success', 'User Berhasil Diupdate');
     }
 
-    public function destroy(User $user){
+    public function destroy(User $user)
+    {
         $user->delete();
         return redirect()->back()->with('success', 'User Berhasil Dihapus');
     }

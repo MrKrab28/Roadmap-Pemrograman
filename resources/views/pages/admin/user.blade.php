@@ -2,7 +2,8 @@
     <div class="row">
         <div class="col-12">
             <div class="page-title-box d-sm-flex align-items-center justify-content-between">
-                <h4 class="mb-sm-0 font-size-18">User !</h4>
+                <h4 class="mb-sm-0 font-size-18" style="font-family: Cascadia Code; font-weight: 1000;">
+                    User</h4>
 
                 {{-- <div class="page-title-right">
                     <ol class="breadcrumb m-0">
@@ -20,14 +21,28 @@
         <div class="col-12">
             <div class="card">
                 <div class="card-header">
-                    <h4 class="card-title">Table Edit</h4>
-                    <p class="card-title-desc">Table Edits is a lightweight jQuery plugin for making table rows editable.
+                    <h4 class="card-title">USER</h4>
+                    <x-form.modal label="New User" size="modal-l" title="Form User"
+                        action="{{ route('admin.user-store') }}" method="POST" autocomplete="off">
+                        <div class="row">
+
+
+                            <x-form.input label="Nama" name="nama" id="namaInput" :required="true" />
+                            <x-form.input label="Email" name="email" type="email" id="emailInput"
+                                :required="true" />
+                            <x-form.input label="password" name="password" type="password" id="passwordInput"
+                                :required="true" />
+
+
+
+                        </div>
+                    </x-form.modal>
+                    <p class="card-title-desc">
                     </p>
                 </div>
                 <div class="card-body">
-
                     <div class="table-responsive">
-                        <table class="table table-editable table-nowrap align-middle table-edits">
+                        {{-- <table class="table table-editable table-nowrap align-middle table-edits">
                             <thead>
                                 <tr>
                                     <th>No</th>
@@ -56,9 +71,33 @@
 
 
                             </tbody>
-                        </table>
-                        <x-component.datatable id="" >
-                            
+                        </table> --}}
+                        <x-component.datatable id="CategoryTable">
+                            <thead>
+                                <th>#</th>
+                                <th>Nama</th>
+                                <th>Email</th>
+
+                                <th></th>
+                            </thead>
+                            <tbody>
+                                @foreach ($users as $user)
+                                    <tr data-id="1">
+                                        <td data-field="id">{{ $loop->iteration }}</td>
+                                        <td data-field="name">{{ $user->nama }}</td>
+                                        <td data-field="age">{{ $user->email }}</td>
+
+                                        <td style="width: 100px" class="">
+                                            <a href="{{ route('admin.user-edit', $user) }}"
+                                                class="btn btn-outline-primary btn-sm edit" title="Edit">
+                                                <i class="fas fa-pencil-alt"></i>
+                                            </a>
+
+                                        </td>
+                                    </tr>
+                                @endforeach
+                            </tbody>
+
                         </x-component.datatable>
                     </div>
 

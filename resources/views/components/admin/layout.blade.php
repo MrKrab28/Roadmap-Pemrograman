@@ -32,6 +32,8 @@
     <link href="{{ asset('assets/css/icons.min.css') }}" rel="stylesheet" type="text/css" />
     <!-- App Css-->
     <link href="{{ asset('assets/css/app.min.css') }}" id="app-style" rel="stylesheet" type="text/css" />
+
+    <link rel="stylesheet" href="{{ asset('assets/libs/sweetalert2/sweetalert2.min.css') }}">
     @stack('style')
 </head>
 
@@ -70,14 +72,12 @@
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-sm-6">
-                            <script>
-                                document.write(new Date().getFullYear())
-                            </script> © Dason.
+
                         </div>
                         <div class="col-sm-6">
                             <div class="text-sm-end d-none d-sm-block">
-                                Design & Develop by <a href="#!"
-                                    class="text-decoration-underline">Themesbrand</a>
+                                <a href="#" style="font-family: Cascadia Code; font-weight: 1000;">
+                                    @{{ Artisan<span>.</span><span>Compass</span > }}</a>
                             </div>
                         </div>
                     </div>
@@ -107,7 +107,7 @@
     <!-- pace js -->
     <script src="{{ asset('assets/libs/pace-js/pace.min.js') }}"></script>
 
-
+    <script src="{{ asset('assets/libs/sweetalert2/sweetalert2.all.min.js') }}"></script>
     <!-- apexcharts -->
     <script src="{{ asset('assets/libs/apexcharts/apexcharts.min.js') }}"></script>
 
@@ -121,6 +121,7 @@
     <script src="{{ asset('assets/js/pages/dashboard.init.js') }}"></script>
 
     <script src="{{ asset('assets/js/app.js') }}"></script>
+
     @stack('scripts')
 
     @if (Session::has('success'))
@@ -128,7 +129,11 @@
             Swal.fire({
                 icon: 'success',
                 title: 'Success',
-                text: '{{ Session::get('success') }}',
+                text: "{{ Session::get('success') }}" ,
+
+                background: '#212529',
+
+
             })
         </script>
     @endif
@@ -138,6 +143,7 @@
                 icon: 'error',
                 title: 'Failed',
                 text: '{{ Session::get('error') }}',
+                background: '#212529',
             })
         </script>
     @endif

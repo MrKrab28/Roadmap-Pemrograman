@@ -15,4 +15,5 @@
         id="{{ $id }}" {{ $readonly ? 'readonly' : '' }} {{ $required ? 'required' : '' }}>
     @if ($helperText)
         <small class="text-muted">{{ $helperText }}</small>
+    @endif
 </div>
