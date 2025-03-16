@@ -23,19 +23,18 @@
                 <div class="card-header">
                     <h4 class="card-title">Users</h4>
                     <x-form.modal label="New User" size="modal-l" title="Form User"
-                        action="{{ route('admin.user-store') }}" method="POST" autocomplete="off">
-                        <div class="row">
-
-
-                            <x-form.input label="Nama" name="nama" id="namaInput" :required="true" />
-                            <x-form.input label="Email" name="email" type="email" id="emailInput"
-                                :required="true" />
-                            <x-form.input label="password" name="password" type="password" id="passwordInput"
-                                :required="true" />
+                        action="{{ route('admin.user-store') }}">
 
 
 
-                        </div>
+                        <x-form.input label="Nama" name="nama" id="namaInput" :required="true" />
+                        <x-form.input label="Email" name="email" type="email" id="emailInput" :required="true" />
+                        <x-form.input label="password" name="password" type="password" id="passwordInput"
+                            :required="true" />
+
+
+
+
                     </x-form.modal>
                     <p class="card-title-desc">
                     </p>

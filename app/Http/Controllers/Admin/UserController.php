@@ -22,9 +22,11 @@ class UserController extends Controller
             'password' => 'required',
         ]);
 
+
+        $data['password'] = bcrypt($data['password']);
         User::create($data);
 
-        return redirect()->route('admin.user-store')->with('success', 'User Berhasil Ditambahkan');
+        return redirect()->back()->with('success', 'User Berhasil Ditambahkan');
     }
 
     public function edit(User $user)

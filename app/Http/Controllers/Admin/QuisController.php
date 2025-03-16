@@ -21,7 +21,7 @@ class QuisController extends Controller
 
         Quis::create($data);
 
-        return redirect()->route('admin.quis-store')->with('success', 'Quis Berhasil Ditambahkan');
+        return redirect()->back()->with('success', 'Quis Berhasil Ditambahkan');
     }
 
     public function edit(Quis $quis){

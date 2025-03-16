@@ -29,7 +29,7 @@ class CourseController extends Controller
 
         Course::create($data);
 
-        return redirect()->route('admin.course-store')->with('success', 'Course Berhasil Ditambahkan');
+        return redirect()->back()->with('success', 'Course Berhasil Ditambahkan');
     }
 
 

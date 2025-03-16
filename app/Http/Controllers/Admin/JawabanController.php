@@ -44,7 +44,7 @@ class JawabanController extends Controller
 
         $jawaban->update($data);
 
-        return redirect()->route('admin.jawaban-update')->with('success', 'Jawaban Berhasil Diupdate');
+        return redirect()->back()->with('success', 'Jawaban Berhasil Diupdate');
     }
 
     public function destroy(Jawaban $jawaban)

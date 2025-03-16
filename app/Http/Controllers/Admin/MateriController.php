@@ -32,7 +32,7 @@ class MateriController extends Controller
 
         $materi->update($data);
 
-        return redirect()->route('admin.materi-update')->with('success', 'Materi Berhasil Diupdate');
+        return redirect()->back()->with('success', 'Materi Berhasil Diupdate');
     }
 
     public function edit(Materi $materi){

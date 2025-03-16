@@ -13,15 +13,15 @@ class CategoryController extends Controller
         return view('pages.admin.category', compact('categories'));
     }
 
-    public function store(){
-        $data = request()->validate([
+    public function store(Request $request){
+        $data = $request->validate([
             'nama' => 'required',
             'deskripsi' => 'required',
         ]);
 
         Category::create($data);
 
-        return redirect()->route('admin.category-store')->with('success', 'Category Berhasil Ditambahkan');
+        return redirect()->back()->with('success', 'Category Berhasil Ditambahkan');
     }
 
     public function edit(Category $category){
