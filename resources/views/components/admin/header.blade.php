@@ -3,21 +3,13 @@
         <div class="d-flex">
             <!-- LOGO -->
             <div class="navbar-brand-box">
-                <a href="index.html" class="logo logo-dark">
-                    <span class="logo-sm">
-                        <img src="assets/images/logo-sm.svg" alt="" height="30">
-                    </span>
-                    <span class="logo-lg">
-                        <img src="assets/images/logo-sm.svg" alt="" height="24"> <span class="logo-txt">Dason</span>
-                    </span>
-                </a>
 
                 <a href="index.html" class="logo logo-light">
                     <span class="logo-sm">
-                        <img src="assets/images/logo-sm.svg" alt="" height="30">
+                        <img src="{{ asset('assets/images/testingcopy.png') }}" alt="" width="50" height="60">
                     </span>
                     <span class="logo-lg">
-                        <img src="assets/images/logo-sm.svg" alt="" height="24"> <span class="logo-txt">Dason</span>
+                        <img src="{{ asset('assets/images/testingcopy.png') }}" alt="" width="50" height="60"><span>Artisan.Compass</span>
                     </span>
                 </a>
             </div>
