@@ -5,19 +5,19 @@ namespace App\Models;
 use App\Models\Course;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Tonysm\RichTextLaravel\Models\Traits\HasRichText;
 
 class Materi extends Model
 {
-    use HasFactory;
+    use HasFactory, HasRichText;
+
 
     protected $table = 'materi';
 
-    protected $fillable = [
-        'judul',
-        'content',
-    
-        'course_id',
-    ];
+    protected $guarded = ['id'];
+     protected $richTextAttributes = [
+        // 'content',
+     ];
 
     public function course()
     {

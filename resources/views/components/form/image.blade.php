@@ -20,7 +20,7 @@
 
                 var reader = new FileReader();
                 reader.onload = function(e) {
-                    $('#{{ $id }}Preview').html('<img src="' + e.target.result +
+                    $('#{{ $id }}Preview').html('<img style="max-width: 100%; max-height: 100%" src="' + e.target.result +
                         '" />');
                 }
                 reader.readAsDataURL(this.files[0]);
@@ -37,7 +37,7 @@
         <small class="text-muted">{{ $helperText }}</small>
     @endif
     <div class="border rounded mt-3 dashed img-container d-flex justify-content-center align-items-center p-1"
-        style="height: 250px" id="{{ $id }}Preview" onclick="$('#{{ $id }}').click()">
+        style="height: 200px" id="{{ $id }}Preview" onclick="$('#{{ $id }}').click()">
         <span>Choose Image</span>
     </div>
 </div>

@@ -22,4 +22,9 @@ class Course extends Model
     {
         return $this->hasMany(Materi::class, 'course_id');
     }
+
+    public function category()
+    {
+        return $this->belongsTo(Category::class, 'category_id');
+    }
 }

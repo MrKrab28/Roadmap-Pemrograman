@@ -22,7 +22,7 @@
     <!-- plugin css -->
     <link href="{{ asset('assets/libs/admin-resources/jquery.vectormap/jquery-jvectormap-1.2.2.css') }}" rel="stylesheet"
         type="text/css" />
-
+        {{-- @vite('resources/css/app.css') --}}
     <!-- preloader css -->
     {{-- <link rel="stylesheet" href="{{ asset('assets/css/preloader.min.css') }}" type="text/css" /> --}}
 
@@ -32,8 +32,12 @@
     <link href="{{ asset('assets/css/icons.min.css') }}" rel="stylesheet" type="text/css" />
     <!-- App Css-->
     <link href="{{ asset('assets/css/app.min.css') }}" id="app-style" rel="stylesheet" type="text/css" />
+    {{-- <link rel="stylesheet" type="text/css" href="https://unpkg.com/trix@2.0.8/dist/trix.css">
+    <script type="text/javascript" src="https://unpkg.com/trix@2.0.8/dist/trix.umd.min.js"></script> --}}
+
 
     <link rel="stylesheet" href="{{ asset('assets/libs/sweetalert2/sweetalert2.min.css') }}">
+    <x-rich-text::styles />
     @stack('style')
 </head>
 
@@ -95,7 +99,7 @@
     <!-- /Right-bar -->
 
     <!-- Right bar overlay-->
-
+    @vite('resources/js/app.js')
 
     <!-- JAVASCRIPT -->
     <script src="{{ asset('assets/libs/jquery/jquery.min.js') }}"></script>
@@ -147,6 +151,8 @@
             })
         </script>
     @endif
+
+
 </body>
 
 </html>

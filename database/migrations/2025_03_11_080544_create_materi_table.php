@@ -17,7 +17,7 @@ return new class extends Migration
             $table->timestamps();
 
             $table->string('judul');
-            $table->text('content');
+            $table->longText('content');
 
             $table->foreign('course_id')->references('id')->on('materi')->onUpdate('cascade')->onDelete('cascade');
         });

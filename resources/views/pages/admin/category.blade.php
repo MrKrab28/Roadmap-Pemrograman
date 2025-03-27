@@ -18,7 +18,8 @@
                         action="{{ route('admin.category-store') }}" method="POST" autocomplete="off">
                         <div class="row">
                             <x-form.input label="Category" name="nama" id="namaInput" :required="true" />
-                            <x-form.textarea label="Deskripsi" name="deskripsi" id="deskripsiInput" :required="true" :rows="5" />
+                            <x-form.textarea label="Deskripsi" name="deskripsi" id="deskripsiInput" :required="true"
+                                :rows="5" />
                         </div>
                     </x-form.modal>
                     <p class="card-title-desc">
@@ -42,10 +43,19 @@
                                         <td data-field="age">{{ Str::limit($category->deskripsi, 100) }}</td>
 
                                         <td style="width: 100px" class="">
-                                            <a href="{{ route('admin.category-edit', $category) }}"
-                                                class="btn btn-outline-primary btn-sm edit" title="Edit">
-                                                <i class="fas fa-pencil-alt"></i>
-                                            </a>
+                                            <div class="d-flex  gap-2">
+                                                <a href="{{ route('admin.category-edit', $category) }}"
+                                                    class="btn btn-outline-primary btn-sm edit" title="Edit">
+                                                    <i class="fas fa-pencil-alt"></i>
+                                                </a>
+
+                                                <form action="{{ route('admin.category-delete', $category) }}">
+                                                    <button type="submit" class="btn btn-outline-danger btn-sm delete"
+                                                        title="Edit">
+                                                        <i class="fas fa-trash"></i>
+                                                    </button>
+                                                </form>
+                                            </div>
 
                                         </td>
                                     </tr>

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Models\Course;
 use App\Models\Materi;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
@@ -10,18 +11,20 @@ class MateriController extends Controller
 {
     public function index(){
         $materis = Materi::all();
-        return view('pages.admin.materi', compact('materis'));
+        $courses = Course::select('id', 'judul')->get();
+        return view('pages.admin.materi', ['materis' => $materis, 'courses' => $courses]);
     }
 
     public function store(Request $request){
         $data = $request->validate([
+            'course_id' => 'required',
             'judul' => 'required',
             'content' => 'required',
         ]);
 
         Materi::create($data);
-
-        return redirect()->route('admin.materi-store')->with('success', 'Materi Berhasil Ditambahkan');
+       
+        return redirect()->back()->with('success', 'Materi Berhasil Ditambahkan');
     }
 
     public function update(Materi $materi, Request $request){

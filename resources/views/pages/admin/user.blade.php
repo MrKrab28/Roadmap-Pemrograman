@@ -87,11 +87,17 @@
                                         <td data-field="age">{{ $user->email }}</td>
 
                                         <td style="width: 100px" class="">
-                                            <a href="{{ route('admin.user-edit', $user) }}"
+                                            <div class="d-flex  gap-2">
+                                                <a href="{{ route('admin.user-edit', $user) }}"
                                                 class="btn btn-outline-primary btn-sm edit" title="Edit">
                                                 <i class="fas fa-pencil-alt"></i>
                                             </a>
-
+                                            <form action="{{ route('admin.user-delete', $user) }}">
+                                                <button type="submit" class="btn btn-outline-danger btn-sm delete" title="Edit">
+                                                    <i class="fas fa-trash"></i>
+                                                </button>
+                                            </form>
+                                            </div>
                                         </td>
                                     </tr>
                                 @endforeach

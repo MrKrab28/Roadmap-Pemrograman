@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Models\Course;
+use App\Models\Category;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
@@ -11,7 +12,8 @@ class CourseController extends Controller
     public function index()
     {
         $courses = Course::all();
-        return view('pages.admin.course', compact('courses'));
+        $categories = Category::select('id', 'nama')->get();
+        return view('pages.admin.course', ['courses' => $courses, 'categories' => $categories]);
     }
 
     public function store(Request $request)

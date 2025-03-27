@@ -14,12 +14,16 @@
             <div class="card">
                 <div class="card-header">
                     <h4 class="card-title">Courses</h4>
-                    <x-form.modal label="New User" size="modal-l" title="Form User"
-                        action="{{ route('admin.course-store') }}" method="POST" autocomplete="off">
+                    <x-form.modal label="New Course" size="modal-l" title="Form Course"
+                        action="{{ route('admin.course-store') }}" >
                         <div class="row">
 
-
                             <x-form.input label="Judul" name="judul" id="judulInput" :required="true" />
+                            <x-form.select-search label="Category" id="category_id" name="category_id" :required="true" placeholder="Pilih" id="formModal">
+                                @foreach ($categories as $category)
+                                    <option value="{{ $category->id }}">{{ $category->nama }}</option>
+                                @endforeach
+                            </x-form.select-search>
 
 
                             <x-form.image label="Upload" name="gambar" id="imgInput" :required="true" />
@@ -35,8 +39,8 @@
                         <x-component.datatable id="CourseTable">
                             <thead>
                                 <th>#</th>
-                                <th>Nama</th>
-                                <th>Email</th>
+                                <th>Course</th>
+                                <th>Category</th>
 
                                 <th></th>
                             </thead>
@@ -44,14 +48,23 @@
                                 @foreach ($courses as $course)
                                     <tr data-id="1">
                                         <td data-field="id">{{ $loop->iteration }}</td>
-                                        <td data-field="name">{{ $user->nama }}</td>
-                                        <td data-field="age">{{ $user->email }}</td>
+                                        <td data-field="name">{{ $course->judul }}</td>
+                                        <td data-field="age">{{ $course->category->nama }}</td>
 
                                         <td style="width: 100px" class="">
-                                            <a href="{{ route('admin.user-edit', $user) }}"
-                                                class="btn btn-outline-primary btn-sm edit" title="Edit">
-                                                <i class="fas fa-pencil-alt"></i>
-                                            </a>
+                                            <div class="d-flex  gap-2">
+                                                <a href="{{ route('admin.course-edit', $course) }}"
+                                                    class="btn btn-outline-primary btn-sm edit" title="Edit">
+                                                    <i class="fas fa-pencil-alt"></i>
+                                                </a>
+
+                                                <form action="{{ route('admin.course-delete', $course) }}">
+                                                    <button type="submit" class="btn btn-outline-danger btn-sm delete"
+                                                        title="Edit">
+                                                        <i class="fas fa-trash"></i>
+                                                    </button>
+                                                </form> 
+                                            </div>
 
                                         </td>
                                     </tr>
