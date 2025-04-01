@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 use App\Models\User;
 use Illuminate\Http\Request;
+use App\Models\CourseCompletion;
 use Illuminate\Support\Facades\Auth;
+
 class AuthController extends Controller
 {
     public function login()
@@ -29,12 +31,15 @@ class AuthController extends Controller
             'password' => $request->password
         ];
 
+
         if (Auth::guard('admin')->attempt($credentials)) {
             $request->session()->regenerate();
             return redirect()->route('dashboard');
         }
         if (Auth::guard('user')->attempt($credentials, $remember)) {
             $request->session()->regenerate();
+
+
             return redirect()->route('user.index');
         }
 

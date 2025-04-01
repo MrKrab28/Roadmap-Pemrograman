@@ -38,6 +38,9 @@ Route::middleware('auth:user')->group(function () {
 
 
     Route::get('quiz/show/{materi}', [QuisController::class, 'show'])->name('user.quis-show');
-    Route::post('/quiz/submit', [QuisController::class, 'submitJawaban'])->name('user.quis-submitJawaban');
+    Route::post('/quiz/{quis}/submit', [QuisController::class, 'submitJawaban'])->name('user.quis-submitJawaban');
+
+
+    Route::get('course/{course_id}/complete', [CourseController::class, 'completeCourse'])->name('user.complete-course');
 
 });

@@ -16,7 +16,7 @@
                     <h4 class="card-title">Moduls</h4>
                     <x-form.modal label="New Modul" size="modal-l" title="Form Modul"
                         action="{{ route('admin.materi-store') }}" size="xl">
-npm 
+
                         <div class="row">
                             <div class="col-md-6">
                                 <x-form.input label="Judul" name="judul" id="judulInput" :required="true" />

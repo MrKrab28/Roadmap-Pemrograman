@@ -14,11 +14,11 @@
                 <li class="nav-item "><a href="{{ route('user.index') }}"
                         class="nav-link @if (request()->segment(2) == 'index') active @endif "><b>Home</b></a></li>
                 <li class="nav-item"><a href="{{ route('user.index') }}#category"
-                        class="nav-link @if (request()->segment(2) == 'index#category') active @endif"><b>Category</b></a></li>
+                        class="nav-link @if ( request()->segment(1) == 'category' ) active @endif"><b>Category</b></a></li>
                 <li class="nav-item"><a href="{{ route('user.course-index') }}"
-                        class="nav-link @if (request()->segment(2) == 'course') active @endif"><b>Course</b></a></li>
+                        class="nav-link @if (request()->segment(1) == 'course') active @endif"><b>Course</b></a></li>
                 <li class="nav-item"><a href="{{ route('user.materi-index') }}"
-                        class="nav-link @if (request()->segment(2) == 'materi') active @endif"><b>Modul</b></a>
+                        class="nav-link @if (request()->segment(1) == 'materi') active @endif"><b>Modul</b></a>
                 </li>
                 {{-- <li class="nav-item"><a href="#" class="nav-link"><b>Blog</b></a></li> --}}
                 <li class="nav-item"><a href="{{ route('user.index') }}#about" class="nav-link"><b>About</b></a></li>
