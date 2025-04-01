@@ -25,7 +25,7 @@ class JawabanController extends Controller
 
         Jawaban::create($data);
 
-        return redirect()->route('admin.jawaban-store')->with('success', 'Jawaban Berhasil Ditambahkan');
+        return redirect()->back()->with('success', 'Jawaban Berhasil Ditambahkan');
     }
 
     public function edit(Jawaban $jawaban)

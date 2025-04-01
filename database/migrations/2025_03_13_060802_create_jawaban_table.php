@@ -17,7 +17,7 @@ return new class extends Migration
             $table->id();
             $table->foreignId('quis_id');
             $table->string('jawaban');
-            $table->string('status' , ['benar', 'salah']);
+            $table->enum('status' , ['benar', 'salah']);
             $table->enum('opsi', ['A', 'B', 'C', 'D']);
             $table->timestamps();
 

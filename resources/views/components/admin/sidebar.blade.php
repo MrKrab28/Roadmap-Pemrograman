@@ -11,14 +11,14 @@
 
                     @foreach ($menuGroup['items'] as $item)
                         @if (isset($item['submenu']))
-                            <li>
+                            <li class="mm-@if ($item['route-active'] == request()->segment(2))active @endif">
                                 <a href="javascript: void(0);" class="has-arrow">
                                     <i data-feather="{{ $item['icon'] }}"></i>
                                     <span data-key="t-{{ Str::slug($item['label']) }}">{{ $item['label'] }}</span>
                                 </a>
                                 <ul class="sub-menu" aria-expanded="false">
                                     @foreach ($item['submenu'] as $submenu)
-                                        <li>
+                                        <li  class="mm-@if ($item['route-active'] == request()->segment(2) && $submenu['route-active'] == request()->segment(3))active @endif">
                                             <a href="{{ route($submenu['route-name']) }}"
                                                data-key="t-{{ Str::slug($submenu['label']) }}">{{ $submenu['label'] }}</a>
                                         </li>
@@ -26,7 +26,7 @@
                                 </ul>
                             </li>
                         @else
-                            <li>
+                            <li class="mm-@if ($item['route-active'] == request()->segment(2))active @endif">
                                 <a href="{{ route($item['route-name']) }}">
                                     <i data-feather="{{ $item['icon'] }}"></i>
                                     <span data-key="t-{{ Str::slug($item['label']) }}">{{ $item['label'] }}</span>

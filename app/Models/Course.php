@@ -11,7 +11,11 @@ class Course extends Model
 
     protected $table = 'course';
 
-    protected $guarded = ['id'];
+    protected $fillable = [
+        'judul',
+        'gambar',
+        'category_id',
+    ];
 
     /**
      * Get all the materi for the Course

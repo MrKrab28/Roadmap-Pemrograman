@@ -55,7 +55,7 @@ class CourseController extends Controller
         $data['gambar'] = $filename;
         $course->update($data);
 
-        return redirect()->route('admin.course-update')->with('success', 'Course Berhasil Diupdate');
+        return redirect()->back()->with('success', 'Course Berhasil Diupdate');
     }
 
     public function destroy(Course $course)

@@ -6,10 +6,10 @@
 
                 <a href="index.html" class="logo logo-light">
                     <span class="logo-sm">
-                        <img src="{{ asset('assets/images/testingcopy.png') }}" alt="" width="50" height="60">
+                        <img src="{{ asset('assets/images/testingcopy222.png') }}" alt="" width="50" height="60">
                     </span>
                     <span class="logo-lg">
-                        <img src="{{ asset('assets/images/testingcopy.png') }}" alt="" width="50" height="60"><span>Artisan.Compass</span>
+                        <img src="{{ asset('assets/images/testingcopy222.png') }}" alt="" width="50" height="60"><span>Artisan.Compass</span>
                     </span>
                 </a>
             </div>
@@ -54,7 +54,7 @@
             <div class="dropdown d-inline-block">
                 <button type="button" class="btn header-item bg-soft-light border-start border-end" id="page-header-user-dropdown"
                 data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    <img class="rounded-circle header-profile-user" src="{{ asset('assets/images/avatar.png') }}"
+                    <img class="rounded-circle header-profile-user" src="{{ asset('assets/images/testingcopy222.png') }}"
                         alt="Header Avatar">
                     <span class="d-none d-xl-inline-block ms-1 fw-medium">{{ auth()->user()->nama }}</span>
                     <i class="mdi mdi-chevron-down d-none d-xl-inline-block"></i>

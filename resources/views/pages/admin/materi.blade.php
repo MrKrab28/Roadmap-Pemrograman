@@ -16,10 +16,14 @@
                     <h4 class="card-title">Moduls</h4>
                     <x-form.modal label="New Modul" size="modal-l" title="Form Modul"
                         action="{{ route('admin.materi-store') }}" size="xl">
-
+npm 
                         <div class="row">
                             <div class="col-md-6">
                                 <x-form.input label="Judul" name="judul" id="judulInput" :required="true" />
+                                <div class="mb-2">
+                                    <x-form.input label="Urutan" name="urutan" id="urutanInput" :required="true" />
+
+                                </div>
                             </div>
                             <div class="col-md-6">
                                 <x-form.select-search label="Courses" id="courseInput" name="course_id"
@@ -33,7 +37,7 @@
 
 
                         </div>
-                        <div class="card bg-light p-4" >
+                        <div class="card bg bg-dark text-light p-5 ">
 
                             <x-trix-input label="content" name="content" id="content" :required="true"
                                 style="height: 500px" />
@@ -50,26 +54,36 @@
                                 <th>#</th>
                                 <th>Modul</th>
                                 <th>Course</th>
+                                <th>Urutan</th>
+                                <th>Quiz</th>
 
                                 <th></th>
                             </thead>
                             <tbody>
                                 @foreach ($materis as $materi)
                                     <tr data-id="1">
-                                        <td data-field="id">{{ $loop->iteration }}</td>
-                                        <td data-field="name">{{ $materi->judul }}</td>
-                                        <td data-field="age">{{ $materi->course->judul }}</td>
+                                        <td>{{ $loop->iteration }}</td>
+                                        <td>{{ $materi->judul }}</td>
+                                        <td>{{ $materi->course->judul }}</td>
+                                        <td>{{ $materi->urutan }}</td>
+                                        <td>
+                                            <button class="btn btn-outline-success btn-sm"
+                                                onclick="location.href='{{ route('admin.quis-index', $materi->id) }}'">Open</button>
+                                        </td>
 
                                         <td style="width: 100px" class="">
                                             <div class="d-flex  gap-2">
-                                                <a href="{{ route('admin.materi-edit', $materi) }}"
+                                                <a href="{{ route('admin.materi-edit', $materi->id) }}"
                                                     class="btn btn-outline-primary btn-sm edit" title="Edit">
                                                     <i class="fas fa-pencil-alt"></i>
                                                 </a>
 
-                                                <form action="{{ route('admin.materi-delete', $materi) }}">
+                                                <form action="{{ route('admin.materi-delete', $materi->id) }}"
+                                                    method="POST">
+                                                    @csrf
+                                                    @method('DELETE')
                                                     <button type="submit" class="btn btn-outline-danger btn-sm delete"
-                                                        title="Edit">
+                                                        title="Delete">
                                                         <i class="fas fa-trash"></i>
                                                     </button>
                                                 </form>

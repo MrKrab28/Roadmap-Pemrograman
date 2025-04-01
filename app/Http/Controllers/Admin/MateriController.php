@@ -20,10 +20,11 @@ class MateriController extends Controller
             'course_id' => 'required',
             'judul' => 'required',
             'content' => 'required',
+            'urutan' => 'required',
         ]);
 
         Materi::create($data);
-       
+
         return redirect()->back()->with('success', 'Materi Berhasil Ditambahkan');
     }
 
@@ -31,6 +32,7 @@ class MateriController extends Controller
         $data = $request->validate([
             'judul' => 'required',
             'content' => 'required',
+            'urutan' => 'required',
         ]);
 
         $materi->update($data);
@@ -39,6 +41,15 @@ class MateriController extends Controller
     }
 
     public function edit(Materi $materi){
-        return view('pages.admin.materi-edit', compact('materi'));
+        $courses = Course::select('id', 'judul')->get();
+        return view('pages.admin.materi-edit', [
+            'materi' => $materi,
+            'courses' => $courses
+        ]);
+    }
+
+    public function delete(Materi $materi){
+        $materi->delete();
+        return redirect()->back()->with('success', 'Materi Berhasil Dihapus');
     }
 }

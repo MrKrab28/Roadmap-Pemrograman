@@ -93,6 +93,8 @@
                                                 <i class="fas fa-pencil-alt"></i>
                                             </a>
                                             <form action="{{ route('admin.user-delete', $user) }}">
+                                                @csrf
+                                                @method('DELETE')
                                                 <button type="submit" class="btn btn-outline-danger btn-sm delete" title="Edit">
                                                     <i class="fas fa-trash"></i>
                                                 </button>

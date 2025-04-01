@@ -3,20 +3,36 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Models\Quis;
+use App\Models\Materi;
+use App\Models\Jawaban;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
 class QuisController extends Controller
 {
-    public function index()
+    public function index(Materi $materi)
     {
-        $quis = Quis::all();
-        return view('pages.admin.quis', compact('quis'));
+        $quis = Quis::where('materi_id', $materi->id)->first();
+        if($quis){
+
+            $jawabans = Jawaban::where('quis_id', $quis->id)->get();
+            $opsiDipilih = $jawabans->pluck('opsi')->toArray();
+        }else {
+            $jawabans = collect();
+            $opsiDipilih = [];
+        }
+        return view('pages.admin.quis', [
+            'jawabans' => $jawabans??[],
+            'quis' => $quis,
+            'materi' => $materi,
+            'opsiDipilih' => $opsiDipilih
+        ]);
     }
 
     public function store(Request $request){
         $data = $request->validate([
             'pertanyaan' => 'required',
+            'materi_id' => 'required',
         ]);
 
         Quis::create($data);
@@ -36,11 +52,11 @@ class QuisController extends Controller
 
         $quis->update($data);
 
-        return redirect()->route('admin.quis-update')->with('success', 'Quis Berhasil Diupdate');
+        return redirect()->back()->with('success', 'Quis Berhasil Diupdate');
     }
 
     public function destroy(Quis $quis){
         $quis->delete();
-        return redirect()->route('admin.quis-update')->with('success', 'Quis Berhasil Dihapus');
+        return redirect()->back()->with('success', 'Quis Berhasil Dihapus');
     }
 }

@@ -4,6 +4,8 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
+use function Laravel\Prompts\table;
+
 return new class extends Migration
 {
     /**
@@ -18,8 +20,9 @@ return new class extends Migration
 
             $table->string('judul');
             $table->longText('content');
+            $table->integer('urutan');
 
-            $table->foreign('course_id')->references('id')->on('materi')->onUpdate('cascade')->onDelete('cascade');
+            $table->foreign('course_id')->references('id')->on('course')->onUpdate('cascade')->onDelete('cascade');
         });
     }
 

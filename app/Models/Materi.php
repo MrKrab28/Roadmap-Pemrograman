@@ -14,10 +14,19 @@ class Materi extends Model
 
     protected $table = 'materi';
 
-    protected $guarded = ['id'];
+    protected $fillable = [
+        'judul',
+        'content',
+        'course_id',
+        'urutan',
+    ];
      protected $richTextAttributes = [
         // 'content',
      ];
+
+     public function quiz(){
+        return $this->hasOne(Quis::class, 'materi_id');
+     }
 
     public function course()
     {

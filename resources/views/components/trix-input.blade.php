@@ -1,15 +1,21 @@
 @props(['id', 'name', 'value' => ''])
 
+
+
+
+<link rel="stylesheet" type="text/css" href="https://unpkg.com/trix@2.0.8/dist/trix.css">
+  <script type="text/javascript" src="https://unpkg.com/trix@2.0.8/dist/trix.umd.min.js"></script>
+
 <input type="hidden" name="{{ $name }}" id="{{ $id }}_input" value="{{ $value }}" />
 
-<trix-toolbar class="[&_.trix-button]:bg-white [&_.trix-button.trix-active]:bg-gray-300"
+<trix-toolbar class="[&_.trix-button]:bg-white [&_.trix-button.trix-active]:bg-gray-300 "
     id="{{ $id }}_toolbar"></trix-toolbar>
 
 <trix-editor id="{{ $id }}" toolbar="{{ $id }}_toolbar" input="{{ $id }}_input"
     {{ $attributes->merge([
         'class' => 'max-w-full max-h-[500px] trix-content border-gray-300 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300
-                focus:ring-1 focus:border-indigo-500 dark:focus:border-indigo-600 focus:ring-indigo-500 dark:focus:ring-indigo-600
-                rounded-md shadow-sm dark:[&_pre]:!bg-gray-700 dark:[&_pre]:rounded dark:[&_pre]:!text-white overflow-auto bg-white text-black',
+                            focus:ring-1 focus:border-indigo-500 dark:focus:border-indigo-600 focus:ring-indigo-500 dark:focus:ring-indigo-600
+                            rounded-md shadow-sm dark:[&_pre]:!bg-gray-700 dark:[&_pre]:rounded dark:[&_pre]:!text-white overflow-auto bg-white text-black',
     ]) }}></trix-editor>
 <style>
     /* Mengubah warna untuk teks yang di-bold */

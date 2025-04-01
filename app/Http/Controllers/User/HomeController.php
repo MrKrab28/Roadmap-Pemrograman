@@ -2,12 +2,20 @@
 
 namespace App\Http\Controllers\User;
 
-use App\Http\Controllers\Controller;
+use App\Models\Course;
+use App\Models\Category;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 
 class HomeController extends Controller
 {
-    public function index(){
-        return view('components.user.layout');
+    public function index()
+    {
+
+        $categories = Category::all();
+        return view('pages.user.index', [
+            'categories' => $categories,
+          
+        ]);
     }
 }

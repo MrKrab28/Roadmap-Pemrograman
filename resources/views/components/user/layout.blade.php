@@ -14,18 +14,161 @@
     {{-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"> --}}
     <link href="{{ asset('assets/css/app.min.css') }}" id="app-style" rel="stylesheet" type="text/css" />
     <link href="{{ asset('assets/css/bootstrap.min.css') }}" id="bootstrap-style" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    @vite(['resources/css/app.css' , 'resources/js/app.js'])
+    <link rel="stylesheet" href="{{ asset('assets/libs/sweetalert2/sweetalert2.min.css') }}">
+    <script src="{{ asset('assets/libs/sweetalert2/sweetalert2.all.min.js') }}"></script>
 
-
+    @stack('style')
+    @stack('script')
     <link href="{{ asset('assets/css/icons.min.css') }}" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" href="{{ asset('assets/css/user.css') }}">
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Oswald:300,400,500,700');
+
+        @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800');
+
+        $gr-1: linear-gradient(170deg, #01E4F8 0%, #1D3EDE 100%);
+        $gr-2: linear-gradient(170deg, #B4EC51 0%, #429321 100%);
+        $gr-3: linear-gradient(170deg, #C86DD7 0%, #3023AE 100%);
+
+        .gr-1 {
+            background: $gr-1;
+        }
+
+        .gr-2 {
+            background: $gr-2;
+        }
+
+        .gr-3 {
+            background: $gr-3;
+        }
+
+        * {
+            transition: .5s;
+        }
+
+        .h-100 {
+            height: 100vh !important;
+        }
+
+        .align-middle {
+            position: relative;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .column {
+            margin-top: 3rem;
+            padding-left: 3rem;
+
+            &:hover {
+                padding-left: 0;
+
+                .card .txt {
+                    margin-left: 1rem;
+
+                    h1,
+                    p {
+                        color: rgba(255, 255, 255, 1);
+                        opacity: 1;
+                    }
+                }
+
+                a {
+                    color: rgba(255, 255, 255, 1);
+
+                    &:after {
+                        width: 10%;
+                    }
+                }
+            }
+        }
+
+        .card {
+            min-height: 170px;
+            margin: 0;
+            padding: 1.7rem 1.2rem;
+            border: none;
+            border-radius: 0;
+            color: rgba(0, 0, 0, 1);
+            letter-spacing: .05rem;
+            font-family: 'Oswald', sans-serif;
+            box-shadow: 0 0 21px rgba(0, 0, 0, .27);
+
+            .txt {
+                margin-left: -3rem;
+                z-index: 1;
+
+                h1 {
+                    font-size: 1.5rem;
+                    font-weight: 300;
+                    text-transform: uppercase;
+                }
+
+                p {
+                    font-size: .7rem;
+                    font-family: 'Open Sans', sans-serif;
+                    letter-spacing: 0rem;
+                    margin-top: 33px;
+                    opacity: 0;
+                    color: rgba(255, 255, 255, 1);
+                }
+            }
+
+            a {
+                z-index: 3;
+                font-size: .7rem;
+                color: rgba(0, 0, 0, 1);
+                margin-left: 1rem;
+                position: relative;
+                bottom: -.5rem;
+                text-transform: uppercase;
+
+                &:after {
+                    content: "";
+                    display: inline-block;
+                    height: 0.5em;
+                    width: 0;
+                    margin-right: -100%;
+                    margin-left: 10px;
+                    border-top: 1px solid rgba(255, 255, 255, 1);
+                    transition: .5s;
+                }
+            }
+
+            .ico-card {
+                position: absolute;
+                top: 0;
+                left: 0;
+                bottom: 0;
+                right: 0;
+                width: 100%;
+                height: 100%;
+                overflow: hidden;
+            }
+
+            i {
+                position: relative;
+                right: -50%;
+                top: 60%;
+                font-size: 12rem;
+                line-height: 0;
+                opacity: .2;
+                color: rgba(255, 255, 255, 1);
+                z-index: 0;
+            }
+        }
+    </style>
 </head>
 
 <body>
+    @stack('scripts')
     <!-- <header class="header"> -->
     {{-- <nav class="navbar bg-dark border-bottom border-body navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
         <div class="container">
             <a href="#" style="font-family: Cascadia Code; font-weight: 1000;" class="logo">
-                @{{ Artisan<span>.</span><span>Compass</span > }}</a>
+                @{{ Artisan < span > . < /span><span>Compass</span > }}</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -68,209 +211,129 @@
             <!-- </div> -->
         </div>
     </nav> --}}
-    <x-user.header/>
-   
-    <div class="hero">
-        <div class="container">
-            <div class="hero-content" data-aos="zoom-in" data-aos-duration="1000">
-                <div class="hero-text">
-                    <h1 class="main-title text-light">Join & Learn Website Programming with Us!</h1>
-                    <p class="sub-title">Temukan Roadmap Pemrograman dan sumber belajar yang komprehensif untuk
-                        memulai karier sebagai Web Developer.</p>
-                    <a href="#course" class="btn-main"><i data-feather="mail"></i><span data-key="t-email">Mulai Belajar
-                            Sekarang</span></a>
-                </div>
-                <div class="hero-image">
-                    <img src="{{ asset('assets/images/testingcopy.png') }}" alt="Gambar Hero">
-                    <!-- Ganti dengan URL gambar sesuai kebutuhan -->
-                </div>
-            </div>
-        </div>
-    </div>
+    <x-user.header />
+
+
     <!-- </header> -->
 
     <!-- Konten lainnya di sini -->
     <!-- content -->
-    <section class="container mt-3" id="course">
-        <h2 class="mb-4">Pilihan Kursus</h2>
-        <div class="row">
-            <div class="col-md-3 mb-4">
-                <div class="card bg-dark text-white">
-                    <img src="css.png" class="card-img-top" alt="CSS">
-                    <div class="card-body">
-                        <h5 class="card-title">CSS</h5>
-                        <p class="card-text">Kuasai CSS untuk mendesain tampilan halaman web dengan kreatif.</p>
-                        <a href="#" class="btn btn-primary">Pilih Kursus</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3 mb-4">
-                <div class="card bg-dark text-white">
-                    <img src="css.png" class="card-img-top" alt="CSS">
-                    <div class="card-body">
-                        <h5 class="card-title">CSS</h5>
-                        <p class="card-text">Kuasai CSS untuk mendesain tampilan halaman web dengan kreatif.</p>
-                        <a href="#" class="btn btn-primary">Pilih Kursus</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3 mb-4">
-                <div class="card bg-dark text-white">
-                    <img src="css.png" class="card-img-top" alt="CSS">
-                    <div class="card-body">
-                        <h5 class="card-title">CSS</h5>
-                        <p class="card-text">Kuasai CSS untuk mendesain tampilan halaman web dengan kreatif.</p>
-                        <a href="#" class="btn btn-primary">Pilih Kursus</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3 mb-4">
-                <div class="card bg-dark text-white">
-                    <img src="css.png" class="card-img-top" alt="CSS">
-                    <div class="card-body">
-                        <h5 class="card-title">CSS</h5>
-                        <p class="card-text">Kuasai CSS untuk mendesain tampilan halaman web dengan kreatif.</p>
-                        <a href="#" class="btn btn-primary">Pilih Kursus</a>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </section>
-
-    <section>
+    <div class="container mt-3 mb-5">
+        {{ $slot }}
+    </div>
+    <div class="wave py-3" data-aos="zoom-in" data-aos-duration="1000" style="background-color: #29b6f6">
+        <hr class="navbar bg-dark">
+    </div>
+    <section class=" mt-5 mb-5 ">
         <header>
-            <div class="container">
-                <h1 class="text-center">Can I use...this service?</h1>
+            <div class="container" id="about" data-aos="zoom-in" data-aos-duration="1000">
+                <div class="row">
+                    <h1 class="text-center text-light mb-4">About</h1>
+                    <h3 class="text-center mb-0"><a href="#"
+                            style="font-family: Cascadia Code; font-weight: 1000;" class="logo text-light">
+                            @{{ Artisan <span>.</span><span style="color: #29b6f6;">Compass</span> }}</a></h3>
+                    <p class="text-justify text-center mt-0">Selamat datang di Artisan.Compass - Rumah bagi para calon
+                        developer web masa depan!</p>
+                    <div class="col-md-6">
+
+                        <h2 class="mt-4">Siapa Kami</h2>
+                        <p class="text-justify">Artisan Compass adalah platform komprehensif yang dirancang untuk
+                            memberikan roadmap pemrograman yang jelas dan terstruktur bagi para pemrogram, baik pemula
+                            maupun yang berpengalaman. Misi kami adalah memberdayakan para pengembang dengan membimbing
+                            mereka melalui perjalanan pemrograman mereka, membantu mereka memperoleh keterampilan dan
+                            pengetahuan yang diperlukan untuk sukses di industri teknologi yang terus berkembang.</p>
+
+
+                        <p class="text-justify mt-5">Di Artisan Compass, kami membayangkan dunia di mana setiap
+                            pemrogram
+                            memiliki akses ke jalur pembelajaran yang terdefinisi dengan baik, memungkinkan mereka untuk
+                            membangun keahlian mereka dengan cara yang sesuai dengan tujuan mereka. Kami percaya pada
+                            kekuatan belajar melalui praktik dan bertujuan untuk mendukung para pengembang di setiap
+                            langkah perjalanan mereka, baik yang baru memulai maupun yang ingin memperdalam pengetahuan
+                            di bidang spesifik.</p>
+                        <p class="text-justify mt-5">Kami menyediakan roadmap untuk membantu Anda memahami jalur
+                            pembelajaran terbaik untuk bahasa pemrograman atau teknologi tertentu. Baik Anda seorang
+                            pemula atau pemrogram berpengalaman, panduan terperinci kami mencakup semua yang Anda
+                            butuhkan, dari dasar-dasar hingga konsep lanjutan.</p>
+
+
+                    </div>
+                    <div class="col-md-6 d-flex justify-content-center align-items-center mt-0">
+                        <img src="{{ asset('assets/images/artisan.compas.png') }}" style="height: 650px;width: 650px"
+                            alt="">
+                        <!-- Di sini Anda bisa menambahkan gambar yang cocok -->
+                        <!-- Contoh: <img src="path/to/about-us-image.jpg" alt="Tim Artisan.Compass" class="img-fluid rounded shadow"> -->
+                    </div>
+                </div>
+
+
             </div>
         </header>
-        <div class="container">
-            <h2 class="page-header">Step 1: Where is the data?</h2>
-            <div class="row">
-                <div class="col-xs-12">
-                    <p class="lead text-center bg-info btn text-info center-block">Is the data in the system?</p>
-                    <div class="row">
-                        <div class="col-xs-6 text-center">
-                            <p class="btn"><span class="glyphicon glyphicon-arrow-down"></span>
-                        </div>
-                        <div class="col-xs-6 text-center">
-                            <p class="btn">
-                                <span class="glyphicon glyphicon-arrow-down"></span>
-                            </p>
-                        </div>
-                    </div>
 
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-xs-6 text-center">
-                    <p class="center-block"><span class="btn btn-success btn-lg">Yes</span></p>
-                    <p class="btn center-block"><span class="glyphicon glyphicon-arrow-down"></span></p>
-
-                    <p class="bg-success text-success btn">Okay! Proceed to step 2.</p>
-                </div>
-                <div class="col-xs-6 text-center">
-                    <p class="center-block"><span class="btn btn-danger btn-lg">No</span></p>
-                    <p class="btn center-block"><span class="glyphicon glyphicon-arrow-down"></span></p>
-                    <p class="bg-info text-info btn">Are you willing to put the data into the system?</p>
-                    <div class="row">
-                        <div class="col-xs-6 text-center">
-                            <p class="btn"><span class="glyphicon glyphicon-arrow-down"></span>
-                        </div>
-                        <div class="col-xs-6 text-center">
-                            <p class="btn">
-                                <span class="glyphicon glyphicon-arrow-down"></span>
-                            </p>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-xs-6">
-                            <p class="center-block"><span class="btn btn-success btn-lg">Yes</span></p>
-                            <p class="btn">
-                                <span class="glyphicon glyphicon-arrow-down"></span>
-                            </p>
-                            <p class="bg-success text-success btn text-wrap">Okay! After the data is in the system,
-                                proceed to step 2.</p>
-
-                        </div>
-                        <div class="col-xs-6 text-center">
-                            <p class="center-block"><span class="btn btn-danger btn-lg">No</span></p>
-                            <p class="btn center-block"><span class="glyphicon glyphicon-arrow-down"></span></p>
-                            <p class="btn bg-danger text-danger text-wrap">The data must be in the system to use this
-                                service.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <div class="bg-dark border-bottom border-body navbar-expand-lg bg-body-tertiary py-3" data-bs-theme="dark"
+            data-aos="zoom-in" data-aos-duration="1000">
+            <hr class="py-1" style="background-color: rgb(255, 255, 255)">
         </div>
-        <div class="container">
-            <h2 class="page-header">Step 2: What type of email is it?</h2>
+
+
+        <hr data-aos="zoom-in" data-aos-duration="1000">
+        <div class="container mt-5 mb-3" data-aos="zoom-in" data-aos-duration="1000">
+
             <div class="row">
-                <div class="col-xs-12">
-                    <p class="lead text-center bg-info btn text-info center-block">What type of email do you want to
-                        send?</p>
-                    <div class="row">
-                        <div class="col-xs-6 text-center">
-                            <p class="btn"><span class="glyphicon glyphicon-arrow-down"></span>
-                        </div>
-                        <div class="col-xs-6 text-center">
-                            <p class="btn">
-                                <span class="glyphicon glyphicon-arrow-down"></span>
-                            </p>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-xs-6 text-center">
-                            <p class="center-block"><span class="btn btn-warning btn-lg">Newsletter</span></p>
-                            <p class="btn center-block"><span class="glyphicon glyphicon-arrow-down"></span></p>
-                            <p class="center-block bg-info text-info btn">Is it directly related to fundraising?</p>
-                            <div class="row">
-                                <div class="col-xs-6 text-center">
-                                    <p class="btn"><span class="glyphicon glyphicon-arrow-down"></span>
-                                </div>
-                                <div class="col-xs-6 text-center">
-                                    <p class="btn">
-                                        <span class="glyphicon glyphicon-arrow-down"></span>
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-xs-6">
-                                    <p class="center-block"><span class="btn btn-success btn-lg">Yes</span></p>
-                                    <p class="btn">
-                                        <span class="glyphicon glyphicon-arrow-down"></span>
-                                    </p>
-                                    <p class="bg-success text-success btn text-wrap">Okay! You can proceed to step 3.
-                                    </p>
 
-                                </div>
-                                <div class="col-xs-6 text-center">
-                                    <p class="center-block"><span class="btn btn-danger btn-lg">No</span></p>
-                                    <p class="btn center-block"><span class="glyphicon glyphicon-arrow-down"></span>
-                                    </p>
-                                    <p class="btn bg-danger text-danger text-wrap">Content must be directly related to
-                                        fundraising to use this service.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xs-6 text-center">
-                            <p class="center-block"><span class="btn btn-success btn-lg">Solicitation</span></p>
-                            <p class="btn center-block"><span class="glyphicon glyphicon-arrow-down"></span></p>
-
-                            <p class="bg-success text-success btn">Okay! Proceed to step 3.</p>
-                        </div>
+                <!-- Logo dan Tentang Singkat -->
+                <div class="col-md-4 mb-4">
+                    <h5 class="text-white">@{{ Artisan.Compass }}</h5>
+                    <p class="text-light small">Platform belajar pemrograman web terlengkap dengan roadmap yang
+                        terstruktur untuk membantu Anda memulai karier sebagai developer.</p>
+                    <div class="social-icons mt-3">
+                        <a href="#" class="text-light me-3"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-light me-3"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-light me-3"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-light me-3"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="text-light me-3"><i class="fab fa-github"></i></a>
                     </div>
+                </div>
+
+                <!-- Link-link Penting -->
+                <div class="col-md-2 mb-4">
 
                 </div>
+
+                <!-- Kategori Pembelajaran -->
+                <div class="col-md-2 mb-4">
+
+                </div>
+
+                <!-- Kontak dan Newsletter -->
+                <div class="col-md-4 mb-4">
+                    <h5 class="text-white">Newsletter</h5>
+                    <p class="text-light small">Dapatkan update materi dan tips pemrograman terbaru dari kami.</p>
+
+                    <p class="text-light small mt-3">
+                        <i class="fas fa-envelope me-2"></i> info@artisancompass.id<br>
+                        <i class="fas fa-phone me-2"></i> +62 812 3456 7890
+                    </p>
+                </div>
             </div>
+
+            <hr class="border-secondary">
+
+            <!-- Copyright -->
+            <div class="row">
+                <div class="col-md-6">
+                    <p class="text-light small mb-0">&copy; 2025 Artisan.Compass. All Rights Reserved.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <a href="#" class="text-light text-decoration-none small me-3">Privacy Policy</a>
+                    <a href="#" class="text-light text-decoration-none small me-3">Terms of Service</a>
+                    <a href="#" class="text-light text-decoration-none small">Sitemap</a>
+                </div>
+            </div>
+
+
         </div>
-        <footer>
-            <div class="container">
-                <hr>
-                <p>Footer information here. For more questions please call the person that you know to call with your
-                    questions. </p>
-            </div>
-        </footer>
+
     </section>
 
     <script src="{{ asset('assets/libs/jquery/jquery.min.js') }}"></script>
@@ -281,7 +344,6 @@
 
 
     <script src="{{ asset('assets/js/app.js') }}"></script>
-
 
 
 

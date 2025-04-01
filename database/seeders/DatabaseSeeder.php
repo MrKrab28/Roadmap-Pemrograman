@@ -25,5 +25,7 @@ class DatabaseSeeder extends Seeder
             'email' => 'user@mail',
             'password' => bcrypt('123'),
         ]);
+
+        $this->call(CategorySeeder::class);
     }
 }

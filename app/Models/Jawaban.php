@@ -17,5 +17,8 @@ class Jawaban extends Model
         'opsi',
         'quis_id',
     ];
-    
+    public function quis()
+    {
+        return $this->belongsTo(Quis::class, 'quis_id');
+    }
 }
