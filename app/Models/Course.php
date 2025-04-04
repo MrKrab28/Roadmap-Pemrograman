@@ -12,9 +12,9 @@ class Course extends Model
     protected $table = 'course';
 
     protected $fillable = [
+        'category_id',
         'judul',
         'gambar',
-        'category_id',
     ];
 
     /**

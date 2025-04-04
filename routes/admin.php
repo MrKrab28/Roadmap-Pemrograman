@@ -9,6 +9,7 @@ use App\Http\Controllers\Admin\MateriController;
 use App\Http\Controllers\Admin\JawabanController;
 use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Admin\DashboardController;
+use App\Http\Controllers\Admin\RoadmapController;
 
 // Route::get('/', function () {
 //     return view('components.admin.layout');
@@ -59,13 +60,17 @@ Route::middleware('auth:admin')->group(function () {
     Route::put('materi/quizz/update/{quis}', [QuisController::class, 'update'])->name('admin.quis-update');
     Route::delete('materi/quizz/delete/{quis}', [QuisController::class, 'destroy'])->name('admin.quis-delete');
 
-
+// JAWABAN
     Route::get('jawaban', [JawabanController::class, 'index'])->name('admin.jawaban-index');
     Route::post('jawaban/add', [JawabanController::class, 'store'])->name('admin.jawaban-store');
     Route::get('jawaban/edit/{jawaban}', [JawabanController::class, 'edit'])->name('admin.jawaban-edit');
     Route::put('jawaban/update/{jawaban}', [JawabanController::class, 'update'])->name('admin.jawaban-update');
     Route::delete('jawaban/delete/{jawaban}', [JawabanController::class, 'destroy'])->name('admin.jawaban-delete');
 
+    // ROADMAP
+    Route::get('roadmap/category', [RoadmapController::class, 'category' ])->name('admin.roadmap-category');
+    Route::get('roadmap/course', [RoadmapController::class, 'course' ])->name('admin.roadmap-course');
+    Route::get('roadmap/modul', [RoadmapController::class, 'modul' ])->name('admin.roadmap-modul');
 });
 
 
