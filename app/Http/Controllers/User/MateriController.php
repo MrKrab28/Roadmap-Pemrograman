@@ -17,13 +17,14 @@ class MateriController extends Controller
     }
 
     public function detail(Materi $materi)
-    {
+    {    $course = $materi->course;
         $prev = Materi::where('urutan', '<', $materi->urutan)->orderBy('urutan', 'desc')->first();
         $next= Materi::where('urutan', '>', $materi->urutan)->orderBy('urutan', 'asc')->first();
         return view('pages.user.materi-detail', [
             'materi' => $materi,
             'prev' => $prev,
-            'next' => $next
+            'next' => $next,
+            'course' => $course
 
         ]);
     }

@@ -86,7 +86,7 @@
                 <div class="row">
                     <div class="col-sm-6">
                         @if ($quis)
-                            <p>{{ $quis->pertanyaan }}</p>
+                            <h3>{{ $quis->pertanyaan }}</h3>
                             <div class="position-absolute bottom-0 end-0">
                                 <form action="{{ route('admin.quis-delete', $quis->id) }}" method="POST">
                                     @csrf

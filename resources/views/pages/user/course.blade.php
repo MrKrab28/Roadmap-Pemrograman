@@ -3,7 +3,7 @@
         <h2 class="mb-4 text-light text-center">Courses</h2>
 
         <div class="row mb-5">
-            @foreach ($courses as $course)
+            {{-- @foreach ($courses as $course)
                 <div class="col-md-6 col-lg-3 column">
                     @if (session('materi_selesai_' . $course->materi->last()->id))
                         <div class="card gr-1" style="background-color: #29b6f6">
@@ -38,6 +38,60 @@
                             </div>
                         </div>
                     @endif
+                </div>
+            @endforeach --}}
+            @foreach ($courses as $course)
+                @php
+
+                    $isCompleted = \App\Models\CourseCompletion::where('user_id', auth()->id())
+                        ->where('course_id', $course->id)
+                        ->where('selesai', true)
+                        ->exists();
+                @endphp
+
+                <div class="col-md-6 col-lg-3 column">
+                    @if ($isCompleted)
+                        <div class="card gr-1" style="background-color: #29b6f6">
+                            <div class="txt">
+                                <h1 style="word-wrap: break-word">{{ $course->judul }}</h1>
+                                <p>{{ Str::of($course->content)->stripTags()->limit(50) }}</p>
+                            </div>
+                            <h5>{{ $course->category->nama }}</h5>
+                            <a href="{{ route('user.course-detail', $course->id) }}">Read more</a>
+
+                            <!-- Menampilkan status "Completed" jika kursus selesai -->
+
+
+                            <div class="ico-card">
+                                <div class="d-flex align-items-center justify-content-end">
+                                    <i class="fa-solid fa-check"></i>
+                                    <img src="{{ asset('images/courses/' . $course->gambar) }}"
+                                        style="height: 200px;width: 200px;" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    @else
+                        <div class="card gr-1">
+                            <div class="txt">
+                                <h1 style="word-wrap: break-word">{{ $course->judul }}</h1>
+                                <p>{{ Str::of($course->content)->stripTags()->limit(50) }}</p>
+                            </div>
+                            <h5>{{ $course->category->nama }}</h5>
+                            <a href="{{ route('user.course-detail', $course->id) }}">Read more</a>
+
+                            <!-- Menampilkan status "Completed" jika kursus selesai -->
+
+
+                            <div class="ico-card">
+
+                                <div class="d-flex align-items-center justify-content-end">
+                                    <img src="{{ asset('images/courses/' . $course->gambar) }}"
+                                        style="height: 200px;width: 200px;" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    @endif
+
                 </div>
             @endforeach
         </div>

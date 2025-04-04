@@ -38,7 +38,7 @@
                                 <div class="mb-4 mb-md-5 text-center">
                                     <img src="{{ asset('assets/images/login-logo.png') }}" alt=""
                                         height="100">
-                                    <a href="index.html" class="d-block auth-logo">
+                                    <a href="#" class="d-block auth-logo">
 
 
 
@@ -145,7 +145,8 @@
                                         <div class="carousel-inner">
                                             <div class="carousel-item active">
                                                 <div class="testi-contain text-center text-white">
-                                                    <i class="bx bxs-quote-alt-left text-success display-6"></i>
+                                                    <i class="bx bxs-quote-alt-left text-success display-6"><img src="{{ asset('assets/images/ARTISAN.COMPASS(1).png') }}"
+                                                        class="avatar-md img-fluid rounded-circle d-block" alt="..."></i>
                                                     <h4 class="mt-4 fw-medium lh-base text-white">“I feel confident
                                                         imposing change
                                                         on myself. It's a lot more progressing fun than looking back.
