@@ -11,10 +11,15 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('roadmap', function (Blueprint $table) {
-            $table->id();
-            $table->foreignId('category_id')->constrained('category')->onUpdate('cascade')->onDelete('cascade');
+        Schema::create('nodes', function (Blueprint $table) {
+
             $table->timestamps();
+            $table->foreignId('roadmap_id');
+
+            $table->string('kode')->primary();
+            $table->string('label');
+
+            $table->foreign('roadmap_id')->references('id')->on('roadmap')->onUpdate('cascade')->onDelete('cascade');
         });
     }
 
@@ -23,6 +28,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('roadmap');
+        Schema::dropIfExists('nodes');
     }
 };

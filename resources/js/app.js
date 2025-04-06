@@ -11,3 +11,4 @@ mermaid.initialize({
 });
 
 window.mermaid = mermaid;
+

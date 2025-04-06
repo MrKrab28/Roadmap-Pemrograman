@@ -55,26 +55,13 @@ return [
         'items' =>
         [
             [
-                'route-active' => 'category',
-                'label' => 'Category',
+                'route-active' => 'roadmap',
+                'label' => 'Roadmap',
                 'icon' => 'share-2',
-                'route-name' => 'admin.roadmap-category',
+                'route-name' => 'admin.roadmap-index',
                 'admin-only' => false,
             ],
-            [
-                'route-active' => 'course',
-                'label' => 'Course',
-                'icon' => 'share-2',
-                'route-name' => 'admin.roadmap-course',
-                'admin-only' => false,
-            ],
-            [
-                'route-active' => 'modul',
-                'label' => 'Modul',
-                'icon' => 'share-2',
-                'route-name' => 'admin.roadmap-modul',
-                'admin-only' => false,
-            ],
+
         ]
     ]
 

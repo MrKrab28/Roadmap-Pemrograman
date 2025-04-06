@@ -2,14 +2,16 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\Admin\NodeController;
 use App\Http\Controllers\Admin\QuisController;
 use App\Http\Controllers\Admin\UserController;
 use App\Http\Controllers\Admin\CourseController;
 use App\Http\Controllers\Admin\MateriController;
 use App\Http\Controllers\Admin\JawabanController;
+use App\Http\Controllers\Admin\RoadmapController;
 use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Admin\DashboardController;
-use App\Http\Controllers\Admin\RoadmapController;
+use App\Http\Livewire\RoadmapBuild;
 
 // Route::get('/', function () {
 //     return view('components.admin.layout');
@@ -68,9 +70,19 @@ Route::middleware('auth:admin')->group(function () {
     Route::delete('jawaban/delete/{jawaban}', [JawabanController::class, 'destroy'])->name('admin.jawaban-delete');
 
     // ROADMAP
-    Route::get('roadmap/category', [RoadmapController::class, 'category' ])->name('admin.roadmap-category');
-    Route::get('roadmap/course', [RoadmapController::class, 'course' ])->name('admin.roadmap-course');
-    Route::get('roadmap/modul', [RoadmapController::class, 'modul' ])->name('admin.roadmap-modul');
+  Route::get('roadmap', [RoadmapController::class, 'index'])->name('admin.roadmap-index');
+  Route::post('roadmap/add', [RoadmapController::class, 'store'])->name('admin.roadmap-store');
+  Route::get('roadmap/build/{roadmap}', [RoadmapController::class, 'build'])->name('admin.roadmap-build');
+
+  Route::post('roadmap/nodes/add', [RoadmapController::class, 'nodeStore'])->name('admin.node-store');
+  Route::delete('roadmap/nodes/delete/{node}', [RoadmapController::class, 'nodeDelete'])->name('admin.node-delete');
+
+  Route::post('roadmap/konek/add', [RoadmapController::class, 'konekStore'])->name('admin.konek-store');
+  Route::delete('roadmap/konek/delete/{konek}', [RoadmapController::class, 'konekDelete'])->name('admin.konek-delete');
+
+
+
+
 });
 
 

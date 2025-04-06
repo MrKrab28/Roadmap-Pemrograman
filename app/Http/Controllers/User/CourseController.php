@@ -28,19 +28,16 @@ class CourseController extends Controller
 
     public function completeCourse($course_id)
     {
-        $user_id = Auth::user()->id;  // Mendapatkan ID pengguna yang sedang login
+        $user_id = Auth::user()->id;
 
-        // Cek apakah user sudah memiliki record untuk course tersebut
         $courseCompletion = CourseCompletion::where('user_id', $user_id)
             ->where('course_id', $course_id)
             ->first();
 
         if ($courseCompletion) {
-            // Jika sudah ada, update status selesai menjadi true
             $courseCompletion->selesai = true;
             $courseCompletion->save();
         } else {
-            // Jika belum ada, buat entri baru
             CourseCompletion::create([
                 'user_id' => $user_id,
                 'course_id' => $course_id,
@@ -48,7 +45,6 @@ class CourseController extends Controller
             ]);
         }
 
-        // Redirect kembali ke halaman kursus
         return redirect()->route('user.course-index')->with('status', 'benar');
     }
 

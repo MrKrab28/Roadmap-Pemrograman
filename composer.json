@@ -9,6 +9,7 @@
         "icehouse-ventures/laravel-mermaid": "^1.4",
         "laravel/framework": "^11.9",
         "laravel/tinker": "^2.9",
+        "livewire/livewire": "^3.6",
         "tonysm/rich-text-laravel": "^3.3"
     },
     "require-dev": {

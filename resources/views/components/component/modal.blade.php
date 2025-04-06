@@ -1,7 +1,7 @@
 @props(['id', 'title', 'size' => null])
 
 <div class="modal fade bs-example-modal-{{ $size }}" tabindex="-1" role="dialog"
-    aria-labelledby="myExtraLargeModalLabel" aria-hidden="true">
+    aria-labelledby="myExtraLargeModalLabel" aria-hidden="true" id="{{ $id }}">
     <div class="modal-dialog modal-{{ $size }}">
         <div class="modal-content">
             <div class="modal-header">
