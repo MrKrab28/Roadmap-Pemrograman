@@ -12,6 +12,7 @@ use App\Http\Controllers\Admin\RoadmapController;
 use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Livewire\RoadmapBuild;
+use App\http\Livewire\Roadmap;
 
 // Route::get('/', function () {
 //     return view('components.admin.layout');
@@ -81,7 +82,7 @@ Route::middleware('auth:admin')->group(function () {
   Route::delete('roadmap/konek/delete/{konek}', [RoadmapController::class, 'konekDelete'])->name('admin.konek-delete');
 
 
-
+//   Route::get('admin/roadmap/{roadmapId}', Roadmap::class)->name('admin.roadmap');
 
 });
 

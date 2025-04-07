@@ -1,39 +1,31 @@
+@script
+    <script type="module">
+        document.addEventListener('DOMContentLoaded', () => {
+            renderDiagram($wire.mermaidData);
+            // renderDiagram(@json($mermaidData));
+        })
+
+        $wire.on('mermaidUpdated', () => {
+            renderDiagram($wire.mermaidData);
+        })
+
+        const renderDiagram = async (isinya) => {
+            const {
+                svg
+            } = await mermaid.render("diagram", isinya);
+
+
+            document.getElementById("roadmapnya").innerHTML = svg;
+        }
+    </script>
+@endscript
+
 <div>
-    <div wire:ignore class="mermaid-container">
-        <div class="mermaid">
-            {!! $mermaidData !!}
+    <div class="card">
+        <div class="card-body">
+            <div>
+                <div id="roadmapnya"></div>
+            </div>
         </div>
     </div>
-
-    <script>
-        document.addEventListener('livewire:initialized', () => {
-            // Fungsi untuk me-render diagram Mermaid
-            function renderMermaid() {
-                if (typeof mermaid !== 'undefined') {
-                    try {
-                        // Reset diagram sebelum merender ulang
-                        document.querySelectorAll('.mermaid').forEach(el => {
-                            if (el.hasAttribute('data-processed')) {
-                                el.removeAttribute('data-processed');
-                            }
-                        });
-
-                        // Re-initialize
-                        mermaid.init(undefined, document.querySelectorAll('.mermaid'));
-                    } catch (e) {
-                        console.error('Error rendering Mermaid:', e);
-                    }
-                }
-            }
-
-            // Render awal
-            renderMermaid();
-
-            // Render ulang saat ada perubahan data
-            @this.on('$refresh', () => {
-                // Sedikit penundaan untuk memastikan DOM sudah diperbarui
-                setTimeout(renderMermaid, 50);
-            });
-        });
-    </script>
 </div>

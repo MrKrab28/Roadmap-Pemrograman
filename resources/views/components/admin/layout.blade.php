@@ -127,8 +127,8 @@
         <script src="{{ asset('assets/js/pages/dashboard.init.js') }}"></script>
 
         <script src="{{ asset('assets/js/app.js') }}"></script>
-        <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
-        <script src="{{ asset('js/mermaid-helper.js') }}"></script>
+        {{-- <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script> --}}
+        {{-- <script src="{{ asset('js/mermaid-helper.js') }}"></script> --}}
         @stack('scripts')
 
         @if (Session::has('success'))

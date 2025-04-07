@@ -18,4 +18,13 @@ class Roadmap extends Model
     {
         return $this->belongsTo(Category::class);
     }
+    public function nodes()
+    {
+        return $this->hasMany(Node::class);
+    }
+
+    public function connections()
+    {
+        return $this->hasMany(RoadmapConnection::class);
+    }
 }

@@ -15,12 +15,10 @@
     <link href="{{ asset('assets/css/app.min.css') }}" id="app-style" rel="stylesheet" type="text/css" />
     <link href="{{ asset('assets/css/bootstrap.min.css') }}" id="bootstrap-style" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-    @vite(['resources/css/app.css' , 'resources/js/app.js'])
     <link rel="stylesheet" href="{{ asset('assets/libs/sweetalert2/sweetalert2.min.css') }}">
     <script src="{{ asset('assets/libs/sweetalert2/sweetalert2.all.min.js') }}"></script>
 
     @stack('style')
-    @stack('script')
     <link href="{{ asset('assets/css/icons.min.css') }}" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" href="{{ asset('assets/css/user.css') }}">
     <style>
@@ -44,7 +42,7 @@
             background: $gr-3;
         }
 
-        * {
+        .gr-1 * {
             transition: .5s;
         }
 
@@ -163,7 +161,6 @@
 </head>
 
 <body>
-    @stack('scripts')
     <!-- <header class="header"> -->
     {{-- <nav class="navbar bg-dark border-bottom border-body navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
         <div class="container">
@@ -231,7 +228,7 @@
                     <h1 class="text-center text-light mb-4">About</h1>
                     <h3 class="text-center mb-0"><a href="#"
                             style="font-family: Cascadia Code; font-weight: 1000;" class="logo text-light">
-                            @{{ Artisan <span>.</span><span style="color: #29b6f6;">Compass</span> }}</a></h3>
+                            @{{ Artisan < span > . < /span><span style="color: #29b6f6;">Compass</span > }}</a></h3>
                     <p class="text-justify text-center mt-0">Selamat datang di Artisan.Compass - Rumah bagi para calon
                         developer web masa depan!</p>
                     <div class="col-md-6">
@@ -347,6 +344,8 @@
 
 
 
+    @vite('resources/js/app.js')
+    @stack('scripts')
 
     {{-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script> --}}
     <script src="{{ asset('assets/libs/bootstrap/js/bootstrap.bundle.min.js') }}"></script>

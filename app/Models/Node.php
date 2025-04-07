@@ -17,4 +17,6 @@ class Node extends Model
         'roadmap_id'
     ];
     public $incrementing = false;
+
+    
 }
