@@ -1,5 +1,11 @@
 <div class="vertical-menu">
-
+    <ul class="bg-bubbles">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        
+    </ul>
     <div data-simplebar class="h-100">
 
         <!--- Sidemenu -->

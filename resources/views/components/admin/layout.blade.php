@@ -83,7 +83,7 @@
                             <div class="col-sm-6">
                                 <div class="text-sm-end d-none d-sm-block">
                                     <a href="#" style="font-family: Cascadia Code; font-weight: 1000;">
-                                        @{{ Artisan < span > . < /span><span>Compass</span > }}</a>
+                                        @{{ Artisan<span>.</span><span>Compass</span> }}</a>
                                 </div>
                             </div>
                         </div>

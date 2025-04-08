@@ -16,7 +16,7 @@
 @endpush
 <x-user.layout>
     <div class="row justify-content-center mt-5 mb-5">
-        <div class="col-md-4">
+        {{-- <div class="col-md-4"> --}}
             @foreach ($courses as $course)
                 {{-- @php
 
@@ -25,7 +25,7 @@
                         ->where('selesai', true)
                         ->exists();
                 @endphp --}}
-                <div class="col-md-12 column">
+                <div class="col-md-3 column mb-5">
                     @if ($course->is_completed)
                         <div class="card gr-1" style="background-color: #29b6f6">
                             <div class="txt">
@@ -65,18 +65,20 @@
                     @endif
                 </div>
             @endforeach
-        </div>
+        {{-- </div> --}}
 
         <div class="col-md-6 px-5">
             {{-- <div class="card"> --}}
             {{-- <div class="card-body text-light"> --}}
                 <h1 class="card-title text-center text-light fs-1">Roadmap</h1>
                 <h1 class="card-title text-center text-light fs-3">{{ $category->nama }}</h1>
-                <div id="roadmapnya" class="w-100 h-100"></div>
 
-            {{-- </div> --}}
-            {{-- </div> --}}
+                {{-- </div> --}}
+                {{-- </div> --}}
+            </div>
         </div>
-    </div>
 
+        <div id="roadmapnya" class="w-100 h-100">
+            %%{init: {"themeVariables": {"graphWidth": "1200", "graphHeight": "800"}}}%%
+        </div>
 </x-user.layout>

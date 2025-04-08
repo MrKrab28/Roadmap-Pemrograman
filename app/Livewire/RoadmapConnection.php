@@ -53,6 +53,7 @@ class RoadmapConnection extends Component
         $this->loadConnections();
 
         // Emit event to parent component
+        $this->loadNodes();
         $this->dispatch('connectionUpdated');
     }
     public function deleteConnection($connectionId)
@@ -72,6 +73,7 @@ class RoadmapConnection extends Component
 
             // Emit events to refresh the UI
             $this->dispatch('connectionUpdated');
+            $this->loadNodes();
         } else {
             // Handle case when connection doesn't exist
             session()->flash('error', 'Connection not found.');

@@ -38,7 +38,7 @@
                                 <div class="mb-4 mb-md-5 text-center">
                                     <img src="{{ asset('assets/images/login-logo.png') }}" alt=""
                                         height="100">
-                                    <a href="#" class="d-block auth-logo">
+                                    <a href="index.html" class="d-block auth-logo">
 
 
 
@@ -50,16 +50,17 @@
                                 <div class="auth-content my-auto">
                                     <div class="text-center">
                                         <h5 class="mb-0">Login Page</h5>
-                                        <p class="text-muted mt-2">Sign in to continue</p>
+                                        <p class="text-muted mt-2">Sign In to continue</p>
                                     </div>
                                     <form class="mt-4 pt-2" action="{{ route('authenticate') }}" method="POST">
                                         @csrf
+
                                         <div class="form-floating form-floating-custom mb-4">
                                             <input type="text" class="form-control" name="email" id="input-email"
                                                 placeholder="Enter your email">
                                             <label for="input-email">email</label>
                                             <div class="form-floating-icon">
-                                                <i data-feather="users"></i>
+                                                <i data-feather="mail"></i>
                                             </div>
                                         </div>
 
@@ -81,17 +82,17 @@
 
                                         <div class="mb-3">
                                             <button class="btn btn-primary w-100 waves-effect waves-light"
-                                                type="submit">Log In</button>
+                                                type="submit">Login</button>
                                         </div>
                                     </form>
-
 
 
                                     <div class="mt-5 text-center">
                                         <p class="text-muted mb-0">Don't have an account ? <a
                                                 href="{{ route('register') }}" class="text-primary fw-semibold"> Signup
                                                 now </a> </p>
-                                    </div>
+                                        </div>
+
                                 </div>
                                 <div class="mt-4 mt-md-5 text-center">
 
@@ -104,7 +105,7 @@
                 <!-- end col -->
                 <div class="col-xxl-9 col-lg-8 col-md-7">
                     <div class="auth-bg pt-md-5 p-4 d-flex">
-                        <div class="bg-overlay"></div>
+                        {{-- <div class="bg-overlay"></div> --}}
                         <ul class="bg-bubbles">
                             <li></li>
                             <li></li>
@@ -118,7 +119,7 @@
                             <li></li>
                         </ul>
                         <!-- end bubble effect -->
-                        <div class="row justify-content-center align-items-end">
+                        {{-- <div class="row justify-content-center align-items-end">
                             <div class="col-xl-7">
                                 <div class="p-0 p-sm-4 px-xl-0">
                                     <div id="reviewcarouselIndicators" class="carousel slide" data-bs-ride="carousel">
@@ -145,7 +146,8 @@
                                         <div class="carousel-inner">
                                             <div class="carousel-item active">
                                                 <div class="testi-contain text-center text-white">
-                                                    <i class="bx bxs-quote-alt-left text-success display-6"><img src="{{ asset('assets/images/ARTISAN.COMPASS(1).png') }}"
+                                                    <i class="bx bxs-quote-alt-left text-success display-6">
+                                                        <img src="assets/images/users/avatar-2.jpg"
                                                         class="avatar-md img-fluid rounded-circle d-block" alt="..."></i>
                                                     <h4 class="mt-4 fw-medium lh-base text-white">“I feel confident
                                                         imposing change
@@ -153,7 +155,9 @@
                                                         That's why
                                                         I ultricies enim
                                                         at malesuada nibh diam on tortor neaded to throw curve balls.”
+
                                                     </h4>
+
                                                     <div class="mt-4 pt-1 pb-5 mb-5">
                                                         <h5 class="font-size-16 text-white">Richard Drews
                                                         </h5>
@@ -201,7 +205,7 @@
                                     <!-- end review carousel -->
                                 </div>
                             </div>
-                        </div>
+                        </div> --}}
                     </div>
                 </div>
                 <!-- end col -->
@@ -227,7 +231,7 @@
     <script src="assets/libs/node-waves/waves.min.js"></script>
     <script src="assets/libs/feather-icons/feather.min.js"></script>
     <!-- pace js -->
-    <script src="assets/libs/pace-js/pace.min.js"></script>
+    {{-- <script src="assets/libs/pace-js/pace.min.js"></script> --}}
 
     <script src="assets/js/pages/pass-addon.init.js"></script>
 

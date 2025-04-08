@@ -216,6 +216,7 @@
     <!-- Konten lainnya di sini -->
     <!-- content -->
     <div class="container mt-3 mb-5">
+
         {{ $slot }}
     </div>
     <div class="wave py-3" data-aos="zoom-in" data-aos-duration="1000" style="background-color: #29b6f6">
@@ -228,7 +229,7 @@
                     <h1 class="text-center text-light mb-4">About</h1>
                     <h3 class="text-center mb-0"><a href="#"
                             style="font-family: Cascadia Code; font-weight: 1000;" class="logo text-light">
-                            @{{ Artisan < span > . < /span><span style="color: #29b6f6;">Compass</span > }}</a></h3>
+                            @{{ Artisan<span>.</span><span style="color: #29b6f6;">Compass</span> }}</a></h3>
                     <p class="text-justify text-center mt-0">Selamat datang di Artisan.Compass - Rumah bagi para calon
                         developer web masa depan!</p>
                     <div class="col-md-6">

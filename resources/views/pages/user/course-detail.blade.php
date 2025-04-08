@@ -13,7 +13,7 @@
                         <div class="card-image-container"
                             style="border-radius: 20px 20px 0px 0px; height: 600px; overflow: hidden;">
                             <img src="{{ asset('images/courses/' . $course->gambar) }}" class="card-img-top "
-                                style="object-fit: cover; height: 100%;" alt="">
+                                style="object-fit:initial; height: 100%;" alt="">
                         </div>
 
 

@@ -6,7 +6,7 @@
                     <h1 class="main-title text-light">Join & Learn Website Programming with Us!</h1>
                     <p class="sub-title">Temukan Roadmap Pemrograman dan sumber belajar yang komprehensif untuk
                         memulai karier sebagai Web Developer.</p>
-                    <a href="#course" class="btn-main"><i data-feather="mail"></i><span data-key="t-email">Mulai Belajar
+                    <a href="{{ route('user.index') }}#category" class="btn-main"><i data-feather="terminal"></i><span data-key="t-email"> Mulai Belajar
                             Sekarang</span></a>
                 </div>
                 <div class="hero-image">

@@ -52,7 +52,7 @@
                                         <h5 class="mb-0">Register</h5>
                                         <p class="text-muted mt-2">Sign up to continue</p>
                                     </div>
-                                    <form class="mt-4 pt-2" action="{{ route('authenticate') }}" method="POST">
+                                    <form class="mt-4 pt-2" action="{{ route('registerUser') }}" method="POST">
                                         @csrf
                                         <div class="form-floating form-floating-custom mb-4">
                                             <input type="text" class="form-control" name="nama" id="input-nama"
@@ -122,7 +122,7 @@
                             <li></li>
                         </ul>
                         <!-- end bubble effect -->
-                        <div class="row justify-content-center align-items-end">
+                        {{-- <div class="row justify-content-center align-items-end">
                             <div class="col-xl-7">
                                 <div class="p-0 p-sm-4 px-xl-0">
                                     <div id="reviewcarouselIndicators" class="carousel slide" data-bs-ride="carousel">
@@ -208,7 +208,7 @@
                                     <!-- end review carousel -->
                                 </div>
                             </div>
-                        </div>
+                        </div> --}}
                     </div>
                 </div>
                 <!-- end col -->

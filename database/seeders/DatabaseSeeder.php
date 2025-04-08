@@ -27,7 +27,7 @@ class DatabaseSeeder extends Seeder
             'email' => 'user@mail',
             'password' => bcrypt('123'),
         ]);
-
+        User::factory(17)->create();
         $this->call([
             CategorySeeder::class,
             CourseSeeder::class,
