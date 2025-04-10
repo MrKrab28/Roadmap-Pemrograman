@@ -7,32 +7,26 @@ use App\Models\Materi;
 use App\Models\Jawaban;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Models\Course;
 
 class QuisController extends Controller
 {
-    public function index(Materi $materi)
-    {
-        $quis = Quis::where('materi_id', $materi->id)->first();
-        if($quis){
 
-            $jawabans = Jawaban::where('quis_id', $quis->id)->get();
-            $opsiDipilih = $jawabans->pluck('opsi')->toArray();
-        }else {
-            $jawabans = collect();
-            $opsiDipilih = [];
-        }
+
+    public function index(Course $course)
+    {
+        $quises = Quis::where('course_id', $course->id)->get();
+
         return view('pages.admin.quis', [
-            'jawabans' => $jawabans??[],
-            'quis' => $quis,
-            'materi' => $materi,
-            'opsiDipilih' => $opsiDipilih
+            'quises' => $quises,
+            'course' => $course
         ]);
     }
 
     public function store(Request $request){
         $data = $request->validate([
             'pertanyaan' => 'required',
-            'materi_id' => 'required',
+            'course_id' => 'required',
         ]);
 
         Quis::create($data);

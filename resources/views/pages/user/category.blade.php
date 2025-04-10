@@ -1,9 +1,9 @@
 <x-user.layout>
-    <div class="row justify-content-center">
+    <div class="row justify-content-center ">
         <h2 class="mb-4 text-light text-center">Category</h2>
         @foreach ($categories as $category)
             <div class="col-md-3 mb-4">
-                <div class="card bg-dark text-white h-100 rounded-4 ">
+                <div class="card bg-dark text-white h-100 rounded-4 transition-element ">
 
                     <div class="card-body">
                         <h5 class="card-title">{{ $category->nama }}</h5>

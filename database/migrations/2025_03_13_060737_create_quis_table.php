@@ -13,9 +13,11 @@ return new class extends Migration
     {
         Schema::create('quis', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('materi_id');
+            $table->foreignId('course_id');
             $table->string('pertanyaan');
             $table->timestamps();
+
+            $table->foreign('course_id')->references('id')->on('course')->onDelete('cascade');
         });
     }
 

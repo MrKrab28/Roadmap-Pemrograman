@@ -34,6 +34,12 @@ class CourseController extends Controller
         return redirect()->back()->with('success', 'Course Berhasil Ditambahkan');
     }
 
+    public function quis(Course $course){
+        return view('pages.admin.quis', [
+            'course' => $course
+        ]);
+    }
+
 
     public function edit(Course $course)
     {

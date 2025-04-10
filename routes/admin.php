@@ -57,14 +57,14 @@ Route::middleware('auth:admin')->group(function () {
     Route::delete('materi/delete/{materi}', [MateriController::class, 'delete'])->name('admin.materi-delete');
 
     // QUIZ
-    Route::get('materi/quizz/{materi}', [QuisController::class, 'index'])->name('admin.quis-index');
-    Route::post('materi/quizz/add', [QuisController::class, 'store'])->name('admin.quis-store');
-    Route::get('materi/quizz/edit/{quis}', [QuisController::class, 'edit'])->name('admin.quis-edit');
-    Route::put('materi/quizz/update/{quis}', [QuisController::class, 'update'])->name('admin.quis-update');
-    Route::delete('materi/quizz/delete/{quis}', [QuisController::class, 'destroy'])->name('admin.quis-delete');
+    Route::get('course/quizz/{course}', [QuisController::class, 'index'])->name('admin.quis-index');
+    Route::post('course/quizz/add', [QuisController::class, 'store'])->name('admin.quis-store');
+    Route::get('course/quizz/edit/{quis}', [QuisController::class, 'edit'])->name('admin.quis-edit');
+    Route::put('course/quizz/update/{quis}', [QuisController::class, 'update'])->name('admin.quis-update');
+    Route::delete('course/quizz/delete/{quis}', [QuisController::class, 'destroy'])->name('admin.quis-delete');
 
 // JAWABAN
-    Route::get('jawaban', [JawabanController::class, 'index'])->name('admin.jawaban-index');
+    Route::get('jawaban/{quis}', [JawabanController::class, 'index'])->name('admin.jawaban-index');
     Route::post('jawaban/add', [JawabanController::class, 'store'])->name('admin.jawaban-store');
     Route::get('jawaban/edit/{jawaban}', [JawabanController::class, 'edit'])->name('admin.jawaban-edit');
     Route::put('jawaban/update/{jawaban}', [JawabanController::class, 'update'])->name('admin.jawaban-update');

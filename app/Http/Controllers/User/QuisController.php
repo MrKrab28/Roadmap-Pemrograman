@@ -13,100 +13,39 @@ use Illuminate\Support\Facades\Auth;
 
 class QuisController extends Controller
 {
-    public function show(Materi $materi)
-    {   $course = $materi->course;
-        $quis = Quis::where('materi_id', $materi->id)->first();
-        $jawabans = Jawaban::where('quis_id', $quis->id)->get();
+    public function show(Course $course)
+    {
+        $courseCompletion = CourseCompletion::where('user_id', Auth::user()->id)->where('course_id', $course->id)->first();
+
         return view('pages.user.quiz', [
-            'materi' => $materi,
-            'quis' => $quis,
-            'jawabans' => $jawabans,
-            'course' => $course
+            'daftarPertanyaan' => $course->quis,
+            'course' => $course,
+            'courseCompletion' => $courseCompletion
         ]);
     }
 
-    public function submitJawaban(Request $request)
+    public function submitJawaban(Request $request, Course $course)
     {
-        $data = $request->validate([
-            'jawabanOpsi' => 'required',
-            'materi_id' => 'required',
-            'course_id' => 'required' // pastikan course_id ada di request
-        ]);
+        $skor = 0;
+        foreach ($request->jawaban as $jawaban) {
+            $jwb = Jawaban::find($jawaban);
 
-        // Ambil data quiz
-        $quis = Quis::where('materi_id', $data['materi_id'])->first();
-        $jawabanUser = $data['jawabanOpsi'];
-        $jawaban = Jawaban::where('quis_id', $quis->id)->where('opsi', $jawabanUser)->first();
-
-        // Tentukan status jawaban
-        $status = $jawaban && $jawaban->status == 'benar' ? 'benar' : 'salah';
-        $user = Auth::user();
-        $course = Course::find($data['course_id']); // Sekarang bisa mendapatkan course_id dari request
-        $materi_id = $data['materi_id'];
-
-        // Simpan informasi di session
-        session([
-            'jawabanUser' => $jawaban ? $jawaban->jawaban : '',
-            'jawabanOpsi' => $jawabanUser,
-            'materi_selesai_' . $data['materi_id'] => true
-        ]);
-
-        // Cek apakah materi terakhir sudah selesai
-        $lastMateri = $course->materi->last();
-        if ($materi_id == $lastMateri->id) {
-            // Tandai materi sebagai selesai
-            CourseCompletion::updateOrCreate(
-                [
-                    'user_id' => $user->id,
-                    'course_id' => $course->id,
-                    'materi_id' => $materi_id
-                ],
-                [
-                    'selesai' => true,
-                    'jawabanUser' => $jawabanUser
-                ]
-            );
-
-            // Setelah materi terakhir selesai, cek apakah seluruh materi dalam kursus telah selesai
-            $allMaterisCompleted = true;
-
-            foreach ($course->materi as $materi) {
-                $materiCompleted = CourseCompletion::where('user_id', $user->id)
-                    ->where('course_id', $course->id)
-                    ->where('materi_id', $materi->id)
-                    ->where('selesai', false)
-                    ->exists();
-
-                if ($materiCompleted) {
-                    $allMaterisCompleted = false;
-                    break;
-                }
-            }
-
-            // Jika semua materi selesai, tandai kursus sebagai selesai
-            if ($allMaterisCompleted) {
-                CourseCompletion::updateOrCreate(
-                    [
-                        'user_id' => $user->id,
-                        'course_id' => $course->id
-                    ],
-                    [
-                        'selesai' => true
-                    ]
-                );
-            }
+            if ($jwb->status == "benar") $skor += 1;
         }
 
-        return redirect()->route('user.quis-show', ['materi' => $data['materi_id']])->with([
-            'status' => $status,
-            'jawabanUser' => $jawaban ? $jawaban->jawaban : '',
-            'quis_id' => $quis->id,
-            'materi_id' => $data['materi_id'],
-            'course' => $course // Pastikan mengirimkan $course ke view
-        ]);
+        if ($skor != 0) {
+            $skor = $skor * 100 / count($course->quis);
+
+            CourseCompletion::insert([
+                'user_id' => Auth::user()->id,
+                'course_id' => $course->id,
+                'selesai' => true,  
+                'skor' => $skor
+            ]);
+        } else {
+            return back()->with('error', 'Skor Anda Belum Memenuhi syarat');
+        }
+
+        return to_route('user.category-detail', $course->category_id);
     }
-
-
-
-
 }

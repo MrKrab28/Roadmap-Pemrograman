@@ -92,7 +92,8 @@
             color: rgba(0, 0, 0, 1);
             letter-spacing: .05rem;
             font-family: 'Oswald', sans-serif;
-            box-shadow: 0 0 21px rgba(0, 0, 0, .27);
+            box-shadow: 0 0 3px #000000;
+            /* border-radius: 12px 12px 12px 12px; */
 
             .txt {
                 margin-left: -3rem;
@@ -156,8 +157,10 @@
                 color: rgba(255, 255, 255, 1);
                 z-index: 0;
             }
+
         }
     </style>
+
 </head>
 
 <body>
@@ -229,7 +232,7 @@
                     <h1 class="text-center text-light mb-4">About</h1>
                     <h3 class="text-center mb-0"><a href="#"
                             style="font-family: Cascadia Code; font-weight: 1000;" class="logo text-light">
-                            @{{ Artisan<span>.</span><span style="color: #29b6f6;">Compass</span> }}</a></h3>
+                            @{{ Artisan < span > . < /span><span style="color: #29b6f6;">Compass</span > }}</a></h3>
                     <p class="text-justify text-center mt-0">Selamat datang di Artisan.Compass - Rumah bagi para calon
                         developer web masa depan!</p>
                     <div class="col-md-6">

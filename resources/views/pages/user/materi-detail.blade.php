@@ -11,16 +11,16 @@
                                 @if ($prev == null) disabled @else onclick="location.href='{{ route('user.materi-detail', $prev) }}'" @endif>Prev</button>
                             {{-- <button class="btn btn-primary"
                                 @if ($next == null) disabled @else onclick="location.href='{{ route('user.materi-detail', $next) }}'" @endif>Next</button> --}}
-                            @if ($next == null && $materi->quiz)
+                            @if ($next == null && $course->quis)
                                 <button class="btn btn-primary"
-                                    onclick="location.href='{{ route('user.quis-show', $materi->id) }}'">Quiz</button>
-                            @elseif ($next == null && !$materi->quiz)
+                                    onclick="location.href='{{ route('user.quis-show', $course->id) }}'">Quiz</button>
+                            @elseif ($next == null && !$course->quis)
                                 <button class="btn btn-primary" disabled>Next</button>
                             @else
                                 <button class="btn btn-primary"
                                     onclick="location.href='{{ route('user.materi-detail', $next) }}'">Next</button>
                             @endif
-                          
+
                         </div>
                     </div>
                 </div>

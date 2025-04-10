@@ -15,17 +15,13 @@ return new class extends Migration
             $table->id();
             $table->foreignId('user_id');
             $table->foreignId('course_id');
-            $table->foreignId('materi_id');
             $table->boolean('selesai')->default(false);
-            $table->string('jawabanUser')->nullable();
+            $table->integer('skor');
             $table->timestamps();
 
-
-            $table->foreign('materi_id')->references('id')->on('materi')->onUpdate('cascade')->onDelete('cascade');
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->foreign('course_id')->references('id')->on('course')->onDelete('cascade');
         });
-
     }
 
     /**

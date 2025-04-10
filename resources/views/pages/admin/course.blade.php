@@ -41,6 +41,7 @@
                                 <th>#</th>
                                 <th>Course</th>
                                 <th>Category</th>
+                                <th>Quiz</th>
 
                                 <th></th>
                             </thead>
@@ -50,6 +51,11 @@
                                         <td data-field="id">{{ $loop->iteration }}</td>
                                         <td data-field="name">{{ $course->judul }}</td>
                                         <td data-field="age">{{ $course->category->nama }}</td>
+                                        <td data-field="age">
+                                            <a href="{{ route('admin.quis-index', $course) }}" class="btn btn-primary">
+                                                <i class="fas fa-plus"></i>
+                                            </a>
+                                        </td>
 
                                         <td style="width: 100px" class="">
                                             <div class="d-flex  gap-2">

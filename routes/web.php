@@ -37,10 +37,9 @@ Route::middleware('auth:user')->group(function () {
     Route::get('materi/detail/{materi}', [MateriController::class, 'detail'])->name('user.materi-detail');
 
 
-    Route::get('quiz/show/{materi}', [QuisController::class, 'show'])->name('user.quis-show');
-    Route::post('/quiz/{quis}/submit', [QuisController::class, 'submitJawaban'])->name('user.quis-submitJawaban');
+    Route::get('quiz/show/{course}', [QuisController::class, 'show'])->name('user.quis-show');
+    Route::post('/quiz/submit/{course}', [QuisController::class, 'submitJawaban'])->name('user.quis-submitJawaban');
 
 
     Route::get('course/{course_id}/complete', [CourseController::class, 'completeCourse'])->name('user.complete-course');
-
 });

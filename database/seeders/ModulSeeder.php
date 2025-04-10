@@ -23,13 +23,13 @@ class ModulSeeder extends Seeder
             [
                 'course_id' => 1,
                 'judul' => 'Introduction to Backend Development',
-                'content' => 'Materi ini akan membahas pengenalan pengembangan backend, seperti apa itu server dan bagaimana cara kerjanya.',
+                'content' => 'Introduction to Backend Development',
                 'urutan' => 2,
             ],
             [
                 'course_id' => 1,
                 'judul' => 'Introduction to Backend Development',
-                'content' => 'Materi ini akan membahas pengenalan pengembangan backend, seperti apa itu server dan bagaimana cara kerjanya.',
+                'content' => 'Introduction to Backend DevelopmentIntroduction to Backend Development',
                 'urutan' => 3,
             ],
             [
@@ -41,25 +41,25 @@ class ModulSeeder extends Seeder
             [
                 'course_id' => 1,
                 'judul' => 'Introduction to Backend Development',
-                'content' => 'Materi ini akan membahas pengenalan pengembangan backend, seperti apa itu server dan bagaimana cara kerjanya.',
+                'content' => 'ada dasdasdasdasdas',
                 'urutan' => 5,
             ],
             [
                 'course_id' => 1,
                 'judul' => 'Introduction to Backend Development',
-                'content' => 'Materi ini akan membahas pengenalan pengembangan backend, seperti apa itu server dan bagaimana cara kerjanya.',
+                'content' => 'rtghggsfdsdfg324324342342324',
                 'urutan' => 6,
             ],
             [
                 'course_id' => 1,
                 'judul' => 'Introduction to Backend Development',
-                'content' => 'Materi ini akan membahas pengenalan pengembangan backend, seperti apa itu server dan bagaimana cara kerjanya.',
+                'content' => 'SDFDSFDFSSDF3124343',
                 'urutan' => 7,
             ],
             [
                 'course_id' => 1,
                 'judul' => 'Introduction to Backend Development',
-                'content' => 'Materi ini akan membahas pengenalan pengembangan backend, seperti apa itu server dan bagaimana cara kerjanya.',
+                'content' => 'GHGFHGFHFHGFG343434SSASADSADS',
                 'urutan' => 8,
             ],
             [

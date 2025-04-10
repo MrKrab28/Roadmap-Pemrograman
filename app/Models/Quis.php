@@ -18,6 +18,10 @@ class Quis extends Model
         return $this->belongsTo(Materi::class, 'materi_id');
     }
 
+    public function course(){
+        return $this->belongsTo(Course::class, 'course_id');
+    }
+
     public function jawaban()
     {
         return $this->hasMany(Jawaban::class, 'quis_id');
