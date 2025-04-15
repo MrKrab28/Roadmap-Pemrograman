@@ -22,16 +22,30 @@ class HomeController extends Controller
         ]);
     }
 
-    public function learning(){
+    public function learning()
+    {
         $user = Auth::user()->id;
-        $completions = CourseCompletion::where('user_id', $user)
-                        ->where('selesai', true)
-                        ->with('course', 'course.category')
-                        ->get();
 
+        $completions = CourseCompletion::where('user_id', $user)
+            ->where('selesai', true)
+            ->with('course', 'course.category')
+            ->get();
+
+            $grouped = $completions->groupBy(function ($completion) {
+                return $completion->course->category->id ?? 'tanpa_kategori';
+            });
+
+            $categories = $completions
+                ->pluck('course.category')
+                ->unique('id')
+                ->filter()
+                ->values();
+
+                
         return view('pages.user.mylearning', [
-            'completions' => $completions,
-           
+            'groupedCompletions' => $grouped,
+            'categories' => $categories,
+
         ]);
     }
 }

@@ -20,6 +20,7 @@ class CompletionSeeder extends Seeder
                 ['user_id' => 1, 'course_id' => 4, 'selesai'=> true, 'skor' => 70],
                 ['user_id' => 1, 'course_id' => 5, 'selesai'=> true, 'skor' => 60],
                 ['user_id' => 1, 'course_id' => 6, 'selesai'=> true, 'skor' => 80],
+                ['user_id' => 1, 'course_id' => 2, 'selesai'=> true, 'skor' => 90],
 
         ]);
     }
