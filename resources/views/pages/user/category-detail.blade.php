@@ -77,24 +77,26 @@
         @endforeach
         {{-- </div> --}}
 
-        <div class="col-md-6 px-5">
-            {{-- <div class="card"> --}}
-            {{-- <div class="card-body text-light"> --}}
+    </div>
+    <div class="row mb-5">
+      
+         {{-- <div class="card"> --}}
+        {{-- <div class="card-body text-light"> --}}
             <h1 class="card-title text-center text-light fs-1">Roadmap</h1>
             <h1 class="card-title text-center text-light fs-3">{{ $category->nama }}</h1>
 
             {{-- </div> --}}
             {{-- </div> --}}
-        </div>
-    </div>
-    <style>
-        #roadmapnya * {
-            transition: none !important;
+            <style>
+                #roadmapnya * {
+                    transition: none !important;
 
-        }
-    </style>
-    <div id="roadmapnya" class="w-100 h-100 ">
-        %%{init: {"themeVariables": {"graphWidth": "1200", "graphHeight": "800"}}}%%
+                }
+            </style>
+            <div id="roadmapnya" class="w-100 h-100 ">
+                %%{init: {"themeVariables": {"graphWidth": "1200", "graphHeight": "800"}}}%%
+            </div>
+
     </div>
     @if (Session::has('skor'))
         <script>

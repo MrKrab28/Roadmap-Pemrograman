@@ -16,13 +16,13 @@
                     </div>
                 </div>
             </div>
-            <div class="card-body mt-5">
+            <div class="card-body mt-5 ">
                 <h3 class="card-title text-light fs-2 text-center mt-0">Modul</h3>
                 <hr style="border: 2px solid #29b6f6">
-                <div class="row mt-5 mb-5">
+                <div class="row mt-5 mb-5 justify-content-center">
 
                     @foreach ($course->materi as $materi)
-                        <div class="col-md-3 col-lg-3 column">
+                        <div class="col-md-3 col-lg-3 column ">
                             <div class="card gr-1 " style="height: 250px;">
                                 <div class="txt">
                                     <h1 style="word-wrap: break-word">{{ $materi->judul }}</h1>

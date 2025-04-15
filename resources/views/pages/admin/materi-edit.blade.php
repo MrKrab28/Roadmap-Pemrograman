@@ -38,6 +38,10 @@
 
                                 <x-form.input label="Judul" type="text" id="judulInput" name="judul"
                                     value="{{ $materi->judul }}" />
+                                    <div class="mb-2">
+                                        <x-form.input label="Urutan" name="urutan" id="urutanInput" value="{{ $materi->urutan }}" />
+
+                                    </div>
                             </div>
                             <div class="col-md-6">
                                 <x-form.select-search label="Courses" id="courseSelect" name="course_id" :required="true">
