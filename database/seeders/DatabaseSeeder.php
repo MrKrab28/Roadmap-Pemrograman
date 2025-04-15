@@ -40,9 +40,10 @@ class DatabaseSeeder extends Seeder
             ModulSeeder::class,
             QuisSeeder::class,
            JawbanSeeder::class,
+           RoadmapSeeder::class,
            NodeSeeder::class,
            ConnectionSeeder::class,
-           
+
         ]);
     }
 }
