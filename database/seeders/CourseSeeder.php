@@ -32,17 +32,17 @@ class CourseSeeder extends Seeder
             ],
             [
                 'category_id' => 1,
-                'judul' => 'Menghubungkan PHP dengan Database (MySQL)',
+                'judul' => 'Menghubungkan PHP dengan Database',
                 'gambar' => 'php_logo.png',
             ],
             [
                 'category_id' => 1,
-                'judul' => 'Membuat Aplikasi CRUD dengan PHP dan MySQL',
+                'judul' => 'Create CRUD Project',
                 'gambar' => 'php_logo.png',
             ],
             [
                 'category_id' => 1,
-                'judul' => 'Validasi dan Keamanan dalam PHP',
+                'judul' => 'Validasi & Security',
                 'gambar' => 'php_logo.png'
             ]
 

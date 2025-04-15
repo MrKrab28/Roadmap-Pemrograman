@@ -22,7 +22,7 @@ class ModulSeeder extends Seeder
             ],
             [
                 'course_id' => 1,
-                'judul' => "Sejarah PHP",
+                'judul' => "Sejarah",
                 'content' => "<p><strong>PHP pertama kali diciptakan oleh Rasmus Lerdorf</strong> pada tahun 1994 sebagai <strong>Personal Home Page Tools</strong> (PHP Tools). Tujuannya adalah untuk membuat sebuah sistem yang dapat memantau pengunjung di website pribadinya. PHP kemudian berkembang menjadi bahasa pemrograman scripting yang digunakan untuk pengembangan web, dan pada tahun 1995, PHP diperkenalkan ke publik sebagai <strong>PHP/FI</strong>.</p><p>Seiring waktu, PHP terus berkembang dengan tambahan fitur seperti interaksi dengan database, pengolahan form, dan pembuatan aplikasi web dinamis. Versi PHP yang stabil saat ini adalah PHP 8.x yang menawarkan banyak fitur canggih seperti peningkatan performa, keamanan, dan dukungan untuk fitur-fitur modern di pengembangan web.</p>",
                 'urutan' => 2
             ],
@@ -34,7 +34,7 @@ class ModulSeeder extends Seeder
             ],
             [
                 'course_id' => 1,
-                'judul' => "Cara Menginstal PHP dan Lingkungan Pengembangan (XAMPP, WAMP, LAMP)",
+                'judul' => "Instalasi",
                 'content' => "<p>Agar dapat menjalankan PHP secara lokal, Anda perlu menginstal PHP beserta web server (Apache) dan database (MySQL). Ada beberapa alat yang bisa digunakan untuk ini, di antaranya:</p><ul><li><strong>XAMPP:</strong> XAMPP adalah paket perangkat lunak yang menyediakan Apache, MySQL, PHP, dan Perl dalam satu instalasi. Ini adalah pilihan yang sangat populer di Windows, Linux, dan macOS.</li><li><strong>WAMP:</strong> WAMP adalah paket yang dirancang untuk Windows yang menyediakan Apache, MySQL, dan PHP. WAMP sering digunakan oleh pengembang Windows.</li><li><strong>LAMP:</strong> LAMP adalah paket perangkat lunak untuk Linux yang menyediakan Linux, Apache, MySQL, dan PHP. Ini adalah pilihan umum untuk pengembangan server-side di lingkungan Linux.</li></ul><p>Setelah mengunduh dan menginstal XAMPP, WAMP, atau LAMP, Anda dapat mulai menulis kode PHP di editor teks dan menjalankannya di server lokal Anda. Ini memungkinkan Anda untuk mengembangkan dan menguji aplikasi PHP tanpa harus terhubung ke server web jarak jauh.</p><p>Langkah-langkah dasar instalasi (misalnya, XAMPP):</p><ol><li>Unduh XAMPP dari situs resmi Apache Friends.</li><li>Jalankan installer dan pilih komponen yang ingin Anda instal (Apache, MySQL, PHP, dll).</li><li>Setelah instalasi selesai, buka XAMPP Control Panel dan mulai server Apache dan MySQL.</li><li>Tempatkan file PHP Anda di folder <strong>htdocs</strong> untuk memulai pengujian aplikasi.</li></ol>",
                 'urutan' => 4
             ],
@@ -68,7 +68,7 @@ class ModulSeeder extends Seeder
             ],
             [
                 'course_id' => 3,
-                'judul' => 'Sintaks dasar PHP',
+                'judul' => 'Sintaks PHP',
                 'content' => <<<HTML
 <h2>Sintaks Dasar PHP</h2>
 
@@ -184,10 +184,100 @@ HTML,
                 'urutan' => 1
             ],
 
+
+
+
             [
                 'course_id' => 3,
-                'judul' => 'Struktur Kontrol: if, switch, loop',
-                'content' => "<h2>Struktur Kontrol dalam PHP</h2>
+                'judul' => 'Variabel, tipe data, & operator',
+                'content' => "<h2>Variabel, Tipe Data, dan Operator dalam PHP</h2>
+
+<p>Dalam PHP, variabel digunakan untuk menyimpan data, dan operator digunakan untuk melakukan operasi terhadap data tersebut. Berikut adalah pembahasan lengkapnya:</p>
+
+<hr>
+
+<h3>📌 1. Variabel dalam PHP</h3>
+<p>Variabel digunakan untuk menyimpan informasi yang dapat digunakan kembali dalam program.</p>
+<pre><code>&lt;?php
+\$nama = \"Budi\";
+\$umur = 25;
+echo \"Nama saya \$nama dan umur saya \$umur tahun\";
+?&gt;</code></pre>
+
+<p><strong>Aturan penamaan variabel:</strong></p>
+<ul>
+    <li>Harus diawali dengan tanda <code>$</code></li>
+    <li>Hanya boleh terdiri dari huruf, angka, dan underscore</li>
+    <li>Tidak boleh diawali angka</li>
+    <li>Case-sensitive (huruf besar dan kecil dianggap berbeda)</li>
+</ul>
+
+<hr>
+
+<h3>📌 2. Tipe Data di PHP</h3>
+<p>PHP mendukung berbagai macam tipe data:</p>
+<ul>
+    <li><strong>String</strong>: <code>\"Halo Dunia\"</code></li>
+    <li><strong>Integer</strong>: <code>123</code></li>
+    <li><strong>Float</strong>: <code>3.14</code></li>
+    <li><strong>Boolean</strong>: <code>true</code> atau <code>false</code></li>
+    <li><strong>Array</strong>: <code>[1, 2, 3]</code></li>
+    <li><strong>NULL</strong>: Variabel tanpa nilai</li>
+</ul>
+
+<hr>
+
+<h3>📌 3. Operator dalam PHP</h3>
+<p>Operator digunakan untuk melakukan operasi matematika, logika, atau manipulasi data lainnya.</p>
+
+<h4>🔹 Operator Aritmatika</h4>
+<pre><code>
+\$a = 10;
+\$b = 5;
+echo \$a + \$b; // 15
+echo \$a - \$b; // 5
+echo \$a * \$b; // 50
+echo \$a / \$b; // 2
+echo \$a % \$b; // 0
+</code></pre>
+
+<h4>🔹 Operator Perbandingan</h4>
+<pre><code>
+\$a = 10;
+\$b = 5;
+var_dump(\$a == \$b); // false
+var_dump(\$a != \$b); // true
+var_dump(\$a &gt; \$b);  // true
+</code></pre>
+
+<h4>🔹 Operator Logika</h4>
+<pre><code>
+\$x = true;
+\$y = false;
+var_dump(\$x && \$y); // false
+var_dump(\$x || \$y); // true
+var_dump(!\$x);       // false
+</code></pre>
+
+<hr>
+
+<h3>✅ Kesimpulan</h3>
+<ul>
+    <li>Gunakan <code>\$</code> untuk mendefinisikan variabel di PHP.</li>
+    <li>Kenali berbagai tipe data seperti string, integer, float, boolean, array, dan null.</li>
+    <li>Operator membantu kita melakukan operasi matematika dan logika dalam kode.</li>
+</ul>
+<p>Memahami konsep dasar ini akan sangat membantumu dalam memahami alur logika program dan mengembangkan aplikasi web dengan PHP.</p>",
+                'urutan' => 2
+            ],
+
+
+
+
+            [
+                'course_id' => 3,
+                'judul' => 'Struktur Kontrol',
+                'content' => "<h2>Struktur Kontrol dalam PHP: if, switch, loop</h2>
 
             <p>Struktur kontrol digunakan untuk menentukan alur eksekusi program berdasarkan kondisi tertentu atau untuk menjalankan perulangan kode. PHP menyediakan beberapa jenis struktur kontrol yang umum:</p>
 
@@ -285,9 +375,13 @@ HTML,
             <p>Dengan struktur kontrol, kamu bisa membuat program yang lebih fleksibel dan responsif terhadap kondisi yang berubah.</p>",
                 'urutan' => 3,
             ],
+
+
+
+
             [
                 'course_id' => 3,
-                'judul' => 'Fungsi dalam PHP',
+                'judul' => 'PHP Function',
                 'content' => <<<HTML
 <h2>Fungsi dalam PHP</h2>
 
@@ -398,9 +492,14 @@ echo totalJumlah(10, 20, 30); // Output: 60
 HTML,
     'urutan' => 4,
             ],
+
+
+
+
+
             [
                 'course_id' => 3,
-                'judul' => 'Pengenalan Array dan Operasi Array',
+                'judul' => 'Operasi Array',
                 'content' => <<<HTML
             <h2>Pengenalan Array dan Operasi Array</h2>
 
@@ -585,7 +684,7 @@ HTML,
 
             [
                 'course_id' => 4,
-                'judul' => 'Instalasi dan Konfigurasi MySQL',
+                'judul' => 'Instalasi dan Config MySQL',
                 'content' => "<h2>Instalasi dan Konfigurasi MySQL</h2>
                 <p>Langkah pertama adalah mengunduh MySQL Installer dari situs resmi <a href='https://dev.mysql.com/downloads/installer/'>MySQL</a>.</p>
                 <p>Setelah mengunduh installer, jalankan file tersebut dan pilih <strong>MySQL Server</strong> serta tool lainnya (misalnya MySQL Workbench atau MySQL Command Line).</p>
@@ -615,7 +714,7 @@ HTML,
 
             [
                 'course_id' => 4,
-                'judul' => 'Menghubungkan PHP dengan Database MySQL',
+                'judul' => 'Config PHP dengan MySQL',
                 'content' => "<h2>Menghubungkan PHP dengan Database MySQL</h2>
                 <p>Setelah berhasil menginstal MySQL, langkah selanjutnya adalah menghubungkan PHP dengan database MySQL. Ada dua cara utama untuk melakukannya, yaitu dengan <strong>MySQLi</strong> dan <strong>PDO</strong>.</p>
 
@@ -662,7 +761,7 @@ HTML,
 
             [
                 'course_id' => 4,
-                'judul' => 'Menulis Query SQL di PHP: SELECT, INSERT, UPDATE, DELETE',
+                'judul' => 'Query SQL: SELECT, INSERT, UPDATE, DELETE',
                 'content' => "<h2>Menulis Query SQL di PHP: SELECT, INSERT, UPDATE, DELETE</h2>
                 <h3>1. Query SELECT</h3>
                 <p>Query SELECT digunakan untuk mengambil data dari tabel dalam database. Berikut adalah contoh menggunakan MySQLi untuk menampilkan data dari tabel.</p>
@@ -726,7 +825,7 @@ HTML,
 
             [
                 'course_id' => 4,
-                'judul' => 'Menangani Data Form dengan PHP dan MySQL',
+                'judul' => 'Handle Data Form dengan MySQL',
                 'content' => "<h2>Menangani Data Form dengan PHP dan MySQL</h2>
                 <p>Menangani data form dengan PHP melibatkan pengambilan data dari form dan memasukkan data ke dalam database. Berikut adalah contoh penggunaan form HTML untuk menangani data input.</p>
 
@@ -774,7 +873,7 @@ HTML,
 
             [
                 'course_id' => 5,
-                'judul' => 'pa itu CRUD (Create, Read, Update, Delete)?',
+                'judul' => 'CRUD (Create, Read, Update, Delete)?',
                 'content' => "<h2>Apa itu CRUD?</h2>
 
         <p><strong>CRUD</strong> adalah singkatan dari <strong>Create, Read, Update, Delete</strong>. Ini adalah empat operasi dasar yang biasa digunakan dalam pengelolaan data pada aplikasi berbasis database.</p>
@@ -835,9 +934,12 @@ HTML,
             ],
 
 
+
+
+
             [
                 'course_id' => 5,
-                'judul' => 'Membuat aplikasi sederhana dengan operasi CRUD',
+                'judul' => 'Simple Project operasi CRUD',
                 'content' => ' <h2>Membuat Aplikasi Sederhana dengan Operasi CRUD</h2>
 
         <p>Setelah memahami konsep CRUD, sekarang kita akan membuat aplikasi web sederhana untuk mengelola data <strong>mahasiswa</strong> menggunakan PHP dan MySQL.</p>
@@ -943,9 +1045,13 @@ header("Location: index.php");
                 'urutan' => 2,
             ],
 
+
+
+
+
             [
                 'course_id' => 5,
-                'judul' => 'Menggunakan PHP untuk menangani form dan memproses data ke database',
+                'judul' => 'Handle form dan data ke database',
                 'content' => '  <h2>Menggunakan PHP untuk Menangani Form dan Memproses Data ke Database</h2>
 
         <p>Dalam aplikasi web, form adalah cara yang umum digunakan untuk mengumpulkan data dari pengguna. Pada tutorial ini, kita akan belajar bagaimana cara membuat form, menangani data yang dikirimkan, dan memprosesnya untuk disimpan ke dalam database menggunakan PHP dan MySQL.</p>
@@ -1033,9 +1139,15 @@ header("Location: index.php");
             ],
 
 
+
+
+
+
+
+
             [
                 'course_id' => 6,
-                'judul' =>"Validasi form dan sanitasi data",
+                'judul' =>"Validasi form & sanitasi data",
                 'content'=>"<h2>Validasi Form dan Sanitasi Data</h2>
 
 <p>Validasi dan sanitasi adalah langkah penting dalam pengolahan data yang diterima melalui formulir (form). Validasi digunakan untuk memastikan data yang dimasukkan oleh pengguna sesuai dengan kriteria yang diinginkan, sementara sanitasi digunakan untuk membersihkan data agar tidak mengandung karakter atau elemen berbahaya, seperti kode HTML yang tidak diinginkan atau script yang dapat menyebabkan kerentanannya (seperti XSS dan SQL Injection).</p>
@@ -1102,9 +1214,15 @@ echo \$email; // Menghilangkan karakter-karakter berbahaya pada email
                 'urutan' => 1,
             ],
 
+
+
+
+
+
+
             [
                 'course_id' => 6,
-                'judul' =>"Pengamanan aplikasi dengan prepared statements untuk menghindari SQL Injection",
+                'judul' =>"App Secure dengan prepared statements untuk menghindari SQL Injection",
                 'content' => "<h2>Pengamanan Aplikasi dengan Prepared Statements</h2>
 
 <p>SQL Injection adalah salah satu teknik serangan di mana pelaku dapat menyisipkan perintah SQL berbahaya ke dalam input pengguna untuk mendapatkan akses tidak sah ke database.</p>
@@ -1182,9 +1300,11 @@ if (\$result-&gt;num_rows &gt; 0) {
 
 
 
+
+
             [
                 'course_id' => 6,
-                'judul' => "Menggunakan hashing untuk password dengan PHP (password_hash)",
+                'judul' => "password Hashing (password_hash)",
                 'content' => "<h2>Menggunakan Hashing untuk Password dengan PHP</h2>
 
 <p>Dalam membuat aplikasi web yang aman, sangat penting untuk <strong>tidak menyimpan password secara langsung</strong> (plaintext) di dalam database. Sebaliknya, password harus <strong>di-hash</strong> agar tetap aman meskipun database diretas.</p>
