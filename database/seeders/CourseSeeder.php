@@ -24,6 +24,7 @@ class CourseSeeder extends Seeder
                 'judul' => 'Pengenalan HTML',
                 'gambar' => 'html_logo.png',
             ],
+
             [
                 'category_id' => 1,
                 'judul' => 'Dasar - Dasar PHP',
@@ -38,8 +39,12 @@ class CourseSeeder extends Seeder
                 'category_id' => 1,
                 'judul' => 'Membuat Aplikasi CRUD dengan PHP dan MySQL',
                 'gambar' => 'php_logo.png',
+            ],
+            [
+                'category_id' => 1,
+                'judul' => 'Validasi dan Keamanan dalam PHP',
+                'gambar' => 'php_logo.png'
             ]
-
 
         ]);
     }

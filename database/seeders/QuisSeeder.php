@@ -78,6 +78,22 @@ class QuisSeeder extends Seeder
             $stmt->bind_param("i", $id);
             $stmt->execute();</code></pre>'],
 
+
+
+            ['course_id' => 6, 'pertanyaan' => 'Fungsi apa yang digunakan untuk mencegah serangan XSS pada input pengguna di PHP?'],
+            ['course_id' => 6, 'pertanyaan' => "Apa hasil dari kode berikut? <pre><code>\$name = htmlspecialchars(\"&lt;script&gt;alert('XSS')&lt;/script&gt;\");
+    echo \$name;</code></pre>"],
+            ['course_id' => 6, 'pertanyaan' => 'Apa keuntungan utama menggunakan prepared statements dalam PHP?'],
+            ['course_id' => 6, 'pertanyaan' => 'Apa yang akan dilakukan oleh kode berikut? <pre><code>$stmt = $conn->prepare(\"SELECT * FROM users WHERE email = ?\");
+            $stmt->bind_param(\"s\", $email);
+            $stmt->execute();</code></pre>'],
+            ['course_id' => 6, 'pertanyaan' => 'Apa fungsi dari password_verify() dalam PHP?'],
+            ['course_id' => 6, 'pertanyaan' => 'Apa output dari kode berikut? <pre><code>$password = "admin123";
+    $hash = password_hash($password, PASSWORD_DEFAULT);
+    echo password_verify("admin123", $hash) ? "Match" : "No Match";</code></pre>'],
+
+
+
         ]);
     }
 }

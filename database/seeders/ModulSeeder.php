@@ -760,9 +760,21 @@ HTML,
                 'urutan' => 4
             ],
 
+
+
+
+
+
+
+
+
+
+
+
+
             [
                 'course_id' => 5,
-                'judul' => 'Menangani Data Form dengan PHP dan MySQL',
+                'judul' => 'pa itu CRUD (Create, Read, Update, Delete)?',
                 'content' => "<h2>Apa itu CRUD?</h2>
 
         <p><strong>CRUD</strong> adalah singkatan dari <strong>Create, Read, Update, Delete</strong>. Ini adalah empat operasi dasar yang biasa digunakan dalam pengelolaan data pada aplikasi berbasis database.</p>
@@ -945,7 +957,7 @@ header("Location: index.php");
         <pre><code>&lt;form action="proses.php" method="POST"&gt;
             Nama: &lt;input type="text" name="nama"&gt;&lt;br&gt;
             NIM: &lt;input type="text" name="nim"&gt;&lt;br&gt;
-           &lt;button type="submit"&gt;Simpan &lt;/button&gt;
+           &lt;button type="submit"&gt;Simpan</button>
         &lt;/form&gt;</code></pre>
 
         <hr>
@@ -1021,6 +1033,227 @@ header("Location: index.php");
             ],
 
 
+            [
+                'course_id' => 6,
+                'judul' =>"Validasi form dan sanitasi data",
+                'content'=>"<h2>Validasi Form dan Sanitasi Data</h2>
+
+<p>Validasi dan sanitasi adalah langkah penting dalam pengolahan data yang diterima melalui formulir (form). Validasi digunakan untuk memastikan data yang dimasukkan oleh pengguna sesuai dengan kriteria yang diinginkan, sementara sanitasi digunakan untuk membersihkan data agar tidak mengandung karakter atau elemen berbahaya, seperti kode HTML yang tidak diinginkan atau script yang dapat menyebabkan kerentanannya (seperti XSS dan SQL Injection).</p>
+
+<hr>
+
+<h3>1. Validasi Form</h3>
+<p>Validasi form adalah proses untuk memeriksa apakah data yang dimasukkan oleh pengguna sudah sesuai dengan kriteria yang diinginkan. Ada berbagai cara untuk melakukan validasi data di PHP, baik menggunakan fungsi bawaan PHP atau dengan menggunakan filter.</p>
+
+<h4>Contoh Validasi Email</h4>
+<pre><code>&lt;?php
+if (filter_var(\$_POST['email'], FILTER_VALIDATE_EMAIL)) {
+    echo \"Email valid\";
+} else {
+    echo \"Email tidak valid\";
+}
+?&gt;</code></pre>
+
+<h4>Contoh Validasi Angka</h4>
+<pre><code>&lt;?php
+if (filter_var(\$_POST['age'], FILTER_VALIDATE_INT)) {
+    echo \"Age valid\";
+} else {
+    echo \"Age harus berupa angka\";
+}
+?&gt;</code></pre>
+
+<hr>
+
+<h3>2. Sanitasi Data</h3>
+<p>Sanitasi adalah proses membersihkan data masukan agar tidak berbahaya. Sanitasi sangat penting untuk mencegah serangan seperti XSS (Cross-Site Scripting) dan SQL Injection yang dapat membahayakan aplikasi web.</p>
+
+<h4>Contoh Sanitasi Input dengan <code>htmlspecialchars()</code></h4>
+<p>Fungsi <code>htmlspecialchars()</code> digunakan untuk menghindari eksekusi kode HTML dan script yang dapat menyebabkan kerentanannya (XSS).</p>
+<pre><code>&lt;?php
+\$name = htmlspecialchars(\$_POST['name']);
+echo \$name; // Menampilkan nama pengguna tanpa menjalankan HTML
+?&gt;</code></pre>
+
+<h4>Contoh Sanitasi Input dengan <code>filter_var()</code></h4>
+<p>Fungsi <code>filter_var()</code> bisa digunakan untuk membersihkan input dari karakter-karakter yang tidak diinginkan.</p>
+<pre><code>&lt;?php
+\$email = filter_var(\$_POST['email'], FILTER_SANITIZE_EMAIL);
+echo \$email; // Menghilangkan karakter-karakter berbahaya pada email
+?&gt;</code></pre>
+
+<hr>
+
+<h3>3. Pentingnya Validasi dan Sanitasi</h3>
+<ul>
+    <li><strong>Validasi</strong> digunakan untuk memverifikasi bahwa input sesuai dengan format yang diinginkan.</li>
+    <li><strong>Sanitasi</strong> menghilangkan karakter berbahaya yang mungkin digunakan untuk eksploitasi aplikasi.</li>
+    <li>Validasi dan sanitasi bekerja bersama untuk meningkatkan keamanan aplikasi, mencegah serangan seperti SQL Injection dan Cross-Site Scripting (XSS).</li>
+</ul>
+
+<hr>
+
+<h3>✅ Kesimpulan</h3>
+<ul>
+    <li>Selalu validasi data untuk memastikan input yang masuk sesuai dengan format yang diinginkan.</li>
+    <li>Selalu sanitasi data untuk menghindari risiko XSS dan SQL Injection.</li>
+    <li>Gunakan fungsi PHP seperti <code>htmlspecialchars()</code> dan <code>filter_var()</code> untuk validasi dan sanitasi input dari form.</li>
+</ul>",
+                'urutan' => 1,
+            ],
+
+            [
+                'course_id' => 6,
+                'judul' =>"Pengamanan aplikasi dengan prepared statements untuk menghindari SQL Injection",
+                'content' => "<h2>Pengamanan Aplikasi dengan Prepared Statements</h2>
+
+<p>SQL Injection adalah salah satu teknik serangan di mana pelaku dapat menyisipkan perintah SQL berbahaya ke dalam input pengguna untuk mendapatkan akses tidak sah ke database.</p>
+
+<p>Contoh serangan SQL Injection sederhana:</p>
+<pre><code>SELECT * FROM users WHERE email = 'email@example.com' OR '1' = '1'</code></pre>
+<p>Kueri seperti di atas akan selalu bernilai benar dan bisa digunakan untuk membypass login.</p>
+
+<hr>
+
+<h3>Apa itu Prepared Statements?</h3>
+<p><strong>Prepared statements</strong> adalah fitur dari database yang memungkinkan eksekusi query SQL dengan parameter yang telah diikat sebelumnya. Teknik ini membuat input pengguna tidak bisa dimanipulasi sebagai bagian dari query, sehingga aman dari SQL Injection.</p>
+
+<hr>
+
+<h3>Contoh Prepared Statements dengan MySQLi</h3>
+<pre><code>&lt;?php
+\$conn = new mysqli(\"localhost\", \"root\", \"\", \"db_example\");
+
+// Menyiapkan statement
+\$stmt = \$conn-&gt;prepare(\"SELECT * FROM users WHERE email = ? AND password = ?\");
+
+// Binding parameter (s = string)
+\$stmt-&gt;bind_param(\"ss\", \$email, \$password);
+
+// Mengisi data
+\$email = \$_POST['email'];
+\$password = \$_POST['password'];
+
+// Eksekusi
+\$stmt-&gt;execute();
+
+\$result = \$stmt-&gt;get_result();
+if (\$result-&gt;num_rows &gt; 0) {
+    echo \"Login berhasil\";
+} else {
+    echo \"Email atau password salah\";
+}
+?&gt;</code></pre>
+
+<hr>
+
+<h3>Perbedaan Query Biasa vs Prepared Statements</h3>
+<table border='1' cellpadding='8'>
+    <tr><th>Query Biasa</th><th>Prepared Statement</th></tr>
+    <tr>
+        <td><code>\$query = \"SELECT * FROM users WHERE email = '\$email'\";</code></td>
+        <td><code>\$stmt = \$conn->prepare(\"SELECT * FROM users WHERE email = ?\");</code></td>
+    </tr>
+    <tr>
+        <td>Rawan SQL Injection</td>
+        <td>Lebih Aman</td>
+    </tr>
+</table>
+
+<hr>
+
+<h3>Keuntungan Menggunakan Prepared Statements</h3>
+<ul>
+    <li>Mencegah SQL Injection</li>
+    <li>Meningkatkan keamanan aplikasi</li>
+    <li>Memudahkan penggunaan query berulang</li>
+</ul>
+
+<hr>
+
+<h3>✅ Kesimpulan</h3>
+<ul>
+    <li>SQL Injection adalah ancaman serius yang bisa dieksploitasi melalui input pengguna.</li>
+    <li>Gunakan <strong>prepared statements</strong> untuk memisahkan query SQL dan data input pengguna.</li>
+    <li>PHP mendukung prepared statements melalui MySQLi dan PDO.</li>
+</ul>",
+                'urutan' => 2
+            ],
+
+
+
+            [
+                'course_id' => 6,
+                'judul' => "Menggunakan hashing untuk password dengan PHP (password_hash)",
+                'content' => "<h2>Menggunakan Hashing untuk Password dengan PHP</h2>
+
+<p>Dalam membuat aplikasi web yang aman, sangat penting untuk <strong>tidak menyimpan password secara langsung</strong> (plaintext) di dalam database. Sebaliknya, password harus <strong>di-hash</strong> agar tetap aman meskipun database diretas.</p>
+
+<hr>
+
+<h3>1. Apa itu Hashing?</h3>
+<p>Hashing adalah proses mengubah data menjadi string acak tetap (hash). Di PHP, hashing password bisa dilakukan dengan fungsi <code>password_hash()</code> dan diverifikasi dengan <code>password_verify()</code>.</p>
+
+<hr>
+
+<h3>2. Fungsi <code>password_hash()</code></h3>
+<p>Fungsi ini digunakan untuk meng-hash password sebelum disimpan ke database.</p>
+<pre><code>&lt;?php
+\$password = \"myPassword123\";
+\$hashedPassword = password_hash(\$password, PASSWORD_DEFAULT);
+
+echo \$hashedPassword;
+?&gt;</code></pre>
+
+<p>Fungsi ini secara otomatis menggunakan algoritma yang aman (default-nya saat ini adalah bcrypt) dan menghasilkan hasil berbeda setiap kali meskipun password-nya sama karena adanya <strong>salt</strong> yang di-generate otomatis.</p>
+
+<hr>
+
+<h3>3. Menyimpan Password ke Database</h3>
+<p>Setelah password di-hash, kamu bisa menyimpannya ke database dengan query seperti biasa.</p>
+<pre><code>&lt;?php
+// Misal \$hashedPassword sudah dihasilkan dari password_hash()
+\$stmt = \$conn-&gt;prepare(\"INSERT INTO users (email, password) VALUES (?, ?)\");
+\$stmt-&gt;bind_param(\"ss\", \$email, \$hashedPassword);
+\$stmt-&gt;execute();
+?&gt;</code></pre>
+
+<hr>
+
+<h3>4. Verifikasi Password dengan <code>password_verify()</code></h3>
+<p>Ketika user login, kamu tidak membandingkan password langsung, tetapi dengan menggunakan <code>password_verify()</code>.</p>
+<pre><code>&lt;?php
+// Password input dari user
+\$inputPassword = \$_POST['password'];
+
+// Password hash dari database
+\$hashedFromDB = \$user['password'];
+
+if (password_verify(\$inputPassword, \$hashedFromDB)) {
+    echo \"Password benar\";
+} else {
+    echo \"Password salah\";
+}
+?&gt;</code></pre>
+
+<hr>
+
+<h3>5. Kenapa Tidak Menggunakan MD5 atau SHA1?</h3>
+<ul>
+    <li><strong>MD5</strong> dan <strong>SHA1</strong> sudah tidak aman untuk hashing password karena mudah di-crack dengan brute-force atau rainbow table.</li>
+    <li><strong>password_hash()</strong> jauh lebih aman karena menggunakan algoritma modern seperti bcrypt yang sudah dioptimasi untuk keamanan.</li>
+</ul>
+
+<hr>
+
+<h3>✅ Kesimpulan</h3>
+<ul>
+    <li>Selalu hash password sebelum disimpan ke database.</li>
+    <li>Gunakan <code>password_hash()</code> dan <code>password_verify()</code> untuk memastikan keamanan login pengguna.</li>
+    <li>Jangan pernah menyimpan password dalam bentuk teks biasa (plaintext)!</li>
+</ul>",
+                'urutan' => 3,
+            ],
 
         ]);
     }

@@ -191,6 +191,44 @@ class JawbanSeeder extends Seeder
             ['quis_id' => 31, 'jawaban' => 'Menyiapkan data terlebih dahulu dan menggunakannya dalam query', 'status' => 'salah', 'opsi' => 'B'],
             ['quis_id' => 31, 'jawaban' => 'Mengeksekusi query langsung tanpa parameter', 'status' => 'salah', 'opsi' => 'C'],
             ['quis_id' => 31, 'jawaban' => 'Menjalankan query yang sudah ada', 'status' => 'salah', 'opsi' => 'D'],
+
+
+
+
+
+            ['quis_id' => 32, 'jawaban' => 'htmlspecialchars()', 'status' => 'benar', 'opsi' => 'A'],
+            ['quis_id' => 32, 'jawaban' => 'strip_tags()', 'status' => 'salah', 'opsi' => 'B'],
+            ['quis_id' => 32, 'jawaban' => 'addslashes()', 'status' => 'salah', 'opsi' => 'C'],
+            ['quis_id' => 32, 'jawaban' => 'filter_var()', 'status' => 'salah', 'opsi' => 'D'],
+
+            ['quis_id' => 33, 'jawaban' => '&lt;script&gt;alert(&#039;XSS&#039;)&lt;/script&gt;', 'status' => 'benar', 'opsi' => 'A'],
+            ['quis_id' => 33, 'jawaban' => 'alert("XSS")', 'status' => 'salah', 'opsi' => 'B'],
+            ['quis_id' => 33, 'jawaban' => 'XSS', 'status' => 'salah', 'opsi' => 'C'],
+            ['quis_id' => 33, 'jawaban' => 'Error', 'status' => 'salah', 'opsi' => 'D'],
+
+            ['quis_id' => 34, 'jawaban' => 'Menghindari SQL Injection', 'status' => 'benar', 'opsi' => 'A'],
+            ['quis_id' => 34, 'jawaban' => 'Mempercepat koneksi database', 'status' => 'salah', 'opsi' => 'B'],
+            ['quis_id' => 34, 'jawaban' => 'Menghilangkan kebutuhan untuk password', 'status' => 'salah', 'opsi' => 'C'],
+            ['quis_id' => 34, 'jawaban' => 'Mengganti penggunaan PHP', 'status' => 'salah', 'opsi' => 'D'],
+
+
+            ['quis_id' => 35, 'jawaban' => 'Menjalankan query aman dengan parameter email', 'status' => 'benar', 'opsi' => 'A'],
+            ['quis_id' => 35, 'jawaban' => 'Menjalankan query tanpa parameter', 'status' => 'salah', 'opsi' => 'B'],
+            ['quis_id' => 35, 'jawaban' => 'Menampilkan error karena SQL salah', 'status' => 'salah', 'opsi' => 'C'],
+            ['quis_id' => 35, 'jawaban' => 'Menghapus data di tabel', 'status' => 'salah', 'opsi' => 'D'],
+
+            ['quis_id' => 36, 'jawaban' => 'Memverifikasi password input dengan hash yang tersimpan', 'status' => 'benar', 'opsi' => 'A'],
+            ['quis_id' => 36, 'jawaban' => 'Mengubah password menjadi hash baru', 'status' => 'salah', 'opsi' => 'B'],
+            ['quis_id' => 36, 'jawaban' => 'Menghapus password dari database', 'status' => 'salah', 'opsi' => 'C'],
+            ['quis_id' => 36, 'jawaban' => 'Menampilkan password dalam bentuk hash', 'status' => 'salah', 'opsi' => 'D'],
+
+            ['quis_id' => 37, 'jawaban' => 'Match', 'status' => 'benar', 'opsi' => 'A'],
+            ['quis_id' => 37, 'jawaban' => 'No Match', 'status' => 'salah', 'opsi' => 'B'],
+            ['quis_id' => 37, 'jawaban' => 'Error', 'status' => 'salah', 'opsi' => 'C'],
+            ['quis_id' => 37, 'jawaban' => 'False', 'status' => 'salah', 'opsi' => 'D'],
+
+
+
         ]);
-    }
+}
 }
