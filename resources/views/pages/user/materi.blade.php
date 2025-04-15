@@ -5,7 +5,7 @@
         <div class="row mb-5">
             @foreach ($materis as $materi)
                 <div class="col-md-6 col-lg-3 column">
-                    <div class="card gr-1">
+                    <div class="card gr-1" style="height: 250px">
                         <div class="txt">
                             <h1 style="word-wrap: break-word">{{ $materi->judul }}</h1>
                             <p>{{ Str::of($materi->content)->stripTags()->limit(50) }}</p>

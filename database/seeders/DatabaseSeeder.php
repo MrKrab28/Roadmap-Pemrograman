@@ -7,7 +7,13 @@ use App\Models\User;
 use App\Models\Admin;
 use App\Models\Course;
 use App\Models\Materi;
+use App\Models\Jawaban;
 use Illuminate\Database\Seeder;
+use Database\Seeders\QuisSeeder;
+use Database\Seeders\ModulSeeder;
+use Database\Seeders\CourseSeeder;
+use Database\Seeders\CategorySeeder;
+use Database\Seeders\JawbanSeeder;
 
 class DatabaseSeeder extends Seeder
 {
@@ -32,6 +38,8 @@ class DatabaseSeeder extends Seeder
             CategorySeeder::class,
             CourseSeeder::class,
             ModulSeeder::class,
+            QuisSeeder::class,
+           JawbanSeeder::class
         ]);
     }
 }

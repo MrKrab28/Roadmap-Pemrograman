@@ -33,19 +33,20 @@ class QuisController extends Controller
             if ($jwb->status == "benar") $skor += 1;
         }
 
-        if ($skor != 0) {
-            $skor = $skor * 100 / count($course->quis);
+        $skor = $skor * 100 / count($course->quis);
+        if ($skor != 50) {
 
             CourseCompletion::insert([
                 'user_id' => Auth::user()->id,
                 'course_id' => $course->id,
-                'selesai' => true,  
+                'selesai' => true,
                 'skor' => $skor
             ]);
         } else {
             return back()->with('error', 'Skor Anda Belum Memenuhi syarat');
         }
 
-        return to_route('user.category-detail', $course->category_id);
+        return to_route('user.category-detail', $course->category_id)->with('skor', 'Andah Telah Menyelesaikan Course ' . $course->judul . ', Skor Anda : ' . $skor);
     }
+
 }

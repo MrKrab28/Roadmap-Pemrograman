@@ -55,7 +55,7 @@
                                 <th>Modul</th>
                                 <th>Course</th>
                                 <th>Urutan</th>
-                                <th>Quiz</th>
+
 
                                 <th></th>
                             </thead>
@@ -66,10 +66,7 @@
                                         <td>{{ $materi->judul }}</td>
                                         <td>{{ $materi->course->judul }}</td>
                                         <td>{{ $materi->urutan }}</td>
-                                        <td>
-                                            <button class="btn btn-outline-success btn-sm"
-                                                onclick="location.href='{{ route('admin.quis-index', $materi->id) }}'">Open</button>
-                                        </td>
+                                            
 
                                         <td style="width: 100px" class="">
                                             <div class="d-flex  gap-2">

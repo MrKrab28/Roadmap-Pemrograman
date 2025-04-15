@@ -16,34 +16,16 @@ class CourseSeeder extends Seeder
         Course::insert([
             [
                 'category_id' => 1,
-                'judul' => 'Introduction to Backend Development',
-                'gambar' => '1743532813HTML, CSS.png',
-            ],
-            [
-                'category_id' => 1,
-                'judul' => 'Introduction to Backend PHP Language',
-                'gambar' => '1743532813HTML, CSS.png',
-            ],
-            [
-                'category_id' => 1,
-                'judul' => 'PHP Fundamental',
-                'gambar' => '1743532813HTML, CSS.png',
+                'judul' => 'Pengenalan PHP',
+                'gambar' => 'php_logo.png',
             ],
             [
                 'category_id' => 2,
-                'judul' => 'Frontend Development with HTML & CSS',
-                'gambar' => 'Mempelajari cara membuat website dengan menggunakan HTML dan CSS.',
+                'judul' => 'Pengenalan HTML',
+                'gambar' => 'html_logo.png',
             ],
-            [
-                'category_id' => 2,
-                'judul' => 'learn how frameworks works',
-                'gambar' => '1743532813HTML, CSS.png',
-            ],
-            [
-                'category_id' => 3,
-                'judul' => 'Fullstack',
-                'gambar' => '1743532813HTML, CSS.png',
-            ],
+            
+
         ]);
     }
 }

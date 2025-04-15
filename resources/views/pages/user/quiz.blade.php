@@ -23,6 +23,7 @@
                         <h1 class="card-title text-center text-light fs-3">Pertanyaan Belum Ditambahkan</h1>
 
                     @endif
+
                     @if (!$courseCompletion)
                         <form action="{{ route('user.quis-submitJawaban', $course) }}" method="post">
                             @csrf

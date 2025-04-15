@@ -25,6 +25,8 @@ Route::middleware(['guest:user,admin'])->group(function () {
 Route::middleware('auth:user')->group(function () {
     Route::post('/logout-user', [AuthController::class, 'logoutUser'])->name('user.logout');
 
+    Route::get('/user/learning', [HomeController::class, 'learning'])->name('user.mylearning');
+
     Route::get('/user/index', [HomeController::class, 'index'])->name('user.index');
 
 

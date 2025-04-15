@@ -37,12 +37,16 @@
                         <li><a class="dropdown-item" href="apps-contacts-profile.html"><i
                                     class="mdi mdi-face-profile font-size-16 align-middle me-1"></i> Profile</a></li>
 
+                            <li>
+                                <a class="dropdown-item" href="{{ route('user.mylearning') }}"><i
+                                        class="mdi mdi-check-circle-outline text-success font-size-16 align-middle me-1"></i> My Learning Path</a>
+                            </li>
                         <li>
                             <form action="{{ route('user.logout') }}" method="POST">
                                 @csrf
                                 {{-- <a class="dropdown-item" href="auth-logout.html"><i class="mdi mdi-logout font-size-16 align-middle me-1"></i> Logout</a> --}}
                                 <button class="dropdown-item" type="submit"><i
-                                        class="mdi mdi-logout font-size-16 align-middle me-1"></i> Logout</button>
+                                        class="mdi mdi-logout font-size-16 align-middle me-1 text-danger"></i> Logout</button>
                             </form>
                         </li>
                     </ul>

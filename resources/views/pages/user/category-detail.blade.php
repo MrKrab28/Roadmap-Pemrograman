@@ -15,6 +15,16 @@
     </script>
 @endpush
 <x-user.layout>
+    <style>
+        .swal2-container.swal2-center>.swal2-popup {
+            background-color: #121212 !important;
+        }
+
+        .swal2-html-container,
+        .swal2-title {
+            color: white !important;
+        }
+    </style>
     <div class="row justify-content-center mt-5 mb-5">
         {{-- <div class="col-md-4"> --}}
         @foreach ($courses as $course)
@@ -47,7 +57,7 @@
                         </div>
                     </div>
                 @else
-                    <div class="card gr-1" >
+                    <div class="card gr-1">
                         <div class="txt">
                             <h1 style="word-wrap: break-word">{{ $course->judul }}</h1>
                             <p>{{ Str::of($course->content)->stripTags()->limit(50) }}</p>
@@ -86,4 +96,17 @@
     <div id="roadmapnya" class="w-100 h-100 ">
         %%{init: {"themeVariables": {"graphWidth": "1200", "graphHeight": "800"}}}%%
     </div>
+    @if (Session::has('skor'))
+        <script>
+            Swal.fire({
+                icon: 'success',
+                title: 'Success',
+                text: "{{ Session::get('skor') }}",
+
+                background: '#212529',
+
+
+            })
+        </script>
+    @endif
 </x-user.layout>
