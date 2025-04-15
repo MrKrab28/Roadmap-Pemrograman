@@ -78,8 +78,8 @@
         {{-- </div> --}}
 
     </div>
-    <div class="row mb-5">
-      
+    <div class="row mb-5 ">
+
          {{-- <div class="card"> --}}
         {{-- <div class="card-body text-light"> --}}
             <h1 class="card-title text-center text-light fs-1">Roadmap</h1>
@@ -93,7 +93,7 @@
 
                 }
             </style>
-            <div id="roadmapnya" class="w-100 h-100 ">
+            <div id="roadmapnya" class="w-100 h-100 justify-content-center">
                 %%{init: {"themeVariables": {"graphWidth": "1200", "graphHeight": "800"}}}%%
             </div>
 
