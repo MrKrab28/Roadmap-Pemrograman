@@ -55,20 +55,20 @@
                         <form action="{{ route('user.quis-submitJawaban', $course) }}" method="post">
                             @csrf
 
-                            @foreach ($daftarPertanyaan as $quis)
-                                <ol class="text-white fw-normal">
-                                    <li class="text-start">{!! $quis->pertanyaan !!}</li>
+                            <ol class="text-white fw-normal">
+                                @foreach ($daftarPertanyaan as $quis)
+                                    <li class="text-start mb-1 mt-2">{!! $quis->pertanyaan !!}</li>
                                     @foreach ($quis->jawaban as $jawaban)
                                         <div class="form-check">
                                             <input class="form-check-input" type="radio"
                                                 id="jawaban{{ $jawaban->id }}" name="jawaban[{{ $quis->id }}]"
                                                 value="{{ $jawaban->id }}" required>
-                                            <label class="form-check-label fw-light"
+                                            <label class="form-check-label fw-light mb-1"
                                                 for="jawaban{{ $jawaban->id }}">{{ $jawaban->jawaban }}</label>
                                         </div>
                                     @endforeach
-                                </ol>
-                            @endforeach
+                                @endforeach
+                            </ol>
                             @if ($daftarPertanyaan->count() == 0)
                                 <h3 class="text-light">Quiz Not Found</h3>
                             @else
