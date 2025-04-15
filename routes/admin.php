@@ -64,7 +64,7 @@ Route::middleware('auth:admin')->group(function () {
     Route::put('course/quizz/update/{quis}', [QuisController::class, 'update'])->name('admin.quis-update');
     Route::delete('course/quizz/delete/{quis}', [QuisController::class, 'destroy'])->name('admin.quis-delete');
 
-// JAWABAN
+    // JAWABAN
     Route::get('jawaban/{quis}', [JawabanController::class, 'index'])->name('admin.jawaban-index');
     Route::post('jawaban/add', [JawabanController::class, 'store'])->name('admin.jawaban-store');
     Route::get('jawaban/edit/{jawaban}', [JawabanController::class, 'edit'])->name('admin.jawaban-edit');
@@ -72,19 +72,17 @@ Route::middleware('auth:admin')->group(function () {
     Route::delete('jawaban/delete/{jawaban}', [JawabanController::class, 'destroy'])->name('admin.jawaban-delete');
 
     // ROADMAP
-  Route::get('roadmap', [RoadmapController::class, 'index'])->name('admin.roadmap-index');
-  Route::post('roadmap/add', [RoadmapController::class, 'store'])->name('admin.roadmap-store');
-  Route::get('roadmap/build/{roadmap}', [RoadmapController::class, 'build'])->name('admin.roadmap-build');
+    Route::get('roadmap', [RoadmapController::class, 'index'])->name('admin.roadmap-index');
+    Route::post('roadmap/add', [RoadmapController::class, 'store'])->name('admin.roadmap-store');
+    Route::get('roadmap/build/{roadmap}', [RoadmapController::class, 'build'])->name('admin.roadmap-build');
 
-  Route::post('roadmap/nodes/add', [RoadmapController::class, 'nodeStore'])->name('admin.node-store');
-  Route::delete('roadmap/nodes/delete/{node}', [RoadmapController::class, 'nodeDelete'])->name('admin.node-delete');
+    Route::post('roadmap/nodes/add', [RoadmapController::class, 'nodeStore'])->name('admin.node-store');
+    Route::delete('roadmap/nodes/delete/{node}', [RoadmapController::class, 'nodeDelete'])->name('admin.node-delete');
 
-  Route::post('roadmap/konek/add', [RoadmapController::class, 'konekStore'])->name('admin.konek-store');
-  Route::delete('roadmap/konek/delete/{konek}', [RoadmapController::class, 'konekDelete'])->name('admin.konek-delete');
+    Route::post('roadmap/konek/add', [RoadmapController::class, 'konekStore'])->name('admin.konek-store');
+    Route::delete('roadmap/konek/delete/{konek}', [RoadmapController::class, 'konekDelete'])->name('admin.konek-delete');
 
 
-//   Route::get('admin/roadmap/{roadmapId}', Roadmap::class)->name('admin.roadmap');
+    //   Route::get('admin/roadmap/{roadmapId}', Roadmap::class)->name('admin.roadmap');
 
 });
-
-

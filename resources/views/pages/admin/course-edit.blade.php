@@ -39,7 +39,7 @@
                                     value="{{ $course->category_id }}" :readonly="true" :hidden="true" />
                                 <x-form.input label="Course" type="text" id="judulInput" name="judul"
                                     value="{{ $course->judul }}" />
-                                    <x-form.image label="Upload" name="gambar" id="imgInput" :required="true" />
+                                    <x-form.image label="Upload" name="gambar" id="imgInput" :required="true" value="" />
 
                                     <div class="d-flex justify-content-end me-3">
 

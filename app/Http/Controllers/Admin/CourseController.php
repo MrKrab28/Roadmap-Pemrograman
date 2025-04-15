@@ -63,12 +63,18 @@ class CourseController extends Controller
             'gambar' => 'required',
         ]);
 
+        if($request->hasFile('gambar')){
 
-        $file = $request->file('gambar');
-        $filename = time() .  $data['judul'] .'.' . $file->extension();
-        $file->move(public_path('images/courses'), $filename);
-        $data['gambar'] = $filename;
+            $file = $request->file('gambar');
+            $filename = time() .  $data['judul'] .'.' . $file->extension();
+            $file->move(public_path('images/courses'), $filename);
+            $data['gambar'] = $filename;
+        }else{
+            $data['gambar'] = $course->gambar;
+        }
         $course->update($data);
+
+
 
         return redirect()->back()->with('success', 'Course Berhasil Diupdate');
     }
