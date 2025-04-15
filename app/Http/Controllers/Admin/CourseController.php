@@ -6,6 +6,7 @@ use App\Models\Course;
 use App\Models\Category;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Models\Materi;
 
 class CourseController extends Controller
 {
@@ -32,6 +33,14 @@ class CourseController extends Controller
         Course::create($data);
 
         return redirect()->back()->with('success', 'Course Berhasil Ditambahkan');
+    }
+
+    public function courseModul(Course $course){
+        $materi = Materi::where('course_id', $course->id)->get();
+        return view('pages.admin.course-modul', [
+            'materis' => $materi,
+            'course' => $course
+        ]);
     }
 
     public function quis(Course $course){

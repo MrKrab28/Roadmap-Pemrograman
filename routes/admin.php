@@ -46,6 +46,7 @@ Route::middleware('auth:admin')->group(function () {
     Route::get('course', [CourseController::class, 'index'])->name('admin.course-index');
     Route::post('course/add', [CourseController::class, 'store'])->name('admin.course-store');
     Route::get('course/edit/{course}', [CourseController::class, 'edit'])->name('admin.course-edit');
+    Route::get('course/modul/{course}', [CourseController::class, 'courseModul'])->name('admin.course-modul');
     Route::put('course/update/{course}', [CourseController::class, 'update'])->name('admin.course-update');
     Route::delete('course/delete/{course}', [CourseController::class, 'delete'])->name('admin.course-delete');
 

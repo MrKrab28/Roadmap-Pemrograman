@@ -185,7 +185,7 @@ HTML,
             ],
 
             [
-                'course_id' => 2,
+                'course_id' => 3,
                 'judul' => 'Struktur Kontrol: if, switch, loop',
                 'content' => "<h2>Struktur Kontrol dalam PHP</h2>
 

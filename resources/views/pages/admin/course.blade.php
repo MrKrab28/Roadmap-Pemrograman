@@ -42,6 +42,7 @@
                                 <th>Course</th>
                                 <th>Category</th>
                                 <th>Quiz</th>
+                                <th>Modul</th>
 
                                 <th></th>
                             </thead>
@@ -53,7 +54,12 @@
                                         <td data-field="age">{{ $course->category->nama }}</td>
                                         <td data-field="age">
                                             <a href="{{ route('admin.quis-index', $course) }}" class="btn btn-primary">
-                                                <i class="fas fa-plus"></i>
+                                                <i class="fas fa-brain">?</i>
+                                            </a>
+                                        </td>
+                                        <td data-field="age">
+                                            <a href="{{ route('admin.course-modul', $course) }}" class="btn btn-primary">
+                                                <i class="fas fa-book"></i>
                                             </a>
                                         </td>
 
