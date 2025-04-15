@@ -23,7 +23,7 @@
                         <div class="row">
                             <x-form.input label="course_id" type="text" id="course_idInput" name="course_id"
                                 :hidden="true" value="{{ $course->id }}" />
-                           
+
                             <x-form.textarea label="Quiz" name="pertanyaan" id="quisInput" :required="true"
                                 :rows="5" />
                         </div>
@@ -52,10 +52,7 @@
                                             </td>
                                             <td style="width: 100px" class="">
                                                 <div class="d-flex  gap-2">
-                                                    <a href="{{ route('admin.quis-edit', $quis->id) }}"
-                                                        class="btn btn-outline-primary btn-sm edit" title="Edit">
-                                                        <i class="fas fa-pencil-alt"></i>
-                                                    </a>
+                                                   
 
                                                     <form action="{{ route('admin.quis-delete', $quis->id) }}"
                                                         method="POST">

@@ -20,17 +20,44 @@
                         <h1 class="card-title text-center text-light fs-3">Tidak Ditemukan</h1>
                     @endif --}}
                     @if ($daftarPertanyaan->count() == 0)
-                        <h1 class="card-title text-center text-light fs-3">Pertanyaan Belum Ditambahkan</h1>
-
+                        <h1 class="card-title text-center text-danger fs-3">Pertanyaan Belum Ditambahkan</h1>
                     @endif
+                    <style>
+                        pre code {
+                            background-color: #333333;
+                            color: #fff;
+                            padding: 10px;
+                            border-radius: 5px;
+                            font-family: 'Courier New', Courier, monospace;
+                            font-size: 1.2em;
+                            white-space: pre-wrap;
+                            /* Agar teks tetap membungkus saat panjang */
+                            word-wrap: break-word;
+                            /* margin-bottom: 20px; */
+                            /* Agar teks tidak keluar dari batas kontainer */
+                        }
 
+                        code {
+                            display: block;
+                            /* Menjadikan code sebagai block-level element agar lebih mudah diatur */
+                            white-space: pre-wrap;
+                            /* Agar teks tetap membungkus dan tidak keluar */
+                            word-wrap: break-word;
+                            /* Agar teks tidak keluar dari batas kontainer */
+                        }
+
+                        .pertanyaan {
+                            margin-bottom: 20px;
+                            /* Menambahkan jarak bawah antar pertanyaan dan kode */
+                        }
+                    </style>
                     @if (!$courseCompletion)
                         <form action="{{ route('user.quis-submitJawaban', $course) }}" method="post">
                             @csrf
 
-                            <ol class="text-white fw-normal">
-                                @foreach ($daftarPertanyaan as $quis)
-                                    <li class="text-start">{{ $quis->pertanyaan }}</li>
+                            @foreach ($daftarPertanyaan as $quis)
+                                <ol class="text-white fw-normal">
+                                    <li class="text-start">{!! $quis->pertanyaan !!}</li>
                                     @foreach ($quis->jawaban as $jawaban)
                                         <div class="form-check">
                                             <input class="form-check-input" type="radio"
@@ -40,15 +67,20 @@
                                                 for="jawaban{{ $jawaban->id }}">{{ $jawaban->jawaban }}</label>
                                         </div>
                                     @endforeach
-                                @endforeach
-                            </ol>
-
-                            <button class="btn btn-danger">Submit</button>
+                                </ol>
+                            @endforeach
+                            @if ($daftarPertanyaan->count() == 0)
+                                <h3 class="text-light">Quiz Not Found</h3>
+                            @else
+                                <button class="btn btn-danger">Submit</button>
+                            @endif
                         </form>
                     @else
                         <h1 class="card-title text-center text-light fs-3">Anda telah mengerjakan quiz ini</h1>
                         <h3>Skor Anda: {{ round($courseCompletion->skor, 2) }}</h3>
-                        <button class="btn btn-outline-info mt-3" onclick="location.href='{{ route('user.category-detail', $course->category_id) }}'"> > next Course</button>
+                        <button class="btn btn-outline-info mt-3"
+                            onclick="location.href='{{ route('user.category-detail', $course->category_id) }}'"> >
+                            next Course</button>
                     @endif
 
 

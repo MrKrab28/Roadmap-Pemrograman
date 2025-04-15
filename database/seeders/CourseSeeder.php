@@ -24,7 +24,22 @@ class CourseSeeder extends Seeder
                 'judul' => 'Pengenalan HTML',
                 'gambar' => 'html_logo.png',
             ],
-            
+            [
+                'category_id' => 1,
+                'judul' => 'Dasar - Dasar PHP',
+                'gambar' => 'php_logo.png',
+            ],
+            [
+                'category_id' => 1,
+                'judul' => 'Menghubungkan PHP dengan Database (MySQL)',
+                'gambar' => 'php_logo.png',
+            ],
+            [
+                'category_id' => 1,
+                'judul' => 'Membuat Aplikasi CRUD dengan PHP dan MySQL',
+                'gambar' => 'php_logo.png',
+            ]
+
 
         ]);
     }
