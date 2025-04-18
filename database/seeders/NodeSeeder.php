@@ -15,6 +15,8 @@ class NodeSeeder extends Seeder
     {
         Node::insert(
             [
+
+                ['kode' => 'Category', 'label' => 'BACKEND', 'roadmap_id' => 1],
                 ['kode' => 'PHP', 'label' => 'PHP', 'roadmap_id' => 1],
                 ['kode' => 'LVL', 'label' => 'LARAVEL', 'roadmap_id' => 1],
 
@@ -31,8 +33,8 @@ class NodeSeeder extends Seeder
                 ['kode' => 'php2', 'label' => 'Dasar - Dasar PHP', 'roadmap_id' => 1],
                 ['kode' => 'php2-1', 'label' => 'Sintaks Dasar', 'roadmap_id' => 1],
                 ['kode' => 'php2-2', 'label' => 'Variabel, tipe data, & operator','roadmap_id' => 1],
-                ['kode' => 'php2-4', 'label' => 'Struktur Kontrol', 'roadmap_id' => 1],
-                ['kode' => 'php2-3', 'label' => 'PHP Function', 'roadmap_id' => 1],
+                ['kode' => 'php2-3', 'label' => 'Struktur Kontrol', 'roadmap_id' => 1],
+                ['kode' => 'php2-4', 'label' => 'PHP Function', 'roadmap_id' => 1],
                 ['kode' => 'php2-5', 'label' => 'Operasi Array', 'roadmap_id' => 1],
 
 
