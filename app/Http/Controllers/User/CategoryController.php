@@ -56,6 +56,7 @@ class CategoryController extends Controller
     {
         $nodes = Node::where('roadmap_id', $roadmap->id)->get();
         $connection = RoadmapConnection::where('roadmap_id', $roadmap->id)->get();
+        // $mermaidData = "%%{init: { \"flowchart\": { \"curve\": \"basis\" } } }%%\n";
         $mermaidData = "graph TD;\n";
         foreach ($nodes as $node) {
             $mermaidData .= " {$node->kode}[\"{$node->label}\"];\n";
@@ -64,8 +65,20 @@ class CategoryController extends Controller
         foreach ($connection as $konek) {
             $mermaidData .= " {$konek->source} --> {$konek->target};\n";
         }
+
+
+        // $mermaidData .= "subgraph group1\n";
+        // $mermaidData .= "A1[\". $node->label .\"] --> A2[\"Node A2\"];\n";
+        // $mermaidData .= "end\n";
+
+        // $mermaidData .= "subgraph group2\n";
+        // $mermaidData .= "B1[\"Node B1\"] --> B2[\"Node B2\"];\n";
+        // $mermaidData .= "end\n";
+
+
+
         $mermaidData .= "classDef node fill:#29b6f6,stroke:000,stroke-width:1px, rx:10px,ry:10px,color:#fff;\n";  // Styling untuk node
-        $mermaidData .= "linkStyle default stroke:#fff,stroke-width:3px;\n";
+        $mermaidData .= "linkStyle default stroke:#fff,stroke-width:3px,fill:none,stroke-dasharray: 0;\n";
 
         return $mermaidData;
     }

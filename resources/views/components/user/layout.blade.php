@@ -226,18 +226,18 @@
         <hr class="navbar bg-dark">
     </div>
     <section class=" mt-5 mb-5 ">
-        <header>
-            <div class="container" id="about" data-aos="zoom-in" data-aos-duration="1000">
-                <div class="row">
+        <header class="mb-5">
+            <div class="container mb-5" id="about" data-aos="zoom-in" data-aos-duration="1000">
+                <div class="row mb-5">
                     <h1 class="text-center text-light mb-4">About</h1>
                     <h3 class="text-center mb-0"><a href="#"
-                            style="font-family: Cascadia Code; font-weight: 1000;" class="logo text-light">
+                            style=" font-weight: 1000;" class="logo text-light">
                             @{{ Artisan<span>.</span><span style="color: #29b6f6;">Compass</span > }}</a></h3>
                     <p class="text-justify text-center mt-0">Selamat datang di Artisan.Compass - Rumah bagi para calon
                         developer web masa depan!</p>
-                    <div class="col-md-6">
+                        <h2 class="mt-4 text-center mb-3 text-light">Siapa Kami</h2>
+                    <div class="col-md-6 fs-5">
 
-                        <h2 class="mt-4">Siapa Kami</h2>
                         <p class="text-justify">Artisan Compass adalah platform komprehensif yang dirancang untuk
                             memberikan roadmap pemrograman yang jelas dan terstruktur bagi para pemrogram, baik pemula
                             maupun yang berpengalaman. Misi kami adalah memberdayakan para pengembang dengan membimbing
@@ -259,8 +259,8 @@
 
 
                     </div>
-                    <div class="col-md-6 d-flex justify-content-center align-items-center mt-0">
-                        <img src="{{ asset('assets/images/artisan.compas.png') }}" style="height: 650px;width: 650px"
+                    <div class="col-md-6 d-flex justify-content-center align-items-center mt-0 mb-5">
+                        <img src="{{ asset('assets/images/artisan.compas22222.png') }}" style="height: 450px;width: 650px"
                             alt="">
                         <!-- Di sini Anda bisa menambahkan gambar yang cocok -->
                         <!-- Contoh: <img src="path/to/about-us-image.jpg" alt="Tim Artisan.Compass" class="img-fluid rounded shadow"> -->
