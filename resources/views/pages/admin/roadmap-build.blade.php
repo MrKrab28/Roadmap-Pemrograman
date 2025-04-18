@@ -53,9 +53,13 @@
                 </div>
             </div>
         </div>
+
         <div class="col-md-8">
 
-            @livewire('roadmap', ['roadmapId' => $roadmap->id])
+
+                    @livewire('roadmap', ['roadmapId' => $roadmap->id])
+              
+
         </div>
     </div>
 
