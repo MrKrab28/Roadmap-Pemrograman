@@ -64,7 +64,7 @@ class CategoryController extends Controller
         foreach ($connection as $konek) {
             $mermaidData .= " {$konek->source} --> {$konek->target};\n";
         }
-        $mermaidData .= "classDef node fill:#29b6f6,stroke:#fff,stroke-width:1px, rx:10px,ry:10px,color:#fff;\n";  // Styling untuk node
+        $mermaidData .= "classDef node fill:#29b6f6,stroke:000,stroke-width:1px, rx:10px,ry:10px,color:#fff;\n";  // Styling untuk node
         $mermaidData .= "linkStyle default stroke:#fff,stroke-width:3px;\n";
 
         return $mermaidData;
