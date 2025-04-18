@@ -138,6 +138,16 @@
                     }, 300);
                 });
             }
+            mermaid.initialize({
+                theme: 'default',
+                themeVariables: {
+                    // edgeLabelBackground: '#fff',
+                    // primaryColor: '#29b6f6',
+                    lineColor: '#fff',
+                   color:'#000',
+                    arrowheadColor: '#000' // ⬅️ Ini penting!
+                }
+            });
         </script>
     @endpush
 
@@ -212,7 +222,7 @@
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                color: white;
+                color: #000;
                 text-align: center;
                 font-size: 14px;
             }
