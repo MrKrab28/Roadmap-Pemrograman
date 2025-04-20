@@ -16,8 +16,8 @@ class ConnectionSeeder extends Seeder
         RoadmapConnection::insert(
             [
 
-                ['source' => 'Category', 'target' => 'PHP', 'roadmap_id' => 1],
-                ['source' => 'Category', 'target' => 'LVL', 'roadmap_id' => 1],
+                ['source' => 'CategoryBE', 'target' => 'PHP', 'roadmap_id' => 1],
+                ['source' => 'CategoryBE', 'target' => 'LVL', 'roadmap_id' => 1],
 
 
                 ['source' => 'PHP', 'target' => 'php1', 'roadmap_id' => 1],
@@ -77,7 +77,62 @@ class ConnectionSeeder extends Seeder
                 ['source' => 'php5', 'target' => 'php5-2', 'roadmap_id' => 1],
                 ['source' => 'php5', 'target' => 'php5-3', 'roadmap_id' => 1],
 
-            ]
+
+
+
+
+
+
+
+
+
+
+
+                ['source' => 'CategoryFE', 'target' => 'HTML', 'roadmap_id' => 2],
+                ['source' => 'CategoryFE', 'target' => 'CSS', 'roadmap_id' => 2],
+                ['source' => 'CategoryFE', 'target' => 'JS', 'roadmap_id' => 2],
+
+
+
+
+
+                ['source' => 'HTML', 'target' => 'html1', 'roadmap_id' => 2],
+
+
+                ['source' => 'html1', 'target' => 'html1-1', 'roadmap_id' => 2],
+                ['source' => 'html1', 'target' => 'html1-2', 'roadmap_id' => 2],
+                ['source' => 'html1', 'target' => 'html1-3', 'roadmap_id' => 2],
+
+
+                ['source' => 'html3-1', 'target' => 'html2', 'roadmap_id' => 2],
+                ['source' => 'html2', 'target' => 'html2-1', 'roadmap_id' => 2],
+                ['source' => 'html2', 'target' => 'html2-2', 'roadmap_id' => 2],
+                ['source' => 'html2', 'target' => 'html2-3', 'roadmap_id' => 2],
+                ['source' => 'html2', 'target' => 'html2-4', 'roadmap_id' => 2],
+
+
+                ['source' => 'html1-2', 'target' => 'html3', 'roadmap_id' => 2],
+                ['source' => 'html3', 'target' => 'html3-1', 'roadmap_id' => 2],
+                ['source' => 'html3', 'target' => 'html3-2', 'roadmap_id' => 2],
+                ['source' => 'html3', 'target' => 'html3-3', 'roadmap_id' => 2],
+
+
+
+
+                ['source' => 'CSS', 'target' => 'css1', 'roadmap_id' => 2],
+
+                ['source' => 'css1', 'target' => 'css1-1', 'roadmap_id' => 2],
+                ['source' => 'css1', 'target' => 'css1-2', 'roadmap_id' => 2],
+                ['source' => 'css1', 'target' => 'css1-3', 'roadmap_id' => 2],
+
+
+
+                ['source' => 'JS', 'target' => 'js1', 'roadmap_id' => 2],
+
+
+
+
+                ]
         );
     }
 }

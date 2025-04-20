@@ -16,7 +16,7 @@ class NodeSeeder extends Seeder
         Node::insert(
             [
 
-                ['kode' => 'Category', 'label' => 'BACKEND', 'roadmap_id' => 1],
+                ['kode' => 'CategoryBE', 'label' => 'BACKEND', 'roadmap_id' => 1],
                 ['kode' => 'PHP', 'label' => 'PHP', 'roadmap_id' => 1],
                 ['kode' => 'LVL', 'label' => 'LARAVEL', 'roadmap_id' => 1],
 
@@ -58,6 +58,63 @@ class NodeSeeder extends Seeder
                 ['kode' => 'php5-1', 'label' => 'Validasi form & sanitasi data', 'roadmap_id' => 1],
                 ['kode' => 'php5-2', 'label' => 'App Secure dengan prepared statements untuk menghindari SQL Injection', 'roadmap_id' => 1],
                 ['kode' => 'php5-3', 'label' => 'password Hashing (password_hash)', 'roadmap_id' => 1],
+
+
+
+
+
+
+
+
+
+
+                ['kode' => 'CategoryFE', 'label' => 'FRONTEND', 'roadmap_id' => 2],
+
+
+
+
+                ['kode' => 'HTML', 'label' => 'HTML', 'roadmap_id' => 2],
+
+
+
+
+
+                ['kode' => 'html1', 'label' => 'Pengenalan HTML', 'roadmap_id' => 2],
+                ['kode' => 'html1-1', 'label' => 'Apa itu HTML?', 'roadmap_id' => 2],
+                ['kode' => 'html1-2', 'label' => 'Struktur Dasar', 'roadmap_id' => 2],
+                ['kode' => 'html1-3', 'label' => 'Elemen Dasar: Tag, Atribut, & Value', 'roadmap_id' => 2],
+
+
+
+                ['kode' => 'html2', 'label' => 'Content HTML', 'roadmap_id' => 2],
+                ['kode' => 'html2-1', 'label' => 'Heading, Paragraph, Lists', 'roadmap_id' => 2],
+                ['kode' => 'html2-2', 'label' => 'Form Input', 'roadmap_id' => 2],
+                ['kode' => 'html2-3', 'label' => 'Image, Video, & Audio', 'roadmap_id' => 2],
+                ['kode' => 'html2-4', 'label' => 'Link & Navigation', 'roadmap_id' => 2],
+
+
+                ['kode' => 'html3', 'label' => 'Layout Structur', 'roadmap_id' => 2],
+                ['kode' => 'html3-1', 'label' => 'Elemen Layout Dasar', 'roadmap_id' => 2],
+                ['kode' => 'html3-2', 'label' => 'Table Layout & Grid Sederhana', 'roadmap_id' => 2],
+                ['kode' => 'html3-3', 'label' => 'Elemen dengan Hierarki Semantik yang Benar', 'roadmap_id' => 2],
+
+
+
+
+
+
+                ['kode' => 'CSS', 'label' => 'CSS', 'roadmap_id' => 2],
+
+
+                ['kode' => 'css1', 'label' => 'Pengenalan CSS', 'roadmap_id' => 2],
+                ['kode' => 'css1-1', 'label' => 'Apa itu CSS?', 'roadmap_id' => 2],
+                ['kode' => 'css1-2', 'label' => 'Config CSS', 'roadmap_id' => 2],
+                ['kode' => 'css1-3', 'label' => 'CSS: selector, properti, & value', 'roadmap_id' => 2],
+
+
+
+                ['kode' => 'JS', 'label' => 'JS', 'roadmap_id' => 2],
+                ['kode' => 'js1', 'label' => 'JavaScript', 'roadmap_id' => 2],
 
                 ]
         );

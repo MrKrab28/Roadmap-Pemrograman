@@ -94,6 +94,28 @@ class QuisSeeder extends Seeder
 
 
 
+            ['course_id' => 7, 'pertanyaan' => 'Tag apa yang digunakan untuk membuat heading tingkat tertinggi?'],
+            ['course_id' => 7, 'pertanyaan' => 'Tag apa yang digunakan untuk membuat daftar bernomor di HTML?'],
+            ['course_id' => 7, 'pertanyaan' => 'Tag apa yang digunakan untuk menampilkan video di HTML?'],
+            ['course_id' => 7, 'pertanyaan' => 'Untuk membuat dropdown pada form, tag HTML yang digunakan adalah...?'],
+            ['course_id' => 7, 'pertanyaan' => 'Tag <code><a></code> dalam HTML digunakan untuk...?'],
+
+
+
+            ['course_id' => 8, 'pertanyaan' => 'Tag HTML apa yang digunakan untuk membungkus bagian utama konten halaman?'],
+            ['course_id' => 8, 'pertanyaan' => 'Apa fungsi dari tag <section>?'],
+            ['course_id' => 8, 'pertanyaan' => 'Tag HTML apa yang biasanya digunakan untuk bagian penutup halaman?'],
+            ['course_id' => 8, 'pertanyaan' => 'Apa tujuan dari penggunaan elemen semantik dalam HTML?'],
+            ['course_id' => 8, 'pertanyaan' => 'Tag HTML mana yang semantik dan digunakan untuk konten mandiri seperti artikel?'],
+            ['course_id' => 8, 'pertanyaan' => 'Struktur heading HTML dimulai dari tag apa?'],
+
+
+            ['course_id' => 9, 'pertanyaan' => 'Apa singkatan dari CSS?'],
+            ['course_id' => 9, 'pertanyaan' => 'Apa fungsi utama CSS dalam pengembangan web?'],
+            ['course_id' => 9, 'pertanyaan' => 'CSS digunakan untuk mengatur apa dalam sebuah halaman web?'],
+            ['course_id' => 9, 'pertanyaan' => 'Mengapa penting memisahkan HTML dan CSS?'],
+            ['course_id' => 9, 'pertanyaan' => 'Apa keuntungan menggunakan CSS dalam proyek besar?'],
+
         ]);
     }
 }

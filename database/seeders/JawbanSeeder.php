@@ -72,6 +72,12 @@ class JawbanSeeder extends Seeder
             ['quis_id' => 10, 'jawaban' => '<!DOCTYPE html>', 'status' => 'benar', 'opsi' => 'C'],
             ['quis_id' => 10, 'jawaban' => '<body>', 'status' => 'salah', 'opsi' => 'D'],
 
+
+
+
+
+
+
             ['quis_id' => 11, 'jawaban' => 'Menampung data sementara untuk digunakan dalam program', 'status' => 'benar', 'opsi' => 'A'],
             ['quis_id' => 11, 'jawaban' => 'Menyimpan string dalam array', 'status' => 'salah', 'opsi' => 'B'],
             ['quis_id' => 11, 'jawaban' => 'Membaca file dari server', 'status' => 'salah', 'opsi' => 'C'],
@@ -229,6 +235,108 @@ class JawbanSeeder extends Seeder
 
 
 
+
+
+
+
+
+
+
+
+
+
+            ['quis_id' => 38, 'jawaban' => '<h6>', 'status' => 'salah', 'opsi' => 'A'],
+            ['quis_id' => 38, 'jawaban' => '<h3>', 'status' => 'salah', 'opsi' => 'B'],
+            ['quis_id' => 38, 'jawaban' => '<h1>', 'status' => 'benar', 'opsi' => 'C'],
+            ['quis_id' => 38, 'jawaban' => '<head>', 'status' => 'salah', 'opsi' => 'D'],
+
+
+            ['quis_id' => 39, 'jawaban' => '<ul>', 'status' => 'salah', 'opsi' => 'A'],
+            ['quis_id' => 39, 'jawaban' => '<li>', 'status' => 'salah', 'opsi' => 'B'],
+            ['quis_id' => 39, 'jawaban' => '<ol>', 'status' => 'benar', 'opsi' => 'C'],
+            ['quis_id' => 39, 'jawaban' => '<dl>', 'status' => 'salah', 'opsi' => 'D'],
+
+
+            ['quis_id' => 40, 'jawaban' => '<video>', 'status' => 'benar', 'opsi' => 'A'],
+            ['quis_id' => 40, 'jawaban' => '<media>', 'status' => 'salah', 'opsi' => 'B'],
+            ['quis_id' => 40, 'jawaban' => '<mp4>', 'status' => 'salah', 'opsi' => 'C'],
+            ['quis_id' => 40, 'jawaban' => '<embed>', 'status' => 'salah', 'opsi' => 'D'],
+
+
+            ['quis_id' => 41, 'jawaban' => '<input>', 'status' => 'salah', 'opsi' => 'A'],
+            ['quis_id' => 41, 'jawaban' => '<option>', 'status' => 'salah', 'opsi' => 'B'],
+            ['quis_id' => 41, 'jawaban' => '<select>', 'status' => 'benar', 'opsi' => 'C'],
+            ['quis_id' => 41, 'jawaban' => '<textarea>', 'status' => 'salah', 'opsi' => 'D'],
+
+
+            ['quis_id' => 42, 'jawaban' => 'Menambahkan gambar', 'status' => 'salah', 'opsi' => 'A'],
+            ['quis_id' => 42, 'jawaban' => 'Menampilkan video', 'status' => 'salah', 'opsi' => 'B'],
+            ['quis_id' => 42, 'jawaban' => 'Membuat tautan/hyperlink', 'status' => 'benar', 'opsi' => 'C'],
+            ['quis_id' => 42, 'jawaban' => 'Mengatur layout halaman', 'status' => 'salah', 'opsi' => 'D'],
+
+
+
+
+            ['quis_id' => 43, 'jawaban' => '<main>', 'status' => 'benar', 'opsi' => 'A'],
+            ['quis_id' => 43, 'jawaban' => '<div>', 'status' => 'salah', 'opsi' => 'B'],
+            ['quis_id' => 43, 'jawaban' => '<body>', 'status' => 'salah', 'opsi' => 'C'],
+            ['quis_id' => 43, 'jawaban' => '<container>', 'status' => 'salah', 'opsi' => 'D'],
+
+
+            ['quis_id' => 44, 'jawaban' => 'Untuk menyisipkan gambar', 'status' => 'salah', 'opsi' => 'A'],
+            ['quis_id' => 44, 'jawaban' => 'Untuk membuat form', 'status' => 'salah', 'opsi' => 'B'],
+            ['quis_id' => 44, 'jawaban' => 'Untuk mengelompokkan konten tematik', 'status' => 'benar', 'opsi' => 'C'],
+            ['quis_id' => 44, 'jawaban' => 'Untuk membuat sidebar', 'status' => 'salah', 'opsi' => 'D'],
+
+
+            ['quis_id' => 45, 'jawaban' => '<footer>', 'status' => 'benar', 'opsi' => 'A'],
+            ['quis_id' => 45, 'jawaban' => '<bottom>', 'status' => 'salah', 'opsi' => 'B'],
+            ['quis_id' => 45, 'jawaban' => '<nav>', 'status' => 'salah', 'opsi' => 'C'],
+            ['quis_id' => 45, 'jawaban' => '<aside>', 'status' => 'salah', 'opsi' => 'D'],
+
+            ['quis_id' => 46, 'jawaban' => 'Mempercantik tampilan halaman', 'status' => 'salah', 'opsi' => 'A'],
+            ['quis_id' => 46, 'jawaban' => 'Memudahkan struktur dan makna halaman', 'status' => 'benar', 'opsi' => 'B'],
+            ['quis_id' => 46, 'jawaban' => 'Meningkatkan ukuran file', 'status' => 'salah', 'opsi' => 'C'],
+            ['quis_id' => 46, 'jawaban' => 'Menggantikan JavaScript', 'status' => 'salah', 'opsi' => 'D'],
+
+
+            ['quis_id' => 47, 'jawaban' => '<div>', 'status' => 'salah', 'opsi' => 'A'],
+            ['quis_id' => 47, 'jawaban' => '<article>', 'status' => 'benar', 'opsi' => 'B'],
+            ['quis_id' => 47, 'jawaban' => '<span>', 'status' => 'salah', 'opsi' => 'C'],
+            ['quis_id' => 47, 'jawaban' => '<main>', 'status' => 'salah', 'opsi' => 'D'],
+
+
+            ['quis_id' => 48, 'jawaban' => '<h6>', 'status' => 'salah', 'opsi' => 'A'],
+            ['quis_id' => 48, 'jawaban' => '<h1>', 'status' => 'benar', 'opsi' => 'B'],
+            ['quis_id' => 48, 'jawaban' => '<p>', 'status' => 'salah', 'opsi' => 'C'],
+            ['quis_id' => 48, 'jawaban' => '<title>', 'status' => 'salah', 'opsi' => 'D'],
+
+
+            ['quis_id' => 49, 'jawaban' => 'Cascading Style Sheets', 'status' => 'benar', 'opsi' => 'A'],
+            ['quis_id' => 49, 'jawaban' => 'Creative Style Syntax', 'status' => 'salah', 'opsi' => 'B'],
+            ['quis_id' => 49, 'jawaban' => 'Code Styling Sheet', 'status' => 'salah', 'opsi' => 'C'],
+            ['quis_id' => 49, 'jawaban' => 'Central Style System', 'status' => 'salah', 'opsi' => 'D'],
+
+            ['quis_id' => 50, 'jawaban' => 'Mengelola struktur data', 'status' => 'salah', 'opsi' => 'A'],
+            ['quis_id' => 50, 'jawaban' => 'Menentukan tampilan visual halaman web', 'status' => 'benar', 'opsi' => 'B'],
+            ['quis_id' => 50, 'jawaban' => 'Membuat API', 'status' => 'salah', 'opsi' => 'C'],
+            ['quis_id' => 50, 'jawaban' => 'Menghubungkan server', 'status' => 'salah', 'opsi' => 'D'],
+
+            ['quis_id' => 51, 'jawaban' => 'Fungsi dan variabel', 'status' => 'salah', 'opsi' => 'A'],
+            ['quis_id' => 51, 'jawaban' => 'Struktur halaman dan alur logika', 'status' => 'salah', 'opsi' => 'B'],
+            ['quis_id' => 51, 'jawaban' => 'Tampilan dan tata letak visual', 'status' => 'benar', 'opsi' => 'C'],
+            ['quis_id' => 51, 'jawaban' => 'Relasi database', 'status' => 'salah', 'opsi' => 'D'],
+
+            ['quis_id' => 52, 'jawaban' => 'Agar halaman web lebih berat', 'status' => 'salah', 'opsi' => 'A'],
+            ['quis_id' => 52, 'jawaban' => 'Memisahkan struktur dan tampilan agar mudah dikelola', 'status' => 'benar', 'opsi' => 'B'],
+            ['quis_id' => 52, 'jawaban' => 'Untuk menyulitkan pembacaan kode', 'status' => 'salah', 'opsi' => 'C'],
+            ['quis_id' => 52, 'jawaban' => 'Agar browser dapat membacanya lebih cepat', 'status' => 'salah', 'opsi' => 'D'],
+
+            ['quis_id' => 53, 'jawaban' => 'Menulis ulang kode untuk setiap halaman', 'status' => 'salah', 'opsi' => 'A'],
+            ['quis_id' => 53, 'jawaban' => 'Menggunakan satu file untuk mengatur banyak halaman', 'status' => 'benar', 'opsi' => 'B'],
+            ['quis_id' => 53, 'jawaban' => 'Mengurangi waktu loading', 'status' => 'salah', 'opsi' => 'C'],
+            ['quis_id' => 53, 'jawaban' => 'Mengubah struktur halaman', 'status' => 'salah', 'opsi' => 'D'],
+
         ]);
-}
+    }
 }

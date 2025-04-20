@@ -40,13 +40,14 @@ class ModulSeeder extends Seeder
             ],
             [
                 'course_id' => 2,
-                'judul' => "Pengertian HTML dan Peranannya dalam Pembuatan Halaman Web",
-                'content' => "<p><strong>HTML (HyperText Markup Language)</strong> adalah bahasa markup standar untuk membuat halaman web. HTML digunakan untuk menyusun dan menampilkan teks, gambar, video, dan elemen-elemen lainnya di browser.</p><p>HTML bukan bahasa pemrograman, tetapi bahasa yang menyusun struktur halaman web. HTML bekerja bersama CSS (untuk tampilan) dan JavaScript (untuk interaktivitas) dalam membentuk aplikasi web modern.</p><p><strong>Peran HTML:</strong></p><ul><li>Menentukan struktur dasar halaman web</li><li>Menampilkan konten seperti teks dan media</li><li>Menjadi dasar sebelum menambahkan CSS dan JavaScript</li></ul>",
+                'judul' => "Pengenalan HTML",
+                'content' => "<h1>Pengertian HTML dan Peranannya dalam Pembuatan Halaman Web</h1>
+                <p><strong>HTML (HyperText Markup Language)</strong> adalah bahasa markup standar untuk membuat halaman web. HTML digunakan untuk menyusun dan menampilkan teks, gambar, video, dan elemen-elemen lainnya di browser.</p><p>HTML bukan bahasa pemrograman, tetapi bahasa yang menyusun struktur halaman web. HTML bekerja bersama CSS (untuk tampilan) dan JavaScript (untuk interaktivitas) dalam membentuk aplikasi web modern.</p><p><strong>Peran HTML:</strong></p><ul><li>Menentukan struktur dasar halaman web</li><li>Menampilkan konten seperti teks dan media</li><li>Menjadi dasar sebelum menambahkan CSS dan JavaScript</li></ul>",
                 'urutan' => 1
             ],
             [
                 'course_id' => 2,
-                'judul' => "Struktur Dasar Dokumen HTML",
+                'judul' => "Struktur Dasar",
                 'content' => "<p>Setiap halaman HTML dimulai dengan struktur dasar agar dikenali dengan baik oleh browser. Struktur ini terdiri dari:</p><pre><code>&lt;!DOCTYPE html&gt;
         &lt;html&gt;
           &lt;head&gt;
@@ -62,7 +63,7 @@ class ModulSeeder extends Seeder
             ],
             [
                 'course_id' => 2,
-                'judul' => "Elemen Dasar HTML: Tag, Atribut, dan Nilai",
+                'judul' => "Elemen Dasar: Tag, Atribut, dan Nilai",
                 'content' => "<p>HTML dibentuk dari <strong>elemen</strong> yang dimulai dengan <strong>tag</strong>. Tag HTML biasanya berpasangan (pembuka dan penutup), dan bisa memiliki <strong>atribut</strong> dengan <strong>nilai</strong> tertentu.</p><p><strong>Contoh elemen HTML:</strong></p><pre><code>&lt;a href=\"https://example.com\" target=\"_blank\"&gt;Kunjungi Website&lt;/a&gt;</code></pre><p><strong>Penjelasan:</strong></p><ul><li><strong>Tag:</strong> &lt;a&gt; dan &lt;/a&gt; digunakan untuk membuat tautan</li><li><strong>Atribut:</strong> <code>href</code> menentukan URL tujuan, <code>target</code> menentukan perilaku jendela</li><li><strong>Nilai:</strong> \"https://example.com\" adalah nilai dari <code>href</code></li></ul><p>Dengan memahami elemen HTML, Anda dapat mulai membangun struktur halaman secara semantik dan rapi.</p>",
                 'urutan' => 3
             ],
@@ -490,7 +491,7 @@ echo totalJumlah(10, 20, 30); // Output: 60
 
 <p>Memahami fungsi adalah dasar penting dalam membuat aplikasi PHP yang terstruktur dan dapat digunakan kembali.</p>
 HTML,
-    'urutan' => 4,
+                'urutan' => 4,
             ],
 
 
@@ -1147,8 +1148,8 @@ header("Location: index.php");
 
             [
                 'course_id' => 6,
-                'judul' =>"Validasi form & sanitasi data",
-                'content'=>"<h2>Validasi Form dan Sanitasi Data</h2>
+                'judul' => "Validasi form & sanitasi data",
+                'content' => "<h2>Validasi Form dan Sanitasi Data</h2>
 
 <p>Validasi dan sanitasi adalah langkah penting dalam pengolahan data yang diterima melalui formulir (form). Validasi digunakan untuk memastikan data yang dimasukkan oleh pengguna sesuai dengan kriteria yang diinginkan, sementara sanitasi digunakan untuk membersihkan data agar tidak mengandung karakter atau elemen berbahaya, seperti kode HTML yang tidak diinginkan atau script yang dapat menyebabkan kerentanannya (seperti XSS dan SQL Injection).</p>
 
@@ -1222,7 +1223,7 @@ echo \$email; // Menghilangkan karakter-karakter berbahaya pada email
 
             [
                 'course_id' => 6,
-                'judul' =>"App Secure dengan prepared statements untuk menghindari SQL Injection",
+                'judul' => "App Secure dengan prepared statements untuk menghindari SQL Injection",
                 'content' => "<h2>Pengamanan Aplikasi dengan Prepared Statements</h2>
 
 <p>SQL Injection adalah salah satu teknik serangan di mana pelaku dapat menyisipkan perintah SQL berbahaya ke dalam input pengguna untuk mendapatkan akses tidak sah ke database.</p>
@@ -1374,6 +1375,949 @@ if (password_verify(\$inputPassword, \$hashedFromDB)) {
 </ul>",
                 'urutan' => 3,
             ],
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            [
+                'course_id' => 7,
+                'urutan' => 1,
+                'judul' => 'Heading, Paragraph, Lists',
+                'content' =>  '
+        <h2>Pendahuluan</h2>
+        <p>HTML (Hypertext Markup Language) adalah bahasa standar yang digunakan untuk membuat dan menyusun halaman web. Sebagai dasar dari semua halaman web, HTML memungkinkan Anda untuk menentukan struktur konten yang akan ditampilkan oleh browser. Dalam materi ini, kita akan membahas elemen dasar dalam HTML, termasuk <strong>heading</strong>, <strong>paragraf</strong>, dan <strong>list</strong>, yang sangat penting dalam membangun halaman yang terstruktur dan mudah dipahami.</p>
+
+        <h3>1. Heading (Judul)</h3>
+        <p>Elemen <code>&lt;h1&gt;</code> hingga <code>&lt;h6&gt;</code> adalah elemen <strong>heading</strong> dalam HTML. Heading digunakan untuk menandai judul atau subjudul pada halaman web. Dalam struktur HTML, elemen heading juga digunakan untuk menunjukkan tingkat pentingnya sebuah informasi. Heading sangat berguna untuk membantu pembaca memahami struktur dan hierarki konten di halaman web.</p>
+
+        <p>Heading dengan tag <code>&lt;h1&gt;</code> dianggap sebagai judul utama halaman dan harus digunakan hanya satu kali di setiap halaman untuk menjaga konsistensi dan struktur halaman yang baik. Tag <code>&lt;h2&gt;</code> hingga <code>&lt;h6&gt;</code> digunakan untuk subjudul atau judul bagian yang lebih kecil, di mana <code>&lt;h2&gt;</code> adalah subjudul utama, <code>&lt;h3&gt;</code> subjudul dari <code>&lt;h2&gt;</code>, dan seterusnya.</p>
+
+        <h4>Contoh Penggunaan Heading:</h4>
+        <pre><code>&lt;h1&gt;Judul Utama Halaman&lt;/h1&gt;</code></pre>
+        <pre><code>&lt;h2&gt;Subjudul Bagian Utama&lt;/h2&gt;</code></pre>
+        <pre><code>&lt;h3&gt;Sub-subjudul&lt;/h3&gt;</code></pre>
+
+        <p><strong>Penjelasan elemen heading lebih lanjut:</strong></p>
+        <ul>
+            <li><strong><code>&lt;h1&gt;</code>:</strong> Digunakan untuk menandai judul utama halaman. Ini memberikan gambaran umum tentang apa yang akan dibahas dalam halaman tersebut. Setiap halaman sebaiknya memiliki satu <code>&lt;h1&gt;</code> untuk menjaga struktur yang konsisten.</li>
+            <li><strong><code>&lt;h2&gt;</code>:</strong> Digunakan untuk menandai subjudul utama yang membagi konten menjadi bagian yang lebih kecil. Setiap bagian utama dari halaman bisa diberi subjudul dengan tag <code>&lt;h2&gt;</code>.</li>
+            <li><strong><code>&lt;h3&gt;</code> hingga <code>&lt;h6&gt;</code>:</strong> Digunakan untuk sub-subjudul yang lebih spesifik. Seiring menurunnya angka, semakin kecil tingkat pentingnya judul tersebut dalam struktur konten.</li>
+        </ul>
+
+        <h4>Manfaat Penggunaan Heading:</h4>
+        <p>Selain memberikan struktur visual pada halaman web, heading juga memiliki manfaat SEO (Search Engine Optimization). Mesin pencari seperti Google menggunakan heading untuk menentukan relevansi dan urutan informasi di halaman web. Oleh karena itu, penggunaan heading yang benar dan terstruktur dengan baik dapat membantu halaman Anda lebih mudah ditemukan di hasil pencarian.</p>
+
+        <h3>2. Paragraf</h3>
+        <p>Paragraf adalah elemen dasar dalam HTML yang digunakan untuk mengelompokkan teks dalam bentuk blok. Setiap paragraf diletakkan dalam elemen <code>&lt;p&gt;</code>. Paragraf membantu membagi teks menjadi bagian yang lebih mudah dibaca, membuat konten lebih terstruktur dan tidak terlihat padat. Tanpa paragraf, teks akan muncul dalam satu blok panjang yang bisa membuat pembaca merasa kesulitan dalam memahami informasi.</p>
+
+        <h4>Contoh Penggunaan Paragraf:</h4>
+        <pre><code>&lt;p&gt;Ini adalah paragraf pertama yang menjelaskan topik tertentu&lt;/p&gt;</code></pre>
+        <pre><code>&lt;p&gt;Ini adalah paragraf kedua yang berisi detail lebih lanjut tentang topik tersebut&lt;/p&gt;</code></pre>
+
+        <h4>Penjelasan Paragraf Lebih Lanjut:</h4>
+        <p>Paragraf membantu meningkatkan keterbacaan konten halaman web. Ketika menulis teks panjang, menggunakan paragraf akan membuat teks lebih mudah dipahami dan diikuti. Setiap paragraf dipisahkan dengan jarak vertikal yang membuat halaman lebih rapi.</p>
+
+        <h4>Manfaat Penggunaan Paragraf:</h4>
+        <ul>
+            <li><strong>Keterbacaan:</strong> Paragraf yang dipisahkan dengan baik membantu pembaca mencerna informasi dengan lebih mudah.</li>
+            <li><strong>Struktur Teks:</strong> Menggunakan paragraf memungkinkan Anda untuk mengorganisir informasi secara terstruktur, sehingga pembaca dapat mengikuti ide utama dengan mudah.</li>
+            <li><strong>SEO:</strong> Mesin pencari juga menyukai halaman yang terstruktur dengan baik, termasuk penggunaan paragraf yang memisahkan topik-topik utama.</li>
+        </ul>
+
+        <h3>3. List (Daftar)</h3>
+        <p>Daftar adalah elemen HTML yang digunakan untuk mengelompokkan informasi dalam bentuk list atau urutan. Ada dua jenis daftar utama dalam HTML: <code>&lt;ul&gt;</code> (unordered list) dan <code>&lt;ol&gt;</code> (ordered list).</p>
+
+        <h4>Daftar Tidak Terurut (Unordered List - &lt;ul&gt;)</h4>
+        <p>Daftar tidak terurut digunakan untuk menampilkan informasi yang tidak memiliki urutan tertentu. Item dalam daftar tidak memiliki angka atau urutan tertentu, hanya simbol titik atau bullet yang digunakan untuk memisahkan setiap item.</p>
+
+        <h4>Contoh Penggunaan Daftar Tidak Terurut:</h4>
+        <pre><code>&lt;ul&gt;
+  &lt;li&gt;Apple&lt;/li&gt;
+  &lt;li&gt;Banana&lt;/li&gt;
+  &lt;li&gt;Cherry&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+
+        <h4>Daftar Terurut (Ordered List - &lt;ol&gt;)</h4>
+        <p>Daftar terurut digunakan ketika item dalam daftar memiliki urutan tertentu. Ini berguna ketika Anda ingin menyusun informasi dalam langkah-langkah atau urutan numerik.</p>
+
+        <h4>Contoh Penggunaan Daftar Terurut:</h4>
+        <pre><code>&lt;ol&gt;
+  &lt;li&gt;Langkah pertama&lt;/li&gt;
+  &lt;li&gt;Langkah kedua&lt;/li&gt;
+  &lt;li&gt;Langkah ketiga&lt;/li&gt;
+&lt;/ol&gt;</code></pre>
+
+        <h4>Perbedaan antara Daftar Terurut dan Daftar Tidak Terurut:</h4>
+        <ul>
+            <li><strong>Daftar Tidak Terurut (<code>&lt;ul&gt;</code>):</strong> Digunakan untuk item yang tidak memerlukan urutan khusus.</li>
+            <li><strong>Daftar Terurut (<code>&lt;ol&gt;</code>):</strong> Digunakan untuk item yang memerlukan urutan tertentu, seperti langkah-langkah atau instruksi yang harus diikuti dalam urutan yang benar.</li>
+        </ul>
+
+        <h3>4. Mengapa Heading, Paragraf, dan List Penting dalam HTML?</h3>
+        <p>Heading, paragraf, dan list adalah elemen dasar yang sangat penting dalam HTML karena mereka membantu menyusun halaman web dengan cara yang terstruktur, membuatnya mudah dibaca dan dimengerti oleh pengunjung. Selain itu, penggunaan elemen-elemen ini yang tepat sangat penting untuk SEO, karena mesin pencari akan lebih mudah memahami dan mengindeks halaman yang terstruktur dengan baik.</p>
+
+        <p>Penggunaan heading yang benar membantu pembaca dan mesin pencari memahami topik utama dan subtopik dalam halaman. Paragraf memungkinkan untuk menyusun informasi dalam potongan-potongan kecil yang mudah dicerna, sementara list mempermudah penyusunan informasi yang berbentuk urutan atau item-item yang relevan.</p>
+    ',
+            ],
+
+
+            [
+                'course_id' => 7,
+                'urutan' => 2,
+                'judul' => 'Form Input',
+                'content' => '
+        <h1>form input (input, select, textarea)</h1>
+        <h2>Pendahuluan</h2>
+        <p>Formulir (form) dalam HTML digunakan untuk mengumpulkan data dari pengguna. Elemen form memungkinkan pengguna untuk memasukkan data seperti nama, alamat email, dan lain-lain, yang kemudian dapat diproses oleh server. Di dalam formulir HTML, kita sering menggunakan elemen seperti <strong>input</strong>, <strong>select</strong>, dan <strong>textarea</strong> untuk menerima berbagai jenis input dari pengguna. Pada materi ini, kita akan membahas cara penggunaan elemen-elemen ini dengan penjelasan yang mendalam.</p>
+
+        <h3>1. Input</h3>
+        <p>Elemen <code>&lt;input&gt;</code> adalah elemen yang sangat umum digunakan dalam HTML untuk menerima input dari pengguna. Elemen ini dapat digunakan untuk berbagai jenis input, seperti teks, angka, tanggal, dan lain-lain. Jenis input ditentukan melalui atribut <code>type</code>.</p>
+
+        <h4>Jenis-Jenis Input yang Umum Digunakan:</h4>
+        <ul>
+            <li><strong>Text:</strong> <code>&lt;input type="text"&gt;</code> digunakan untuk menerima input teks dari pengguna, seperti nama atau alamat.</li>
+            <li><strong>Password:</strong> <code>&lt;input type="password"&gt;</code> digunakan untuk menerima input yang bersifat rahasia, seperti kata sandi, di mana karakter yang dimasukkan disembunyikan.</li>
+            <li><strong>Checkbox:</strong> <code>&lt;input type="checkbox"&gt;</code> digunakan untuk membuat opsi pilihan yang dapat dipilih oleh pengguna (true/false).</li>
+            <li><strong>Radio:</strong> <code>&lt;input type="radio"&gt;</code> digunakan untuk memilih satu opsi dari beberapa pilihan yang tersedia.</li>
+            <li><strong>Submit:</strong> <code>&lt;input type="submit"&gt;</code> digunakan untuk mengirimkan formulir ke server.</li>
+            <li><strong>Button:</strong> <code>&lt;input type="button"&gt;</code> digunakan untuk membuat tombol yang tidak mengirimkan formulir, tetapi dapat diprogram dengan JavaScript untuk menjalankan tindakan tertentu.</li>
+        </ul>
+
+        <h4>Contoh Penggunaan Elemen Input:</h4>
+        <pre><code>&lt;form&gt;
+  &lt;label for="nama"&gt;Nama:&lt;/label&gt;
+  &lt;input type="text" id="nama" name="nama"&gt;
+
+  &lt;label for="password"&gt;Kata Sandi:&lt;/label&gt;
+  &lt;input type="password" id="password" name="password"&gt;
+
+  &lt;input type="submit" value="Kirim"&gt;
+&lt;/form&gt;</code></pre>
+
+        <h4>Penjelasan Lebih Lanjut:</h4>
+        <p>Elemen <code>&lt;input&gt;</code> sangat fleksibel karena memungkinkan berbagai jenis data dikumpulkan dari pengguna. Atribut <code>type</code> menentukan tipe input yang diterima. Misalnya, ketika menggunakan <code>type="text"</code>, pengguna dapat memasukkan teks biasa, sementara <code>type="password"</code> akan menyembunyikan karakter input. Dengan menggunakan <code>type="radio"</code> atau <code>type="checkbox"</code>, kita dapat menyediakan opsi yang memungkinkan pengguna untuk memilih lebih dari satu opsi (checkbox) atau hanya satu opsi (radio).</p>
+
+        <h4>Manfaat Penggunaan Input:</h4>
+        <ul>
+            <li><strong>Koleksi Data:</strong> Formulir HTML memungkinkan kita mengumpulkan berbagai jenis data dari pengguna dengan cara yang efisien.</li>
+            <li><strong>Kemudahan Penggunaan:</strong> Input yang tepat mempermudah pengguna dalam memberikan data yang dibutuhkan, seperti nama, email, atau preferensi mereka.</li>
+            <li><strong>Validasi:</strong> Beberapa tipe input memungkinkan kita untuk melakukan validasi data sebelum mengirimkan formulir ke server, seperti memeriksa format email atau memastikan bahwa kata sandi tidak kosong.</li>
+        </ul>
+
+        <h3>2. Select (Dropdown Menu)</h3>
+        <p>Elemen <code>&lt;select&gt;</code> digunakan untuk membuat menu dropdown, yang memungkinkan pengguna memilih satu atau beberapa pilihan dari daftar yang disediakan. Biasanya, elemen <code>&lt;select&gt;</code> digunakan bersama dengan elemen <code>&lt;option&gt;</code> untuk menampilkan pilihan-pilihan yang dapat dipilih oleh pengguna.</p>
+
+        <h4>Contoh Penggunaan Elemen Select:</h4>
+        <pre><code>&lt;form&gt;
+  &lt;label for="negara"&gt;Pilih Negara:&lt;/label&gt;
+  &lt;select id="negara" name="negara"&gt;
+    &lt;option value="indonesia"&gt;Indonesia&lt;/option&gt;
+    &lt;option value="malaysia"&gt;Malaysia&lt;/option&gt;
+    &lt;option value="singapura"&gt;Singapura&lt;/option&gt;
+  &lt;/select&gt;
+  &lt;input type="submit" value="Kirim"&gt;
+&lt;/form&gt;</code></pre>
+
+        <h4>Penjelasan Lebih Lanjut:</h4>
+        <p>Elemen <code>&lt;select&gt;</code> memungkinkan kita untuk membuat dropdown menu yang dapat menampung beberapa pilihan di dalamnya. Setiap pilihan dalam dropdown ditandai dengan elemen <code>&lt;option&gt;</code>. Atribut <code>value</code> dalam elemen <code>&lt;option&gt;</code> menentukan nilai yang dikirimkan ketika pengguna memilih pilihan tersebut. Menu dropdown sangat berguna ketika ada banyak pilihan, sehingga tidak perlu menampilkan semuanya sekaligus.</p>
+
+        <h4>Manfaat Penggunaan Select:</h4>
+        <ul>
+            <li><strong>Penyederhanaan Pilihan:</strong> Menggunakan dropdown menu membuat daftar pilihan yang banyak menjadi lebih ringkas dan mudah diakses oleh pengguna.</li>
+            <li><strong>Pengurangan Kesalahan:</strong> Dengan menyediakan pilihan tetap, pengguna dapat memilih opsi yang benar tanpa perlu mengetikkan data secara manual, yang mengurangi kesalahan.</li>
+            <li><strong>Mempermudah Navigasi:</strong> Dropdown menu yang terorganisir dengan baik mempermudah pengguna dalam menemukan pilihan yang mereka inginkan.</li>
+        </ul>
+
+        <h3>3. Textarea</h3>
+        <p>Elemen <code>&lt;textarea&gt;</code> digunakan untuk menerima input teks yang lebih panjang dari pengguna. Biasanya, elemen ini digunakan untuk meminta pengguna menulis pesan, komentar, atau opini. Tidak seperti elemen <code>&lt;input&gt;</code> yang hanya dapat digunakan untuk input satu baris, <code>&lt;textarea&gt;</code> memungkinkan input multi-baris.</p>
+
+        <h4>Contoh Penggunaan Textarea:</h4>
+        <pre><code>&lt;form&gt;
+  &lt;label for="komentar"&gt;Komentar Anda:&lt;/label&gt;
+  &lt;textarea id="komentar" name="komentar" rows="4" cols="50"&gt;&lt;/textarea&gt;
+  &lt;input type="submit" value="Kirim"&gt;
+&lt;/form&gt;</code></pre>
+
+        <h4>Penjelasan Lebih Lanjut:</h4>
+        <p>Elemen <code>&lt;textarea&gt;</code> digunakan untuk menerima input teks yang lebih panjang. Pengguna dapat mengetikkan beberapa baris teks di dalam area textarea. Anda bisa mengatur ukuran area input menggunakan atribut <code>rows</code> untuk menentukan jumlah baris dan <code>cols</code> untuk menentukan lebar kolom. Textarea sangat berguna ketika Anda ingin menerima data dalam format yang lebih bebas, seperti komentar, deskripsi, atau alamat.</p>
+
+        <h4>Manfaat Penggunaan Textarea:</h4>
+        <ul>
+            <li><strong>Input Teks Panjang:</strong> Textarea digunakan ketika Anda membutuhkan area untuk teks panjang, seperti komentar atau pesan dari pengguna.</li>
+            <li><strong>Fleksibilitas:</strong> Dengan textarea, pengguna bisa menulis lebih bebas tanpa dibatasi oleh ukuran baris input seperti pada elemen <code>&lt;input&gt;</code>.</li>
+            <li><strong>Mempermudah Pengumpulan Data:</strong> Teks panjang dapat dikumpulkan dengan lebih mudah menggunakan textarea, yang memungkinkan pengguna untuk memberikan masukan lebih rinci dan mendalam.</li>
+        </ul>
+
+        <h3>4. Mengapa Form Input Penting dalam HTML?</h3>
+        <p>Form input sangat penting dalam HTML karena memungkinkan kita mengumpulkan informasi dari pengguna yang kemudian dapat digunakan untuk berbagai tujuan, seperti registrasi, login, pengisian survey, atau pengumpulan feedback. Dengan menggunakan elemen seperti input, select, dan textarea, kita dapat menyediakan antarmuka yang jelas dan mudah digunakan untuk mengumpulkan data dari pengguna. Formulir yang baik memungkinkan pengguna memberikan input yang diperlukan dengan cara yang cepat dan efisien.</p>
+    ',
+            ],
+
+            [
+                'course_id' => 7,
+                'urutan' => 3,
+                'judul' => 'Image, Video, & Audio',
+                'content' => '
+        <p>Di dalam dunia pengembangan web, media seperti gambar, video, dan audio adalah komponen penting dalam menyampaikan informasi kepada pengguna. Dengan HTML, kamu bisa menyisipkan berbagai jenis media ke dalam halaman web. Mari kita pelajari cara untuk melakukannya.</p>
+
+        <h3>1. Menyisipkan Gambar</h3>
+        <p>Untuk menampilkan gambar di halaman web, kita menggunakan tag <code>&lt;img&gt;</code>. Tag ini digunakan untuk menyisipkan gambar statis, yang sering kali digunakan untuk logo, ilustrasi, ikon, dan foto. Gambar adalah salah satu jenis konten multimedia yang membuat halaman web lebih menarik dan informatif.</p>
+        <p>Berikut adalah contoh penggunaan tag <code>&lt;img&gt;</code>:</p>
+        <pre><code>&lt;img src="images/gambar.jpg" alt="Gambar Deskripsi" width="600" height="400"&gt;</code></pre>
+
+        <p><strong>Penjelasan:</strong>
+            <ul>
+                <li><code>src</code>: Atribut ini menunjukkan lokasi file gambar yang ingin ditampilkan. Ini bisa berupa path relatif, seperti <code>images/gambar.jpg</code>, atau URL absolut, seperti <code>https://example.com/gambar.jpg</code>.</li>
+                <li><code>alt</code>: Atribut ini memberikan deskripsi alternatif untuk gambar. Deskripsi ini muncul ketika gambar gagal dimuat atau ketika pengguna menggunakan pembaca layar. Atribut ini juga berfungsi untuk SEO (Search Engine Optimization) karena mesin pencari dapat membaca deskripsi gambar.</li>
+                <li><code>width</code> dan <code>height</code>: Atribut ini mengontrol ukuran gambar yang ditampilkan di halaman. Meskipun gambar asli dapat memiliki dimensi yang lebih besar atau lebih kecil, atribut ini memungkinkan kamu untuk menyesuaikan tampilan gambar sesuai kebutuhan.</li>
+            </ul>
+        </p>
+
+        <p><strong>Contoh lain:</strong> Jika gambar berada dalam folder yang terpisah, kamu bisa menggunakan path relatif untuk mengaksesnya, seperti berikut:</p>
+        <pre><code>&lt;img src="assets/images/logo.png" alt="Logo Website"&gt;</code></pre>
+
+        <h3>2. Menyisipkan Video</h3>
+        <p>Selain gambar, video juga merupakan media yang sangat efektif dalam menyampaikan informasi secara visual dan audio. HTML menyediakan tag <code>&lt;video&gt;</code> untuk menyisipkan video ke dalam halaman web. Dengan tag ini, kamu bisa mengontrol pemutaran video secara langsung di halaman tanpa perlu menggunakan plugin tambahan seperti Flash.</p>
+        <p>Berikut adalah cara menggunakan tag <code>&lt;video&gt;</code> untuk menyisipkan video:</p>
+        <pre><code>&lt;video controls width="600" height="400"&gt;
+    &lt;source src="video.mp4" type="video/mp4"&gt;
+    Browser Anda tidak mendukung elemen video.
+&lt;/video&gt;</code></pre>
+
+        <p><strong>Penjelasan:</strong>
+            <ul>
+                <li><code>controls</code>: Atribut ini menambahkan kontrol pemutaran, seperti tombol play/pause, volume, dan progress bar. Tanpa atribut ini, video akan diputar otomatis tanpa kontrol.</li>
+                <li><code>width</code> dan <code>height</code>: Atribut ini mengatur ukuran video di halaman.</li>
+                <li><code>&lt;source&gt;</code>: Elemen <code>&lt;source&gt;</code> digunakan untuk mendefinisikan file video yang akan diputar. Atribut <code>src</code> menunjukkan lokasi file, sedangkan atribut <code>type</code> menunjukkan format video (misalnya, <code>video/mp4</code>).</li>
+            </ul>
+        </p>
+
+        <p><strong>Catatan:</strong> Sebaiknya kamu menyediakan beberapa format video (seperti .mp4, .webm, .ogg) untuk memastikan kompatibilitas dengan berbagai browser. HTML5 memungkinkan kamu untuk menyediakan berbagai format video untuk kompatibilitas lintas platform.</p>
+
+        <h3>3. Menyisipkan Audio</h3>
+        <p>Selain video, audio juga bisa disisipkan menggunakan tag <code>&lt;audio&gt;</code>. Media audio sering digunakan dalam aplikasi web untuk musik, suara latar, atau efek suara. Seperti halnya tag video, tag audio juga mendukung atribut <code>controls</code> untuk memberikan kontrol pemutaran kepada pengguna.</p>
+        <p>Berikut adalah contoh untuk menyisipkan file audio:</p>
+        <pre><code>&lt;audio controls&gt;
+    &lt;source src="musik.mp3" type="audio/mp3"&gt;
+    Browser Anda tidak mendukung elemen audio.
+&lt;/audio&gt;</code></pre>
+
+        <p><strong>Penjelasan:</strong>
+            <ul>
+                <li><code>controls</code>: Menambahkan kontrol pemutaran untuk audio, termasuk tombol play/pause dan pengaturan volume.</li>
+                <li><code>src</code>: Menunjukkan lokasi file audio yang ingin diputar.</li>
+                <li><code>type</code>: Menentukan format file audio, misalnya <code>audio/mp3</code> atau <code>audio/ogg</code>.</li>
+            </ul>
+        </p>
+
+        <p>Jika pengguna memiliki browser yang tidak mendukung elemen audio, kamu bisa menambahkan pesan alternatif di dalam tag <code>&lt;audio&gt;</code>, seperti yang ditunjukkan di atas ("Browser Anda tidak mendukung elemen audio").</p>
+
+        <h3>Ringkasan:</h3>
+        <ul>
+            <li><code>&lt;img&gt;</code> digunakan untuk menyisipkan gambar dengan atribut <code>src</code> dan <code>alt</code>.</li>
+            <li><code>&lt;video&gt;</code> digunakan untuk menyisipkan video, dengan kontrol pemutaran menggunakan atribut <code>controls</code>.</li>
+            <li><code>&lt;audio&gt;</code> digunakan untuk menyisipkan file audio dengan kontrol pemutaran menggunakan atribut <code>controls</code>.</li>
+        </ul>
+        <p>Dengan memahami cara menyisipkan gambar, video, dan audio ini, kamu bisa membuat halaman web yang lebih menarik dan interaktif!</p>
+    ',
+            ],
+
+            [
+                'course_id' => 7,
+                'urutan' => 4,
+                'judul' => 'Link & Navigation',
+                'content' => '
+        <p>Link dan navigasi adalah komponen penting dalam membangun sebuah website. Mereka memungkinkan pengguna untuk berpindah antar halaman atau bagian-bagian tertentu dari halaman yang sama. HTML memberikan tag khusus untuk membuat link dan mengorganisir navigasi di halaman web.</p>
+
+        <h3>1. Menambahkan Link (Tautan)</h3>
+        <p>Link atau tautan adalah elemen HTML yang menghubungkan satu halaman dengan halaman lainnya. Link dibuat menggunakan tag <code>&lt;a&gt;</code> (anchor). Tautan ini dapat mengarah ke halaman lain, ke bagian lain di halaman yang sama, atau ke sumber daya eksternal.</p>
+        <p>Berikut adalah contoh cara membuat tautan:</p>
+        <pre><code>&lt;a href="https://www.example.com"&gt;Kunjungi Website&lt;/a&gt;</code></pre>
+
+        <p><strong>Penjelasan:</strong>
+            <ul>
+                <li><code>href</code>: Atribut <code>href</code> adalah atribut utama pada tag <code>&lt;a&gt;</code> yang berfungsi untuk menentukan tujuan dari tautan tersebut. Nilai dari atribut ini bisa berupa URL absolut (misalnya, <code>https://www.example.com</code>) atau path relatif (misalnya, <code>page.html</code>).</li>
+                <li><code>&lt;a&gt;</code>: Tag ini membungkus teks atau elemen lain yang akan menjadi tautan. Pengguna dapat mengklik elemen ini untuk menuju ke lokasi yang ditentukan dalam atribut <code>href</code>.</li>
+            </ul>
+        </p>
+
+        <h3>2. Menambahkan Link ke Bagian Tertentu dalam Halaman</h3>
+        <p>Selain mengarah ke halaman lain, tautan juga bisa mengarah ke bagian tertentu dalam halaman yang sama. Ini sangat berguna untuk membuat navigasi dalam halaman yang panjang atau untuk membuat daftar isi.</p>
+        <pre><code>&lt;a href="#bagian1"&gt;Ke Bagian 1&lt;/a&gt;</code></pre>
+        <p>Dan pada bagian yang dituju, gunakan atribut <code>id</code>:</p>
+        <pre><code>&lt;div id="bagian1"&gt;Ini adalah Bagian 1&lt;/div&gt;</code></pre>
+
+        <h3>3. Menambahkan Link ke Email</h3>
+        <p>Kamu juga bisa menambahkan link yang membuka aplikasi email untuk mengirim email ke alamat tertentu. Untuk melakukannya, gunakan skema <code>mailto:</code> dalam atribut <code>href</code>.</p>
+        <pre><code>&lt;a href="mailto:email@example.com"&gt;Kirim Email&lt;/a&gt;</code></pre>
+
+        <h3>4. Membuat Menu Navigasi</h3>
+        <p>Untuk mempermudah navigasi di halaman web, kamu bisa membuat menu navigasi dengan beberapa link yang mengarah ke bagian-bagian tertentu dalam halaman atau ke halaman lain.</p>
+        <pre><code>&lt;nav&gt;
+    &lt;ul&gt;
+        &lt;li&gt;&lt;a href="#home"&gt;Home&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#about"&gt;About&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#services"&gt;Services&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/nav&gt;</code></pre>
+
+        <p><strong>Penjelasan:</strong>
+            <ul>
+                <li><code>&lt;nav&gt;</code>: Elemen ini digunakan untuk membungkus link navigasi. Ini memberi tahu browser bahwa elemen di dalamnya adalah bagian dari navigasi situs web.</li>
+                <li><code>&lt;ul&gt;</code>: Tag ini membuat daftar tak terurut. Di dalamnya, kamu bisa menambahkan item daftar dengan tag <code>&lt;li&gt;</code>.</li>
+                <li><code>&lt;a&gt;</code>: Tag ini digunakan untuk membuat tautan dalam menu navigasi.</li>
+            </ul>
+        </p>
+
+        <h3>5. Membuka Link di Tab Baru</h3>
+        <p>Jika kamu ingin agar link terbuka di tab baru saat diklik, tambahkan atribut <code>target="_blank"</code> pada tag <code>&lt;a&gt;</code>.</p>
+        <pre><code>&lt;a href="https://www.example.com" target="_blank"&gt;Kunjungi Website&lt;/a&gt;</code></pre>
+
+        <h3>Ringkasan:</h3>
+        <ul>
+            <li><code>&lt;a&gt;</code> digunakan untuk membuat link, dengan atribut <code>href</code> yang mengarahkan ke lokasi tujuan.</li>
+            <li><code>&lt;nav&gt;</code> digunakan untuk membuat menu navigasi yang dapat menghubungkan berbagai bagian dalam halaman atau halaman lain.</li>
+            <li><code>target="_blank"</code> digunakan untuk membuka link di tab baru.</li>
+        </ul>
+
+        <p>Dengan memahami cara membuat link dan navigasi yang baik, kamu bisa membuat website yang lebih interaktif dan mudah dijelajahi.</p>
+    ',
+            ],
+
+
+
+
+
+
+
+
+
+
+            [
+                'course_id' => 8,
+                'urutan' => 1,
+                'judul' => 'Elemen Layout Dasar',
+                'content' => '
+        <h2>Pendahuluan</h2>
+        <p>HTML tidak hanya digunakan untuk menampilkan konten, tetapi juga untuk menyusun struktur halaman web dengan rapi dan semantik. Untuk itu, kita menggunakan elemen layout dasar seperti <code>&lt;div&gt;</code>, <code>&lt;header&gt;</code>, <code>&lt;footer&gt;</code>, <code>&lt;section&gt;</code>, dan <code>&lt;article&gt;</code>. Elemen-elemen ini membantu developer membuat tata letak yang lebih mudah dipahami oleh browser, developer lain, bahkan oleh mesin pencari.</p>
+
+        <h3>1. &lt;div&gt; - Elemen Kontainer Umum</h3>
+        <p><code>&lt;div&gt;</code> (singkatan dari "division") adalah elemen non-semantik yang digunakan sebagai kontainer umum untuk mengelompokkan elemen HTML lainnya. Elemen ini tidak memiliki arti semantik, namun sangat berguna dalam pengelompokan dan pengaturan layout menggunakan CSS.</p>
+
+        <pre><code>&lt;div class="konten"&gt;
+  &lt;p&gt;Ini adalah paragraf di dalam div.&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+
+        <ul>
+            <li><strong>Non-semantik:</strong> Tidak menggambarkan arti konten di dalamnya.</li>
+            <li><strong>Fleksibel:</strong> Sering digunakan bersama CSS untuk membentuk grid, layout, atau posisi elemen.</li>
+        </ul>
+
+        <h3>2. &lt;header&gt; - Bagian Atas Halaman</h3>
+        <p><code>&lt;header&gt;</code> adalah elemen semantik yang mewakili bagian kepala dari halaman atau bagian dari konten. Biasanya digunakan untuk memuat judul, navigasi utama, logo, atau elemen pengantar lainnya.</p>
+
+        <pre><code>&lt;header&gt;
+  &lt;h1&gt;Selamat Datang di Website Saya&lt;/h1&gt;
+  &lt;nav&gt;
+    &lt;a href="/"&gt;Beranda&lt;/a&gt;
+    &lt;a href="/kontak"&gt;Kontak&lt;/a&gt;
+  &lt;/nav&gt;
+&lt;/header&gt;</code></pre>
+
+        <p><strong>Catatan:</strong> &lt;header&gt; tidak harus muncul hanya sekali di halaman. Ia bisa digunakan di dalam &lt;article&gt; atau &lt;section&gt; untuk memberikan pengantar lokal.</p>
+
+        <h3>3. &lt;footer&gt; - Bagian Bawah Halaman</h3>
+        <p><code>&lt;footer&gt;</code> adalah elemen semantik yang biasanya terletak di bagian bawah halaman atau konten. Elemen ini biasanya berisi informasi hak cipta, tautan kebijakan privasi, atau kontak pengembang.</p>
+
+        <pre><code>&lt;footer&gt;
+  &lt;p&gt;&copy; 2025 Website Saya. Semua Hak Dilindungi.&lt;/p&gt;
+&lt;/footer&gt;</code></pre>
+
+        <p><strong>Penggunaan:</strong> Sama seperti &lt;header&gt;, elemen &lt;footer&gt; juga bisa digunakan di dalam &lt;section&gt; atau &lt;article&gt; sebagai penutup lokal konten.</p>
+
+        <h3>4. &lt;section&gt; - Bagian Terpisah dari Konten</h3>
+        <p><code>&lt;section&gt;</code> adalah elemen semantik yang digunakan untuk mengelompokkan konten yang memiliki tema atau tujuan tertentu. Biasanya digunakan untuk membagi halaman menjadi bagian-bagian yang lebih kecil seperti fitur, berita, atau artikel.</p>
+
+        <pre><code>&lt;section&gt;
+  &lt;h2&gt;Fitur Utama&lt;/h2&gt;
+  &lt;p&gt;Kami menawarkan berbagai fitur menarik.&lt;/p&gt;
+&lt;/section&gt;</code></pre>
+
+        <ul>
+            <li><strong>Semantik:</strong> Menjelaskan struktur dan tujuan konten kepada browser dan pembaca screen reader.</li>
+            <li><strong>SEO-friendly:</strong> Membantu mesin pencari memahami struktur konten.</li>
+        </ul>
+
+        <h3>5. &lt;article&gt; - Konten Independen</h3>
+        <p><code>&lt;article&gt;</code> digunakan untuk membungkus konten yang bisa berdiri sendiri dan dapat dipublikasikan secara independen seperti postingan blog, berita, atau forum.</p>
+
+        <pre><code>&lt;article&gt;
+  &lt;header&gt;
+    &lt;h2&gt;Judul Artikel&lt;/h2&gt;
+    &lt;p&gt;Ditulis oleh Admin&lt;/p&gt;
+  &lt;/header&gt;
+  &lt;p&gt;Ini adalah isi utama artikel yang menjelaskan topik tertentu.&lt;/p&gt;
+  &lt;footer&gt;
+    &lt;p&gt;Dipublikasikan: 21 April 2025&lt;/p&gt;
+  &lt;/footer&gt;
+&lt;/article&gt;</code></pre>
+
+        <p><strong>Kelebihan:</strong> &lt;article&gt; memudahkan pengelompokan konten yang bisa berdiri sendiri dan berguna dalam pengelolaan CMS atau feed berita.</p>
+
+        <h3>Kesimpulan</h3>
+        <p>Memahami elemen layout dasar HTML sangat penting untuk membangun struktur halaman web yang baik. Elemen seperti <code>&lt;header&gt;</code>, <code>&lt;footer&gt;</code>, <code>&lt;section&gt;</code>, dan <code>&lt;article&gt;</code> memperkuat semantik HTML dan membuat konten lebih mudah dipahami baik oleh manusia maupun mesin pencari. Sementara itu, <code>&lt;div&gt;</code> tetap menjadi alat penting untuk layout yang fleksibel bersama CSS. Gunakan elemen semantik sesuai kebutuhan agar struktur halaman menjadi lebih logis, mudah dirawat, dan lebih profesional.</p>
+    '
+            ],
+
+
+
+
+            [
+                'course_id' => 8,
+                'urutan' => 2,
+                'judul' => 'Table Layout & Grid Sederhana',
+                'content' =>  '
+                <h2>Pendahuluan</h2>
+                <p>Pada tahap awal pengembangan web, salah satu cara untuk mengatur tata letak (layout) halaman adalah dengan menggunakan <strong>tabel HTML</strong> dan konsep <strong>grid</strong>. Meskipun penggunaan tabel untuk layout sudah tidak direkomendasikan dalam praktik modern, pemahaman tentang tabel sangat penting untuk menampilkan data tabular. Sementara itu, konsep grid lebih disarankan karena mendukung desain yang fleksibel dan responsif.</p>
+
+                <h3>1. Layout dengan Tabel HTML</h3>
+                <p>Tabel HTML digunakan untuk menyusun data dalam baris dan kolom. Tabel terdiri dari elemen-elemen berikut:</p>
+                <ul>
+                    <li><code>&lt;table&gt;</code>: Elemen utama tabel</li>
+                    <li><code>&lt;tr&gt;</code>: Table Row (baris tabel)</li>
+                    <li><code>&lt;th&gt;</code>: Table Header (judul kolom)</li>
+                    <li><code>&lt;td&gt;</code>: Table Data (isi sel)</li>
+                </ul>
+
+                <p><strong>Contoh Tabel Sederhana:</strong></p>
+                <pre><code>&lt;table border="1"&gt;
+          &lt;tr&gt;
+            &lt;th&gt;Nama&lt;/th&gt;
+            &lt;th&gt;Jurusan&lt;/th&gt;
+            &lt;th&gt;Angkatan&lt;/th&gt;
+          &lt;/tr&gt;
+          &lt;tr&gt;
+            &lt;td&gt;Andi&lt;/td&gt;
+            &lt;td&gt;Informatika&lt;/td&gt;
+            &lt;td&gt;2022&lt;/td&gt;
+          &lt;/tr&gt;
+          &lt;tr&gt;
+            &lt;td&gt;Budi&lt;/td&gt;
+            &lt;td&gt;Sistem Informasi&lt;/td&gt;
+            &lt;td&gt;2023&lt;/td&gt;
+          &lt;/tr&gt;
+        &lt;/table&gt;</code></pre>
+
+                <p><strong>Catatan:</strong> Gunakan atribut <code>border</code> untuk melihat garis tabel saat belajar, namun dalam praktik modern, sebaiknya gaya (seperti garis, warna, padding) diatur dengan CSS.</p>
+
+                <h4>Kelebihan Layout dengan Tabel:</h4>
+                <ul>
+                    <li>Mudah digunakan untuk menampilkan data tabular seperti laporan atau rekap.</li>
+                    <li>Strukturnya jelas dan rapi untuk data yang berbentuk baris-kolom.</li>
+                </ul>
+
+                <h4>Kekurangan:</h4>
+                <ul>
+                    <li>Sulit dibuat responsif untuk tampilan mobile.</li>
+                    <li>Tidak fleksibel untuk layout desain modern.</li>
+                    <li>Tidak semantik jika digunakan untuk layout halaman.</li>
+                </ul>
+
+                <hr/>
+
+                <h3>2. Layout dengan Grid Sederhana (Menggunakan CSS Grid)</h3>
+                <p>Untuk layout modern, kita sebaiknya menggunakan <strong>CSS Grid</strong>. Grid adalah sistem layout berbasis kolom dan baris yang sangat fleksibel, powerful, dan responsif. Kita bisa menggunakannya untuk menyusun halaman seperti galeri, dashboard, atau kolom konten.</p>
+
+                <p><strong>Contoh Layout Grid Sederhana:</strong></p>
+                <pre><code>&lt;style&gt;
+          .grid-container {
+            display: grid;
+            grid-template-columns: auto auto auto;
+            gap: 10px;
+            background-color: #ddd;
+            padding: 10px;
+          }
+          .grid-item {
+            background-color: white;
+            padding: 20px;
+            text-align: center;
+            border: 1px solid #ccc;
+          }
+        &lt;/style&gt;
+
+        &lt;div class="grid-container"&gt;
+          &lt;div class="grid-item"&gt;1&lt;/div&gt;
+          &lt;div class="grid-item"&gt;2&lt;/div&gt;
+          &lt;div class="grid-item"&gt;3&lt;/div&gt;
+          &lt;div class="grid-item"&gt;4&lt;/div&gt;
+          &lt;div class="grid-item"&gt;5&lt;/div&gt;
+          &lt;div class="grid-item"&gt;6&lt;/div&gt;
+        &lt;/div&gt;</code></pre>
+
+                <p><strong>Penjelasan:</strong></p>
+                <ul>
+                    <li><code>display: grid;</code> mengaktifkan grid layout pada kontainer.</li>
+                    <li><code>grid-template-columns: auto auto auto;</code> menciptakan 3 kolom dengan lebar otomatis.</li>
+                    <li><code>gap:</code> memberikan jarak antar elemen.</li>
+                </ul>
+
+                <h4>Kelebihan CSS Grid:</h4>
+                <ul>
+                    <li>Lebih modern dan fleksibel daripada tabel.</li>
+                    <li>Lebih mudah untuk membuat desain responsif.</li>
+                    <li>Mendukung layout kompleks seperti dua kolom, sidebar, header, dan konten utama.</li>
+                </ul>
+
+                <h4>Contoh Kasus: Tata Letak Dashboard</h4>
+                <pre><code>&lt;style&gt;
+          .dashboard {
+            display: grid;
+            grid-template-areas:
+              "header header"
+              "sidebar main"
+              "footer footer";
+            grid-template-columns: 200px 1fr;
+            grid-template-rows: 60px 1fr 40px;
+            gap: 10px;
+          }
+          .header { grid-area: header; background: #4CAF50; color: white; padding: 10px; }
+          .sidebar { grid-area: sidebar; background: #f0f0f0; padding: 10px; }
+          .main { grid-area: main; background: white; padding: 10px; }
+          .footer { grid-area: footer; background: #ddd; padding: 10px; text-align: center; }
+        &lt;/style&gt;
+
+        &lt;div class="dashboard"&gt;
+          &lt;div class="header"&gt;Header&lt;/div&gt;
+          &lt;div class="sidebar"&gt;Menu&lt;/div&gt;
+          &lt;div class="main"&gt;Konten Utama&lt;/div&gt;
+          &lt;div class="footer"&gt;Footer&lt;/div&gt;
+        &lt;/div&gt;</code></pre>
+
+                <p>Dengan CSS Grid, kita bisa membuat layout kompleks dengan kode yang rapi dan mudah dipahami.</p>
+
+                <h3>Kesimpulan</h3>
+                <p>Untuk menyusun layout halaman, HTML menyediakan beberapa cara. Tabel cocok untuk data tabular, sedangkan CSS Grid lebih cocok untuk layout modern yang responsif. Sebagai pemula, penting untuk memahami kedua pendekatan agar bisa memilih teknik yang paling sesuai untuk kebutuhan proyek web Anda.</p>
+            '
+            ],
+
+
+
+
+            [
+                'course_id' => 8,
+                'urutan' => 3,
+                'judul' => 'Elemen dengan Hierarki Semantik yang Benar',
+                'content' => '<h2>Pendahuluan</h2>
+        <p>Dalam HTML, <strong>elemen semantik</strong> adalah elemen yang secara eksplisit menyampaikan makna dari kontennya, baik kepada browser maupun pembaca (manusia maupun mesin seperti screen reader). Penggunaan elemen semantik yang benar akan membantu struktur halaman lebih rapi, mudah dipahami, dan lebih SEO-friendly.</p>
+
+        <p>Sebagai developer web pemula, penting untuk mengetahui <strong>hierarki semantik</strong> agar halaman yang dibuat tidak hanya “berfungsi” tetapi juga “berarti” dan terstruktur baik secara logika maupun visual.</p>
+
+        <hr/>
+
+        <h3>1. Apa Itu Elemen Semantik?</h3>
+        <p>Elemen semantik adalah tag HTML yang secara jelas mendeskripsikan tujuannya. Contohnya:</p>
+        <ul>
+            <li><code>&lt;header&gt;</code> — bagian kepala halaman atau bagian atas dari suatu section.</li>
+            <li><code>&lt;nav&gt;</code> — bagian navigasi dari sebuah halaman.</li>
+            <li><code>&lt;main&gt;</code> — konten utama yang unik untuk halaman tersebut.</li>
+            <li><code>&lt;section&gt;</code> — blok konten yang berkaitan dan bisa berdiri sendiri secara tematis.</li>
+            <li><code>&lt;article&gt;</code> — konten independen dan lengkap, seperti berita atau posting blog.</li>
+            <li><code>&lt;aside&gt;</code> — konten pelengkap (sidebar, kutipan, iklan).</li>
+            <li><code>&lt;footer&gt;</code> — bagian bawah halaman atau bagian penutup suatu konten.</li>
+        </ul>
+
+        <hr/>
+
+        <h3>2. Hierarki Semantik yang Benar</h3>
+        <p>Hierarki semantik mengatur bagaimana elemen-elemen disusun berdasarkan makna dan fungsinya. Ini sangat penting untuk:</p>
+        <ul>
+            <li>Memastikan struktur dokumen logis dan konsisten</li>
+            <li>Memudahkan navigasi menggunakan teknologi bantu</li>
+            <li>Meningkatkan performa SEO (Search Engine Optimization)</li>
+        </ul>
+
+        <p><strong>Contoh struktur semantik yang benar:</strong></p>
+        <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="id"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+  &lt;title&gt;Contoh Hierarki Semantik&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+  &lt;header&gt;
+    &lt;h1&gt;Website Saya&lt;/h1&gt;
+    &lt;nav&gt;
+      &lt;ul&gt;
+        &lt;li&gt;&lt;a href="#beranda"&gt;Beranda&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#artikel"&gt;Artikel&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#kontak"&gt;Kontak&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/nav&gt;
+  &lt;/header&gt;
+
+  &lt;main&gt;
+    &lt;section&gt;
+      &lt;h2&gt;Tentang Kami&lt;/h2&gt;
+      &lt;p&gt;Ini adalah paragraf pembuka yang menjelaskan isi dari website kami.&lt;/p&gt;
+    &lt;/section&gt;
+
+    &lt;article&gt;
+      &lt;h2&gt;Judul Artikel&lt;/h2&gt;
+      &lt;p&gt;Konten utama dari artikel kami yang bersifat mandiri.&lt;/p&gt;
+    &lt;/article&gt;
+
+    &lt;aside&gt;
+      &lt;h3&gt;Berita Terkini&lt;/h3&gt;
+      &lt;p&gt;Ini adalah informasi tambahan yang relevan namun bukan bagian utama.&lt;/p&gt;
+    &lt;/aside&gt;
+  &lt;/main&gt;
+
+  &lt;footer&gt;
+    &lt;p&gt;&copy; 2025 Website Saya. Semua Hak Dilindungi.&lt;/p&gt;
+  &lt;/footer&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+        <p><strong>Catatan:</strong> Perhatikan bagaimana setiap elemen diletakkan pada tempatnya sesuai fungsinya. Ini akan memberikan struktur yang kuat dan logis.</p>
+
+        <hr/>
+
+        <h3>3. Perbandingan: Semantik vs Non-Semantik</h3>
+        <table border="1" cellpadding="6">
+            <thead>
+                <tr>
+                    <th>Semantik</th>
+                    <th>Non-Semantik</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><code>&lt;header&gt;</code></td>
+                    <td><code>&lt;div id="header"&gt;</code></td>
+                </tr>
+                <tr>
+                    <td><code>&lt;nav&gt;</code></td>
+                    <td><code>&lt;div class="nav"&gt;</code></td>
+                </tr>
+                <tr>
+                    <td><code>&lt;article&gt;</code></td>
+                    <td><code>&lt;div class="article"&gt;</code></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <p>Non-semantik tetap bisa bekerja, namun kurang jelas tujuannya dan tidak ramah bagi mesin pencari atau alat bantu visual.</p>
+
+        <hr/>
+
+        <h3>4. Pentingnya Penggunaan Hierarki Heading (H1-H6)</h3>
+        <p>Elemen heading (<code>&lt;h1&gt;</code> sampai <code>&lt;h6&gt;</code>) juga merupakan bagian dari struktur semantik yang penting.</p>
+        <ul>
+            <li><code>&lt;h1&gt;</code> hanya boleh satu per halaman, berfungsi sebagai judul utama.</li>
+            <li><code>&lt;h2&gt;</code> digunakan untuk sub-judul utama dari <code>&lt;h1&gt;</code>.</li>
+            <li>Gunakan <code>&lt;h3&gt;</code> dan seterusnya secara berurutan sesuai kedalaman topik.</li>
+        </ul>
+
+        <pre><code>&lt;h1&gt;Tutorial HTML&lt;/h1&gt;
+  &lt;h2&gt;Pendahuluan&lt;/h2&gt;
+  &lt;h2&gt;Dasar-dasar HTML&lt;/h2&gt;
+    &lt;h3&gt;Apa Itu Tag?&lt;/h3&gt;
+    &lt;h3&gt;Apa Itu Atribut?&lt;/h3&gt;
+</code></pre>
+
+        <p>Struktur heading ini membantu pembaca (dan mesin pencari) memahami isi dokumen secara hirarkis dan terstruktur.</p>
+
+        <hr/>
+
+        <h3>Kesimpulan</h3>
+        <p>Menggunakan elemen HTML secara semantik dan sesuai hierarki sangat penting untuk membuat halaman web yang profesional, terstruktur, mudah dipahami, dan mudah diakses. Elemen-elemen seperti <code>&lt;header&gt;</code>, <code>&lt;main&gt;</code>, <code>&lt;article&gt;</code>, <code>&lt;section&gt;</code>, dan <code>&lt;footer&gt;</code> bukan hanya membantu pengembang, tapi juga memberikan manfaat besar untuk mesin pencari, pembaca layar, dan pengguna secara umum.</p>
+        <p>Latihlah selalu membuat struktur HTML yang bersih, semantik, dan hierarkis agar kualitas kode kamu meningkat sejak awal.</p>
+    '
+            ],
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            [
+                'course_id' => 9,
+                'urutan' => 1,
+                'judul' => 'Apa Itu CSS?',
+                'content' => "
+        <p><strong>CSS</strong> (Cascading Style Sheets) adalah bahasa desain yang digunakan untuk mengatur tampilan dan tata letak elemen-elemen dalam halaman web. Jika HTML berfungsi sebagai kerangka atau struktur dari sebuah website, maka CSS bertindak sebagai \"pakaian\" yang memberikan warna, bentuk, dan keindahan visual terhadap struktur tersebut.</p>
+
+        <h3>Apa Itu CSS?</h3>
+        <p>CSS adalah bahasa yang digunakan untuk menentukan bagaimana elemen HTML ditampilkan di layar, kertas, atau media lainnya. CSS mengontrol segala aspek visual dari halaman web seperti:</p>
+        <ul>
+            <li>Warna teks dan latar belakang</li>
+            <li>Jenis dan ukuran font</li>
+            <li>Jarak antar elemen (margin, padding)</li>
+            <li>Ukuran dan posisi layout</li>
+            <li>Efek visual seperti bayangan, transisi, dan animasi</li>
+            <li>Responsivitas (tampilan di perangkat mobile, tablet, dan desktop)</li>
+        </ul>
+
+        <h3>Peran CSS dalam Desain Web</h3>
+        <p>Tanpa CSS, semua halaman web akan terlihat polos dan seragam. CSS memungkinkan desainer web untuk menciptakan pengalaman visual yang menarik dan konsisten di seluruh situs.</p>
+
+        <p>Berikut beberapa peran penting CSS dalam pengembangan web:</p>
+        <ol>
+            <li><strong>Pemisahan antara Konten dan Presentasi:</strong> Dengan CSS, kita dapat memisahkan struktur konten (HTML) dari tampilan visualnya. Ini membuat kode lebih bersih dan mudah dikelola.</li>
+            <li><strong>Desain Konsisten:</strong> CSS memungkinkan kita mendefinisikan gaya global (seperti warna tema dan font) yang bisa diterapkan di banyak halaman sekaligus melalui file eksternal.</li>
+            <li><strong>Responsif:</strong> Dengan CSS media queries, kita dapat membuat desain yang menyesuaikan ukuran layar sehingga tampak baik di smartphone, tablet, maupun desktop.</li>
+            <li><strong>Pengelolaan Tampilan yang Lebih Mudah:</strong> Mengubah satu baris di file CSS bisa langsung mengubah tampilan seluruh website tanpa perlu menyentuh setiap elemen HTML satu per satu.</li>
+        </ol>
+
+        <h3>Contoh Penerapan CSS</h3>
+        <pre><code>&lt;style&gt;
+    body {
+        background-color: #f2f2f2;
+        font-family: Arial, sans-serif;
+    }
+    h1 {
+        color: #2c3e50;
+        text-align: center;
+    }
+    p {
+        line-height: 1.6;
+        color: #555;
+    }
+&lt;/style&gt;
+        </code></pre>
+
+        <p>Contoh di atas menunjukkan bagaimana CSS dapat mengubah tampilan elemen <code>body</code>, <code>h1</code>, dan <code>p</code>. Tanpa CSS, teks hanya tampil default tanpa gaya tambahan.</p>
+
+        <h3>Kesimpulan</h3>
+        <p>CSS adalah komponen fundamental dalam web development yang berperan besar dalam mempercantik tampilan dan memastikan situs terlihat profesional. Untuk membangun situs web yang menarik, responsif, dan mudah diakses, penguasaan CSS sangatlah penting. CSS juga merupakan dasar untuk belajar lebih lanjut ke framework seperti Bootstrap dan preprocessor seperti SASS.</p>
+    "
+            ],
+
+
+
+            [
+                'course_id' => 9,
+                'urutan' => 2,
+                'judul' => 'Config CSS',
+                'content' => "
+                <h1>Cara Menghubungkan CSS dengan HTML (Inline, Internal, Eksternal)</h1>
+        <p>Pada dasarnya, CSS dapat diterapkan ke dalam HTML dengan tiga cara utama: <strong>inline</strong>, <strong>internal</strong>, dan <strong>eksternal</strong>. Masing-masing metode memiliki kegunaan dan karakteristik yang berbeda, tergantung pada konteks penggunaannya.</p>
+
+        <h3>1. Inline CSS</h3>
+        <p>Inline CSS adalah gaya yang ditulis langsung pada atribut <code>style</code> di dalam elemen HTML. Metode ini hanya berlaku pada elemen tersebut secara spesifik.</p>
+
+        <p><strong>Contoh:</strong></p>
+        <pre><code>&lt;p style=\"color: red; font-size: 18px;\"&gt;Ini paragraf dengan inline CSS&lt;/p&gt;</code></pre>
+
+        <p><strong>Kelebihan:</strong></p>
+        <ul>
+            <li>Cepat dan mudah diterapkan untuk gaya tunggal atau pengujian cepat.</li>
+        </ul>
+        <p><strong>Kekurangan:</strong></p>
+        <ul>
+            <li>Sulit dikelola jika digunakan dalam skala besar.</li>
+            <li>Melanggar prinsip pemisahan antara konten dan tampilan.</li>
+            <li>Menambah panjang tag HTML dan bisa membuat kode menjadi tidak rapi.</li>
+        </ul>
+
+        <h3>2. Internal CSS</h3>
+        <p>Internal CSS ditulis di dalam tag <code>&lt;style&gt;</code> yang ditempatkan di bagian <code>&lt;head&gt;</code> dari dokumen HTML. Gaya ini berlaku untuk satu halaman HTML saja.</p>
+
+        <p><strong>Contoh:</strong></p>
+        <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;style&gt;
+        h1 {
+            color: blue;
+            text-align: center;
+        }
+        p {
+            font-size: 16px;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Judul Halaman&lt;/h1&gt;
+    &lt;p&gt;Ini paragraf dengan internal CSS.&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+        <p><strong>Kelebihan:</strong></p>
+        <ul>
+            <li>Mudah diterapkan dan diatur di satu halaman.</li>
+            <li>Tidak memerlukan file terpisah.</li>
+        </ul>
+        <p><strong>Kekurangan:</strong></p>
+        <ul>
+            <li>Tidak efisien jika digunakan di banyak halaman (tidak dapat digunakan ulang).</li>
+            <li>Menambah beban file HTML.</li>
+        </ul>
+
+        <h3>3. Eksternal CSS</h3>
+        <p>Eksternal CSS adalah metode paling direkomendasikan dan profesional. Gaya ditulis di file CSS terpisah (misalnya <code>style.css</code>) dan dihubungkan ke HTML menggunakan tag <code>&lt;link&gt;</code> di bagian <code>&lt;head&gt;</code>.</p>
+
+        <p><strong>Contoh struktur file:</strong></p>
+        <ul>
+            <li><code>index.html</code> — file HTML</li>
+            <li><code>style.css</code> — file CSS</li>
+        </ul>
+
+        <p><strong>File: index.html</strong></p>
+        <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;link rel=\"stylesheet\" href=\"style.css\"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Halo Dunia&lt;/h1&gt;
+    &lt;p&gt;Paragraf dengan eksternal CSS&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+        <p><strong>File: style.css</strong></p>
+        <pre><code>h1 {
+    color: green;
+}
+p {
+    font-style: italic;
+}</code></pre>
+
+        <p><strong>Kelebihan:</strong></p>
+        <ul>
+            <li>Dapat digunakan kembali di banyak halaman.</li>
+            <li>Memisahkan kode HTML dan CSS untuk keterbacaan dan pengelolaan yang lebih baik.</li>
+            <li>Loading halaman bisa lebih cepat jika browser menyimpan cache CSS.</li>
+        </ul>
+        <p><strong>Kekurangan:</strong></p>
+        <ul>
+            <li>Membutuhkan file terpisah.</li>
+            <li>Jika file eksternal tidak dimuat (misalnya karena koneksi buruk), tampilan bisa kacau.</li>
+        </ul>
+
+        <h3>Kesimpulan</h3>
+        <p>Dalam praktik profesional, penggunaan <strong>eksternal CSS</strong> sangat dianjurkan karena mendukung prinsip pemrograman yang rapi, modular, dan efisien. Namun, pemahaman tentang inline dan internal CSS tetap penting karena ada kalanya dibutuhkan, misalnya saat membuat email template atau testing cepat.</p>
+    "
+            ],
+            [
+                'course_id' => 9,
+                'urutan' => 3,
+                'judul' => 'CSS: selector, properti, dan value',
+                'content' => "<h1>Menyusun Aturan CSS: Selector, Properti, dan Value(nilai)</h1>
+                <p>CSS (Cascading Style Sheets) bekerja dengan cara mengatur bagaimana elemen-elemen HTML ditampilkan di browser. Untuk menyusun aturan CSS yang efektif, kita harus memahami tiga komponen utama dalam setiap aturan CSS, yaitu: <strong>selector</strong>, <strong>properti</strong>, dan <strong>nilai (value)</strong>.</p>
+
+        <h3>1. Struktur Dasar Aturan CSS</h3>
+        <p>Aturan CSS ditulis dalam format sebagai berikut:</p>
+        <pre><code>selector {
+    property: value;
+}</code></pre>
+
+        <p>Contoh:</p>
+        <pre><code>p {
+    color: blue;
+    font-size: 16px;
+}</code></pre>
+
+        <p>Contoh di atas berarti semua elemen <code>&lt;p&gt;</code> (paragraf) di halaman akan memiliki teks berwarna biru dan ukuran font 16 piksel.</p>
+
+        <h3>2. Selector</h3>
+        <p>Selector adalah bagian pertama dalam aturan CSS yang digunakan untuk memilih elemen HTML mana yang akan diberi gaya.</p>
+        <p>Jenis-jenis selector:</p>
+        <ul>
+            <li><strong>Selector Tag:</strong> memilih elemen berdasarkan nama tag HTML, misalnya <code>h1</code>, <code>p</code>, <code>div</code>.</li>
+            <li><strong>Selector Class:</strong> memilih elemen berdasarkan atribut class. Ditandai dengan tanda titik (<code>.</code>).</li>
+            <li><strong>Selector ID:</strong> memilih elemen berdasarkan atribut id. Ditandai dengan tanda pagar (<code>#</code>).</li>
+        </ul>
+
+        <p>Contoh:</p>
+        <pre><code>/* Tag selector */
+h1 {
+    color: red;
+}
+
+/* Class selector */
+.text-biru {
+    color: blue;
+}
+
+/* ID selector */
+#judul-utama {
+    font-size: 24px;
+}</code></pre>
+
+        <h3>3. Properti</h3>
+        <p>Properti adalah atribut gaya yang ingin Anda ubah. Ada ratusan properti dalam CSS yang bisa mengatur warna, ukuran, margin, padding, border, posisi, dan banyak lagi.</p>
+        <p>Beberapa contoh properti umum:</p>
+        <ul>
+            <li><code>color</code>: mengatur warna teks</li>
+            <li><code>background-color</code>: mengatur warna latar belakang</li>
+            <li><code>font-size</code>: mengatur ukuran font</li>
+            <li><code>text-align</code>: mengatur perataan teks (left, center, right)</li>
+            <li><code>margin</code>: mengatur jarak luar elemen</li>
+            <li><code>padding</code>: mengatur jarak dalam elemen</li>
+        </ul>
+
+        <h3>4. Nilai (Value)</h3>
+        <p>Setiap properti CSS harus diberi nilai. Nilai ini bisa berupa kata kunci (seperti <code>center</code>, <code>bold</code>), ukuran (seperti <code>14px</code>, <code>1.5em</code>), warna (seperti <code>blue</code>, <code>#ff0000</code>), atau unit lainnya.</p>
+
+        <p>Contoh lengkap aturan CSS:</p>
+        <pre><code>.kotak {
+    width: 200px;
+    height: 100px;
+    background-color: lightblue;
+    border: 2px solid black;
+}</code></pre>
+
+        <h3>5. Beberapa Catatan Penting</h3>
+        <ul>
+            <li>Setiap deklarasi CSS diakhiri dengan tanda titik koma (<code>;</code>).</li>
+            <li>Beberapa properti bisa digabung dalam satu baris, misalnya <code>margin: 10px 20px;</code>.</li>
+            <li>Nama class dan id harus sesuai dengan elemen HTML yang dituju agar gaya diterapkan dengan benar.</li>
+            <li>CSS bersifat cascading, artinya jika ada lebih dari satu aturan berlaku untuk satu elemen, maka aturan dengan spesifikasi tertinggi akan menang (misalnya, ID lebih kuat dari class, dan class lebih kuat dari tag).</li>
+        </ul>
+
+        <h3>6. Kesimpulan</h3>
+        <p>Menyusun aturan CSS yang rapi dan logis adalah fondasi dari desain web modern. Dengan memahami struktur selector, properti, dan nilai, mahasiswa pemula dapat mulai membangun halaman web yang lebih menarik dan profesional. Latihan menyusun berbagai selector dan mengatur tampilannya akan sangat membantu memperkuat pemahaman dasar ini.</p>"
+            ],
+            // [
+            //     'course_id' => 8,
+            //     'urutan' => 1,
+            //     'judul' => '',
+            //     'content' => ''
+            // ],
+            // [
+            //     'course_id' => 8,
+            //     'urutan' => 1,
+            //     'judul' => '',
+            //     'content' => ''
+            // ],
 
         ]);
     }

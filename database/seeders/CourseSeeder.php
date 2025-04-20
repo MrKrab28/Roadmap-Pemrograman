@@ -44,7 +44,32 @@ class CourseSeeder extends Seeder
                 'category_id' => 1,
                 'judul' => 'Validasi & Security',
                 'gambar' => 'php_logo.png'
-            ]
+            ],
+
+
+
+
+
+
+
+
+
+
+            [
+                'category_id' => 2,
+                'judul' => 'Content HTML',
+                'gambar' => 'html_logo.png',
+            ],
+            [
+                'category_id' => 2,
+                'judul' => 'Layout Structur',
+                'gambar' => 'html_logo.png',
+            ],
+            [
+                'category_id' => 2,
+                'judul' => 'Pengenalan CSS',
+                'gambar' => 'html_logo.png',
+            ],
 
         ]);
     }
