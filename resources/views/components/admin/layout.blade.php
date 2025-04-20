@@ -25,10 +25,9 @@
         {{-- @vite('resources/css/app.css') --}}
         <!-- preloader css -->
         {{-- <link rel="stylesheet" href="{{ asset('assets/css/preloader.min.css') }}" type="text/css" /> --}}
-
+        <link href="{{ asset('assets/libs/choices.js/public/assets/styles/choices.min.css') }}" rel="stylesheet" type="text/css" />
         <!-- Bootstrap Css -->
-        <link href="{{ asset('assets/css/bootstrap.min.css') }}" id="bootstrap-style" rel="stylesheet"
-            type="text/css" />
+        <link href="{{ asset('assets/css/bootstrap.min.css') }}" id="bootstrap-style" rel="stylesheet" type="text/css" />
         <!-- Icons Css -->
         <link href="{{ asset('assets/css/icons.min.css') }}" rel="stylesheet" type="text/css" />
         <!-- App Css-->
@@ -68,6 +67,7 @@
 
                         <!-- start page title -->
                         {{ $slot }}
+
                         <!-- end row -->
                     </div>
                     <!-- container-fluid -->
@@ -105,6 +105,7 @@
 
         <!-- JAVASCRIPT -->
         <script src="{{ asset('assets/libs/jquery/jquery.min.js') }}"></script>
+
         <script src="{{ asset('assets/libs/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
         <script src="{{ asset('assets/libs/metismenu/metisMenu.min.js') }}"></script>
         <script src="{{ asset('assets/libs/simplebar/simplebar.min.js') }}"></script>
@@ -112,6 +113,8 @@
         <script src="{{ asset('assets/libs/feather-icons/feather.min.js') }}"></script>
         <!-- pace js -->
         <script src="{{ asset('assets/libs/pace-js/pace.min.js') }}"></script>
+        <script src="{{ asset('assets/libs/choices.js/public/assets/scripts/choices.min.js') }}"></script>
+
 
         <script src="{{ asset('assets/libs/sweetalert2/sweetalert2.all.min.js') }}"></script>
         <!-- apexcharts -->
@@ -129,6 +132,11 @@
         <script src="{{ asset('assets/js/app.js') }}"></script>
         {{-- <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script> --}}
         {{-- <script src="{{ asset('js/mermaid-helper.js') }}"></script> --}}
+
+
+
+
+
         @stack('scripts')
 
         @if (Session::has('success'))

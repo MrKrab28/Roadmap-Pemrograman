@@ -27,13 +27,12 @@
                             </div>
                             <div class="col-md-6">
                                 <x-form.select-search label="Courses" id="courseInput" name="course_id"
-                                    :required="true" placeholder="Pilih" id="formModal">
+                                    :required="true" placeholder="Pilih" modalid="formModal">
                                     @foreach ($courses as $course)
                                         <option value="{{ $course->id }}">{{ $course->judul }}</option>
                                     @endforeach
                                 </x-form.select-search>
                             </div>
-
 
 
                         </div>
@@ -66,7 +65,7 @@
                                         <td>{{ $materi->judul }}</td>
                                         <td>{{ $materi->course->judul }}</td>
                                         <td>{{ $materi->urutan }}</td>
-                                            
+
 
                                         <td style="width: 100px" class="">
                                             <div class="d-flex  gap-2">
