@@ -81,10 +81,10 @@
                 </button>
                 <div class="dropdown-menu dropdown-menu-end">
                     <!-- item-->
-                    <a class="dropdown-item" href="apps-contacts-profile.html"><i
-                            class="mdi mdi-face-profile font-size-16 align-middle me-1"></i> Profile</a>
-                    <a class="dropdown-item" href="auth-lock-screen.html"><i
-                            class="mdi mdi-lock font-size-16 align-middle me-1"></i> Lock screen</a>
+                    {{-- <a class="dropdown-item" href="apps-contacts-profile.html"><i
+                            class="mdi mdi-face-profile font-size-16 align-middle me-1"></i> Profile</a> --}}
+                    {{-- <a class="dropdown-item" href="auth-lock-screen.html"><i
+                            class="mdi mdi-lock font-size-16 align-middle me-1"></i> Lock screen</a> --}}
                     <div class="dropdown-divider"></div>
                     <form action="{{ route('logout') }}" method="POST">
                         @csrf
