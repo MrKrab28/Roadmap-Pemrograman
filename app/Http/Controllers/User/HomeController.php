@@ -8,6 +8,7 @@ use Illuminate\Http\Request;
 use App\Models\CourseCompletion;
 use App\Http\Controllers\Controller;
 use App\Models\Materi;
+use App\Models\User;
 use Illuminate\Support\Facades\Auth;
 
 class HomeController extends Controller
@@ -20,6 +21,37 @@ class HomeController extends Controller
             'categories' => $categories,
 
         ]);
+    }
+
+    public function profile(User $user)
+    {
+        return view('pages.user.profile', compact('user'));
+
+
+    }
+
+    public function update(Request $request, User $user)
+    {
+        $user = User::find($user->id);
+        $data = $request->validate([
+            'nama' => 'required',
+            'email' => 'required',
+
+        ]);
+
+        $user->nama = $data['nama'];
+        $user->email = $data['email'];
+
+
+        if ($request->password) {
+
+            $user->password = bcrypt($request->password);
+        }
+    $user->update();
+        // dd($request->all());
+
+
+        return redirect()->back()->with('success', 'Profile Anda Berhasil di Update');
     }
 
     public function learning()
@@ -41,7 +73,7 @@ class HomeController extends Controller
                 ->filter()
                 ->values();
 
-                
+
         return view('pages.user.mylearning', [
             'groupedCompletions' => $grouped,
             'categories' => $categories,

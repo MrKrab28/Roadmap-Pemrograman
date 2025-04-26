@@ -28,6 +28,8 @@ Route::middleware('auth:user')->group(function () {
     Route::get('/user/learning', [HomeController::class, 'learning'])->name('user.mylearning');
 
     Route::get('/user/index', [HomeController::class, 'index'])->name('user.index');
+    Route::get('user/profile', [HomeController::class, 'profile'])->name('user.profile');
+    Route::put('user/profile-update/{user}', [HomeController::class, 'update'])->name('user.profile-update');
 
 
     Route::get('/category/detail/{category}', [CategoryController::class, 'detail'])->name('user.category-detail');
