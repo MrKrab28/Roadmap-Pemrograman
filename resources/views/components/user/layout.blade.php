@@ -233,12 +233,12 @@
                     <h3 class="text-center mb-0"><a href="#"
                             style=" font-weight: 1000;" class="logo text-light">
                             @{{ Artisan<span>.</span><span style="color: #29b6f6;">Compass</span > }}</a></h3>
-                    <p class="text-justify text-center mt-0">Selamat datang di Artisan.Compass - Rumah bagi para calon
+                    <p class="text-justify text-center mb-5 mt-0">Selamat datang di Artisan.Compass - Rumah bagi para calon
                         developer web masa depan!</p>
-                        <h2 class="mt-4 text-center mb-3 text-light">Siapa Kami</h2>
+
                     <div class="col-md-6 fs-5">
 
-                        <p class="text-justify">Artisan Compass adalah platform komprehensif yang dirancang untuk
+                        <p class="text-justify">Artisan Compass adalah platform teknologi yang dirancang untuk
                             memberikan roadmap pemrograman yang jelas dan terstruktur bagi para pemrogram, baik pemula
                             maupun yang berpengalaman. Misi kami adalah memberdayakan para pengembang dengan membimbing
                             mereka melalui perjalanan pemrograman mereka, membantu mereka memperoleh keterampilan dan
