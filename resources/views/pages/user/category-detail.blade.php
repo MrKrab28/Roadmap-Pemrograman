@@ -147,7 +147,7 @@
                     // primaryColor: '#29b6f6',
                     lineColor: '#fff',
                     color: '#000',
-                   
+
                     arrowheadColor: '#000' // ⬅️ Ini penting!
                 }
             });
@@ -281,12 +281,12 @@
         <div class="row mb-5">
             <h1 class="card-title text-center text-light fs-1">Roadmap</h1>
             <h1 class="card-title text-center text-light fs-3">{{ $category->nama }}</h1>
-
+            <h5 class="card-title text-center text-light mt-3 mb-5">{{ $category->deskripsi }}</h5>
             <div id="mermaid-frame">
                 <div class="instructions">
                     <strong>Petunjuk:</strong><br>
                     - Klik dan seret untuk memindahkan diagram.<br>
-                    - Gunakan roda mouse untuk memperbesar atau memperkecil diagram.<br>
+                    - Gunakan roda mouse/scroll untuk memperbesar atau memperkecil diagram.<br>
                     - Double click untuk mereset tampilan.
                 </div>
                 <div id="diagram-wrapper">
