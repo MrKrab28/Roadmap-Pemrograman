@@ -2306,6 +2306,15 @@ h1 {
         <h3>6. Kesimpulan</h3>
         <p>Menyusun aturan CSS yang rapi dan logis adalah fondasi dari desain web modern. Dengan memahami struktur selector, properti, dan nilai, mahasiswa pemula dapat mulai membangun halaman web yang lebih menarik dan profesional. Latihan menyusun berbagai selector dan mengatur tampilannya akan sangat membantu memperkuat pemahaman dasar ini.</p>"
             ],
+
+
+
+
+
+
+
+
+
             [
                 'course_id' => 10,
                 'urutan' => 1,
@@ -2784,7 +2793,399 @@ span {
 <p>Dengan memahami dan mengatur <strong>width</strong>, <strong>height</strong>, dan <strong>display</strong>, Anda dapat mengontrol ukuran dan perilaku elemen secara efektif, menghasilkan layout yang rapi, fleksibel, dan profesional. Ini adalah fondasi penting sebelum masuk ke teknik layout lanjutan seperti Flexbox dan CSS Grid.</p>
             '
             ],
+            
 
+            [
+                'course_id' => 11,
+                'urutan' => 1,
+                'judul' => 'Responsif Design',
+                'content' => '
+<h2>Apa itu Desain Responsif?</h2>
+
+<p>Desain responsif adalah pendekatan dalam pengembangan web yang bertujuan untuk membuat halaman web tampil dengan baik di berbagai perangkat, baik itu desktop, tablet, maupun smartphone. Ini berarti, tampilan dan tata letak website akan menyesuaikan ukuran layar pengguna secara otomatis, tanpa perlu membuat versi website yang berbeda untuk setiap perangkat.</p>
+
+<h3>Mengapa Desain Responsif Penting?</h3>
+<ul>
+<li><strong>Pengalaman Pengguna (User Experience)</strong>: Dengan desain responsif, pengguna dapat dengan nyaman mengakses konten tanpa harus memperbesar, menggeser, atau mengalami tampilan yang rusak.</li>
+<li><strong>SEO (Search Engine Optimization)</strong>: Google memberikan peringkat lebih tinggi kepada situs yang responsif, karena pengalaman pengguna yang lebih baik.</li>
+<li><strong>Efisiensi</strong>: Tidak perlu membuat dan memelihara beberapa versi website untuk perangkat yang berbeda, cukup satu website yang bisa beradaptasi otomatis.</li>
+</ul>
+
+<h3>Bagaimana Cara Menerapkan Desain Responsif?</h3>
+<p>Beberapa teknik utama dalam desain responsif antara lain:</p>
+<ul>
+<li><strong>Media Queries</strong>: Digunakan di CSS untuk menerapkan style berbeda berdasarkan ukuran layar.</li>
+<li><strong>Grid Layout dan Flexbox</strong>: Membantu mengatur tata letak elemen yang fleksibel dan adaptif.</li>
+<li><strong>Persentase dan Satuan Fleksibel</strong>: Menggunakan satuan seperti %, vw, vh agar elemen mengikuti ukuran layar, bukan ukuran tetap (px).</li>
+<li><strong>Responsive Images</strong>: Menggunakan gambar yang dapat menyesuaikan ukurannya agar tidak melebihi layar perangkat.</li>
+</ul>
+
+<h3>Contoh Penggunaan Media Queries</h3>
+
+<pre><code>
+/* Gaya untuk layar besar */
+body {
+  background-color: lightblue;
+}
+
+/* Gaya untuk layar kecil (maksimal lebar 600px) */
+@media (max-width: 600px) {
+  body {
+    background-color: lightgreen;
+  }
+}
+</code></pre>
+
+<p>Dalam contoh di atas, latar belakang akan berwarna biru pada layar besar, dan berubah menjadi hijau pada layar kecil seperti smartphone.</p>
+
+<h3>Kesimpulan</h3>
+<p>Desain responsif adalah kunci utama untuk membuat website modern yang mudah diakses di berbagai perangkat. Dengan menggunakan prinsip-prinsip seperti media queries, layout fleksibel, dan gambar responsif, kita bisa memastikan website selalu nyaman dilihat oleh semua pengguna, tanpa peduli perangkat apa yang mereka gunakan.</p>
+            '
+            ],
+
+
+
+            [
+                'course_id' => 11,
+                'urutan' => 2,
+                'judul' => 'Menyusun Layout Responsif & Viewport Units',
+                'content' => '
+<h2>Menyusun Layout Responsif Menggunakan Persentase dan Viewport Units</h2>
+
+<p>Pada desain web modern, membuat layout yang responsif adalah keharusan. Salah satu teknik dasar yang sering digunakan adalah menggunakan satuan ukuran relatif, seperti persentase (%) dan viewport units (vw, vh). Dengan cara ini, elemen pada halaman web dapat menyesuaikan ukuran layar secara otomatis tanpa perlu membuat banyak perubahan manual.</p>
+
+<h3>Mengapa Menggunakan Persentase dan Viewport Units?</h3>
+<ul>
+<li><strong>Fleksibel</strong>: Elemen akan otomatis menyesuaikan ukuran layar pengguna.</li>
+<li><strong>Hemat Waktu</strong>: Tidak perlu membuat banyak media queries untuk berbagai ukuran layar.</li>
+<li><strong>User Experience Lebih Baik</strong>: Tampilan tetap rapi dan proporsional di berbagai perangkat.</li>
+</ul>
+
+<h3>Apa itu Satuan Persentase (%)?</h3>
+<p>Persentase digunakan untuk mengatur ukuran elemen relatif terhadap ukuran elemen induknya (parent). Contohnya, jika sebuah elemen memiliki <code>width: 50%;</code>, maka lebarnya akan menjadi setengah dari lebar elemen induknya.</p>
+
+<pre><code>
+.container {
+  width: 80%;
+}
+</code></pre>
+
+<p>Artinya, lebar elemen <code>.container</code> akan selalu 80% dari elemen induk, berapapun ukuran layar pengguna.</p>
+
+<h3>Apa itu Viewport Units (vw, vh)?</h3>
+<ul>
+<li><strong>vw (viewport width)</strong>: 1vw = 1% dari lebar layar.</li>
+<li><strong>vh (viewport height)</strong>: 1vh = 1% dari tinggi layar.</li>
+<li><strong>vmin</strong>: 1% dari ukuran sisi viewport yang lebih kecil (antara lebar dan tinggi).</li>
+<li><strong>vmax</strong>: 1% dari ukuran sisi viewport yang lebih besar.</li>
+</ul>
+
+<h4>Contoh Penggunaan Viewport Units:</h4>
+
+<pre><code>
+.header {
+  height: 20vh; /* Tinggi header adalah 20% dari tinggi layar */
+}
+
+.sidebar {
+  width: 25vw; /* Lebar sidebar adalah 25% dari lebar layar */
+}
+</code></pre>
+
+<p>Dengan menggunakan viewport units, elemen-elemen di halaman akan langsung beradaptasi terhadap ukuran jendela browser tanpa memerlukan perubahan lain.</p>
+
+<h3>Perbandingan Persentase vs Viewport Units</h3>
+<table border="1" cellpadding="8" cellspacing="0">
+<tr>
+<th>Persentase (%)</th>
+<th>Viewport Units (vw/vh)</th>
+</tr>
+<tr>
+<td>Relatif terhadap ukuran elemen induk.</td>
+<td>Relatif terhadap ukuran layar browser.</td>
+</tr>
+<tr>
+<td>Lebih cocok untuk mengatur layout di dalam container.</td>
+<td>Lebih cocok untuk membuat elemen besar seperti header penuh layar.</td>
+</tr>
+</table>
+
+<h3>Contoh Layout Sederhana Menggunakan Persentase dan Viewport Units</h3>
+
+<pre><code>
+.container {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.banner {
+  height: 50vh;
+  background-color: lightblue;
+}
+
+.content {
+  width: 60%;
+  float: left;
+}
+
+.sidebar {
+  width: 35%;
+  float: right;
+}
+</code></pre>
+
+<p>Dengan kombinasi di atas, layout akan otomatis mengikuti ukuran layar pengguna, membuat website tampil baik di semua perangkat.</p>
+
+<h3>Kesimpulan</h3>
+<p>Menggunakan persentase dan viewport units adalah teknik dasar namun sangat efektif untuk membangun layout responsif. Dengan pendekatan ini, kita bisa membuat website yang adaptif, nyaman diakses, dan profesional, tanpa harus bergantung sepenuhnya pada media queries.</p>
+            '
+            ],
+
+
+
+            [
+                'course_id' => 11,
+                'urutan' => 3,
+                'judul' => 'Media queries',
+                'content' => '
+<h2>Memahami Media Queries untuk Membuat Desain yang Cocok untuk Berbagai Perangkat</h2>
+
+<p>Dalam era perangkat yang beragam seperti smartphone, tablet, laptop, dan desktop, desain website harus mampu beradaptasi dengan berbagai ukuran layar. Salah satu teknik utama untuk mencapai hal ini adalah dengan menggunakan <strong>media queries</strong> dalam CSS.</p>
+
+<h3>Apa itu Media Queries?</h3>
+
+<p>Media Queries adalah fitur di CSS yang memungkinkan kita menerapkan style khusus berdasarkan kondisi tertentu pada perangkat pengguna, seperti lebar layar, tinggi layar, orientasi perangkat (potrait atau landscape), dan resolusi layar.</p>
+
+<p>Dengan media queries, kita bisa mendesain halaman web yang responsif tanpa harus membuat file HTML terpisah untuk setiap ukuran layar.</p>
+
+<h3>Bagaimana Cara Kerja Media Queries?</h3>
+
+<p>Media queries menggunakan aturan logika: "Jika kondisi tertentu terpenuhi, maka gunakan style berikut." Kondisi ini disebut <strong>media features</strong> (fitur media).</p>
+
+<h4>Contoh Struktur Media Queries:</h4>
+
+<pre><code>
+@media (kondisi) {
+  /* CSS untuk kondisi tersebut */
+}
+</code></pre>
+
+<h3>Contoh Media Queries Sederhana</h3>
+
+<pre><code>
+/* Gaya umum untuk semua perangkat */
+body {
+  font-size: 16px;
+}
+
+/* Gaya khusus untuk layar dengan lebar maksimum 600px */
+@media (max-width: 600px) {
+  body {
+    font-size: 14px;
+  }
+}
+</code></pre>
+
+<p>Pada contoh di atas, jika lebar layar pengguna 600px atau kurang, ukuran teks akan diperkecil menjadi 14px untuk meningkatkan kenyamanan membaca di layar kecil.</p>
+
+<h3>Beberapa Media Features yang Sering Digunakan</h3>
+
+<ul>
+<li><strong>max-width</strong>: Menerapkan style jika lebar layar kurang dari nilai tertentu.</li>
+<li><strong>min-width</strong>: Menerapkan style jika lebar layar lebih besar dari nilai tertentu.</li>
+<li><strong>orientation</strong>: Mendeteksi apakah perangkat dalam mode potret (portrait) atau lanskap (landscape).</li>
+<li><strong>resolution</strong>: Menyesuaikan style berdasarkan resolusi layar.</li>
+</ul>
+
+<h4>Contoh Media Queries Lainnya:</h4>
+
+<pre><code>
+/* Untuk layar besar */
+@media (min-width: 1024px) {
+  .container {
+    width: 960px;
+  }
+}
+
+/* Untuk tablet */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .container {
+    width: 90%;
+  }
+}
+
+/* Untuk smartphone */
+@media (max-width: 767px) {
+  .container {
+    width: 100%;
+  }
+}
+
+/* Untuk orientasi landscape */
+@media (orientation: landscape) {
+  body {
+    background-color: lightgrey;
+  }
+}
+</code></pre>
+
+<h3>Prinsip Mobile-First Design</h3>
+
+<p>Mobile-first adalah pendekatan di mana kita mendesain dan mengkodekan website mulai dari ukuran layar terkecil (mobile), kemudian memperluasnya untuk layar yang lebih besar menggunakan media queries.</p>
+
+<pre><code>
+/* Style dasar untuk mobile */
+.container {
+  width: 100%;
+}
+
+/* Style tambahan untuk tablet ke atas */
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+}
+</code></pre>
+
+<p>Dengan mobile-first, website kita akan lebih ringan dan cepat di perangkat kecil, lalu tetap nyaman digunakan di perangkat yang lebih besar.</p>
+
+<h3>Kesimpulan</h3>
+
+<p>Media queries adalah alat yang sangat kuat dalam CSS untuk membuat desain web yang responsif. Dengan memahami cara kerja media queries dan menggunakannya dengan benar, kita bisa memastikan bahwa website kita tampil optimal di berbagai ukuran dan jenis perangkat, meningkatkan pengalaman pengguna secara keseluruhan.</p>
+            '
+            ],
+
+
+
+
+            [
+                'course_id' => 11,
+                'urutan' => 4,
+                'judul' => 'Responsif Design',
+                'content' => '
+<h2>Menggunakan Flexbox dan Grid untuk Layout Responsif yang Lebih Fleksibel</h2>
+
+<p>Dalam pengembangan web modern, dua sistem layout yang sering digunakan untuk membangun desain responsif adalah <strong>Flexbox</strong> dan <strong>CSS Grid</strong>. Keduanya memungkinkan kita menyusun elemen di halaman dengan cara yang lebih fleksibel dan dinamis, sehingga tampilan situs bisa menyesuaikan ukuran layar perangkat pengguna secara optimal.</p>
+
+<h3>Apa itu Flexbox?</h3>
+<p><strong>Flexbox</strong> adalah model layout CSS yang memungkinkan elemen dalam sebuah kontainer untuk saling berinteraksi dengan fleksibel. Dengan Flexbox, kita bisa mengatur posisi, ukuran, dan ruang antar elemen dengan lebih mudah, baik dalam satu dimensi (horizontal atau vertikal) maupun dua dimensi.</p>
+
+<h4>Properti Utama Flexbox:</h4>
+<ul>
+<li><strong>display: flex;</strong> - Menetapkan kontainer sebagai flex container.</li>
+<li><strong>justify-content:</strong> Mengatur posisi elemen di sepanjang sumbu utama (horizontal).</li>
+<li><strong>align-items:</strong> Mengatur posisi elemen di sepanjang sumbu silang (vertikal).</li>
+<li><strong>flex-direction:</strong> Menentukan arah elemen, apakah horizontal (row) atau vertikal (column).</li>
+<li><strong>flex-wrap:</strong> Menentukan apakah elemen dapat dibungkus ke baris berikutnya.</li>
+</ul>
+
+<h4>Contoh Penggunaan Flexbox:</h4>
+
+<pre><code>
+.container {
+  display: flex;
+  justify-content: space-between; /* Memberi jarak antar elemen */
+}
+
+.item {
+  flex: 1; /* Setiap item akan mengambil ruang yang sama */
+}
+</code></pre>
+
+<p>Dalam contoh di atas, kita memiliki kontainer dengan dua item. Elemen-elemen ini akan terdistribusi dengan jarak yang sama di sepanjang sumbu horizontal.</p>
+
+<h3>Apa itu CSS Grid?</h3>
+<p><strong>CSS Grid</strong> adalah sistem layout dua dimensi yang memungkinkan kita menyusun elemen dalam baris dan kolom. Grid sangat berguna ketika kita perlu mengatur layout yang lebih kompleks, seperti desain halaman dengan banyak kolom dan baris yang saling terkait.</p>
+
+<h4>Properti Utama Grid:</h4>
+<ul>
+<li><strong>display: grid;</strong> - Menetapkan kontainer sebagai grid container.</li>
+<li><strong>grid-template-columns:</strong> Menentukan jumlah dan ukuran kolom di dalam grid.</li>
+<li><strong>grid-template-rows:</strong> Menentukan jumlah dan ukuran baris di dalam grid.</li>
+<li><strong>grid-gap:</strong> Mengatur jarak antar elemen dalam grid.</li>
+<li><strong>grid-column:</strong> Mengatur elemen untuk span beberapa kolom.</li>
+<li><strong>grid-row:</strong> Mengatur elemen untuk span beberapa baris.</li>
+</ul>
+
+<h4>Contoh Penggunaan CSS Grid:</h4>
+
+<pre><code>
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Membuat 3 kolom dengan lebar yang sama */
+  grid-gap: 20px; /* Jarak antar elemen */
+}
+
+.item {
+  background-color: lightblue;
+  padding: 10px;
+}
+</code></pre>
+
+<p>Di sini, kita membuat grid dengan 3 kolom yang memiliki lebar yang sama, dan ada jarak 20px antara setiap elemen di dalam grid.</p>
+
+<h3>Perbandingan Flexbox dan Grid</h3>
+<table border="1" cellpadding="8" cellspacing="0">
+<tr>
+<th>Flexbox</th>
+<th>CSS Grid</th>
+</tr>
+<tr>
+<td>Fokus pada layout satu dimensi (horizontal atau vertikal).</td>
+<td>Fokus pada layout dua dimensi (baris dan kolom).</td>
+</tr>
+<tr>
+<td>Cocok untuk layout yang lebih sederhana atau elemen sejenis.</td>
+<td>Cocok untuk layout yang lebih kompleks, seperti desain halaman dengan banyak kolom dan baris.</td>
+</tr>
+<tr>
+<td>Lebih mudah digunakan untuk tata letak yang fleksibel dan responsif.</td>
+<td>Lebih kuat untuk kontrol layout yang presisi dan lebih banyak elemen dalam grid.</td>
+</tr>
+</table>
+
+<h3>Contoh Kombinasi Flexbox dan Grid</h3>
+<p>Untuk desain yang lebih kompleks, kita bisa menggabungkan Flexbox dan CSS Grid dalam satu halaman. Misalnya, kita bisa menggunakan Grid untuk membuat struktur halaman utama dan Flexbox untuk elemen-elemen di dalamnya, seperti menu navigasi atau konten artikel.</p>
+
+<pre><code>
+.header {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.menu {
+  display: flex;
+  justify-content: space-around;
+}
+
+.main-content {
+  display: flex;
+  flex-direction: column;
+}
+</code></pre>
+
+<h3>Kesimpulan</h3>
+
+<p>Baik Flexbox maupun CSS Grid adalah alat yang sangat berguna untuk membangun layout responsif yang lebih fleksibel. Flexbox memberikan kontrol yang lebih baik di sepanjang satu sumbu, sementara CSS Grid memungkinkan kontrol lebih mendalam dalam dua dimensi (baris dan kolom). Dengan menggunakan keduanya secara bersama-sama, kita bisa membuat desain web yang sangat responsif dan dinamis, yang terlihat baik di berbagai ukuran layar perangkat.</p>
+            '
+            ],
+            [
+                'course_id' => 11,
+                'urutan' => 4,
+                'judul' => 'Responsif Design',
+                'content' => ''
+            ],
+            [
+                'course_id' => 11,
+                'urutan' => 4,
+                'judul' => 'Responsif Design',
+                'content' => ''
+            ],
+            [
+                'course_id' => 11,
+                'urutan' => 4,
+                'judul' => 'Responsif Design',
+                'content' => ''
+            ],
         ]);
     }
 }

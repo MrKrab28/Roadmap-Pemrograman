@@ -125,6 +125,12 @@ class QuisSeeder extends Seeder
             ['course_id' => 10, 'pertanyaan' => 'Properti apa yang digunakan untuk menentukan lebar suatu elemen?'],
             ['course_id' => 10, 'pertanyaan' => 'Properti apa yang digunakan untuk mengatur bagaimana elemen ditampilkan (seperti block atau inline)?'],
             ['course_id' => 10, 'pertanyaan' => 'Jika ingin elemen menyesuaikan lebar jendela browser, satuan apa yang digunakan?'],
+
+
+            ['course_id' => 9, 'pertanyaan' => 'Bagaimana desain responsif mempengaruhi pengalaman pengguna di berbagai perangkat, dan apa tantangan utama dalam implementasinya?'],
+            ['course_id' => 9, 'pertanyaan' => 'Mengapa persentase dan viewport units (vw, vh) lebih dianjurkan dibandingkan dengan satuan tetap seperti pixel dalam menciptakan layout yang fleksibel dan responsif?'],
+            ['course_id' => 9, 'pertanyaan' => 'Jelaskan bagaimana cara kerja media queries dan sebutkan beberapa contoh kondisi yang bisa ditargetkan untuk menyesuaikan tampilan dengan berbagai perangkat?'],
+            ['course_id' => 9, 'pertanyaan' => 'Apa perbedaan utama antara Flexbox dan CSS Grid dalam hal layout responsif, dan kapan sebaiknya menggunakan masing-masing teknik tersebut?'],
         ]);
     }
 }

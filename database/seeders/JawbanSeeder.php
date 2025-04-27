@@ -382,6 +382,36 @@ class JawbanSeeder extends Seeder
             ['quis_id' => 61, 'jawaban' => 'px', 'status' => 'salah', 'opsi' => 'B'],
             ['quis_id' => 61, 'jawaban' => 'vh', 'status' => 'salah', 'opsi' => 'C'],
             ['quis_id' => 61, 'jawaban' => '%', 'status' => 'salah', 'opsi' => 'D'],
+
+
+
+
+
+            ['quis_id' => 62, 'jawaban' => 'Desain responsif memungkinkan tampilan web menyesuaikan diri dengan berbagai ukuran perangkat, meningkatkan pengalaman pengguna dengan membuat website tetap mudah diakses di perangkat apa pun. Tantangan utamanya adalah menjaga konsistensi desain saat beradaptasi dengan banyak perangkat.', 'status' => 'benar', 'opsi' => 'A'],
+            ['quis_id' => 62, 'jawaban' => 'Desain responsif mengutamakan desain statis yang tidak beradaptasi dengan ukuran layar perangkat.', 'status' => 'salah', 'opsi' => 'B'],
+            ['quis_id' => 62, 'jawaban' => 'Desain responsif hanya penting untuk perangkat mobile, tidak berlaku untuk desktop.', 'status' => 'salah', 'opsi' => 'C'],
+            ['quis_id' => 62, 'jawaban' => 'Desain responsif memungkinkan pengaturan elemen secara manual untuk setiap perangkat, meskipun tidak ada perubahan dalam layout.', 'status' => 'salah', 'opsi' => 'D'],
+
+
+
+            ['quis_id' => 63, 'jawaban' => 'Persentase dan viewport units memungkinkan desain web menyesuaikan ukuran elemen dengan proporsi layar perangkat, menghindari pengaturan elemen dengan ukuran tetap yang tidak fleksibel seperti pixel.', 'status' => 'benar', 'opsi' => 'A'],
+            ['quis_id' => 63, 'jawaban' => 'Persentase dan viewport units tidak memiliki peran dalam desain responsif karena mereka tetap menggunakan ukuran tetap dalam tampilan.', 'status' => 'salah', 'opsi' => 'B'],
+            ['quis_id' => 63, 'jawaban' => 'Unit vw dan vh digunakan untuk mengatur ukuran elemen dalam satuan tetap, yang tidak dipengaruhi oleh perubahan ukuran layar.', 'status' => 'salah', 'opsi' => 'C'],
+            ['quis_id' => 63, 'jawaban' => 'Persentase memberikan ukuran fleksibel yang hanya digunakan dalam layout vertikal, sedangkan viewport units lebih sering digunakan untuk margin dan padding.', 'status' => 'salah', 'opsi' => 'D'],
+
+
+
+            ['quis_id' => 64, 'jawaban' => 'Media queries memungkinkan kita mengaplikasikan CSS khusus untuk kondisi perangkat tertentu, seperti lebar layar, orientasi, atau resolusi. Contoh: @media (max-width: 768px) untuk perangkat dengan lebar layar kurang dari 768px.', 'status' => 'benar', 'opsi' => 'A'],
+            ['quis_id' => 64, 'jawaban' => 'Media queries hanya bisa digunakan untuk menyesuaikan gambar pada perangkat dengan layar kecil.', 'status' => 'salah', 'opsi' => 'B'],
+            ['quis_id' => 64, 'jawaban' => 'Media queries digunakan untuk mengatur margin dan padding pada elemen tanpa memperhatikan perangkat yang digunakan.', 'status' => 'salah', 'opsi' => 'C'],
+            ['quis_id' => 64, 'jawaban' => 'Media queries memungkinkan penyesuaian tata letak, ukuran font, dan elemen visual lainnya tergantung pada kondisi perangkat, seperti lebar layar atau resolusi.', 'status' => 'benar', 'opsi' => 'D'],
+
+
+
+            ['quis_id' => 65, 'jawaban' => 'Flexbox lebih baik digunakan untuk layout satu dimensi (baik horizontal atau vertikal), sedangkan CSS Grid digunakan untuk layout dua dimensi yang lebih kompleks dengan kontrol penuh terhadap baris dan kolom.', 'status' => 'benar', 'opsi' => 'A'],
+            ['quis_id' => 65, 'jawaban' => 'CSS Grid lebih cocok untuk layout satu dimensi dan tidak bisa digunakan untuk layout dua dimensi.', 'status' => 'salah', 'opsi' => 'B'],
+            ['quis_id' => 65, 'jawaban' => 'Flexbox dan CSS Grid memiliki fungsi yang sama dalam mengatur layout responsif dan dapat digunakan secara bergantian.', 'status' => 'salah', 'opsi' => 'C'],
+            ['quis_id' => 65, 'jawaban' => 'Flexbox hanya cocok untuk layout vertikal, sedangkan CSS Grid lebih sering digunakan untuk layout horizontal.', 'status' => 'salah', 'opsi' => 'D'],
         ]);
     }
 }
