@@ -429,6 +429,30 @@ class JawbanSeeder extends Seeder
             ['quis_id' => 68, 'jawaban' => 'Internal dan eksternal sama-sama disimpan dalam HTML', 'status' => 'salah', 'opsi' => 'B'],
             ['quis_id' => 68, 'jawaban' => 'Internal ditulis langsung di file HTML, eksternal di file .js terpisah', 'status' => 'benar', 'opsi' => 'C'],
             ['quis_id' => 68, 'jawaban' => 'Internal digunakan untuk server-side coding', 'status' => 'salah', 'opsi' => 'D'],
+
+
+
+
+
+            ['quis_id' => 69, 'jawaban' => 'Mengulangi kode yang sama tanpa struktur', 'status' => 'salah', 'opsi' => 'A'],
+            ['quis_id' => 69, 'jawaban' => 'Membuat kode lebih modular, terstruktur, dan mudah digunakan ulang', 'status' => 'benar', 'opsi' => 'B'],
+            ['quis_id' => 69, 'jawaban' => 'Membuat tampilan lebih menarik', 'status' => 'salah', 'opsi' => 'C'],
+            ['quis_id' => 69, 'jawaban' => 'Mengganti bahasa pemrograman', 'status' => 'salah', 'opsi' => 'D'],
+
+            ['quis_id' => 70, 'jawaban' => 'mahasiswa["umur"]', 'status' => 'benar', 'opsi' => 'A'],
+            ['quis_id' => 70, 'jawaban' => 'mahasiswa.umur()', 'status' => 'salah', 'opsi' => 'B'],
+            ['quis_id' => 70, 'jawaban' => 'mahasiswa->umur', 'status' => 'salah', 'opsi' => 'C'],
+            ['quis_id' => 70, 'jawaban' => 'mahasiswa[umur]', 'status' => 'salah', 'opsi' => 'D'],
+
+            ['quis_id' => 71, 'jawaban' => 'click', 'status' => 'salah', 'opsi' => 'A'],
+            ['quis_id' => 71, 'jawaban' => 'mouseover', 'status' => 'salah', 'opsi' => 'B'],
+            ['quis_id' => 71, 'jawaban' => 'input', 'status' => 'benar', 'opsi' => 'C'],
+            ['quis_id' => 71, 'jawaban' => 'submit', 'status' => 'salah', 'opsi' => 'D'],
+
+            ['quis_id' => 72, 'jawaban' => 'Tidak terjadi apa-apa.', 'status' => 'salah', 'opsi' => 'A'],
+            ['quis_id' => 72, 'jawaban' => 'Console akan menampilkan "Tombol diklik!"', 'status' => 'benar', 'opsi' => 'B'],
+            ['quis_id' => 72, 'jawaban' => 'Akan muncul alert di browser.', 'status' => 'salah', 'opsi' => 'C'],
+            ['quis_id' => 72, 'jawaban' => 'Halaman akan melakukan refresh otomatis.', 'status' => 'salah', 'opsi' => 'D'],
         ]);
     }
 }

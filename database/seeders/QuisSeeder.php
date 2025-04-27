@@ -138,6 +138,21 @@ class QuisSeeder extends Seeder
             ['course_id' => 12, 'pertanyaan' => 'Apa perbedaan utama antara internal dan eksternal JavaScript?'],
 
 
+            ['course_id' => 13, 'pertanyaan' => 'Apa tujuan utama dari menggunakan fungsi dalam JavaScript?'],
+            ['course_id' => 13, 'pertanyaan' => 'Manakah cara yang benar untuk mengakses nilai "umur" dari objek berikut? <pre>const mahasiswa = { nama: "Rina", umur: 20 };</pre>'],
+            ['course_id' => 13, 'pertanyaan' => 'Dalam JavaScript, apa event yang digunakan saat user mengetik di input field?'],
+            ['course_id' => 13, 'pertanyaan' => 'Apa output dari kode berikut saat tombol diklik?
+<pre>
+&lt;button id="btn"&gt;Klik Saya&lt;/button&gt;
+
+&lt;script&gt;
+document.getElementById("btn").addEventListener("click", function() {
+  console.log("Tombol diklik!");
+});
+&lt;/script&gt;
+</pre>'],
+
+
 
 
         ]);
