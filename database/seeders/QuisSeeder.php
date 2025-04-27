@@ -127,10 +127,19 @@ class QuisSeeder extends Seeder
             ['course_id' => 10, 'pertanyaan' => 'Jika ingin elemen menyesuaikan lebar jendela browser, satuan apa yang digunakan?'],
 
 
-            ['course_id' => 9, 'pertanyaan' => 'Bagaimana desain responsif mempengaruhi pengalaman pengguna di berbagai perangkat, dan apa tantangan utama dalam implementasinya?'],
-            ['course_id' => 9, 'pertanyaan' => 'Mengapa persentase dan viewport units (vw, vh) lebih dianjurkan dibandingkan dengan satuan tetap seperti pixel dalam menciptakan layout yang fleksibel dan responsif?'],
-            ['course_id' => 9, 'pertanyaan' => 'Jelaskan bagaimana cara kerja media queries dan sebutkan beberapa contoh kondisi yang bisa ditargetkan untuk menyesuaikan tampilan dengan berbagai perangkat?'],
-            ['course_id' => 9, 'pertanyaan' => 'Apa perbedaan utama antara Flexbox dan CSS Grid dalam hal layout responsif, dan kapan sebaiknya menggunakan masing-masing teknik tersebut?'],
+            ['course_id' => 11, 'pertanyaan' => 'Bagaimana desain responsif mempengaruhi pengalaman pengguna di berbagai perangkat, dan apa tantangan utama dalam implementasinya?'],
+            ['course_id' => 11, 'pertanyaan' => 'Mengapa persentase dan viewport units (vw, vh) lebih dianjurkan dibandingkan dengan satuan tetap seperti pixel dalam menciptakan layout yang fleksibel dan responsif?'],
+            ['course_id' => 11, 'pertanyaan' => 'Jelaskan bagaimana cara kerja media queries dan sebutkan beberapa contoh kondisi yang bisa ditargetkan untuk menyesuaikan tampilan dengan berbagai perangkat?'],
+            ['course_id' => 11, 'pertanyaan' => 'Apa perbedaan utama antara Flexbox dan CSS Grid dalam hal layout responsif, dan kapan sebaiknya menggunakan masing-masing teknik tersebut?'],
+
+
+            ['course_id' => 12, 'pertanyaan' => 'Apa fungsi utama JavaScript dalam pengembangan web?'],
+            ['course_id' => 12, 'pertanyaan' => 'Apa kata kunci yang digunakan untuk mendeklarasikan variabel di JavaScript modern?'],
+            ['course_id' => 12, 'pertanyaan' => 'Apa perbedaan utama antara internal dan eksternal JavaScript?'],
+
+
+
+
         ]);
     }
 }

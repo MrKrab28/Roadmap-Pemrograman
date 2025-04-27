@@ -412,6 +412,23 @@ class JawbanSeeder extends Seeder
             ['quis_id' => 65, 'jawaban' => 'CSS Grid lebih cocok untuk layout satu dimensi dan tidak bisa digunakan untuk layout dua dimensi.', 'status' => 'salah', 'opsi' => 'B'],
             ['quis_id' => 65, 'jawaban' => 'Flexbox dan CSS Grid memiliki fungsi yang sama dalam mengatur layout responsif dan dapat digunakan secara bergantian.', 'status' => 'salah', 'opsi' => 'C'],
             ['quis_id' => 65, 'jawaban' => 'Flexbox hanya cocok untuk layout vertikal, sedangkan CSS Grid lebih sering digunakan untuk layout horizontal.', 'status' => 'salah', 'opsi' => 'D'],
+
+
+
+            ['quis_id' => 66, 'jawaban' => 'Mengelola struktur halaman', 'status' => 'salah', 'opsi' => 'A'],
+            ['quis_id' => 66, 'jawaban' => 'Membuat halaman menjadi interaktif dan dinamis', 'status' => 'benar', 'opsi' => 'B'],
+            ['quis_id' => 66, 'jawaban' => 'Menyimpan data di server', 'status' => 'salah', 'opsi' => 'C'],
+            ['quis_id' => 66, 'jawaban' => 'Mengatur tampilan halaman saja', 'status' => 'salah', 'opsi' => 'D'],
+
+            ['quis_id' => 67, 'jawaban' => 'var', 'status' => 'salah', 'opsi' => 'A'],
+            ['quis_id' => 67, 'jawaban' => 'let dan const', 'status' => 'benar', 'opsi' => 'B'],
+            ['quis_id' => 67, 'jawaban' => 'define', 'status' => 'salah', 'opsi' => 'C'],
+            ['quis_id' => 67, 'jawaban' => 'varlet', 'status' => 'salah', 'opsi' => 'D'],
+
+            ['quis_id' => 68, 'jawaban' => 'Internal disimpan di file terpisah, eksternal di dalam HTML', 'status' => 'salah', 'opsi' => 'A'],
+            ['quis_id' => 68, 'jawaban' => 'Internal dan eksternal sama-sama disimpan dalam HTML', 'status' => 'salah', 'opsi' => 'B'],
+            ['quis_id' => 68, 'jawaban' => 'Internal ditulis langsung di file HTML, eksternal di file .js terpisah', 'status' => 'benar', 'opsi' => 'C'],
+            ['quis_id' => 68, 'jawaban' => 'Internal digunakan untuk server-side coding', 'status' => 'salah', 'opsi' => 'D'],
         ]);
     }
 }
