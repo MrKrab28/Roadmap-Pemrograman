@@ -3380,20 +3380,483 @@ var status = "Mahasiswa";</code></pre>
 <p>Memilih metode penyisipan JavaScript tergantung pada skala proyek dan kebutuhan. Untuk proyek kecil dan eksperimen cepat, inline dan internal bisa digunakan. Namun untuk proyek besar dan profesional, disarankan menggunakan file eksternal agar kode lebih rapi, modular, dan mudah dikelola.</p>
                 '
             ],
+
+
+
+
+
+
+
+
+
+
+
             [
-                'course_id' => 12,
+                'course_id' => 13,
+                'urutan' => 1,
+                'judul' => 'Structur Control',
+                'content' => '
+<h2>Pengenalan Struktur Kontrol</h2>
+<p>Dalam pemrograman, struktur kontrol adalah bagian penting yang mengatur alur eksekusi program. Tanpa struktur kontrol, program akan berjalan dari atas ke bawah secara berurutan saja, tanpa kemampuan mengambil keputusan atau mengulangi tugas tertentu.</p>
+<p>Struktur kontrol yang umum digunakan di JavaScript meliputi:</p>
+<ul>
+    <li><strong>Percabangan:</strong> if-else, switch</li>
+    <li><strong>Perulangan:</strong> for, while</li>
+</ul>
+
+<h2>1. Percabangan If-Else</h2>
+<p>Percabangan if-else digunakan untuk membuat keputusan berdasarkan kondisi tertentu. Jika kondisi terpenuhi (benar), maka blok kode tertentu akan dijalankan. Jika tidak, bisa diberikan blok kode alternatif dengan else.</p>
+
+<p><strong>Struktur dasar if-else:</strong></p>
+<pre><code>if (kondisi) {
+    // Kode dijalankan jika kondisi benar (true)
+} else {
+    // Kode dijalankan jika kondisi salah (false)
+}</code></pre>
+
+<p><strong>Contoh:</strong></p>
+<pre><code>let nilai = 80;
+
+if (nilai >= 75) {
+    console.log("Selamat, Anda lulus!");
+} else {
+    console.log("Maaf, Anda tidak lulus.");
+}</code></pre>
+
+<h2>2. Percabangan Switch</h2>
+<p>Switch digunakan untuk memilih salah satu dari banyak kemungkinan berdasarkan nilai variabel. Cocok digunakan ketika ada banyak kondisi yang perlu dicek.</p>
+
+<p><strong>Struktur dasar switch:</strong></p>
+<pre><code>switch (ekspresi) {
+    case nilai1:
+        // kode jika ekspresi == nilai1
+        break;
+    case nilai2:
+        // kode jika ekspresi == nilai2
+        break;
+    default:
+        // kode jika tidak ada yang cocok
+}</code></pre>
+
+<p><strong>Contoh:</strong></p>
+<pre><code>let hari = "Senin";
+
+switch (hari) {
+    case "Senin":
+        console.log("Hari ini adalah awal minggu kerja.");
+        break;
+    case "Sabtu":
+    case "Minggu":
+        console.log("Hari ini adalah akhir pekan.");
+        break;
+    default:
+        console.log("Hari biasa.");
+}</code></pre>
+
+<p><strong>Penjelasan:</strong>
+Jika nilai <code>hari</code> cocok dengan "Senin", maka akan mencetak tentang awal minggu kerja. Jika "Sabtu" atau "Minggu", maka dianggap akhir pekan.</p>
+
+<h2>3. Perulangan For</h2>
+<p>For digunakan untuk mengulangi blok kode dalam jumlah tertentu. Biasanya digunakan ketika jumlah perulangan sudah diketahui.</p>
+
+<p><strong>Struktur dasar for:</strong></p>
+<pre><code>for (inisialisasi; kondisi; increment/decrement) {
+    // kode yang akan diulang
+}</code></pre>
+
+<p><strong>Contoh:</strong></p>
+<pre><code>for (let i = 1; i <= 5; i++) {
+    console.log("Perulangan ke-" + i);
+}</code></pre>
+
+<p><strong>Penjelasan:</strong>
+Perulangan ini akan mencetak angka 1 sampai 5.</p>
+
+<h2>4. Perulangan While</h2>
+<p>While digunakan untuk mengulangi blok kode selama kondisi bernilai benar (true). Cocok digunakan saat jumlah perulangan tidak pasti dan tergantung suatu kondisi.</p>
+
+<p><strong>Struktur dasar while:</strong></p>
+<pre><code>while (kondisi) {
+    // kode yang akan diulang
+}</code></pre>
+
+<p><strong>Contoh:</strong></p>
+<pre><code>let angka = 1;
+
+while (angka <= 5) {
+    console.log("Angka ke-" + angka);
+    angka++;
+}</code></pre>
+
+<p><strong>Penjelasan:</strong>
+Selama angka kurang dari atau sama dengan 5, kode akan terus diulang dan angka akan bertambah 1 setiap perulangan.</p>
+
+<h2>Perbandingan For dan While</h2>
+<table border="1" cellpadding="5">
+<thead>
+<tr><th>For</th><th>While</th></tr>
+</thead>
+<tbody>
+<tr><td>Digunakan saat jumlah perulangan sudah diketahui.</td><td>Digunakan saat jumlah perulangan belum pasti.</td></tr>
+<tr><td>Semua komponen (inisialisasi, kondisi, increment) berada di satu baris.</td><td>Komponen lebih fleksibel dan bisa tersebar di dalam loop.</td></tr>
+</tbody>
+</table>
+
+<h2>Kesimpulan</h2>
+<p>Struktur kontrol seperti if-else, switch, for, dan while sangat penting dalam membangun alur logika program yang dinamis dan fleksibel. Pemahaman yang baik terhadap struktur kontrol akan membantu dalam membuat aplikasi yang lebih interaktif, kompleks, dan mudah dikembangkan.</p>
+'
+            ],
+
+
+
+            [
+                'course_id' => 13,
+                'urutan' => 2,
+                'judul' => 'Function',
+                'content' => '
+<h2>Apa itu Fungsi dalam JavaScript?</h2>
+<p>Fungsi adalah blok kode yang dirancang untuk melakukan tugas tertentu. Fungsi membantu mengorganisasi kode agar lebih terstruktur, mudah dibaca, dan dapat digunakan kembali tanpa perlu menulis ulang logika yang sama.</p>
+
+<p>Fungsi biasanya digunakan untuk:</p>
+<ul>
+    <li>Menjalankan tugas berulang</li>
+    <li>Membagi program menjadi bagian-bagian kecil</li>
+    <li>Membuat kode lebih bersih dan modular</li>
+</ul>
+
+<h2>Keuntungan Menggunakan Fungsi</h2>
+<ul>
+    <li><strong>Reusability:</strong> Fungsi dapat dipanggil berkali-kali tanpa menulis ulang kodenya.</li>
+    <li><strong>Organisasi:</strong> Program lebih terstruktur dan mudah dipahami.</li>
+    <li><strong>Maintainability:</strong> Lebih mudah memperbaiki dan memperbarui kode.</li>
+</ul>
+
+<h2>Cara Membuat Fungsi di JavaScript</h2>
+
+<h3>1. Fungsi Deklarasi (Function Declaration)</h3>
+<p>Ini adalah cara standar membuat fungsi.</p>
+
+<p><strong>Struktur dasar:</strong></p>
+<pre><code>function namaFungsi(parameter1, parameter2, ...) {
+    // Blok kode yang akan dijalankan
+}</code></pre>
+
+<p><strong>Contoh:</strong></p>
+<pre><code>function sapa() {
+    console.log("Halo, selamat datang!");
+}
+
+sapa(); // Memanggil fungsi</code></pre>
+
+<h3>2. Fungsi Ekspresi (Function Expression)</h3>
+<p>Fungsi dapat disimpan ke dalam variabel, disebut fungsi ekspresi.</p>
+
+<pre><code>const salam = function() {
+    console.log("Selamat pagi!");
+};
+
+salam(); // Memanggil fungsi</code></pre>
+
+<h3>3. Fungsi dengan Parameter dan Return</h3>
+<p>Fungsi dapat menerima input (parameter) dan mengembalikan output (return).</p>
+
+<pre><code>function tambah(a, b) {
+    return a + b;
+}
+
+let hasil = tambah(3, 5);
+console.log(hasil); // Output: 8</code></pre>
+
+<ul>
+    <li><strong>Parameter:</strong> Nilai yang dikirimkan ke fungsi saat dipanggil.</li>
+    <li><strong>Return:</strong> Nilai yang dikembalikan dari fungsi ke pemanggil.</li>
+</ul>
+
+<h3>4. Arrow Function (Fungsi Panah)</h3>
+<p>Arrow function adalah cara lebih singkat untuk menulis fungsi, diperkenalkan dalam ES6.</p>
+
+<pre><code>const sapaUser = (nama) => {
+    return "Halo, " + nama;
+};
+
+console.log(sapaUser("Andi"));</code></pre>
+
+<p><strong>Catatan:</strong> Jika fungsi hanya memiliki satu baris return, bisa ditulis lebih singkat:</p>
+<pre><code>const sapaUser = nama => "Halo, " + nama;</code></pre>
+
+<h2>Perbedaan Function Declaration dan Function Expression</h2>
+<table border="1" cellpadding="5">
+<thead>
+<tr><th>Function Declaration</th><th>Function Expression</th></tr>
+</thead>
+<tbody>
+<tr><td>Dapat dipanggil sebelum deklarasinya (hoisting)</td><td>Tidak dapat dipanggil sebelum didefinisikan</td></tr>
+<tr><td>Ditulis dengan kata kunci <code>function</code> di awal</td><td>Disimpan di dalam variabel</td></tr>
+</tbody>
+</table>
+
+<h2>Contoh Kasus Penggunaan Fungsi</h2>
+<p>Misal kita ingin membuat kalkulator sederhana:</p>
+
+<pre><code>function hitungLuasPersegi(sisi) {
+    return sisi * sisi;
+}
+
+console.log(hitungLuasPersegi(4)); // Output: 16</code></pre>
+
+<p>Dengan fungsi, kita bisa menghitung luas berapa kali pun hanya dengan memanggil fungsi dan memberi input yang berbeda.</p>
+
+<h2>Kesimpulan</h2>
+<p>Fungsi adalah salah satu fondasi utama dalam pemrograman JavaScript. Dengan memahami bagaimana fungsi dibuat, dipanggil, dan bagaimana mereka berinteraksi dengan parameter dan nilai kembaliannya, kita dapat menulis kode yang lebih rapi, modular, dan efisien. Pemahaman fungsi akan sangat membantu dalam membangun aplikasi web yang besar dan kompleks.</p>
+'
+            ],
+
+
+
+            [
+                'course_id' => 13,
+                'urutan' => 3,
+                'judul' => 'Object & Array',
+                'content' =>  '
+                <h2>Apa itu Objek dalam JavaScript?</h2>
+                <p>Objek adalah struktur data di JavaScript yang digunakan untuk menyimpan berbagai nilai dalam satu kesatuan. Nilai-nilai ini disimpan dalam bentuk pasangan <strong>key-value</strong> (kunci-nilai).</p>
+
+                <h3>Struktur dasar Objek:</h3>
+                <pre><code>const namaObjek = {
+                    kunci1: nilai1,
+                    kunci2: nilai2,
+                    ...
+                };</code></pre>
+
+                <h3>Contoh Objek:</h3>
+                <pre><code>const mahasiswa = {
+                    nama: "Andi",
+                    umur: 21,
+                    jurusan: "Informatika"
+                };</code></pre>
+
+                <h3>Mengakses Properti Objek:</h3>
+                <ul>
+                    <li><strong>Notasi titik:</strong> <code>mahasiswa.nama</code></li>
+                    <li><strong>Notasi bracket:</strong> <code>mahasiswa["umur"]</code></li>
+                </ul>
+
+                <h3>Menambahkan atau Mengubah Properti:</h3>
+                <pre><code>mahasiswa.alamat = "Jakarta"; // Menambahkan properti baru
+                mahasiswa.umur = 22;          // Mengubah nilai properti</code></pre>
+
+                <h3>Menghapus Properti:</h3>
+                <pre><code>delete mahasiswa.jurusan;</code></pre>
+
+                <h2>Apa itu Array dalam JavaScript?</h2>
+                <p>Array adalah struktur data yang digunakan untuk menyimpan daftar nilai dalam satu variabel. Setiap nilai dalam array memiliki indeks (urutan) yang dimulai dari 0.</p>
+
+                <h3>Struktur dasar Array:</h3>
+                <pre><code>const namaArray = [nilai1, nilai2, nilai3, ...];</code></pre>
+
+                <h3>Contoh Array:</h3>
+                <pre><code>const buah = ["Apel", "Pisang", "Mangga"];</code></pre>
+
+                <h3>Mengakses Elemen Array:</h3>
+                <pre><code>console.log(buah[0]); // Output: "Apel"
+                console.log(buah[2]); // Output: "Mangga"</code></pre>
+
+                <h3>Menambahkan Elemen ke Array:</h3>
+                <pre><code>buah.push("Jeruk"); // Menambahkan di akhir array</code></pre>
+
+                <h3>Menghapus Elemen dari Array:</h3>
+                <pre><code>buah.pop(); // Menghapus elemen terakhir
+                buah.shift(); // Menghapus elemen pertama
+                buah.unshift("Durian"); // Menambahkan elemen di awal array</code></pre>
+
+                <h2>Perbedaan Utama Objek dan Array</h2>
+                <table border="1" cellpadding="5">
+                <thead>
+                <tr><th>Objek</th><th>Array</th></tr>
+                </thead>
+                <tbody>
+                <tr><td>Menyimpan data dalam bentuk pasangan kunci-nilai.</td><td>Menyimpan daftar nilai yang berurutan.</td></tr>
+                <tr><td>Nilai diakses menggunakan nama kunci.</td><td>Nilai diakses menggunakan indeks numerik.</td></tr>
+                <tr><td>Cocok untuk data yang kompleks dan tidak berurutan.</td><td>Cocok untuk daftar atau koleksi data sejenis.</td></tr>
+                </tbody>
+                </table>
+
+                <h2>Contoh Gabungan: Array of Object</h2>
+                <p>Kita juga bisa membuat array yang berisi objek-objek di dalamnya.</p>
+
+                <pre><code>const daftarMahasiswa = [
+                    { nama: "Andi", umur: 21 },
+                    { nama: "Budi", umur: 22 },
+                    { nama: "Citra", umur: 20 }
+                ];
+
+                console.log(daftarMahasiswa[1].nama); // Output: "Budi"</code></pre>
+
+                <h2>Beberapa Method Penting Array</h2>
+                <ul>
+                    <li><strong>forEach:</strong> Menjalankan fungsi untuk setiap elemen.</li>
+                    <li><strong>map:</strong> Membuat array baru dengan hasil dari setiap elemen.</li>
+                    <li><strong>filter:</strong> Membuat array baru berdasarkan kondisi tertentu.</li>
+                </ul>
+
+                <p><strong>Contoh penggunaan:</strong></p>
+
+                <pre><code>buah.forEach(function(item) {
+                    console.log(item);
+                });
+
+                const buahBaru = buah.map(function(item) {
+                    return item + " Segar";
+                });
+
+                const buahDenganA = buah.filter(function(item) {
+                    return item.startsWith("A");
+                });</code></pre>
+
+                <h2>Kesimpulan</h2>
+                <p>Objek dan Array adalah fondasi penting dalam JavaScript. Objek digunakan untuk menyimpan data kompleks yang memiliki kunci, sedangkan Array digunakan untuk menyimpan kumpulan nilai yang teratur. Dengan menguasai kedua struktur data ini, kita bisa mengelola informasi dalam aplikasi secara lebih efisien dan efektif.</p>
+                '
+            ],
+
+
+
+            [
+                'course_id' => 13,
+                'urutan' => 4,
+                'judul' => 'Event Handling',
+                'content' => '
+<h2>Apa itu Event Handling?</h2>
+<p><strong>Event Handling</strong> adalah teknik dalam JavaScript untuk membuat halaman web merespons tindakan pengguna, seperti klik, hover, mengetik di input, menggerakkan mouse, atau perubahan lainnya.</p>
+
+<p>Dengan Event Handling, website menjadi lebih interaktif dan dinamis.</p>
+
+<h2>Pengertian Event</h2>
+<p>Event adalah "kejadian" yang terjadi pada elemen di halaman web. Contoh event:</p>
+<ul>
+    <li><strong>click</strong> – Ketika pengguna mengklik sebuah elemen.</li>
+    <li><strong>mouseover</strong> – Ketika pengguna mengarahkan kursor ke elemen.</li>
+    <li><strong>mouseout</strong> – Ketika kursor keluar dari elemen.</li>
+    <li><strong>input</strong> – Ketika pengguna mengetikkan sesuatu di field input.</li>
+    <li><strong>submit</strong> – Ketika form dikirim.</li>
+    <li><strong>keydown</strong> – Ketika tombol keyboard ditekan.</li>
+</ul>
+
+<h2>Cara Menambahkan Event Listener</h2>
+<p>Event Listener adalah fungsi yang "mendengarkan" event tertentu, lalu menjalankan kode saat event itu terjadi.</p>
+
+<h3>Metode: addEventListener()</h3>
+<p>Struktur dasar:</p>
+<pre><code>element.addEventListener("event", function() {
+    // Aksi yang dilakukan saat event terjadi
+});</code></pre>
+
+<h3>Contoh: Menangani Klik</h3>
+<pre><code>const tombol = document.getElementById("tombolSaya");
+
+tombol.addEventListener("click", function() {
+    alert("Tombol diklik!");
+});</code></pre>
+
+<p><strong>Penjelasan:</strong> Ketika pengguna mengklik tombol dengan id <code>tombolSaya</code>, maka akan muncul pop-up alert.</p>
+
+<h2>Jenis-Jenis Event yang Sering Digunakan</h2>
+
+<h3>1. Event Klik (click)</h3>
+<p>Digunakan untuk merespons tindakan klik pada elemen.</p>
+
+<pre><code>button.addEventListener("click", function() {
+    console.log("Tombol diklik");
+});</code></pre>
+
+<h3>2. Event Hover (mouseover dan mouseout)</h3>
+<p>Untuk merespons saat kursor masuk atau keluar dari elemen.</p>
+
+<pre><code>div.addEventListener("mouseover", function() {
+    console.log("Mouse masuk ke area");
+});
+
+div.addEventListener("mouseout", function() {
+    console.log("Mouse keluar dari area");
+});</code></pre>
+
+<h3>3. Event Input (input)</h3>
+<p>Digunakan untuk mendeteksi perubahan pada field input saat pengguna mengetik.</p>
+
+<pre><code>inputField.addEventListener("input", function() {
+    console.log("Pengguna mengetik: " + inputField.value);
+});</code></pre>
+
+<h3>4. Event Submit (submit)</h3>
+<p>Untuk menangani saat form dikirim. Biasanya form dikirimkan ke server, tetapi bisa dicegah dengan <code>event.preventDefault()</code>.</p>
+
+<pre><code>form.addEventListener("submit", function(event) {
+    event.preventDefault();
+    console.log("Form dikirim!");
+});</code></pre>
+
+<h3>5. Event Keydown (Menangani Keyboard)</h3>
+<p>Menangani saat tombol keyboard ditekan.</p>
+
+<pre><code>document.addEventListener("keydown", function(event) {
+    console.log("Tombol yang ditekan: " + event.key);
+});</code></pre>
+
+<h2>Event Handler Inline vs JavaScript Murni</h2>
+
+<ul>
+    <li><strong>Inline (kurang direkomendasikan):</strong></li>
+</ul>
+<pre><code>&lt;button onclick="alert(\'Klik!\')"&gt;Klik Saya&lt;/button&gt;</code></pre>
+
+<ul>
+    <li><strong>JavaScript Murni (lebih baik):</strong></li>
+</ul>
+<pre><code>const tombol = document.getElementById("tombol");
+tombol.addEventListener("click", function() {
+    alert("Klik dengan Event Listener!");
+});</code></pre>
+
+<h2>Manfaat Menggunakan Event Handling</h2>
+<ul>
+    <li>Membuat website lebih <strong>interaktif</strong> dan <strong>dinamis</strong></li>
+    <li>Meningkatkan pengalaman pengguna (User Experience)</li>
+    <li>Memudahkan pengembangan fitur canggih seperti form validasi, permainan, animasi, dan sebagainya</li>
+</ul>
+
+<h2>Kesimpulan</h2>
+<p>Event Handling adalah konsep penting dalam JavaScript yang memungkinkan kita merespons tindakan pengguna dengan interaktif. Dengan memahami berbagai jenis event dan cara menggunakannya, kita bisa membuat halaman web yang lebih hidup dan menyenangkan untuk digunakan.</p>
+'
+            ],
+
+
+
+
+
+
+
+
+
+            
+            [
+                'course_id' => 13,
                 'urutan' => 3,
                 'judul' => 'Menyisipkan JavaScript dalam HTML',
                 'content' => ''
             ],
             [
-                'course_id' => 12,
+                'course_id' => 13,
                 'urutan' => 3,
                 'judul' => 'Menyisipkan JavaScript dalam HTML',
                 'content' => ''
             ],
             [
-                'course_id' => 12,
+                'course_id' => 13,
+                'urutan' => 3,
+                'judul' => 'Menyisipkan JavaScript dalam HTML',
+                'content' => ''
+            ],
+            [
+                'course_id' => 13,
                 'urutan' => 3,
                 'judul' => 'Menyisipkan JavaScript dalam HTML',
                 'content' => ''

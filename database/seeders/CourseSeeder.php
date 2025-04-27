@@ -85,6 +85,11 @@ class CourseSeeder extends Seeder
                 'judul' => 'Pengenalan JavaScript',
                 'gambar' => 'html_logo.png',
             ],
+            [
+                'category_id' => 2,
+                'judul' => 'Control Alur dengan JavaScript',
+                'gambar' => 'html_logo.png',
+            ],
 
         ]);
     }
