@@ -80,8 +80,8 @@ class NodeSeeder extends Seeder
 
 
                 ['kode' => 'html1', 'label' => 'Pengenalan HTML', 'roadmap_id' => 2],
-                ['kode' => 'html1-1', 'label' => 'Apa itu HTML?', 'roadmap_id' => 2],
-                ['kode' => 'html1-2', 'label' => 'Struktur Dasar', 'roadmap_id' => 2],
+                ['kode' => 'html1-1', 'label' => 'Struktur Dasar', 'roadmap_id' => 2],
+                ['kode' => 'html1-2', 'label' => 'Apa itu HTML?', 'roadmap_id' => 2],
                 ['kode' => 'html1-3', 'label' => 'Elemen Dasar: Tag, Atribut, & Value', 'roadmap_id' => 2],
 
 
@@ -110,6 +110,13 @@ class NodeSeeder extends Seeder
                 ['kode' => 'css1-1', 'label' => 'Apa itu CSS?', 'roadmap_id' => 2],
                 ['kode' => 'css1-2', 'label' => 'Config CSS', 'roadmap_id' => 2],
                 ['kode' => 'css1-3', 'label' => 'CSS: selector, properti, & value', 'roadmap_id' => 2],
+
+
+                ['kode' => 'css2', 'label' => 'Styling Dasar', 'roadmap_id' => 2],
+                ['kode' => 'css2-1', 'label' => 'Menata Text & Font', 'roadmap_id' => 2],
+                ['kode' => 'css2-2', 'label' => 'Padding, Margin, & Border', 'roadmap_id' => 2],
+                ['kode' => 'css2-3', 'label' => 'Background, Gradient, & Image', 'roadmap_id' => 2],
+                ['kode' => 'css2-4', 'label' => 'Width, Height, & Display', 'roadmap_id' => 2],
 
 
 

@@ -337,6 +337,51 @@ class JawbanSeeder extends Seeder
             ['quis_id' => 53, 'jawaban' => 'Mengurangi waktu loading', 'status' => 'salah', 'opsi' => 'C'],
             ['quis_id' => 53, 'jawaban' => 'Mengubah struktur halaman', 'status' => 'salah', 'opsi' => 'D'],
 
+
+
+
+
+
+            ['quis_id' => 54, 'jawaban' => 'font-family', 'status' => 'benar', 'opsi' => 'A'],
+            ['quis_id' => 54, 'jawaban' => 'font-size', 'status' => 'salah', 'opsi' => 'B'],
+            ['quis_id' => 54, 'jawaban' => 'text-align', 'status' => 'salah', 'opsi' => 'C'],
+            ['quis_id' => 54, 'jawaban' => 'color', 'status' => 'salah', 'opsi' => 'D'],
+
+
+            ['quis_id' => 55, 'jawaban' => 'letter-spacing', 'status' => 'benar', 'opsi' => 'A'],
+            ['quis_id' => 55, 'jawaban' => 'word-spacing', 'status' => 'salah', 'opsi' => 'B'],
+            ['quis_id' => 55, 'jawaban' => 'line-height', 'status' => 'salah', 'opsi' => 'C'],
+            ['quis_id' => 55, 'jawaban' => 'font-weight', 'status' => 'salah', 'opsi' => 'D'],
+
+            ['quis_id' => 56, 'jawaban' => 'Padding adalah jarak antara isi dan tepi dalam elemen, margin adalah jarak antar elemen.', 'status' => 'benar', 'opsi' => 'A'],
+            ['quis_id' => 56, 'jawaban' => 'Margin adalah jarak isi ke dalam elemen.', 'status' => 'salah', 'opsi' => 'B'],
+            ['quis_id' => 56, 'jawaban' => 'Padding adalah jarak antar elemen.', 'status' => 'salah', 'opsi' => 'C'],
+            ['quis_id' => 56, 'jawaban' => 'Keduanya sama saja.', 'status' => 'salah', 'opsi' => 'D'],
+
+            ['quis_id' => 57, 'jawaban' => 'border', 'status' => 'benar', 'opsi' => 'A'],
+            ['quis_id' => 57, 'jawaban' => 'outline', 'status' => 'salah', 'opsi' => 'B'],
+            ['quis_id' => 57, 'jawaban' => 'margin', 'status' => 'salah', 'opsi' => 'C'],
+            ['quis_id' => 57, 'jawaban' => 'padding', 'status' => 'salah', 'opsi' => 'D'],
+
+            ['quis_id' => 58, 'jawaban' => 'background-repeat', 'status' => 'benar', 'opsi' => 'A'],
+            ['quis_id' => 58, 'jawaban' => 'background-attachment', 'status' => 'salah', 'opsi' => 'B'],
+            ['quis_id' => 58, 'jawaban' => 'background-size', 'status' => 'salah', 'opsi' => 'C'],
+            ['quis_id' => 58, 'jawaban' => 'background-position', 'status' => 'salah', 'opsi' => 'D'],
+
+            ['quis_id' => 59, 'jawaban' => 'width', 'status' => 'benar', 'opsi' => 'A'],
+            ['quis_id' => 59, 'jawaban' => 'size', 'status' => 'salah', 'opsi' => 'B'],
+            ['quis_id' => 59, 'jawaban' => 'scale', 'status' => 'salah', 'opsi' => 'C'],
+            ['quis_id' => 59, 'jawaban' => 'margin', 'status' => 'salah', 'opsi' => 'D'],
+
+            ['quis_id' => 60, 'jawaban' => 'display', 'status' => 'benar', 'opsi' => 'A'],
+            ['quis_id' => 60, 'jawaban' => 'position', 'status' => 'salah', 'opsi' => 'B'],
+            ['quis_id' => 60, 'jawaban' => 'visibility', 'status' => 'salah', 'opsi' => 'C'],
+            ['quis_id' => 60, 'jawaban' => 'flex', 'status' => 'salah', 'opsi' => 'D'],
+
+            ['quis_id' => 61, 'jawaban' => 'vw', 'status' => 'benar', 'opsi' => 'A'],
+            ['quis_id' => 61, 'jawaban' => 'px', 'status' => 'salah', 'opsi' => 'B'],
+            ['quis_id' => 61, 'jawaban' => 'vh', 'status' => 'salah', 'opsi' => 'C'],
+            ['quis_id' => 61, 'jawaban' => '%', 'status' => 'salah', 'opsi' => 'D'],
         ]);
     }
 }

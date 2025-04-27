@@ -2306,18 +2306,484 @@ h1 {
         <h3>6. Kesimpulan</h3>
         <p>Menyusun aturan CSS yang rapi dan logis adalah fondasi dari desain web modern. Dengan memahami struktur selector, properti, dan nilai, mahasiswa pemula dapat mulai membangun halaman web yang lebih menarik dan profesional. Latihan menyusun berbagai selector dan mengatur tampilannya akan sangat membantu memperkuat pemahaman dasar ini.</p>"
             ],
-            // [
-            //     'course_id' => 8,
-            //     'urutan' => 1,
-            //     'judul' => '',
-            //     'content' => ''
-            // ],
-            // [
-            //     'course_id' => 8,
-            //     'urutan' => 1,
-            //     'judul' => '',
-            //     'content' => ''
-            // ],
+            [
+                'course_id' => 10,
+                'urutan' => 1,
+                'judul' => 'Menata Text & Font',
+                'content' => '
+<h2>Pengantar</h2>
+<p>Dalam dunia pengembangan web, tampilan teks (tipografi) memainkan peran yang sangat penting dalam membangun kenyamanan membaca, memperkuat estetika desain, dan menyampaikan pesan secara efektif. Tanpa pengaturan teks yang baik, sebuah halaman web akan terasa kacau, sulit dibaca, dan tidak profesional. Oleh karena itu, memahami konsep <strong>font</strong>, <strong>ukuran</strong>, <strong>warna</strong>, <strong>jarak antar huruf</strong>, dan <strong>perataan teks</strong> adalah langkah dasar yang harus dikuasai oleh setiap calon web developer.</p>
+
+<h2>1. Font (Jenis Huruf)</h2>
+<p><strong>Definisi:</strong> Font adalah gaya visual dari karakter huruf, angka, atau simbol. Dalam web design, font bukan sekadar pilihan estetis, tetapi juga berkaitan erat dengan keterbacaan dan identitas visual sebuah website.</p>
+
+<p><strong>Properti CSS:</strong> <code>font-family</code></p>
+
+<pre><code>p {
+    font-family: "Arial", "Helvetica", sans-serif;
+}</code></pre>
+
+<p><strong>Penjelasan:</strong> Dalam CSS, kita dapat menentukan beberapa font sekaligus (font stack) untuk memastikan fallback jika font utama tidak tersedia di perangkat pengguna.</p>
+
+<p><strong>Kategori Umum Font:</strong></p>
+<ul>
+    <li><strong>Serif:</strong> Memiliki garis kecil di ujung huruf (contoh: Times New Roman). Cocok untuk kesan formal dan tradisional.</li>
+    <li><strong>Sans-serif:</strong> Tidak memiliki garis kecil (contoh: Arial). Lebih modern dan lebih mudah dibaca di layar digital.</li>
+    <li><strong>Monospace:</strong> Setiap karakter memiliki lebar yang sama (contoh: Courier New). Sering digunakan untuk menampilkan kode.</li>
+    <li><strong>Cursive:</strong> Meniru tulisan tangan (contoh: Pacifico). Biasanya digunakan untuk desain kreatif, tetapi kurang ideal untuk teks panjang.</li>
+    <li><strong>Fantasy:</strong> Font dekoratif untuk efek khusus (contoh: Impact).</li>
+</ul>
+
+<p><strong>Kenapa Memilih Font dengan Hati-hati?</strong><br>
+Pilihan font mempengaruhi nuansa emosional website. Misalnya, situs berita sebaiknya menggunakan serif untuk menunjukkan keseriusan, sedangkan aplikasi startup bisa memilih sans-serif untuk kesan modern dan santai.</p>
+
+<h2>2. Ukuran Teks (Font Size)</h2>
+<p><strong>Definisi:</strong> Ukuran teks menentukan seberapa besar karakter tampil di layar. Ukuran yang salah dapat membuat teks sulit dibaca, bahkan menghalangi pengguna mengakses informasi.</p>
+
+<p><strong>Properti CSS:</strong> <code>font-size</code></p>
+
+<pre><code>h1 {
+    font-size: 2em;
+}
+</code></pre>
+
+<p><strong>Unit Pengukuran:</strong></p>
+<ul>
+    <li><strong>px (pixel):</strong> Unit absolut, memberikan kontrol penuh atas ukuran tetapi kurang fleksibel untuk desain responsif.</li>
+    <li><strong>em:</strong> Unit relatif terhadap ukuran elemen induk.</li>
+    <li><strong>rem:</strong> Unit relatif terhadap ukuran elemen root (&lt;html&gt;), konsisten di seluruh dokumen.</li>
+    <li><strong>%:</strong> Persentase terhadap elemen induk.</li>
+</ul>
+
+<p><strong>Prinsip Penting:</strong> Gunakan <em>unit relatif</em> (seperti <code>rem</code> atau <code>em</code>) untuk membuat website yang responsif dan mudah disesuaikan di berbagai ukuran layar.</p>
+
+<h2>3. Warna Teks (Text Color)</h2>
+<p><strong>Definisi:</strong> Warna teks bukan hanya elemen dekoratif. Warna juga menentukan keterbacaan, hierarki informasi, dan kesan emosional yang ditimbulkan oleh sebuah halaman.</p>
+
+<p><strong>Properti CSS:</strong> <code>color</code></p>
+
+<pre><code>p {
+    color: #1a1a1a;
+}</code></pre>
+
+<p><strong>Format Penulisan Warna:</strong></p>
+<ul>
+    <li>Nama warna (contoh: red, blue)</li>
+    <li>Hexadecimal (contoh: #ff5733)</li>
+    <li>RGB (contoh: rgb(255, 87, 51))</li>
+    <li>RGBA (contoh: rgba(255, 87, 51, 0.7))</li>
+    <li>HSL (contoh: hsl(10, 100%, 60%))</li>
+</ul>
+
+<p><strong>Prinsip Desain:</strong> Pastikan ada cukup <em>kontras</em> antara teks dan latar belakang untuk menjaga keterbacaan, terutama untuk aksesibilitas pengguna berkebutuhan khusus.</p>
+
+<h2>4. Jarak Antar Huruf (Letter Spacing)</h2>
+<p><strong>Definisi:</strong> Letter spacing adalah pengaturan jarak antar karakter huruf dalam teks. Pengaturan ini bisa memperbaiki keterbacaan atau menciptakan efek visual tertentu.</p>
+
+<p><strong>Properti CSS:</strong> <code>letter-spacing</code></p>
+
+<pre><code>h2 {
+    letter-spacing: 1px;
+}</code></pre>
+
+<p><strong>Penggunaan Umum:</strong></p>
+<ul>
+    <li>Heading atau judul besar biasanya diberi letter spacing agar terlihat lebih lapang dan elegan.</li>
+    <li>Untuk teks dengan huruf kapital semua (uppercase), letter spacing sedikit lebih besar meningkatkan keterbacaan.</li>
+</ul>
+
+<p><strong>Catatan Penting:</strong> Letter spacing yang berlebihan dapat menyebabkan teks sulit dibaca, jadi gunakan dengan bijak.</p>
+
+<h2>5. Perataan Teks (Text Alignment)</h2>
+<p><strong>Definisi:</strong> Text alignment mengatur bagaimana teks ditempatkan secara horizontal di dalam elemen induknya.</p>
+
+<p><strong>Properti CSS:</strong> <code>text-align</code></p>
+
+<pre><code>p {
+    text-align: center;
+}</code></pre>
+
+<p><strong>Nilai Text-Align:</strong></p>
+<ul>
+    <li><strong>left:</strong> Meratakan teks ke kiri (default untuk bahasa Latin)</li>
+    <li><strong>right:</strong> Meratakan teks ke kanan</li>
+    <li><strong>center:</strong> Membuat teks rata tengah</li>
+    <li><strong>justify:</strong> Membuat teks merata di kedua sisi (seperti di koran)</li>
+</ul>
+
+<p><strong>Pengaruh Alignment:</strong> Pemilihan perataan mempengaruhi ritme membaca pengguna. "Justify" cocok untuk teks panjang, sedangkan "center" lebih pas untuk teks pendek seperti judul atau kutipan.</p>
+
+<h2>Kesimpulan</h2>
+<p>Tipografi bukan hanya tentang keindahan, tetapi juga tentang komunikasi. Dengan menguasai pengaturan font, ukuran, warna, jarak huruf, dan perataan teks, Anda bisa meningkatkan pengalaman pengguna, menyampaikan pesan dengan jelas, dan memperkuat kesan profesional dari website yang Anda bangun. Tipografi yang baik adalah dasar dari desain web yang efektif.</p>
+            '
+            ],
+
+
+
+
+
+            [
+                'course_id' => 10,
+                'urutan' => 2,
+                'judul' => 'Padding, Margin, & Border',
+                'content' => '
+<h2>Pendahuluan</h2>
+<p>Dalam pengembangan web, memahami bagaimana elemen HTML disusun sangat penting untuk menghasilkan tampilan yang rapi, seimbang, dan menarik. Tiga konsep dasar dalam pengaturan ruang antar elemen adalah <strong>padding</strong>, <strong>margin</strong>, dan <strong>border</strong>. Ketiga properti ini merupakan bagian dari konsep besar yang disebut <em>Box Model</em> di CSS.</p>
+
+<h2>Pengertian Box Model</h2>
+<p><strong>Box Model</strong> adalah cara browser memvisualisasikan setiap elemen HTML sebagai sebuah kotak persegi panjang yang terdiri dari:</p>
+<ul>
+    <li><strong>Content:</strong> Area tempat isi teks atau gambar berada.</li>
+    <li><strong>Padding:</strong> Ruang di dalam border yang mengelilingi konten.</li>
+    <li><strong>Border:</strong> Garis yang mengelilingi padding dan konten.</li>
+    <li><strong>Margin:</strong> Ruang di luar border yang memisahkan elemen dari elemen lain.</li>
+</ul>
+
+<p>Visualisasi sederhana:</p>
+<pre>
+[ Margin ]
+ [ Border ]
+  [ Padding ]
+   [ Content ]
+  [ Padding ]
+ [ Border ]
+[ Margin ]
+</pre>
+
+<h2>1. Padding</h2>
+<p><strong>Definisi:</strong> Padding adalah ruang kosong antara konten elemen dan batas border-nya. Padding mendorong konten menjauh dari border dan memberikan "ruang napas" di dalam elemen.</p>
+
+<p><strong>Properti CSS:</strong></p>
+<pre><code>div {
+    padding: 20px;
+}
+</code></pre>
+
+<p><strong>Aturan Penulisan:</strong></p>
+<ul>
+    <li><strong>padding-top</strong>, <strong>padding-right</strong>, <strong>padding-bottom</strong>, <strong>padding-left</strong> untuk sisi spesifik.</li>
+    <li>Jika hanya menggunakan <code>padding</code> tunggal:
+        <ul>
+            <li>1 nilai: semua sisi sama.</li>
+            <li>2 nilai: vertikal (atas/bawah) | horizontal (kiri/kanan).</li>
+            <li>3 nilai: atas | kiri/kanan | bawah.</li>
+            <li>4 nilai: atas | kanan | bawah | kiri (searah jarum jam).</li>
+        </ul>
+    </li>
+</ul>
+
+<p><strong>Contoh:</strong></p>
+<pre><code>div {
+    padding: 10px 20px 30px 40px;
+}
+/* padding-top: 10px; padding-right: 20px; padding-bottom: 30px; padding-left: 40px; */
+</code></pre>
+
+<h2>2. Border</h2>
+<p><strong>Definisi:</strong> Border adalah garis yang mengelilingi padding dan konten sebuah elemen. Border dapat digunakan untuk menegaskan batas visual antar elemen.</p>
+
+<p><strong>Properti CSS:</strong></p>
+<pre><code>div {
+    border: 2px solid black;
+}
+</code></pre>
+
+<p><strong>Komponen Border:</strong></p>
+<ul>
+    <li><strong>Lebar border (border-width)</strong> — Contoh: 1px, 5px</li>
+    <li><strong>Gaya border (border-style)</strong> — solid, dashed, dotted, double, groove, ridge, dll.</li>
+    <li><strong>Warna border (border-color)</strong> — Nama warna, hex, rgb, dll.</li>
+</ul>
+
+<p><strong>Contoh Lain:</strong></p>
+<pre><code>div {
+    border-width: 3px;
+    border-style: dashed;
+    border-color: #ff6600;
+}
+</code></pre>
+
+<p><strong>Fungsi Border:</strong> Membantu menandai, membingkai, atau menonjolkan area tertentu dalam halaman web.</p>
+
+<h2>3. Margin</h2>
+<p><strong>Definisi:</strong> Margin adalah ruang kosong di luar border elemen. Margin menciptakan jarak antara satu elemen dengan elemen lainnya.</p>
+
+<p><strong>Properti CSS:</strong></p>
+<pre><code>div {
+    margin: 15px;
+}
+</code></pre>
+
+<p><strong>Aturan Penulisan:</strong> Sama seperti padding — margin dapat diatur per sisi: <code>margin-top</code>, <code>margin-right</code>, <code>margin-bottom</code>, dan <code>margin-left</code>.</p>
+
+<p><strong>Catatan Penting:</strong> Saat dua margin vertikal bertemu, mereka tidak dijumlahkan, melainkan mengikuti margin terbesar. Ini disebut <em>margin collapsing</em>.</p>
+
+<h2>Ilustrasi Hubungan Padding, Border, Margin</h2>
+<p>Misal elemen div memiliki:</p>
+<ul>
+    <li>Width konten: 200px</li>
+    <li>Padding: 20px</li>
+    <li>Border: 5px</li>
+    <li>Margin: 10px</li>
+</ul>
+
+<p><strong>Total lebar elemen</strong> menjadi:
+<br>
+200px (konten) + (2 × 20px padding) + (2 × 5px border) = 250px
+</p>
+
+<p><strong>Margin</strong> tidak dihitung dalam ukuran elemen, tetapi berpengaruh terhadap jarak antar elemen.</p>
+
+<h2>Praktik Terbaik</h2>
+<ul>
+    <li>Gunakan <code>padding</code> untuk memberi ruang di dalam elemen.</li>
+    <li>Gunakan <code>margin</code> untuk memberi ruang di luar elemen antar elemen lain.</li>
+    <li>Gunakan <code>border</code> untuk memperjelas atau mendekorasi elemen.</li>
+    <li>Gunakan <code>box-sizing: border-box;</code> untuk menghitung padding dan border ke dalam total ukuran elemen, sehingga lebih mudah mengatur layout.</li>
+</ul>
+
+<p><strong>Contoh box-sizing:</strong></p>
+<pre><code>div {
+    box-sizing: border-box;
+}
+</code></pre>
+
+<h2>Kesimpulan</h2>
+<p>Memahami padding, margin, dan border adalah kunci untuk mengontrol ruang, mengatur layout, dan menciptakan desain web yang terstruktur dan profesional. Dengan menguasai konsep ini, Anda akan memiliki pondasi kuat dalam membangun halaman web yang konsisten dan enak dipandang.</p>
+            '
+            ],
+
+
+
+
+
+            [
+                'course_id' => 10,
+                'urutan' => 3,
+                'judul' => 'Background, Gradient, & Image',
+                'content' => '
+<h2>Pendahuluan</h2>
+<p>Pemberian background pada elemen sangat penting dalam desain web untuk mempercantik tampilan, memperjelas hirarki visual, dan meningkatkan pengalaman pengguna. Background bisa berupa warna solid, gradasi warna (gradient), atau gambar.</p>
+
+<h2>1. Menambahkan Background Warna Solid</h2>
+<p><strong>Definisi:</strong> Background warna solid adalah penggunaan satu warna rata untuk mengisi area sebuah elemen.</p>
+
+<p><strong>Properti CSS:</strong> <code>background-color</code></p>
+
+<pre><code>div {
+    background-color: #3498db; /* biru */
+}
+</code></pre>
+
+<p><strong>Penjelasan:</strong> Anda bisa menggunakan nama warna (red, blue), kode heksadesimal (#ff0000), format RGB (rgb(255, 0, 0)), atau HSL (hsl(0, 100%, 50%)).</p>
+
+<p><strong>Contoh:</strong></p>
+<pre><code>body {
+    background-color: #f5f5f5;
+}
+</code></pre>
+
+<h2>2. Menambahkan Background Gradient</h2>
+<p><strong>Definisi:</strong> Gradient adalah transisi bertahap antara dua atau lebih warna. Ini memberikan efek visual yang lebih menarik daripada warna solid biasa.</p>
+
+<p><strong>Properti CSS:</strong> <code>background-image</code> dengan fungsi <code>linear-gradient</code> atau <code>radial-gradient</code></p>
+
+<h3>a. Linear Gradient</h3>
+<p>Transisi warna terjadi dalam garis lurus (bisa vertikal, horizontal, atau diagonal).</p>
+
+<pre><code>div {
+    background-image: linear-gradient(to right, #ff7e5f, #feb47b);
+}
+</code></pre>
+
+<p><strong>Penjelasan:</strong>
+<ul>
+    <li><code>to right</code>: arah gradasi dari kiri ke kanan.</li>
+    <li><code>#ff7e5f</code> ke <code>#feb47b</code>: warna awal ke warna akhir.</li>
+</ul>
+</p>
+
+<h3>b. Radial Gradient</h3>
+<p>Transisi warna memancar dari pusat ke luar seperti lingkaran.</p>
+
+<pre><code>div {
+    background-image: radial-gradient(circle, #ff7e5f, #feb47b);
+}
+</code></pre>
+
+<p><strong>Penggunaan Gradient:</strong>
+<ul>
+    <li>Membuat tombol lebih menarik</li>
+    <li>Memberikan kesan modern pada latar belakang section</li>
+    <li>Menarik perhatian ke elemen tertentu</li>
+</ul>
+</p>
+
+<h2>3. Menambahkan Background Gambar</h2>
+<p><strong>Definisi:</strong> Anda dapat menggunakan gambar sebagai latar belakang elemen.</p>
+
+<p><strong>Properti CSS:</strong> <code>background-image</code></p>
+
+<pre><code>div {
+    background-image: url("gambar.jpg");
+}
+</code></pre>
+
+<h3>Properti Tambahan untuk Background Gambar</h3>
+<ul>
+    <li><code>background-repeat</code>: mengatur apakah gambar diulang.
+        <ul>
+            <li><strong>repeat</strong> (default): gambar diulang baik secara horizontal maupun vertikal.</li>
+            <li><strong>no-repeat</strong>: gambar hanya ditampilkan sekali.</li>
+            <li><strong>repeat-x</strong>: diulang hanya secara horizontal.</li>
+            <li><strong>repeat-y</strong>: diulang hanya secara vertikal.</li>
+        </ul>
+    </li>
+    <li><code>background-size</code>: mengatur ukuran gambar.
+        <ul>
+            <li><strong>cover</strong>: memperbesar gambar untuk menutupi seluruh elemen.</li>
+            <li><strong>contain</strong>: memperkecil gambar agar seluruh gambar terlihat.</li>
+            <li><strong>nilai spesifik</strong> seperti <code>100px 200px</code>.</li>
+        </ul>
+    </li>
+    <li><code>background-position</code>: menentukan posisi gambar.
+        <ul>
+            <li>Contoh: <code>center center</code>, <code>top right</code>, <code>10px 20px</code>.</li>
+        </ul>
+    </li>
+    <li><code>background-attachment</code>: mengatur apakah background bergulir bersama halaman.
+        <ul>
+            <li><strong>scroll</strong> (default): background bergulir.</li>
+            <li><strong>fixed</strong>: background tetap di tempat (efek parallax).</li>
+        </ul>
+    </li>
+</ul>
+
+<p><strong>Contoh Penggunaan Lengkap:</strong></p>
+<pre><code>div {
+    background-image: url("background.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
+</code></pre>
+
+<h2>Praktik Terbaik</h2>
+<ul>
+    <li>Gunakan gambar background yang ukurannya tidak terlalu besar untuk menjaga kecepatan loading halaman.</li>
+    <li>Selalu sertakan fallback warna latar belakang jika gambar tidak dimuat.</li>
+    <li>Pastikan kontras yang cukup antara teks dan latar belakang agar keterbacaan tetap terjaga.</li>
+</ul>
+
+<h2>Kesimpulan</h2>
+<p>Dengan menguasai penggunaan background warna, gradient, dan gambar, Anda dapat menciptakan tampilan web yang lebih menarik, modern, dan user-friendly. Pemilihan dan pengaturan background yang tepat dapat meningkatkan estetika dan pengalaman pengguna secara keseluruhan.</p>
+            '
+            ],
+
+
+
+
+
+
+            [
+                'course_id' => 10,
+                'urutan' => 4,
+                'judul' => 'Width, Height, & Display',
+                'content' => '
+<h2>Pendahuluan</h2>
+<p>Dalam pengembangan web, sangat penting untuk dapat mengatur ukuran elemen agar tampilan menjadi sesuai dengan desain yang diinginkan. Tiga properti utama dalam CSS yang digunakan untuk mengendalikan ukuran dan perilaku elemen adalah <strong>width</strong>, <strong>height</strong>, dan <strong>display</strong>.</p>
+
+<h2>1. Width (Lebar)</h2>
+<p><strong>Definisi:</strong> Properti <code>width</code> digunakan untuk menentukan lebar dari area konten sebuah elemen.</p>
+
+<p><strong>Properti CSS:</strong></p>
+<pre><code>div {
+    width: 300px;
+}
+</code></pre>
+
+<h3>Nilai yang dapat digunakan:</h3>
+<ul>
+    <li><strong>px (piksel)</strong>: Satuan absolut. Contoh: <code>width: 200px;</code></li>
+    <li><strong>% (persen)</strong>: Satuan relatif terhadap elemen induknya (parent element). Contoh: <code>width: 50%;</code></li>
+    <li><strong>vw (viewport width)</strong>: Relatif terhadap lebar jendela browser. <code>1vw = 1%</code> dari lebar viewport.</li>
+    <li><strong>auto</strong>: Browser menghitung lebar secara otomatis berdasarkan konten.</li>
+    <li><strong>min-content</strong>, <strong>max-content</strong>, <strong>fit-content</strong> (CSS level lanjut untuk pengaturan dinamis).</li>
+</ul>
+
+<h2>2. Height (Tinggi)</h2>
+<p><strong>Definisi:</strong> Properti <code>height</code> digunakan untuk menentukan tinggi area konten sebuah elemen.</p>
+
+<p><strong>Properti CSS:</strong></p>
+<pre><code>div {
+    height: 150px;
+}
+</code></pre>
+
+<h3>Nilai yang dapat digunakan:</h3>
+<ul>
+    <li><strong>px (piksel)</strong>: Nilai absolut. Contoh: <code>height: 400px;</code></li>
+    <li><strong>% (persen)</strong>: Persentase terhadap tinggi elemen induk. Perlu elemen induk memiliki tinggi tertentu agar berfungsi.</li>
+    <li><strong>vh (viewport height)</strong>: Relatif terhadap tinggi jendela browser. <code>1vh = 1%</code> dari tinggi viewport.</li>
+    <li><strong>auto</strong>: Tinggi disesuaikan dengan konten di dalam elemen.</li>
+</ul>
+
+<h2>3. Display</h2>
+<p><strong>Definisi:</strong> Properti <code>display</code> menentukan bagaimana sebuah elemen dirender di halaman dan mempengaruhi perilaku pengaturan <code>width</code> dan <code>height</code>.</p>
+
+<h3>Nilai penting pada Display:</h3>
+<ul>
+    <li><strong>block</strong>: Elemen menempati seluruh lebar baris. Kita dapat mengatur <code>width</code> dan <code>height</code>. Contoh elemen: &lt;div&gt;, &lt;p&gt;, &lt;h1&gt;.</li>
+    <li><strong>inline</strong>: Elemen hanya sebesar kontennya dan tidak bisa diatur <code>width</code>/<code>height</code>. Contoh elemen: &lt;span&gt;, &lt;a&gt;.</li>
+    <li><strong>inline-block</strong>: Seperti inline, tetapi bisa diatur <code>width</code> dan <code>height</code>.</li>
+    <li><strong>none</strong>: Elemen tidak ditampilkan di halaman.</li>
+    <li><strong>flex</strong>: Digunakan untuk layout fleksibel modern (dalam pembahasan lebih lanjut).</li>
+    <li><strong>grid</strong>: Digunakan untuk membuat layout berbasis grid (lebih lanjut di topik lanjutan).</li>
+</ul>
+
+<h3>Contoh:</h3>
+
+<pre><code>div {
+    display: block;
+    width: 80%;
+    height: 200px;
+    background-color: lightblue;
+}
+
+span {
+    display: inline;
+    background-color: yellow;
+}
+
+.button {
+    display: inline-block;
+    width: 100px;
+    height: 40px;
+    background-color: green;
+    color: white;
+    text-align: center;
+}
+</code></pre>
+
+<h2>Catatan Penting:</h2>
+<ul>
+    <li>Secara default, elemen <strong>block</strong> akan mengisi 100% lebar induknya, sedangkan elemen <strong>inline</strong> hanya selebar kontennya.</li>
+    <li>Untuk mengubah elemen inline agar bisa diberi ukuran, ubah menjadi <code>inline-block</code>.</li>
+    <li>Jika ingin elemen tidak muncul, gunakan <code>display: none</code>.</li>
+</ul>
+
+<h2>Praktik Terbaik</h2>
+<ul>
+    <li>Gunakan satuan relatif (% atau vw/vh) agar desain lebih responsif.</li>
+    <li>Perhatikan hubungan antara display dan kontrol ukuran elemen.</li>
+    <li>Untuk layout yang lebih kompleks dan responsif, nantinya kombinasi display: flex atau grid sangat membantu.</li>
+</ul>
+
+<h2>Kesimpulan</h2>
+<p>Dengan memahami dan mengatur <strong>width</strong>, <strong>height</strong>, dan <strong>display</strong>, Anda dapat mengontrol ukuran dan perilaku elemen secara efektif, menghasilkan layout yang rapi, fleksibel, dan profesional. Ini adalah fondasi penting sebelum masuk ke teknik layout lanjutan seperti Flexbox dan CSS Grid.</p>
+            '
+            ],
 
         ]);
     }

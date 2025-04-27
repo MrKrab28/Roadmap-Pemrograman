@@ -104,14 +104,14 @@ class ConnectionSeeder extends Seeder
                 ['source' => 'html1', 'target' => 'html1-3', 'roadmap_id' => 2],
 
 
-                ['source' => 'html3-1', 'target' => 'html2', 'roadmap_id' => 2],
+                ['source' => 'html1-1', 'target' => 'html2', 'roadmap_id' => 2],
                 ['source' => 'html2', 'target' => 'html2-1', 'roadmap_id' => 2],
                 ['source' => 'html2', 'target' => 'html2-2', 'roadmap_id' => 2],
                 ['source' => 'html2', 'target' => 'html2-3', 'roadmap_id' => 2],
                 ['source' => 'html2', 'target' => 'html2-4', 'roadmap_id' => 2],
 
 
-                ['source' => 'html1-2', 'target' => 'html3', 'roadmap_id' => 2],
+                ['source' => 'html1-1', 'target' => 'html3', 'roadmap_id' => 2],
                 ['source' => 'html3', 'target' => 'html3-1', 'roadmap_id' => 2],
                 ['source' => 'html3', 'target' => 'html3-2', 'roadmap_id' => 2],
                 ['source' => 'html3', 'target' => 'html3-3', 'roadmap_id' => 2],
@@ -124,6 +124,15 @@ class ConnectionSeeder extends Seeder
                 ['source' => 'css1', 'target' => 'css1-1', 'roadmap_id' => 2],
                 ['source' => 'css1', 'target' => 'css1-2', 'roadmap_id' => 2],
                 ['source' => 'css1', 'target' => 'css1-3', 'roadmap_id' => 2],
+
+
+
+                ['source' => 'css1-3', 'target' => 'css2', 'roadmap_id' => 2],
+
+                ['source' => 'css2', 'target' => 'css2-1', 'roadmap_id' => 2],
+                ['source' => 'css2', 'target' => 'css2-2', 'roadmap_id' => 2],
+                ['source' => 'css2', 'target' => 'css2-3', 'roadmap_id' => 2],
+                ['source' => 'css2', 'target' => 'css2-4', 'roadmap_id' => 2],
 
 
 

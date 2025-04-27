@@ -70,6 +70,16 @@ class CourseSeeder extends Seeder
                 'judul' => 'Pengenalan CSS',
                 'gambar' => 'html_logo.png',
             ],
+            [
+                'category_id' => 2,
+                'judul' => 'Styling Dasar',
+                'gambar' => 'html_logo.png',
+            ],
+            [
+                'category_id' => 2,
+                'judul' => 'Responsif Design & Media Queries',
+                'gambar' => 'html_logo.png',
+            ],
 
         ]);
     }

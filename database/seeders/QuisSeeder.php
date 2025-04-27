@@ -116,6 +116,15 @@ class QuisSeeder extends Seeder
             ['course_id' => 9, 'pertanyaan' => 'Mengapa penting memisahkan HTML dan CSS?'],
             ['course_id' => 9, 'pertanyaan' => 'Apa keuntungan menggunakan CSS dalam proyek besar?'],
 
+
+            ['course_id' => 10, 'pertanyaan' => 'Apa properti CSS yang digunakan untuk mengubah jenis huruf (font)?'],
+            ['course_id' => 10, 'pertanyaan' => 'Properti apa yang digunakan untuk mengatur jarak antar huruf?'],
+            ['course_id' => 10, 'pertanyaan' => 'Apa perbedaan utama antara padding dan margin?'],
+            ['course_id' => 10, 'pertanyaan' => 'Properti CSS apa yang digunakan untuk memberikan garis tepi pada elemen?'],
+            ['course_id' => 10, 'pertanyaan' => 'Untuk mengatur agar gambar background tidak diulang, properti apa yang digunakan?'],
+            ['course_id' => 10, 'pertanyaan' => 'Properti apa yang digunakan untuk menentukan lebar suatu elemen?'],
+            ['course_id' => 10, 'pertanyaan' => 'Properti apa yang digunakan untuk mengatur bagaimana elemen ditampilkan (seperti block atau inline)?'],
+            ['course_id' => 10, 'pertanyaan' => 'Jika ingin elemen menyesuaikan lebar jendela browser, satuan apa yang digunakan?'],
         ]);
     }
 }
