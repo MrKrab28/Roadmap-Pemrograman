@@ -128,7 +128,11 @@ class NodeSeeder extends Seeder
 
 
                 ['kode' => 'JS', 'label' => 'JS', 'roadmap_id' => 2],
-                ['kode' => 'js1', 'label' => 'JavaScript', 'roadmap_id' => 2],
+
+                ['kode' => 'js1', 'label' => 'Pengenalan JavaScript', 'roadmap_id' => 2],
+                ['kode' => 'js1-1', 'label' => 'Apa itu JavaScript?', 'roadmap_id' => 2],
+                ['kode' => 'js1-2', 'label' => 'Menyisipkan JavaScript dalam HTML', 'roadmap_id' => 2],
+                ['kode' => 'js1-3', 'label' => 'Struktur Dasar', 'roadmap_id' => 2],
 
                 ]
         );

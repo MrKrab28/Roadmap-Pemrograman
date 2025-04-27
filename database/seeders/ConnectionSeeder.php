@@ -147,6 +147,9 @@ class ConnectionSeeder extends Seeder
 
                 ['source' => 'JS', 'target' => 'js1', 'roadmap_id' => 2],
 
+                ['source' => 'js1', 'target' => 'js1-1', 'roadmap_id' => 2],
+                ['source' => 'js1', 'target' => 'js1-2', 'roadmap_id' => 2],
+                ['source' => 'js1', 'target' => 'js1-3', 'roadmap_id' => 2],
 
 
 
