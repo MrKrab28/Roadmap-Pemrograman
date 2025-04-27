@@ -3169,21 +3169,233 @@ body {
             '
             ],
             [
-                'course_id' => 11,
-                'urutan' => 4,
-                'judul' => 'Responsif Design',
+                'course_id' => 12,
+                'urutan' => 1,
+                'judul' => 'Apa itu JavaScript?',
+                'content' =>  '
+                <h2>Pengenalan JavaScript</h2>
+                <p><strong>JavaScript</strong> adalah bahasa pemrograman yang digunakan untuk membuat halaman web menjadi lebih interaktif dan dinamis. Awalnya dikembangkan oleh Netscape pada tahun 1995, JavaScript kini menjadi salah satu teknologi inti dalam pengembangan web, bersama dengan HTML dan CSS.</p>
+                <p>JavaScript berjalan di sisi klien (client-side) dalam browser pengguna, sehingga memungkinkan interaksi langsung tanpa perlu memuat ulang halaman dari server. Namun, JavaScript modern juga bisa berjalan di sisi server menggunakan teknologi seperti Node.js.</p>
+
+                <h2>Fungsi Utama JavaScript dalam Pengembangan Web</h2>
+                <ol>
+                    <li><strong>Interaktivitas:</strong> JavaScript memungkinkan pengguna berinteraksi dengan elemen halaman web, seperti mengklik tombol, mengisi formulir, membuka atau menutup menu, slider gambar, dan lainnya.</li>
+                    <li><strong>Manipulasi DOM:</strong> Dengan JavaScript, kita dapat mengubah, menambah, atau menghapus elemen HTML di dalam halaman web secara dinamis tanpa perlu memuat ulang halaman.</li>
+                    <li><strong>Validasi Formulir:</strong> JavaScript dapat memvalidasi input pengguna di sisi klien, memastikan data yang dikirimkan ke server sesuai dengan aturan yang ditetapkan (contohnya, memastikan email berformat benar).</li>
+                    <li><strong>Pengambilan Data Asinkron (AJAX):</strong> JavaScript memungkinkan web mengambil data dari server di latar belakang tanpa mengganggu tampilan halaman. Ini membuat pengalaman pengguna lebih lancar.</li>
+                    <li><strong>Animasi dan Efek Visual:</strong> JavaScript digunakan untuk membuat animasi seperti fade in, fade out, gerakan elemen, atau transisi antar halaman yang lebih halus.</li>
+                    <li><strong>Pengembangan Aplikasi Web:</strong> JavaScript digunakan untuk membangun aplikasi web kompleks seperti SPA (Single Page Application) menggunakan framework seperti React, Vue, atau Angular.</li>
+                </ol>
+
+                <h2>Contoh Sederhana JavaScript</h2>
+                <p>Contoh penggunaan JavaScript untuk menampilkan pesan:</p>
+
+                <pre><code>&lt;button onclick="alert(\'Halo, Selamat Datang di Website!\')">Klik Saya&lt;/button></code></pre>
+
+                <p>Ketika pengguna mengklik tombol tersebut, JavaScript akan menampilkan kotak dialog (alert) dengan pesan yang telah ditentukan.</p>
+
+                <h2>Kesimpulan</h2>
+                <p>JavaScript merupakan bagian penting dalam pengembangan web modern. Tanpa JavaScript, website hanya berupa halaman statis yang tidak interaktif. Dengan JavaScript, kita bisa membuat website yang lebih hidup, responsif, dan dapat memberikan pengalaman pengguna yang jauh lebih baik.</p>
+                                '
+            ],
+
+
+
+            [
+                'course_id' => 12,
+                'urutan' => 2,
+                'judul' => 'Struktur Dasar',
+                'content' => '
+<h2>Pengenalan Struktur Dasar JavaScript</h2>
+<p>Untuk mulai menulis program dengan JavaScript, penting untuk memahami struktur dasar yang terdiri dari variabel, tipe data, operator, dan ekspresi. Pemahaman ini menjadi fondasi dalam membangun logika dan fungsi dalam aplikasi web.</p>
+
+<h2>1. Variabel</h2>
+<p>Variabel adalah tempat untuk menyimpan data atau nilai yang dapat digunakan dan diubah dalam program. Dalam JavaScript, variabel dapat dideklarasikan menggunakan kata kunci:</p>
+<ul>
+    <li><strong>var</strong> - Cara lama mendeklarasikan variabel (tidak direkomendasikan untuk penggunaan modern karena sifatnya yang function-scoped).</li>
+    <li><strong>let</strong> - Mendeklarasikan variabel yang nilainya bisa diubah (block-scoped).</li>
+    <li><strong>const</strong> - Mendeklarasikan variabel dengan nilai tetap (block-scoped).</li>
+</ul>
+
+<p>Contoh deklarasi variabel:</p>
+<pre><code>let nama = "Budi";
+const umur = 20;
+var status = "Mahasiswa";</code></pre>
+
+<h2>2. Tipe Data</h2>
+<p>JavaScript memiliki berbagai tipe data yang dibagi menjadi dua kategori besar:</p>
+
+<h3>Tipe Data Primitif</h3>
+<ul>
+    <li><strong>String</strong> - Teks, contoh: "Halo"</li>
+    <li><strong>Number</strong> - Angka, contoh: 100, 3.14</li>
+    <li><strong>Boolean</strong> - Nilai benar atau salah: true atau false</li>
+    <li><strong>Null</strong> - Menunjukkan ketiadaan nilai</li>
+    <li><strong>Undefined</strong> - Variabel yang belum diberikan nilai</li>
+    <li><strong>Symbol</strong> - Nilai unik dan tidak dapat diubah</li>
+    <li><strong>BigInt</strong> - Untuk angka sangat besar</li>
+</ul>
+
+<h3>Tipe Data Non-Primitif (Kompleks)</h3>
+<ul>
+    <li><strong>Object</strong> - Kumpulan pasangan key-value</li>
+    <li><strong>Array</strong> - Kumpulan nilai dalam satu variabel</li>
+    <li><strong>Function</strong> - Blok kode yang dapat dipanggil dan dijalankan</li>
+</ul>
+
+<h2>3. Operator</h2>
+<p>Operator digunakan untuk melakukan operasi pada nilai dan variabel. Beberapa jenis operator dalam JavaScript:</p>
+
+<h3>Operator Aritmatika</h3>
+<ul>
+    <li><strong>+</strong> : Penjumlahan</li>
+    <li><strong>-</strong> : Pengurangan</li>
+    <li><strong>*</strong> : Perkalian</li>
+    <li><strong>/</strong> : Pembagian</li>
+    <li><strong>%</strong> : Modulus (sisa bagi)</li>
+</ul>
+
+<h3>Operator Perbandingan</h3>
+<ul>
+    <li><strong>==</strong> : Sama dengan</li>
+    <li><strong>===</strong> : Sama dengan dan tipe data harus sama</li>
+    <li><strong>!=</strong> : Tidak sama dengan</li>
+    <li><strong>&lt;</strong> : Kurang dari</li>
+    <li><strong>&gt;</strong> : Lebih dari</li>
+    <li><strong>&lt;=</strong> : Kurang dari atau sama dengan</li>
+    <li><strong>&gt;=</strong> : Lebih dari atau sama dengan</li>
+</ul>
+
+<h3>Operator Logika</h3>
+<ul>
+    <li><strong>&&</strong> : Dan (AND)</li>
+    <li><strong>||</strong> : Atau (OR)</li>
+    <li><strong>!</strong> : Tidak (NOT)</li>
+</ul>
+
+<h2>4. Ekspresi</h2>
+<p>Ekspresi dalam JavaScript adalah kombinasi dari variabel, nilai, dan operator yang menghasilkan suatu nilai baru.</p>
+
+<p>Contoh ekspresi:</p>
+<pre><code>let hasil = (5 + 3) * 2; // menghasilkan 16</code></pre>
+
+<p>Ekspresi bisa sesederhana nilai tunggal (<code>10</code>) atau lebih kompleks seperti operasi matematika, logika, atau pemanggilan fungsi.</p>
+
+<h2>Kesimpulan</h2>
+<p>Memahami variabel, tipe data, operator, dan ekspresi adalah langkah awal untuk menjadi mahir dalam JavaScript. Konsep-konsep ini akan digunakan terus-menerus dalam semua program, baik sederhana maupun kompleks. Dengan dasar yang kuat, Anda akan lebih mudah memahami topik lanjutan seperti fungsi, kondisi, perulangan, dan manipulasi DOM.</p>
+                '
+            ],
+
+
+
+            [
+                'course_id' => 12,
+                'urutan' => 3,
+                'judul' => 'Menyisipkan JavaScript dalam HTML',
+                'content' => '
+<h2>Pengenalan Penyisipan JavaScript</h2>
+<p>Dalam pengembangan web, JavaScript dapat disisipkan ke dalam halaman HTML dengan berbagai cara. Tujuan utamanya adalah untuk menghubungkan antara konten HTML dan logika program JavaScript agar halaman menjadi interaktif dan dinamis.</p>
+<p>Terdapat tiga metode utama dalam menyisipkan JavaScript ke dalam HTML, yaitu: <strong>inline</strong>, <strong>internal</strong>, dan <strong>eksternal</strong>.</p>
+
+<h2>1. Inline JavaScript</h2>
+<p>Pada metode ini, JavaScript ditulis langsung di dalam atribut HTML, biasanya menggunakan atribut <code>onclick</code>, <code>onmouseover</code>, atau event lainnya.</p>
+
+<p><strong>Contoh:</strong></p>
+<pre><code>&lt;button onclick="alert(\'Tombol diklik!\')">Klik Saya&lt;/button></code></pre>
+
+<p><strong>Kelebihan:</strong></p>
+<ul>
+    <li>Mudah dan cepat digunakan untuk aksi sederhana.</li>
+</ul>
+
+<p><strong>Kekurangan:</strong></p>
+<ul>
+    <li>Kurang terorganisir untuk proyek besar.</li>
+    <li>Menyulitkan pemeliharaan dan debugging.</li>
+</ul>
+
+<h2>2. Internal JavaScript</h2>
+<p>JavaScript diletakkan di dalam elemen <code>&lt;script&gt;</code> di dalam file HTML, biasanya di bagian <code>&lt;head&gt;</code> atau sebelum penutup <code>&lt;/body&gt;</code>.</p>
+
+<p><strong>Contoh:</strong></p>
+<pre><code>&lt;!DOCTYPE html>
+&lt;html>
+&lt;head>
+    &lt;title>Contoh Internal JavaScript&lt;/title>
+    &lt;script>
+        function salam() {
+            alert("Selamat datang!");
+        }
+    &lt;/script>
+&lt;/head>
+&lt;body>
+    &lt;button onclick="salam()">Klik Saya&lt;/button>
+&lt;/body>
+&lt;/html></code></pre>
+
+<p><strong>Kelebihan:</strong></p>
+<ul>
+    <li>Lebih terstruktur dibandingkan inline.</li>
+</ul>
+
+<p><strong>Kekurangan:</strong></p>
+<ul>
+    <li>Jika terlalu banyak kode, HTML menjadi tidak rapi.</li>
+</ul>
+
+<h2>3. Eksternal JavaScript</h2>
+<p>JavaScript diletakkan di file terpisah dengan ekstensi <code>.js</code>. File JavaScript ini kemudian dipanggil di dalam HTML menggunakan elemen <code>&lt;script&gt;</code> dengan atribut <code>src</code>.</p>
+
+<p><strong>Contoh File JavaScript (script.js):</strong></p>
+<pre><code>function salam() {
+    alert("Selamat datang dari file eksternal!");
+}</code></pre>
+
+<p><strong>Contoh HTML yang memanggil file eksternal:</strong></p>
+<pre><code>&lt;!DOCTYPE html>
+&lt;html>
+&lt;head>
+    &lt;title>Contoh Eksternal JavaScript&lt;/title>
+    &lt;script src="script.js">&lt;/script>
+&lt;/head>
+&lt;body>
+    &lt;button onclick="salam()">Klik Saya&lt;/button>
+&lt;/body>
+&lt;/html></code></pre>
+
+<p><strong>Kelebihan:</strong></p>
+<ul>
+    <li>Kode JavaScript dan HTML lebih terpisah dan terorganisir.</li>
+    <li>Memudahkan pengelolaan kode dalam proyek besar.</li>
+    <li>File JavaScript dapat digunakan ulang di banyak halaman.</li>
+    <li>Browser bisa melakukan caching file eksternal, mempercepat loading halaman.</li>
+</ul>
+
+<p><strong>Kekurangan:</strong></p>
+<ul>
+    <li>Memerlukan permintaan HTTP tambahan untuk mengambil file JavaScript.</li>
+</ul>
+
+<h2>Kesimpulan</h2>
+<p>Memilih metode penyisipan JavaScript tergantung pada skala proyek dan kebutuhan. Untuk proyek kecil dan eksperimen cepat, inline dan internal bisa digunakan. Namun untuk proyek besar dan profesional, disarankan menggunakan file eksternal agar kode lebih rapi, modular, dan mudah dikelola.</p>
+                '
+            ],
+            [
+                'course_id' => 12,
+                'urutan' => 3,
+                'judul' => 'Menyisipkan JavaScript dalam HTML',
                 'content' => ''
             ],
             [
-                'course_id' => 11,
-                'urutan' => 4,
-                'judul' => 'Responsif Design',
+                'course_id' => 12,
+                'urutan' => 3,
+                'judul' => 'Menyisipkan JavaScript dalam HTML',
                 'content' => ''
             ],
             [
-                'course_id' => 11,
-                'urutan' => 4,
-                'judul' => 'Responsif Design',
+                'course_id' => 12,
+                'urutan' => 3,
+                'judul' => 'Menyisipkan JavaScript dalam HTML',
                 'content' => ''
             ],
         ]);

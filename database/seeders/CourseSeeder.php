@@ -80,6 +80,11 @@ class CourseSeeder extends Seeder
                 'judul' => 'Responsif Design & Media Queries',
                 'gambar' => 'html_logo.png',
             ],
+            [
+                'category_id' => 2,
+                'judul' => 'Pengenalan JavaScript',
+                'gambar' => 'html_logo.png',
+            ],
 
         ]);
     }
