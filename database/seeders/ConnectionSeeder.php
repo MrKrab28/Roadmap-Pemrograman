@@ -136,6 +136,15 @@ class ConnectionSeeder extends Seeder
 
 
 
+                ['source' => 'css1-3', 'target' => 'css3', 'roadmap_id' => 2],
+
+                ['source' => 'css3', 'target' => 'css3-1', 'roadmap_id' => 2],
+                ['source' => 'css3', 'target' => 'css3-2', 'roadmap_id' => 2],
+                ['source' => 'css3', 'target' => 'css3-3', 'roadmap_id' => 2],
+                ['source' => 'css3', 'target' => 'css3-4', 'roadmap_id' => 2],
+
+
+
                 ['source' => 'JS', 'target' => 'js1', 'roadmap_id' => 2],
 
 

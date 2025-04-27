@@ -119,6 +119,13 @@ class NodeSeeder extends Seeder
                 ['kode' => 'css2-4', 'label' => 'Width, Height, & Display', 'roadmap_id' => 2],
 
 
+                ['kode' => 'css3', 'label' => 'Responsif Design & Media Queries', 'roadmap_id' => 2],
+                ['kode' => 'css3-1', 'label' => 'Responsif Design', 'roadmap_id' => 2],
+                ['kode' => 'css3-2', 'label' => 'Layout Responsif & Viewport Units', 'roadmap_id' => 2],
+                ['kode' => 'css3-3', 'label' => 'Media queries', 'roadmap_id' => 2],
+                ['kode' => 'css3-4', 'label' => 'Flexbox & Grid', 'roadmap_id' => 2],
+
+
 
                 ['kode' => 'JS', 'label' => 'JS', 'roadmap_id' => 2],
                 ['kode' => 'js1', 'label' => 'JavaScript', 'roadmap_id' => 2],

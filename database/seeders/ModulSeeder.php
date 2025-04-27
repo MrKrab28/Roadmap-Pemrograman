@@ -2793,7 +2793,7 @@ span {
 <p>Dengan memahami dan mengatur <strong>width</strong>, <strong>height</strong>, dan <strong>display</strong>, Anda dapat mengontrol ukuran dan perilaku elemen secara efektif, menghasilkan layout yang rapi, fleksibel, dan profesional. Ini adalah fondasi penting sebelum masuk ke teknik layout lanjutan seperti Flexbox dan CSS Grid.</p>
             '
             ],
-            
+
 
             [
                 'course_id' => 11,
@@ -2848,7 +2848,7 @@ body {
             [
                 'course_id' => 11,
                 'urutan' => 2,
-                'judul' => 'Menyusun Layout Responsif & Viewport Units',
+                'judul' => 'Layout Responsif & Viewport Units',
                 'content' => '
 <h2>Menyusun Layout Responsif Menggunakan Persentase dan Viewport Units</h2>
 
@@ -3060,7 +3060,7 @@ body {
             [
                 'course_id' => 11,
                 'urutan' => 4,
-                'judul' => 'Responsif Design',
+                'judul' => 'Flexbox & Grid',
                 'content' => '
 <h2>Menggunakan Flexbox dan Grid untuk Layout Responsif yang Lebih Fleksibel</h2>
 
