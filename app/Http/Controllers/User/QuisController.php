@@ -34,7 +34,7 @@ class QuisController extends Controller
         }
 
         $skor = $skor * 100 / count($course->quis);
-        if ($skor != 50) {
+        if ($skor >= 50) {
 
             CourseCompletion::insert([
                 'user_id' => Auth::user()->id,
