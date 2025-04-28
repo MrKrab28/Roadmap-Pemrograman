@@ -23,18 +23,18 @@ class NodeSeeder extends Seeder
 
 
                 ['kode' => 'php1', 'label' => 'Pengenalan PHP', 'roadmap_id' => 1],
-                ['kode' => 'php1-1', 'label' => 'Apa itu PHP?', 'roadmap_id' => 1],
-                ['kode' => 'php1-2', 'label' => 'Sejarah', 'roadmap_id' => 1],
-                ['kode' => 'php1-3', 'label' => 'Fungsi PHP dalam Pengembangan Web Backend', 'roadmap_id' => 1],
-                ['kode' => 'php1-4', 'label' => 'Instalasi', 'roadmap_id' => 1],
+                ['kode' => 'php1-1', 'label' => 'Instalasi', 'roadmap_id' => 1],
+                ['kode' => 'php1-2', 'label' => 'Apa itu PHP?', 'roadmap_id' => 1],
+                ['kode' => 'php1-3', 'label' => 'Sejarah', 'roadmap_id' => 1],
+                ['kode' => 'php1-4', 'label' => 'Fungsi PHP dalam Pengembangan Web Backend', 'roadmap_id' => 1],
 
 
 
                 ['kode' => 'php2', 'label' => 'Dasar - Dasar PHP', 'roadmap_id' => 1],
-                ['kode' => 'php2-1', 'label' => 'Sintaks Dasar', 'roadmap_id' => 1],
-                ['kode' => 'php2-2', 'label' => 'Variabel, tipe data, & operator','roadmap_id' => 1],
-                ['kode' => 'php2-3', 'label' => 'Struktur Kontrol', 'roadmap_id' => 1],
-                ['kode' => 'php2-4', 'label' => 'PHP Function', 'roadmap_id' => 1],
+                ['kode' => 'php2-1', 'label' => 'PHP Function', 'roadmap_id' => 1],
+                ['kode' => 'php2-2', 'label' => 'Sintaks Dasar', 'roadmap_id' => 1],
+                ['kode' => 'php2-3', 'label' => 'Variabel, tipe data, & operator','roadmap_id' => 1],
+                ['kode' => 'php2-4', 'label' => 'Struktur Kontrol', 'roadmap_id' => 1],
                 ['kode' => 'php2-5', 'label' => 'Operasi Array', 'roadmap_id' => 1],
 
 

@@ -24,41 +24,33 @@ class ConnectionSeeder extends Seeder
                 ['source' => 'php1', 'target' => 'php1-1', 'roadmap_id' => 1],
                 ['source' => 'php1', 'target' => 'php1-2', 'roadmap_id' => 1],
                 ['source' => 'php1', 'target' => 'php1-3', 'roadmap_id' => 1],
-                // ['source' => 'php1', 'target' => 'php1-4', 'roadmap_id' => 1],
-
-
-                ['source' => 'php1-1', 'target' => 'php1-4', 'roadmap_id' => 1],
-                ['source' => 'php1-2', 'target' => 'php1-4', 'roadmap_id' => 1],
-                ['source' => 'php1-3', 'target' => 'php1-4', 'roadmap_id' => 1],
+                ['source' => 'php1', 'target' => 'php1-4', 'roadmap_id' => 1],
 
 
 
 
-                ['source' => 'php1-4', 'target' => 'php2', 'roadmap_id' => 1],
+
+
+
+                ['source' => 'php1-1', 'target' => 'php2', 'roadmap_id' => 1],
                 ['source' => 'php2', 'target' => 'php2-1', 'roadmap_id' => 1],
                 ['source' => 'php2', 'target' => 'php2-2', 'roadmap_id' => 1],
                 ['source' => 'php2', 'target' => 'php2-3', 'roadmap_id' => 1],
-                // ['source' => 'php2', 'target' => 'php2-4', 'roadmap_id' => 1],
+                ['source' => 'php2', 'target' => 'php2-4', 'roadmap_id' => 1],
                 ['source' => 'php2', 'target' => 'php2-5', 'roadmap_id' => 1],
 
 
-                ['source' => 'php2-1', 'target' => 'php2-4', 'roadmap_id' => 1],
-                ['source' => 'php2-2', 'target' => 'php2-4', 'roadmap_id' => 1],
-                ['source' => 'php2-3', 'target' => 'php2-4', 'roadmap_id' => 1],
-                ['source' => 'php2-5', 'target' => 'php2-4', 'roadmap_id' => 1],
 
 
 
-                ['source' => 'php2-4', 'target' => 'php3', 'roadmap_id' => 1],
+                ['source' => 'php2-1', 'target' => 'php3', 'roadmap_id' => 1],
                 ['source' => 'php3', 'target' => 'php3-1', 'roadmap_id' => 1],
                 ['source' => 'php3', 'target' => 'php3-2', 'roadmap_id' => 1],
                 ['source' => 'php3', 'target' => 'php3-3', 'roadmap_id' => 1],
-                // ['source' => 'php3', 'target' => 'php3-4', 'roadmap_id' => 1],
+                ['source' => 'php3', 'target' => 'php3-4', 'roadmap_id' => 1],
 
 
-                ['source' => 'php3-1', 'target' => 'php3-4', 'roadmap_id' => 1],
-                ['source' => 'php3-2', 'target' => 'php3-4', 'roadmap_id' => 1],
-                ['source' => 'php3-3', 'target' => 'php3-4', 'roadmap_id' => 1],
+               
 
 
 
