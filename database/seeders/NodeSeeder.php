@@ -156,16 +156,18 @@ class NodeSeeder extends Seeder
                 ['kode' => 'lvl1-2', 'label' => 'Folder Structur', 'roadmap_id' => 3],
 
 
-                ['kode' => 'lvl2', 'label' => 'Routes', 'roadmap_id' => 3],
-                ['kode' => 'lvl2-1', 'label' => 'Controllers', 'roadmap_id' => 3],
-                ['kode' => 'lvl2-2', 'label' => 'Routing Resource & CRUD Operations', 'roadmap_id' => 3],
+                ['kode' => 'lvl2', 'label' => 'Routing & Controllers', 'roadmap_id' => 3],
+                ['kode' => 'lvl2-1', 'label' => 'Routes', 'roadmap_id' => 3],
+                ['kode' => 'lvl2-2', 'label' => 'Controllers', 'roadmap_id' => 3],
+                ['kode' => 'lvl2-3', 'label' => 'Routing Resource & CRUD Operations', 'roadmap_id' => 3],
 
 
 
-                ['kode' => 'lvl3', 'label' => 'Eloquent ORM', 'roadmap_id' => 3],
-                ['kode' => 'lvl3-1', 'label' => 'Interaksi Model dan Database', 'roadmap_id' => 3],
-                ['kode' => 'lvl3-2', 'label' => 'migration & struktur tabel', 'roadmap_id' => 3],
-                ['kode' => 'lvl3-3', 'label' => 'Laravel Seeder', 'roadmap_id' => 3],
+                ['kode' => 'lvl3', 'label' => 'Model & Database', 'roadmap_id' => 3],
+                ['kode' => 'lvl3-1', 'label' => 'Eloquent ORM', 'roadmap_id' => 3],
+                ['kode' => 'lvl3-2', 'label' => 'Interaksi Model dan Database', 'roadmap_id' => 3],
+                ['kode' => 'lvl3-3', 'label' => 'migration & struktur tabel', 'roadmap_id' => 3],
+                ['kode' => 'lvl3-4', 'label' => 'Laravel Seeder', 'roadmap_id' => 3],
 
 
 
