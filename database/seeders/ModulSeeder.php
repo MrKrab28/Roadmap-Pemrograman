@@ -4661,12 +4661,261 @@ Produk::factory()->count(50)->create();
 
 
 
+
+
             [
-                'course_id' => 16,
+                'course_id' => 17,
+                'urutan' => 1,
+                'judul' => 'Pengenalan Blade Templating Engine',
+                'content' => '<h2>Apa itu Blade?</h2>
+<p><strong>Blade</strong> adalah templating engine bawaan Laravel yang memungkinkan kita membuat tampilan (view) dinamis dengan sintaks yang sederhana dan elegan. Blade terintegrasi langsung dengan Laravel dan menggunakan file berekstensi <code>.blade.php</code>.</p>
+
+<p>Blade menyediakan fitur-fitur seperti <strong>inheritance layout</strong>, <strong>komponen</strong>, <strong>pengulangan dan percabangan</strong>, serta kemampuan untuk menyisipkan data dari controller dengan mudah.</p>
+
+<h2>Keunggulan Blade</h2>
+<ul>
+    <li><strong>Ringan:</strong> Blade tidak menambah beban pemrosesan karena dikompilasi menjadi PHP biasa sebelum dijalankan.</li>
+    <li><strong>Fleksibel:</strong> Mendukung berbagai ekspresi dan logika kontrol (if, foreach, dll).</li>
+    <li><strong>Mudah Digunakan:</strong> Sintaks yang mirip HTML dengan sedikit tambahan membuat Blade mudah dipahami.</li>
+</ul>
+
+<h2>Struktur Dasar Blade</h2>
+<p>Contoh file Blade disimpan di direktori <code>resources/views/</code>. Misalnya:</p>
+<pre><code>resources/views/home.blade.php</code></pre>
+
+<p>Untuk mencetak variabel dari controller ke tampilan Blade:</p>
+<pre><code>&lt;h1&gt;Hello, {{ \$name }}&lt;/h1&gt;</code></pre>
+
+<h2>Directive Blade yang Umum Digunakan</h2>
+<ul>
+    <li><code>{{ \$variable }}</code> : Menampilkan isi variabel (dengan otomatis menghindari XSS).</li>
+    <li><code>@if</code>, <code>@elseif</code>, <code>@else</code>, <code>@endif</code> : Struktur percabangan.</li>
+    <li><code>@foreach</code>, <code>@endforeach</code> : Perulangan.</li>
+    <li><code>@include("partial")</code> : Menyisipkan tampilan lain.</li>
+    <li><code>@extends("layout")</code>, <code>@section("content")</code>,
+    <code>@yield("content")</code> : Inheritance layout.</li>
+</ul>
+
+<h2>Contoh Penggunaan Blade</h2>
+<p>Misalnya kita punya layout utama di <code>resources/views/layouts/app.blade.php</code>:</p>
+<pre><code>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;Aplikasi Saya&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div class="container"&gt;
+        @yield("content")
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+<p>Lalu di <code>resources/views/home.blade.php</code>:</p>
+<pre><code>
+@extends("layouts.app")
+
+@section("content")
+    &lt;h1&gt;Selamat Datang, {{ \$nama }}!&lt;/h1&gt;
+@endsection
+</code></pre>
+
+<h2>Kesimpulan</h2>
+<p>Blade mempermudah proses pembuatan tampilan dinamis di Laravel. Dengan sintaks yang bersih dan fitur yang kaya, Blade sangat ideal digunakan dalam aplikasi Laravel baik skala kecil maupun besar. Pemisahan antara logika dan tampilan juga membuat kode lebih terstruktur dan mudah dipelihara.</p>'
+            ],
+
+
+
+
+            [
+                'course_id' => 17,
+                'urutan' => 2,
+                'judul' => 'Basic Syntax Structur',
+                'content' => "<h2>Pendahuluan</h2>
+<p>Dalam Laravel, Blade merupakan sistem templating yang sangat membantu dalam membuat tampilan web yang rapi, terstruktur, dan dapat digunakan ulang. Tiga directive utama yang sangat sering digunakan dalam Blade adalah <code>@extends</code>, <code>@section</code>, dan <code>@yield</code>.</p>
+
+<p>Dengan ketiga directive ini, kita dapat membangun sistem layout yang modular, di mana halaman-halaman tertentu dapat mewarisi struktur dari layout utama dan hanya mengubah bagian kontennya.</p>
+
+<h2>Penggunaan <code>@extends</code></h2>
+<p>Directive <code>@extends</code> digunakan untuk menunjukkan bahwa suatu file Blade mewarisi atau menggunakan layout utama. Biasanya layout utama disimpan di folder <code>resources/views/layouts</code>.</p>
+
+<pre><code>
+// File: resources/views/layouts/app.blade.php
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;Aplikasi Laravel&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div class='container'&gt;
+        @yield('content')
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+<pre><code>
+// File: resources/views/home.blade.php
+@extends('layouts.app')
+
+@section('content')
+    &lt;h1&gt;Selamat datang di halaman Home&lt;/h1&gt;
+@endsection
+</code></pre>
+
+<p>Pada contoh di atas, <code>home.blade.php</code> akan menggunakan layout dari <code>app.blade.php</code>. Layout utama menyediakan struktur HTML, sedangkan <code>home</code> mengisi bagian tertentu saja (yaitu konten).</p>
+
+<h2>Penggunaan <code>@section</code></h2>
+<p>Directive <code>@section</code> digunakan untuk mendefinisikan bagian konten tertentu yang akan ditampilkan pada tempat yang ditentukan oleh <code>@yield</code> dalam layout.</p>
+
+<pre><code>
+@section('content')
+    &lt;p&gt;Ini adalah isi konten yang akan ditampilkan di layout utama.&lt;/p&gt;
+@endsection
+</code></pre>
+
+<p>Setiap <code>@section</code> harus memiliki nama yang sesuai dengan <code>@yield</code> yang digunakan di layout.</p>
+
+<h2>Penggunaan <code>@yield</code></h2>
+<p>Directive <code>@yield</code> digunakan di layout utama untuk menunjukkan di mana konten dari child view (yang menggunakan <code>@section</code>) akan ditampilkan.</p>
+
+<pre><code>
+&lt;body&gt;
+    &lt;nav&gt;Menu Navigasi&lt;/nav&gt;
+    @yield('content')
+    &lt;footer&gt;Hak Cipta 2025&lt;/footer&gt;
+&lt;/body&gt;
+</code></pre>
+
+<h2>Alur Kerja</h2>
+<ol>
+    <li><strong>Layout utama</strong> dibuat dan diisi struktur dasar HTML serta <code>@yield</code> sebagai titik penyisipan.</li>
+    <li><strong>Halaman child</strong> dibuat dengan menggunakan <code>@extends</code> untuk menunjukkan layout mana yang digunakan.</li>
+    <li><code>@section</code> diisi sesuai dengan nama <code>@yield</code> di layout utama.</li>
+</ol>
+
+<h2>Manfaat Menggunakan Struktur Ini</h2>
+<ul>
+    <li>Memisahkan logika tampilan dan konten.</li>
+    <li>Menghindari penulisan ulang struktur HTML berulang kali.</li>
+    <li>Meningkatkan keterbacaan dan pemeliharaan kode.</li>
+</ul>
+
+<h2>Kesimpulan</h2>
+<p>Pemahaman tentang <code>@extends</code>, <code>@section</code>, dan <code>@yield</code> sangat penting dalam membangun tampilan web yang efisien di Laravel. Ketiga directive ini membantu menciptakan layout yang konsisten, mudah digunakan ulang, dan terorganisir secara profesional.</p>"
+            ],
+
+
+
+            [
+                'course_id' => 17,
                 'urutan' => 3,
+                'judul' => 'Basic Layout',
+                'content' => '<h2>Pendahuluan</h2>
+<p>Blade sebagai templating engine Laravel memungkinkan kita untuk membuat layout dasar yang dapat digunakan ulang di seluruh halaman web. Dalam layout dasar ini, kita biasanya memisahkan struktur umum seperti <strong>header</strong>, <strong>footer</strong>, dan <strong>bagian konten</strong> agar aplikasi lebih rapi dan mudah dipelihara.</p>
+
+<h2>Struktur Layout</h2>
+<p>Struktur layout dasar biasanya terdiri dari tiga bagian utama:</p>
+<ul>
+    <li><strong>Header</strong>: Biasanya berisi logo, navigasi, atau nama situs.</li>
+    <li><strong>Konten Dinamis</strong>: Area yang berubah-ubah tergantung halaman.</li>
+    <li><strong>Footer</strong>: Biasanya berisi informasi hak cipta, tautan, atau kontak.</li>
+</ul>
+
+<h2>1. Membuat Layout Utama</h2>
+<p>File layout utama diletakkan di dalam <code>resources/views/layouts/app.blade.php</code>.</p>
+
+<pre><code class="language-php">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;@yield("title", "Aplikasi Laravel")&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+    &lt;header&gt;
+        &lt;h1&gt;My Laravel App&lt;/h1&gt;
+        &lt;nav&gt;
+            &lt;a href="/"&gt;Home&lt;/a&gt; |
+            &lt;a href="/about"&gt;About&lt;/a&gt;
+        &lt;/nav&gt;
+    &lt;/header&gt;
+
+    &lt;main&gt;
+        @yield("content")
+    &lt;/main&gt;
+
+    &lt;footer&gt;
+        &lt;p&gt;&copy; 2025 My Laravel App&lt;/p&gt;
+    &lt;/footer&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+<h2>2. Membuat Halaman Turunan (Child View)</h2>
+<p>Untuk setiap halaman seperti <code>home</code> atau <code>about</code>, kita membuat view yang <code>@extends</code> layout utama dan mengisi konten melalui <code>@section</code>.</p>
+
+<pre><code class="language-php">
+// File: resources/views/home.blade.php
+@extends("layouts.app")
+
+@section("title", "Halaman Home")
+
+@section("content")
+    &lt;h2&gt;Selamat Datang di Home&lt;/h2&gt;
+    &lt;p&gt;Ini adalah halaman beranda dari aplikasi Laravel Anda.&lt;/p&gt;
+@endsection
+</code></pre>
+
+<h2>3. Menambahkan Bagian-Bagian Lain Jika Diperlukan</h2>
+<p>Kita bisa menambahkan bagian lain seperti <code>@section("scripts")</code> untuk JavaScript atau <code>@section("styles")</code> untuk CSS khusus halaman tertentu. Di layout utama cukup tambahkan <code>@yield</code> untuk titik sisipannya.</p>
+
+<pre><code>
+&lt;head&gt;
+    ...
+    @yield("styles")
+&lt;/head&gt;
+
+&lt;body&gt;
+    ...
+    @yield("scripts")
+&lt;/body&gt;
+</code></pre>
+
+<h2>Manfaat Layout Blade</h2>
+<ul>
+    <li>DRY (Dont Repeat Yourself): tidak perlu menyalin ulang struktur HTML di setiap halaman.</li>
+    <li>Meningkatkan keterbacaan dan pengorganisasian kode tampilan.</li>
+    <li>Mudah dikembangkan: perubahan di satu layout akan berdampak ke seluruh halaman yang mewarisinya.</li>
+</ul>
+
+<h2>Kesimpulan</h2>
+<p>Membuat layout dasar dengan Blade merupakan praktik penting dalam pengembangan aplikasi Laravel. Dengan memisahkan struktur layout seperti header, konten, dan footer, serta menggunakan <code>@extends</code>, <code>@yield</code>, dan <code>@section</code>, kamu dapat membangun antarmuka pengguna yang rapi, modular, dan efisien.</p>
+HTML'
+            ],
+
+
+
+            
+            [
+                'course_id' => 17,
+                'urutan' => 1,
                 'judul' => 'Menyisipkan JavaScript dalam HTML',
                 'content' => ''
             ],
+            [
+                'course_id' => 17,
+                'urutan' => 1,
+                'judul' => 'Menyisipkan JavaScript dalam HTML',
+                'content' => ''
+            ],
+
+
+
+
+
         ]);
     }
 }
