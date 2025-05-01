@@ -186,6 +186,14 @@ public function update(Request $request, $id)
             ['course_id' => 15, 'pertanyaan' => 'Lengkapi sintaks berikut untuk mendaftarkan rute CRUD:<pre>Route::______("users", UserController::class);</pre>'],
 
 
+
+            ['course_id' => 16, 'pertanyaan' => 'Apa perintah artisan yang digunakan untuk membuat model baru di Laravel?'],
+            ['course_id' => 16, 'pertanyaan' => 'Apa output yang dihasilkan jika perintah berikut dijalankan?<pre>php artisan make:migration create_produk_table</pre>'],
+            ['course_id' => 16, 'pertanyaan' => 'Apa fungsi dari method <code>run()</code> dalam file seeder di Laravel?'],
+            ['course_id' => 16, 'pertanyaan' => 'Bagaimana cara mengisi data awal ke dalam tabel setelah membuat seeder?'],
+            ['course_id' => 16, 'pertanyaan' => 'Apa yang dimaksud dengan “migration rollback” di Laravel?'],
+            ['course_id' => 16, 'pertanyaan' => 'Apa fungsi dari model di Laravel dalam konteks Eloquent ORM?'],
+
         ]);
     }
 }
