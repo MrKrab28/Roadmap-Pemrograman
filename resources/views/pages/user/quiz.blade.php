@@ -64,7 +64,7 @@
                                                 id="jawaban{{ $jawaban->id }}" name="jawaban[{{ $quis->id }}]"
                                                 value="{{ $jawaban->id }}" required>
                                             <label class="form-check-label fw-light mb-1"
-                                                for="jawaban{{ $jawaban->id }}">{{ $jawaban->jawaban }}</label>
+                                                for="jawaban{{ $jawaban->id }}">{!! $jawaban->jawaban !!}</label>
                                         </div>
                                     @endforeach
                                 @endforeach
