@@ -177,7 +177,20 @@ class NodeSeeder extends Seeder
 
                 ['kode' => 'lvl4-1', 'label' => 'Pengenalan Blade Templating Engine', 'roadmap_id' => 3],
                 ['kode' => 'lvl4-2', 'label' => 'Basic Syntax Structur', 'roadmap_id' => 3],
-                ['kode' => 'lvl4-3', 'label' => 'Basic Layout', 'roadmap_id' => 3],
+                ['kode' => 'lvl4-3', 'label' => 'Model & Database', 'roadmap_id' => 3],
+
+
+
+
+
+                // ['kode' => 'lvl5', 'label' => 'Blade Direktif', 'roadmap_id' => 3],
+                // ['kode' => 'lvl5-1', 'label' => 'Direktif Blade (@if, @foreach, @for)', 'roadmap_id' => 3],
+                // ['kode' => 'lvl5-2', 'label' => 'Data Dinamis Dalam Tampilan Blade ', 'roadmap_id' => 3],
+                // ['kode' => 'lvl5-3', 'label' => 'Blade Form & Laravel Form Helper', 'roadmap_id' => 3],
+                // ['kode' => 'lvl5-4', 'label' => '@include', 'roadmap_id' => 3],
+
+
+
 
 
                 ]
