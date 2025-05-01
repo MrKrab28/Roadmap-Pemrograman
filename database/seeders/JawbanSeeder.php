@@ -537,6 +537,40 @@ class JawbanSeeder extends Seeder
             ['quis_id' => 87, 'jawaban' => 'Menghapus semua data tabel', 'status' => 'salah', 'opsi' => 'C'],
             ['quis_id' => 87, 'jawaban' => 'Membuat seeder baru', 'status' => 'salah', 'opsi' => 'D'],
 
+
+
+
+
+            ['quis_id' => 88, 'jawaban' => 'Untuk mewarisi layout dari file Blade lain', 'status' => 'benar', 'opsi' => 'A'],
+            ['quis_id' => 88, 'jawaban' => 'Untuk menambahkan file CSS', 'status' => 'salah', 'opsi' => 'B'],
+            ['quis_id' => 88, 'jawaban' => 'Untuk menghubungkan controller ke view', 'status' => 'salah', 'opsi' => 'C'],
+            ['quis_id' => 88, 'jawaban' => 'Untuk membuat partial Blade', 'status' => 'salah', 'opsi' => 'D'],
+
+            ['quis_id' => 89, 'jawaban' => 'content', 'status' => 'benar', 'opsi' => 'A'],
+            ['quis_id' => 89, 'jawaban' => 'title', 'status' => 'salah', 'opsi' => 'B'],
+            ['quis_id' => 89, 'jawaban' => 'main', 'status' => 'salah', 'opsi' => 'C'],
+            ['quis_id' => 89, 'jawaban' => 'yield', 'status' => 'salah', 'opsi' => 'D'],
+
+            ['quis_id' => 90, 'jawaban' => '<title>Beranda</title>', 'status' => 'benar', 'opsi' => 'A'],
+            ['quis_id' => 90, 'jawaban' => '<title>Default Title</title>', 'status' => 'salah', 'opsi' => 'B'],
+            ['quis_id' => 90, 'jawaban' => '<title>@section("title")</title>', 'status' => 'salah', 'opsi' => 'C'],
+            ['quis_id' => 90, 'jawaban' => '<title>@extends("title")</title>', 'status' => 'salah', 'opsi' => 'D'],
+
+            ['quis_id' => 91, 'jawaban' => 'Bagian <main> akan diganti oleh isi dari section "content"', 'status' => 'benar', 'opsi' => 'A'],
+            ['quis_id' => 91, 'jawaban' => 'Bagian <header> akan diganti oleh layout utama', 'status' => 'salah', 'opsi' => 'B'],
+            ['quis_id' => 91, 'jawaban' => 'Seluruh halaman akan di-override', 'status' => 'salah', 'opsi' => 'C'],
+            ['quis_id' => 91, 'jawaban' => 'Tidak ada bagian yang diganti', 'status' => 'salah', 'opsi' => 'D'],
+
+            ['quis_id' => 92, 'jawaban' => 'Menandai lokasi di layout untuk menyisipkan script tambahan', 'status' => 'benar', 'opsi' => 'A'],
+            ['quis_id' => 92, 'jawaban' => 'Menambahkan file JavaScript ke layout', 'status' => 'salah', 'opsi' => 'B'],
+            ['quis_id' => 92, 'jawaban' => 'Menginisialisasi event JavaScript', 'status' => 'salah', 'opsi' => 'C'],
+            ['quis_id' => 92, 'jawaban' => 'Menggabungkan layout dengan controller', 'status' => 'salah', 'opsi' => 'D'],
+
+            ['quis_id' => 93, 'jawaban' => 'Menyediakan sintaks ringan dan efisien untuk membuat tampilan dinamis di Laravel', 'status' => 'benar', 'opsi' => 'A'],
+            ['quis_id' => 93, 'jawaban' => 'Mengganti peran database dalam aplikasi Laravel', 'status' => 'salah', 'opsi' => 'B'],
+            ['quis_id' => 93, 'jawaban' => 'Mengatur request dan response HTTP', 'status' => 'salah', 'opsi' => 'C'],
+            ['quis_id' => 93, 'jawaban' => 'Membuat seeder untuk database', 'status' => 'salah', 'opsi' => 'D'],
+
         ]);
     }
 }

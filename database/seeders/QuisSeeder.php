@@ -193,6 +193,29 @@ public function update(Request $request, $id)
             ['course_id' => 16, 'pertanyaan' => 'Perhatikan kode berikut:<pre>$product = Product::find(5);</pre> Apa yang dilakukan baris tersebut?'],
             ['course_id' => 16, 'pertanyaan' => 'Apa hasil dari menjalankan perintah berikut?<pre>php artisan db:seed</pre>'],
 
+
+
+
+            ['course_id' => 17, 'pertanyaan' => 'Apa fungsi dari directive berikut dalam Blade?<pre>@extends("layouts.app")</pre>'],
+            ['course_id' => 17, 'pertanyaan' => 'Lengkapi kode berikut agar konten dimasukkan ke dalam layout utama:<pre>
+@extends("layouts.app")
+
+@section("____")
+    &lt;p&gt;Ini konten&lt;/p&gt;
+@endsection
+</pre>'],
+            ['course_id' => 17, 'pertanyaan' => 'Apa output dari kode Blade berikut jika terdapat @section("title", "Beranda")?<pre>
+&lt;title&gt;@yield("title", "Default Title")&lt;/title&gt;
+</pre>'],
+            ['course_id' => 17, 'pertanyaan' => 'Perhatikan kode berikut. Apa bagian yang akan diganti oleh konten halaman turunan?<pre>
+&lt;body&gt;
+    &lt;header&gt;Header&lt;/header&gt;
+    &lt;main&gt;@yield("content")&lt;/main&gt;
+    &lt;footer&gt;Footer&lt;/footer&gt;
+&lt;/body&gt;
+</pre>'],
+            ['course_id' => 17, 'pertanyaan' => 'Apa hasil dari penggunaan directive berikut dalam file layout Blade?<pre>@yield("scripts")</pre>'],
+            ['course_id' => 17, 'pertanyaan' => 'Apa tujuan menggunakan Blade dalam pengembangan aplikasi Laravel?'],
         ]);
     }
 }
