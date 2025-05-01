@@ -486,7 +486,30 @@ class JawbanSeeder extends Seeder
 
 
 
+            ['quis_id' => 78, 'jawaban' => 'Menghapus controller BlogController', 'status' => 'salah', 'opsi' => 'A'],
+            ['quis_id' => 78, 'jawaban' => 'Membuat controller dengan semua method CRUD (index, create, store, etc)', 'status' => 'benar', 'opsi' => 'B'],
+            ['quis_id' => 78, 'jawaban' => 'Membuat controller kosong tanpa method', 'status' => 'salah', 'opsi' => 'C'],
+            ['quis_id' => 78, 'jawaban' => 'Membuat file view secara otomatis', 'status' => 'salah', 'opsi' => 'D'],
 
+            ['quis_id' => 79, 'jawaban' => 'Menghapus data berdasarkan ID', 'status' => 'salah', 'opsi' => 'A'],
+            ['quis_id' => 79, 'jawaban' => 'Menampilkan data produk', 'status' => 'salah', 'opsi' => 'B'],
+            ['quis_id' => 79, 'jawaban' => 'Menyimpan data baru ke dalam database', 'status' => 'benar', 'opsi' => 'C'],
+            ['quis_id' => 79, 'jawaban' => 'Mengedit file konfigurasi', 'status' => 'salah', 'opsi' => 'D'],
+
+            ['quis_id' => 80, 'jawaban' => '5', 'status' => 'salah', 'opsi' => 'A'],
+            ['quis_id' => 80, 'jawaban' => '7', 'status' => 'benar', 'opsi' => 'B'],
+            ['quis_id' => 80, 'jawaban' => '3', 'status' => 'salah', 'opsi' => 'C'],
+            ['quis_id' => 80, 'jawaban' => '9', 'status' => 'salah', 'opsi' => 'D'],
+
+            ['quis_id' => 81, 'jawaban' => 'Menampilkan data semua produk', 'status' => 'salah', 'opsi' => 'A'],
+            ['quis_id' => 81, 'jawaban' => 'Membuat produk baru', 'status' => 'salah', 'opsi' => 'B'],
+            ['quis_id' => 81, 'jawaban' => 'Memperbarui data berdasarkan ID', 'status' => 'benar', 'opsi' => 'C'],
+            ['quis_id' => 81, 'jawaban' => 'Menghapus data produk', 'status' => 'salah', 'opsi' => 'D'],
+
+            ['quis_id' => 82, 'jawaban' => 'group', 'status' => 'salah', 'opsi' => 'A'],
+            ['quis_id' => 82, 'jawaban' => 'controller', 'status' => 'salah', 'opsi' => 'B'],
+            ['quis_id' => 82, 'jawaban' => 'resource', 'status' => 'benar', 'opsi' => 'C'],
+            ['quis_id' => 82, 'jawaban' => 'web', 'status' => 'salah', 'opsi' => 'D'],
         ]);
     }
 }

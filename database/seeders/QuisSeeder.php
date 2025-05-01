@@ -157,6 +157,35 @@ document.getElementById("btn").addEventListener("click", function() {
             ['course_id' => 14, 'pertanyaan' => 'File konfigurasi .env di Laravel digunakan untuk apa?'],
             ['course_id' => 14, 'pertanyaan' => 'Di manakah file controller disimpan dalam struktur folder Laravel?'],
             ['course_id' => 14, 'pertanyaan' => 'Dalam konsep MVC, komponen “Model” memiliki tanggung jawab utama apa?'],
+
+
+
+
+
+
+
+            ['course_id' => 15, 'pertanyaan' => 'Apa hasil dari perintah artisan berikut?<pre>php artisan make:controller BlogController --resource</pre>'],
+            ['course_id' => 15, 'pertanyaan' => 'Apa output dari method berikut jika dipanggil dalam controller resource?<pre>
+
+public function store(Request $request)
+{
+    Product::create($request->all());
+    return redirect()->route("products.index");
+}
+</pre>'],
+            ['course_id' => 15, 'pertanyaan' => 'Berapa banyak rute HTTP yang didaftarkan oleh perintah berikut?<pre>Route::resource("posts", PostController::class);</pre>'],
+            ['course_id' => 15, 'pertanyaan' => 'Apa fungsi dari method berikut ini dalam controller Laravel?<pre>
+
+public function update(Request $request, $id)
+{
+    $product = Product::findOrFail($id);
+    $product->update($request->all());
+    return redirect()->route("products.index");
+}
+</pre>'],
+            ['course_id' => 15, 'pertanyaan' => 'Lengkapi sintaks berikut untuk mendaftarkan rute CRUD:<pre>Route::______("users", UserController::class);</pre>'],
+
+
         ]);
     }
 }
