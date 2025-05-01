@@ -510,6 +510,37 @@ class JawbanSeeder extends Seeder
             ['quis_id' => 82, 'jawaban' => 'controller', 'status' => 'salah', 'opsi' => 'B'],
             ['quis_id' => 82, 'jawaban' => 'resource', 'status' => 'benar', 'opsi' => 'C'],
             ['quis_id' => 82, 'jawaban' => 'web', 'status' => 'salah', 'opsi' => 'D'],
+
+            // Quis ID: 90 (Model)
+            ['quis_id' => 90, 'jawaban' => 'Model adalah representasi dari tabel database dalam bentuk kelas PHP.', 'status' => 'benar', 'opsi' => 'B'],
+            ['quis_id' => 90, 'jawaban' => 'Model digunakan untuk membuat view di Laravel.', 'status' => 'salah', 'opsi' => 'A'],
+            ['quis_id' => 90, 'jawaban' => 'Model menyimpan file konfigurasi routing.', 'status' => 'salah', 'opsi' => 'C'],
+            ['quis_id' => 90, 'jawaban' => 'Model digunakan hanya untuk testing.', 'status' => 'salah', 'opsi' => 'D'],
+
+            // Quis ID: 91 (Migration)
+            ['quis_id' => 91, 'jawaban' => 'Untuk mendefinisikan dan memodifikasi struktur tabel database secara versioned.', 'status' => 'benar', 'opsi' => 'C'],
+            ['quis_id' => 91, 'jawaban' => 'Untuk menyimpan data dummy.', 'status' => 'salah', 'opsi' => 'A'],
+            ['quis_id' => 91, 'jawaban' => 'Untuk membuat controller secara otomatis.', 'status' => 'salah', 'opsi' => 'B'],
+            ['quis_id' => 91, 'jawaban' => 'Untuk menjalankan file konfigurasi Laravel.', 'status' => 'salah', 'opsi' => 'D'],
+
+            // Quis ID: 92 (Seeder)
+            ['quis_id' => 92, 'jawaban' => 'Seeder digunakan untuk mengisi tabel database dengan data awal atau dummy.', 'status' => 'benar', 'opsi' => 'A'],
+            ['quis_id' => 92, 'jawaban' => 'Seeder digunakan untuk membuat tabel baru.', 'status' => 'salah', 'opsi' => 'B'],
+            ['quis_id' => 92, 'jawaban' => 'Seeder digunakan untuk menjalankan query SQL secara manual.', 'status' => 'salah', 'opsi' => 'C'],
+            ['quis_id' => 92, 'jawaban' => 'Seeder digunakan untuk menyimpan konfigurasi aplikasi.', 'status' => 'salah', 'opsi' => 'D'],
+
+            // Quis ID: 93 (Relasi Model)
+            ['quis_id' => 93, 'jawaban' => 'hasMany, belongsTo, hasOne', 'status' => 'benar', 'opsi' => 'D'],
+            ['quis_id' => 93, 'jawaban' => 'get(), set(), update()', 'status' => 'salah', 'opsi' => 'A'],
+            ['quis_id' => 93, 'jawaban' => 'save(), read(), connect()', 'status' => 'salah', 'opsi' => 'B'],
+            ['quis_id' => 93, 'jawaban' => 'put(), patch(), delete()', 'status' => 'salah', 'opsi' => 'C'],
+
+            // Quis ID: 94 (create menggunakan model)
+            ['quis_id' => 94, 'jawaban' => 'Product::create($request->all());', 'status' => 'benar', 'opsi' => 'C'],
+            ['quis_id' => 94, 'jawaban' => '$product = new Product(); $product->all();', 'status' => 'salah', 'opsi' => 'A'],
+            ['quis_id' => 94, 'jawaban' => 'return Product->save($request);', 'status' => 'salah', 'opsi' => 'B'],
+            ['quis_id' => 94, 'jawaban' => 'Model::insert($request);', 'status' => 'salah', 'opsi' => 'D'],
+
         ]);
     }
 }
