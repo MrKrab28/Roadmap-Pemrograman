@@ -453,6 +453,40 @@ class JawbanSeeder extends Seeder
             ['quis_id' => 72, 'jawaban' => 'Console akan menampilkan "Tombol diklik!"', 'status' => 'benar', 'opsi' => 'B'],
             ['quis_id' => 72, 'jawaban' => 'Akan muncul alert di browser.', 'status' => 'salah', 'opsi' => 'C'],
             ['quis_id' => 72, 'jawaban' => 'Halaman akan melakukan refresh otomatis.', 'status' => 'salah', 'opsi' => 'D'],
+
+
+
+
+
+            ['quis_id' => 73, 'jawaban' => 'Bahasa pemrograman untuk data science.', 'status' => 'salah', 'opsi' => 'A'],
+            ['quis_id' => 73, 'jawaban' => 'Framework PHP untuk membangun aplikasi web modern.', 'status' => 'benar', 'opsi' => 'B'],
+            ['quis_id' => 73, 'jawaban' => 'Sistem manajemen database.', 'status' => 'salah', 'opsi' => 'C'],
+            ['quis_id' => 73, 'jawaban' => 'Framework JavaScript untuk frontend.', 'status' => 'salah', 'opsi' => 'D'],
+
+            ['quis_id' => 74, 'jawaban' => 'php artisan new', 'status' => 'salah', 'opsi' => 'A'],
+            ['quis_id' => 74, 'jawaban' => 'composer install laravel', 'status' => 'salah', 'opsi' => 'B'],
+            ['quis_id' => 74, 'jawaban' => 'laravel install nama_proyek', 'status' => 'salah', 'opsi' => 'C'],
+            ['quis_id' => 74, 'jawaban' => 'composer create-project laravel/laravel nama_proyek', 'status' => 'benar', 'opsi' => 'D'],
+
+            ['quis_id' => 75, 'jawaban' => 'Mengatur routing aplikasi.', 'status' => 'salah', 'opsi' => 'A'],
+            ['quis_id' => 75, 'jawaban' => 'Menentukan isi halaman web.', 'status' => 'salah', 'opsi' => 'B'],
+            ['quis_id' => 75, 'jawaban' => 'Menampilkan log error Laravel.', 'status' => 'salah', 'opsi' => 'C'],
+            ['quis_id' => 75, 'jawaban' => 'Menyimpan pengaturan lingkungan seperti koneksi database dan key aplikasi.', 'status' => 'benar', 'opsi' => 'D'],
+
+            ['quis_id' => 76, 'jawaban' => 'resources/views', 'status' => 'salah', 'opsi' => 'A'],
+            ['quis_id' => 76, 'jawaban' => 'routes/web.php', 'status' => 'salah', 'opsi' => 'B'],
+            ['quis_id' => 76, 'jawaban' => 'app/Http/Controllers', 'status' => 'benar', 'opsi' => 'C'],
+            ['quis_id' => 76, 'jawaban' => 'database/migrations', 'status' => 'salah', 'opsi' => 'D'],
+
+
+            ['quis_id' => 77, 'jawaban' => 'Menampilkan tampilan UI ke pengguna.', 'status' => 'salah', 'opsi' => 'A'],
+            ['quis_id' => 77, 'jawaban' => 'Menerima request HTTP dari user.', 'status' => 'salah', 'opsi' => 'B'],
+            ['quis_id' => 77, 'jawaban' => 'Mengelola logika data dan berinteraksi dengan database.', 'status' => 'benar', 'opsi' => 'C'],
+            ['quis_id' => 77, 'jawaban' => 'Menangani konfigurasi file Laravel.', 'status' => 'salah', 'opsi' => 'D'],
+
+
+
+
         ]);
     }
 }

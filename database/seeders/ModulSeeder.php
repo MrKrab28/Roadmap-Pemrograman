@@ -3836,27 +3836,198 @@ tombol.addEventListener("click", function() {
 
 
 
+
+            [
+                'course_id' => 14,
+                'urutan' => 1,
+                'judul' => 'Pengenalan Laravel',
+                'content' => '<h2>Apa itu Laravel?</h2>
+<p>Laravel adalah sebuah <strong>framework PHP open-source</strong> yang dirancang untuk membangun aplikasi web dengan sintaks yang elegan dan ekspresif. Framework ini mengikuti pola arsitektur <strong>MVC (Model-View-Controller)</strong> yang memisahkan logika aplikasi, tampilan, dan kontrol data, sehingga pengembangan menjadi lebih terstruktur dan mudah dikelola.</p>
+
+<h2>Sejarah Singkat Laravel</h2>
+<p>Laravel pertama kali dikembangkan oleh <strong>Taylor Otwell</strong> dan dirilis pada tahun 2011. Otwell menciptakan Laravel karena merasa CodeIgniter tidak memiliki beberapa fitur penting seperti autentikasi bawaan dan pengelolaan sesi.</p>
+<p>Sejak saat itu, Laravel berkembang sangat pesat dan menjadi salah satu framework PHP paling populer di dunia, berkat dokumentasinya yang jelas, komunitas aktif, dan fitur-fitur modern.</p>
+
+<h2>Mengapa Menggunakan Laravel?</h2>
+<ul>
+    <li><strong>Struktur yang Rapi</strong>: Laravel memisahkan bagian aplikasi menjadi model, view, dan controller.</li>
+    <li><strong>Routing yang Mudah</strong>: Laravel memiliki sistem routing yang sangat sederhana namun powerful.</li>
+    <li><strong>Blade Templating</strong>: Laravel menggunakan Blade, sebuah template engine ringan namun fleksibel.</li>
+    <li><strong>Fitur Bawaan Lengkap</strong>: Seperti autentikasi, validasi form, pengiriman email, artisan CLI, dan lainnya.</li>
+    <li><strong>ORM Eloquent</strong>: Memudahkan interaksi dengan database menggunakan model PHP berorientasi objek.</li>
+    <li><strong>Keamanan</strong>: Laravel memiliki fitur bawaan seperti proteksi CSRF, hashing password, dan validasi input.</li>
+</ul>
+
+<h2>Arsitektur MVC di Laravel</h2>
+<p>Laravel menggunakan arsitektur <strong>MVC (Model-View-Controller)</strong>, yang menjadikan aplikasi mudah dikembangkan dan dipelihara.</p>
+<ul>
+    <li><strong>Model</strong>: Mengatur logika data dan interaksi dengan database.</li>
+    <li><strong>View</strong>: Menampilkan data ke pengguna, menggunakan template Blade.</li>
+    <li><strong>Controller</strong>: Menghubungkan permintaan dari pengguna (request) dengan logika bisnis.</li>
+</ul>
+
+<h2>Fitur Utama Laravel</h2>
+<ol>
+    <li><strong>Routing dan Middleware</strong></li>
+    <li><strong>Blade Templating Engine</strong></li>
+    <li><strong>Eloquent ORM</strong></li>
+    <li><strong>Artisan CLI</strong></li>
+    <li><strong>Migration dan Seeding</strong></li>
+    <li><strong>Authentication dan Authorization</strong></li>
+    <li><strong>Testing Support</strong></li>
+    <li><strong>Event & Queue System</strong></li>
+</ol>
+
+<h2>Siapa yang Cocok Belajar Laravel?</h2>
+<p>Laravel cocok untuk siapa saja yang:</p>
+<ul>
+    <li>Sudah memahami dasar-dasar PHP</li>
+    <li>Ingin membuat aplikasi web modern dengan cepat dan efisien</li>
+    <li>Ingin belajar framework yang digunakan secara luas di industri</li>
+</ul>
+
+<h2>Kesimpulan</h2>
+<p>Laravel adalah pilihan tepat bagi pemula yang ingin belajar membangun aplikasi web dengan PHP secara modern. Dengan dokumentasi yang lengkap, komunitas besar, dan fitur-fitur canggih, Laravel menjadi salah satu framework terbaik yang dapat mempercepat proses belajar dan pengembangan aplikasi.</p>
+'
+            ],
+
+
+
+            [
+                'course_id' => 14,
+                'urutan' => 2,
+                'judul' => 'Installation',
+                'content' => '
+<h2>Pendahuluan</h2>
+<p>Sebelum dapat menggunakan Laravel, kita harus terlebih dahulu menginstal beberapa tools penting. Laravel sendiri direkomendasikan untuk diinstal menggunakan <strong>Composer</strong>, yaitu dependency manager untuk PHP.</p>
+
+<h2>Prasyarat Instalasi Laravel</h2>
+<p>Pastikan komputer kamu sudah memiliki:</p>
+<ul>
+    <li><strong>PHP</strong> versi minimal 8.1</li>
+    <li><strong>Composer</strong> (https://getcomposer.org/)</li>
+    <li><strong>Web server</strong> seperti Apache atau Nginx, atau gunakan Laravel Sail atau XAMPP</li>
+    <li><strong>Database</strong> seperti MySQL, PostgreSQL, atau SQLite</li>
+</ul>
+
+<h3>Langkah-Langkah Instalasi Laravel</h3>
+
+<h4>1. Instal Composer</h4>
+<p>Composer dapat diunduh dari situs resmi: <a href="https://getcomposer.org" target="_blank">getcomposer.org</a>. Ikuti petunjuk sesuai sistem operasi (Windows, Mac, atau Linux).</p>
+
+<h4>2. Cek versi PHP dan Composer</h4>
+<pre><code>php -v
+composer -V</code></pre>
+<p>Pastikan versi PHP minimal 8.1 dan Composer sudah dikenali di terminal atau command prompt.</p>
+
+<h4>3. Instal Laravel menggunakan Composer</h4>
+<p>Gunakan perintah berikut untuk menginstal Laravel secara global:</p>
+<pre><code>composer global require laravel/installer</code></pre>
+<p>Pastikan direktori <code>~/.composer/vendor/bin</code> (untuk macOS/Linux) atau <code>%USERPROFILE%\\AppData\\Roaming\\Composer\\vendor\\bin</code> (untuk Windows) sudah ditambahkan ke PATH environment variable agar bisa menjalankan perintah <code>laravel</code> dari mana saja.</p>
+
+<h4>4. Membuat Proyek Laravel Baru</h4>
+<pre><code>laravel new nama_proyek</code></pre>
+<p>Contoh:</p>
+<pre><code>laravel new blogku</code></pre>
+<p>Perintah ini akan membuat folder <code>blogku</code> berisi semua file Laravel.</p>
+
+<h4>Alternatif: Menggunakan Composer create-project</h4>
+<p>Jika tidak ingin menginstal Laravel secara global:</p>
+<pre><code>composer create-project laravel/laravel blogku</code></pre>
+
+<h4>5. Menjalankan Laravel Development Server</h4>
+<p>Masuk ke folder proyek dan jalankan server lokal:</p>
+<pre><code>cd blogku
+php artisan serve</code></pre>
+<p>Kamu dapat mengakses aplikasi di browser pada <a href="http://localhost:8000" target="_blank">http://localhost:8000</a>.</p>
+
+<h2>Struktur Proyek Laravel</h2>
+<p>Beberapa folder penting dalam struktur proyek Laravel:</p>
+<ul>
+    <li><code>app/</code>: berisi file logika aplikasi (model, controller, dll)</li>
+    <li><code>routes/</code>: mendefinisikan semua rute aplikasi</li>
+    <li><code>resources/views/</code>: tempat menyimpan tampilan (Blade)</li>
+    <li><code>public/</code>: folder yang diakses langsung oleh web browser</li>
+    <li><code>.env</code>: tempat konfigurasi database, environment, dll</li>
+</ul>
+
+<h2>Konfigurasi Awal</h2>
+<ul>
+    <li>Ubah file <code>.env</code> untuk menyesuaikan konfigurasi database kamu.</li>
+    <li>Set timezone, locale, dan app name di <code>config/app.php</code>.</li>
+</ul>
+
+<h2>Kesimpulan</h2>
+<p>Dengan mengikuti langkah-langkah di atas, kamu sudah berhasil menginstal dan menjalankan Laravel di komputer lokal. Selanjutnya kamu bisa mulai membuat route, controller, dan tampilan pertama untuk membangun aplikasi web yang dinamis dan modern.</p>'
+            ],
+
+
+
+
+            [
+                'course_id' => 14,
+                'urutan' => 3,
+                'judul' => 'Folder Structur',
+                'content' => '<h2>Pendahuluan</h2>
+<p>Laravel adalah framework PHP yang menerapkan pola arsitektur <strong>MVC (Model-View-Controller)</strong>. Untuk mendukung pola ini, Laravel memiliki struktur folder yang rapi dan terorganisir, sehingga memudahkan pengembangan aplikasi web secara skala kecil maupun besar.</p>
+
+<h2>Struktur Folder Laravel</h2>
+<p>Berikut ini adalah penjelasan singkat tentang folder-folder utama dalam proyek Laravel:</p>
+
+<ul>
+    <li><strong>app/</strong>: Berisi logika utama aplikasi seperti Model, Controller, dan layanan lainnya. Subfolder penting:
+        <ul>
+            <li><code>Http/Controllers/</code>: Tempat menyimpan controller</li>
+            <li><code>Models/</code>: Menyimpan representasi model data</li>
+            <li><code>Http/Middleware/</code>: Untuk mengatur request filtering</li>
+        </ul>
+    </li>
+    <li><strong>bootstrap/</strong>: Berisi file untuk mem-boot Laravel saat pertama kali dijalankan, termasuk file <code>app.php</code>.</li>
+    <li><strong>config/</strong>: Semua konfigurasi aplikasi Laravel seperti database, mail, session, dll.</li>
+    <li><strong>database/</strong>: Berisi file migrasi, seeder, dan factory untuk database.</li>
+    <li><strong>public/</strong>: Hanya folder ini yang dapat diakses langsung oleh pengguna melalui browser. Berisi <code>index.php</code> (entry point aplikasi), serta file publik (gambar, CSS, JS).</li>
+    <li><strong>resources/</strong>: Tempat menyimpan view (Blade templates), file SASS/JS, dan resource lainnya.
+        <ul>
+            <li><code>views/</code>: Template tampilan dengan Blade</li>
+        </ul>
+    </li>
+    <li><strong>routes/</strong>: Menyimpan definisi rute (routes) aplikasi, seperti <code>web.php</code> dan <code>api.php</code>.</li>
+    <li><strong>storage/</strong>: Untuk menyimpan cache, log, file yang diunggah.</li>
+    <li><strong>tests/</strong>: Untuk menulis unit test dan feature test.</li>
+    <li><strong>vendor/</strong>: Berisi library dan dependensi yang diinstall melalui Composer.</li>
+</ul>
+
+<h2>Konsep MVC (Model - View - Controller)</h2>
+<p>Laravel menggunakan pendekatan arsitektur <strong>MVC</strong> yang membantu memisahkan logika aplikasi, tampilan, dan pengelolaan data.</p>
+
+<ul>
+    <li><strong>Model</strong>: Bertanggung jawab atas representasi dan interaksi data. Biasanya terhubung ke tabel dalam database.
+        <br>Contoh: <code>app/Models/User.php</code>
+    </li>
+    <li><strong>View</strong>: Bertanggung jawab untuk menampilkan data ke pengguna. Laravel menggunakan template engine bernama <strong>Blade</strong>.
+        <br>Contoh: <code>resources/views/welcome.blade.php</code>
+    </li>
+    <li><strong>Controller</strong>: Menjembatani antara Model dan View. Menerima request dari user, memproses data, dan mengembalikan response (view).
+        <br>Contoh: <code>app/Http/Controllers/HomeController.php</code>
+    </li>
+</ul>
+
+<h2>Ilustrasi Singkat Alur MVC di Laravel</h2>
+<ol>
+    <li>Pengguna mengakses URL tertentu → Laravel memanggil rute yang sesuai dari <code>routes/web.php</code>.</li>
+    <li>Rute tersebut menunjuk ke sebuah Controller → Controller memproses data dari Model.</li>
+    <li>Controller mengembalikan hasil ke View → View menampilkan halaman ke pengguna.</li>
+</ol>
+
+<h2>Kesimpulan</h2>
+<p>Dengan memahami struktur folder Laravel dan konsep MVC, kamu akan lebih mudah dalam mengembangkan aplikasi web yang terorganisir, scalable, dan mudah dipelihara. Struktur ini juga membantu membagi tanggung jawab kode, sehingga tim pengembang dapat bekerja lebih efisien.</p>'
+            ],
+
+
+
             
             [
-                'course_id' => 13,
-                'urutan' => 3,
-                'judul' => 'Menyisipkan JavaScript dalam HTML',
-                'content' => ''
-            ],
-            [
-                'course_id' => 13,
-                'urutan' => 3,
-                'judul' => 'Menyisipkan JavaScript dalam HTML',
-                'content' => ''
-            ],
-            [
-                'course_id' => 13,
-                'urutan' => 3,
-                'judul' => 'Menyisipkan JavaScript dalam HTML',
-                'content' => ''
-            ],
-            [
-                'course_id' => 13,
+                'course_id' => 14,
                 'urutan' => 3,
                 'judul' => 'Menyisipkan JavaScript dalam HTML',
                 'content' => ''

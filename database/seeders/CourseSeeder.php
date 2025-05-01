@@ -91,6 +91,18 @@ class CourseSeeder extends Seeder
                 'gambar' => 'html_logo.png',
             ],
 
+
+
+
+
+
+
+            [
+                'category_id' => 3,
+                'judul' => 'LARAVEL',
+                'gambar' => 'laravel.png',
+            ],
+
         ]);
     }
 }

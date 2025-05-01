@@ -152,9 +152,11 @@ document.getElementById("btn").addEventListener("click", function() {
 &lt;/script&gt;
 </pre>'],
 
-
-
-
+            ['course_id' => 14, 'pertanyaan' => 'Apa itu Laravel dalam konteks pengembangan web?'],
+            ['course_id' => 14, 'pertanyaan' => 'Perintah apa yang digunakan untuk membuat proyek Laravel baru menggunakan Composer?'],
+            ['course_id' => 14, 'pertanyaan' => 'File konfigurasi .env di Laravel digunakan untuk apa?'],
+            ['course_id' => 14, 'pertanyaan' => 'Di manakah file controller disimpan dalam struktur folder Laravel?'],
+            ['course_id' => 14, 'pertanyaan' => 'Dalam konsep MVC, komponen “Model” memiliki tanggung jawab utama apa?'],
         ]);
     }
 }
