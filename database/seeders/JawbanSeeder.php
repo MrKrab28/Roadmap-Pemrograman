@@ -571,6 +571,37 @@ class JawbanSeeder extends Seeder
             ['quis_id' => 93, 'jawaban' => 'Mengatur request dan response HTTP', 'status' => 'salah', 'opsi' => 'C'],
             ['quis_id' => 93, 'jawaban' => 'Membuat seeder untuk database', 'status' => 'salah', 'opsi' => 'D'],
 
+
+
+
+
+
+            ['quis_id' => 94, 'jawaban' => '{{ strtolower($name) }}', 'status' => 'salah', 'opsi' => 'A'],
+            ['quis_id' => 94, 'jawaban' => '{{ strtoupper($name) }}', 'status' => 'benar', 'opsi' => 'B'],
+            ['quis_id' => 94, 'jawaban' => '{{ ucwords($name) }}', 'status' => 'salah', 'opsi' => 'C'],
+            ['quis_id' => 94, 'jawaban' => '{{ $name }}', 'status' => 'salah', 'opsi' => 'D'],
+
+            ['quis_id' => 95, 'jawaban' => '1, 2, 3', 'status' => 'salah', 'opsi' => 'A'],
+            ['quis_id' => 95, 'jawaban' => '3, 2, 1', 'status' => 'salah', 'opsi' => 'B'],
+            ['quis_id' => 95, 'jawaban' => '1 2 3', 'status' => 'benar', 'opsi' => 'C'],
+            ['quis_id' => 95, 'jawaban' => '2 1 3', 'status' => 'salah', 'opsi' => 'D'],
+
+            ['quis_id' => 96, 'jawaban' => 'Menampilkan pesan kesalahan', 'status' => 'salah', 'opsi' => 'A'],
+            ['quis_id' => 96, 'jawaban' => 'Menyembunyikan elemen jika kondisi tidak terpenuhi', 'status' => 'salah', 'opsi' => 'B'],
+            ['quis_id' => 96, 'jawaban' => 'Mengatur tampilan navbar', 'status' => 'salah', 'opsi' => 'C'],
+            ['quis_id' => 96, 'jawaban' => 'Menjalankan kondisi jika $user->isAdmin bernilai true', 'status' => 'benar', 'opsi' => 'D'],
+
+            ['quis_id' => 97, 'jawaban' => 'Mendeklarasikan layout utama', 'status' => 'salah', 'opsi' => 'A'],
+            ['quis_id' => 97, 'jawaban' => 'Menyisipkan file Blade kecil seperti header atau navbar', 'status' => 'benar', 'opsi' => 'B'],
+            ['quis_id' => 97, 'jawaban' => 'Membuat form otomatis', 'status' => 'salah', 'opsi' => 'C'],
+            ['quis_id' => 97, 'jawaban' => 'Menambahkan rute baru', 'status' => 'salah', 'opsi' => 'D'],
+
+            ['quis_id' => 98, 'jawaban' => 'Menampilkan input form dengan value "Laravel"', 'status' => 'benar', 'opsi' => 'A'],
+            ['quis_id' => 98, 'jawaban' => 'Menampilkan teks Laravel tanpa form', 'status' => 'salah', 'opsi' => 'B'],
+            ['quis_id' => 98, 'jawaban' => 'Menampilkan form input dengan value kosong', 'status' => 'salah', 'opsi' => 'C'],
+            ['quis_id' => 98, 'jawaban' => 'Menampilkan form input dengan value "name"', 'status' => 'salah', 'opsi' => 'D'],
+
+
         ]);
     }
 }

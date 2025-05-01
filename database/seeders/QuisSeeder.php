@@ -223,7 +223,11 @@ public function update(Request $request, $id)
 
 
             ['course_id' => 18, 'pertanyaan' => 'Apa output dari Blade berikut jika $name = "Andi"?<pre>{{ strtoupper($name) }}</pre>'],
-            ['course_id' => 18, 'pertanyaan' => 'Apa hasil dari kode Blade berikut jika $items = [1, 2, 3]?<pre>@foreach($items as $item){{ $item }}@endforeach</pre>'],
+            ['course_id' => 18, 'pertanyaan' => 'Apa hasil dari kode Blade berikut jika $items = [1, 2, 3]?
+<pre>
+g@foreach($items as $item)
+    {{ $item }}
+@endforeach</pre>'],
             ['course_id' => 18, 'pertanyaan' => 'Apa fungsi dari direktif berikut dalam Blade?<pre>@if($user->isAdmin) ... @endif</pre>'],
             ['course_id' => 18, 'pertanyaan' => 'Apa tujuan penggunaan sintaks berikut?<pre>@include("components.navbar")</pre>'],
             ['course_id' => 18, 'pertanyaan' => 'Apa hasil dari kode berikut?<pre>{!! Form::text("name", "Laravel") !!}</pre>'],
