@@ -4324,8 +4324,345 @@ class ProductController extends Controller
 <p>Dengan menggunakan routing resource di Laravel, kita bisa dengan mudah menangani operasi CRUD dalam aplikasi. Dengan hanya mendefinisikan satu baris kode menggunakan <code>Route::resource()</code>, Laravel secara otomatis akan menghasilkan semua rute yang diperlukan untuk mengelola sumber daya (resource) dengan controller. Ini sangat menghemat waktu dan usaha dalam pembangunan aplikasi web yang berbasis CRUD.</p>"
             ],
 
+
+
+
+
             [
-                'course_id' => 15,
+                'course_id' => 16,
+                'urutan' => 1,
+                'judul' => 'Eloquent ORM',
+                'content' => '<h2>Pendahuluan</h2>
+<p><strong>Eloquent ORM</strong> adalah fitur dari Laravel yang memungkinkan kita berinteraksi dengan database menggunakan pendekatan berbasis objek. ORM (Object Relational Mapping) menghubungkan antara tabel di database dengan model dalam kode PHP, sehingga kita tidak perlu menulis banyak query SQL secara langsung.</p>
+
+<h2>Apa Itu Model di Laravel?</h2>
+<p>Model adalah representasi dari sebuah tabel dalam database. Dengan menggunakan Eloquent, setiap baris data dalam tabel dapat dimanipulasi seperti objek PHP biasa.</p>
+<p>Misalnya, jika kita memiliki tabel <code>mahasiswas</code>, maka kita bisa membuat model <code>Mahasiswa</code>:</p>
+<pre><code>php artisan make:model Mahasiswa</code></pre>
+
+<h2>Struktur Dasar Model</h2>
+<pre><code class="language-php">
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Model;
+
+class Mahasiswa extends Model
+{
+    protected \$table = "mahasiswas";
+}
+</code></pre>
+
+<p>Dengan model ini, kita bisa melakukan operasi CRUD (Create, Read, Update, Delete) secara mudah menggunakan sintaksis yang sederhana.</p>
+
+<h2>Membaca Data (Read)</h2>
+<pre><code class="language-php">
+\$data = Mahasiswa::all(); // Mendapatkan semua data
+\$mahasiswa = Mahasiswa::find(1); // Mendapatkan data dengan ID = 1
+</code></pre>
+
+<h2>Menambahkan Data (Create)</h2>
+<pre><code class="language-php">
+\$mahasiswa = new Mahasiswa;
+\$mahasiswa->nama = "Andi";
+\$mahasiswa->nim = "123456";
+\$mahasiswa->save();
+</code></pre>
+
+<h2>Memperbarui Data (Update)</h2>
+<pre><code class="language-php">
+\$mahasiswa = Mahasiswa::find(1);
+\$mahasiswa->nama = "Budi";
+\$mahasiswa->save();
+</code></pre>
+
+<h2>Menghapus Data (Delete)</h2>
+<pre><code class="language-php">
+\$mahasiswa = Mahasiswa::find(1);
+\$mahasiswa->delete();
+</code></pre>
+
+<h2>Mass Assignment</h2>
+<p>Laravel mendukung fitur mass assignment, yaitu kita bisa mengisi beberapa kolom sekaligus:</p>
+<pre><code class="language-php">
+Mahasiswa::create([
+    "nama" => "Siti",
+    "nim" => "654321"
+]);
+</code></pre>
+<p>Namun, kita harus menentukan kolom yang diperbolehkan dengan properti <code>\$fillable</code> di model:</p>
+<pre><code class="language-php">
+protected \$fillable = ["nama", "nim"];
+</code></pre>
+
+<h2>Kesimpulan</h2>
+<p>Eloquent ORM adalah alat yang sangat powerful dan memudahkan interaksi antara aplikasi Laravel dan database. Dengan pendekatan yang berbasis objek, Eloquent membantu membuat kode lebih bersih, terstruktur, dan mudah dipahami, terutama bagi pemula yang sedang mempelajari konsep pemrograman berorientasi objek dan manipulasi data.</p>'
+            ],
+
+
+
+            [
+                'course_id' => 16,
+                'urutan' => 2,
+                'judul' => 'Interaksi Model dan Database',
+                'content' => '<h2>Pendahuluan</h2>
+<p>Dalam Laravel, <strong>Model</strong> adalah komponen yang digunakan untuk berinteraksi langsung dengan tabel di database. Model merupakan bagian penting dari arsitektur <strong>MVC (Model-View-Controller)</strong>, di mana model bertugas menangani data dan logika bisnis yang berkaitan dengan data tersebut.</p>
+
+<h2>Apa Itu Model?</h2>
+<p>Model di Laravel mewakili sebuah tabel dalam database. Setiap instance dari model mewakili satu baris data dari tabel tersebut. Model menggunakan <strong>Eloquent ORM</strong> untuk menyederhanakan query database dan mengubah data menjadi objek PHP.</p>
+
+<h2>Membuat Model di Laravel</h2>
+<p>Kita dapat membuat model menggunakan Artisan command:</p>
+<pre><code>php artisan make:model NamaModel</code></pre>
+<p>Contoh: Jika kita memiliki tabel <code>produk</code> di database, maka kita bisa membuat model dengan perintah:</p>
+<pre><code>php artisan make:model Produk</code></pre>
+
+<h2>Struktur Dasar Model</h2>
+<p>Setelah perintah dijalankan, Laravel akan membuat file <code>app/Models/Produk.php</code> dengan isi awal seperti berikut:</p>
+<pre><code class="language-php">
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Model;
+
+class Produk extends Model
+{
+    // Laravel akan otomatis menghubungkan model ini dengan tabel "produks" (plural)
+}
+</code></pre>
+
+<h2>Koneksi Model dan Tabel</h2>
+<p>Secara default, Laravel menggunakan nama model dalam bentuk jamak sebagai nama tabel (konvensi Eloquent). Misalnya:</p>
+<ul>
+    <li>Model <code>Produk</code> → tabel <code>produks</code></li>
+</ul>
+<p>Namun, kita dapat secara eksplisit menentukan nama tabel menggunakan properti <code>\$table</code>:</p>
+<pre><code class="language-php">
+protected \$table = "produk";
+</code></pre>
+
+<h2>Menentukan Kolom yang Dapat Diisi (Mass Assignment)</h2>
+<p>Untuk mencegah penyerangan melalui mass assignment, Laravel hanya memperbolehkan kolom yang didefinisikan di dalam <code>\$fillable</code> diisi secara massal:</p>
+<pre><code class="language-php">
+protected \$fillable = ["nama_produk", "harga", "stok"];
+</code></pre>
+
+<h2>Contoh Penggunaan Model</h2>
+<h3>Membuat Data Baru</h3>
+<pre><code class="language-php">
+Produk::create([
+    "nama_produk" => "Laptop",
+    "harga" => 7000000,
+    "stok" => 10
+]);
+</code></pre>
+
+<h3>Membaca Data</h3>
+<pre><code class="language-php">
+\$semuaProduk = Produk::all();
+\$produkSatu = Produk::find(1);
+</code></pre>
+
+<h3>Memperbarui Data</h3>
+<pre><code class="language-php">
+\$produk = Produk::find(1);
+\$produk->stok = 20;
+\$produk->save();
+</code></pre>
+
+<h3>Menghapus Data</h3>
+<pre><code class="language-php">
+\$produk = Produk::find(1);
+\$produk->delete();
+</code></pre>
+
+<h2>Kesimpulan</h2>
+<p>Model di Laravel adalah alat penting untuk menangani interaksi antara aplikasi dan database. Dengan menggunakan model, kita bisa menulis kode yang lebih bersih, terstruktur, dan mudah dikelola. Untuk mahasiswa pemula, memahami cara membuat dan menggunakan model adalah langkah awal untuk membangun aplikasi Laravel yang dinamis dan berorientasi data.</p>'
+            ],
+
+
+
+            [
+                'course_id' => 16,
+                'urutan' => 3,
+                'judul' => 'migration untuk mendefinisikan struktur tabel database',
+                'content' => '<h2>Pendahuluan</h2>
+<p>Dalam Laravel, <strong>migration</strong> adalah fitur yang digunakan untuk membuat, mengubah, dan mengelola struktur tabel dalam database menggunakan kode PHP. Migration mempermudah pengembang untuk menjaga konsistensi struktur database dan melacak perubahannya seiring waktu, terutama dalam tim pengembangan.</p>
+
+<h2>Konsep Migration</h2>
+<p>Migration berfungsi layaknya <strong>version control</strong> untuk database. Dengan migration, kita bisa mendefinisikan skema tabel seperti kolom, tipe data, indeks, dan relasi hanya dengan menuliskan skrip PHP. Migration sangat berguna ketika proyek dijalankan di beberapa lingkungan (local, staging, production) karena struktur database dapat disinkronisasi secara otomatis menggunakan perintah tertentu.</p>
+
+<h2>Membuat Migration</h2>
+<p>Untuk membuat migration, gunakan perintah artisan berikut:</p>
+<pre><code>php artisan make:migration nama_migration</code></pre>
+<p>Contoh: Membuat tabel <code>produk</code>:</p>
+<pre><code>php artisan make:migration create_produk_table</code></pre>
+<p>Perintah ini akan menghasilkan file migration baru di folder <code>database/migrations</code> dengan nama seperti:</p>
+<pre><code>2025_05_01_120000_create_produk_table.php</code></pre>
+
+<h2>Struktur Dasar Migration</h2>
+<pre><code class="language-php">
+use Illuminate\\Database\\Migrations\\Migration;
+use Illuminate\\Database\\Schema\\Blueprint;
+use Illuminate\\Support\\Facades\\Schema;
+
+return new class extends Migration
+{
+    public function up(): void
+    {
+        Schema::create("produk", function (Blueprint \$table) {
+            \$table->id();
+            \$table->string("nama_produk");
+            \$table->integer("harga");
+            \$table->integer("stok");
+            \$table->timestamps();
+        });
+    }
+
+    public function down(): void
+    {
+        Schema::dropIfExists("produk");
+    }
+};
+</code></pre>
+
+<ul>
+    <li><code>up()</code>: Mendefinisikan aksi ketika migration dijalankan (membuat tabel).</li>
+    <li><code>down()</code>: Mendefinisikan aksi ketika migration di-rollback (menghapus tabel).</li>
+</ul>
+
+<h2>Menjalankan Migration</h2>
+<p>Setelah migration dibuat, jalankan perintah berikut untuk membuat tabel di database sesuai definisi:</p>
+<pre><code>php artisan migrate</code></pre>
+
+<h2>Rollback Migration</h2>
+<p>Untuk membatalkan migration yang telah dijalankan:</p>
+<pre><code>php artisan migrate:rollback</code></pre>
+
+<h2>Macam-macam Tipe Kolom di Migration</h2>
+<p>Laravel menyediakan berbagai macam tipe kolom yang bisa digunakan di dalam migration:</p>
+<ul>
+    <li><code>\$table->string("nama");</code> → varchar</li>
+    <li><code>\$table->text("deskripsi");</code> → text</li>
+    <li><code>\$table->integer("stok");</code> → integer</li>
+    <li><code>\$table->boolean("aktif");</code> → boolean</li>
+    <li><code>\$table->timestamp("published_at");</code> → timestamp</li>
+    <li><code>\$table->foreignId("kategori_id")->constrained();</code> → foreign key</li>
+</ul>
+
+<h2>Keuntungan Menggunakan Migration</h2>
+<ol>
+    <li><strong>Konsistensi</strong>: Struktur database sama di semua tim dan server.</li>
+    <li><strong>Kolaboratif</strong>: Perubahan database bisa dikontrol versi melalui Git.</li>
+    <li><strong>Otomatisasi</strong>: Setup database cukup dengan satu perintah.</li>
+    <li><strong>Aman</strong>: Tidak perlu lagi membuat tabel secara manual melalui phpMyAdmin atau SQL mentah.</li>
+</ol>
+
+<h2>Kesimpulan</h2>
+<p>Migration adalah alat penting dalam Laravel untuk mendefinisikan dan mengelola struktur tabel database menggunakan pendekatan terstruktur dan otomatis. Dengan memahami konsep dan penggunaan migration, mahasiswa pemula dapat membangun aplikasi web yang lebih profesional, terstandar, dan mudah dikembangkan bersama tim.</p>'
+            ],
+
+
+
+            [
+                'course_id' => 16,
+                'urutan' => 4,
+                'judul' => 'Laravel Seeder',
+                'content' => "<h2>Pendahuluan</h2>
+<p>Setelah struktur tabel database didefinisikan melalui migration, langkah selanjutnya yang sering dibutuhkan dalam pengembangan aplikasi adalah mengisi data awal (initial data). Laravel menyediakan fitur <strong>Seeder</strong> untuk tujuan ini. Seeder digunakan untuk menambahkan data ke dalam tabel secara otomatis menggunakan kode PHP. Ini sangat membantu dalam proses pengujian dan pengembangan.</p>
+
+<h2>Apa itu Seeder?</h2>
+<p><strong>Seeder</strong> adalah kelas PHP di Laravel yang digunakan untuk mengisi data ke dalam tabel database. Biasanya digunakan untuk menambahkan data dummy (palsu), data default, atau data penting awal seperti admin, kategori produk, peran pengguna, dan sebagainya.</p>
+
+<h2>Membuat Seeder</h2>
+<p>Untuk membuat seeder, gunakan perintah artisan berikut:</p>
+<pre><code>php artisan make:seeder NamaSeeder</code></pre>
+<p>Contoh: <code>php artisan make:seeder ProdukSeeder</code></p>
+<p>Perintah tersebut akan membuat file seeder di direktori <code>database/seeders</code>.</p>
+
+<h2>Contoh Isi Seeder</h2>
+<p>Berikut adalah contoh isi file <code>ProdukSeeder.php</code>:</p>
+<pre><code class='language-php'>
+use Illuminate\\Database\\Seeder;
+use Illuminate\\Support\\Facades\\DB;
+
+class ProdukSeeder extends Seeder
+{
+    public function run(): void
+    {
+        DB::table('produk')->insert([
+            [
+                'nama_produk' => 'Laptop',
+                'harga' => 15000000,
+                'stok' => 10,
+            ],
+            [
+                'nama_produk' => 'Mouse',
+                'harga' => 150000,
+                'stok' => 50,
+            ]
+        ]);
+    }
+}
+</code></pre>
+
+<h2>Menjalankan Seeder</h2>
+<p>Untuk menjalankan seeder, gunakan perintah berikut:</p>
+<pre><code>php artisan db:seed --class=ProdukSeeder</code></pre>
+<p>Jika ingin menjalankan semua seeder sekaligus (termasuk seeder yang dipanggil dari <code>DatabaseSeeder</code>):</p>
+<pre><code>php artisan db:seed</code></pre>
+
+<h2>Mendaftarkan Seeder di DatabaseSeeder</h2>
+<p>File <code>DatabaseSeeder.php</code> bertindak sebagai pusat untuk memanggil seeder lain:</p>
+<pre><code class='language-php'>
+public function run(): void
+{
+    \$this->call([
+        ProdukSeeder::class,
+        UserSeeder::class,
+    ]);
+}
+</code></pre>
+
+<h2>Seeder dengan Model</h2>
+<p>Selain menggunakan DB::table(), kita juga bisa menggunakan Eloquent Model:</p>
+<pre><code>
+use App\\Models\\Produk;
+
+Produk::create([
+    'nama_produk' => 'Keyboard',
+    'harga' => 300000,
+    'stok' => 30,
+]);
+</code></pre>
+
+<h2>Faker untuk Data Dummy</h2>
+<p>Laravel menyediakan library Faker untuk membuat data palsu secara otomatis. Digunakan saat membuat banyak data dalam Factory (digunakan bersamaan dengan seeder).</p>
+<pre><code>
+Produk::factory()->count(50)->create();
+</code></pre>
+
+<h2>Keuntungan Menggunakan Seeder</h2>
+<ul>
+    <li><strong>Efisien</strong>: Tidak perlu mengisi data secara manual setiap kali setup ulang.</li>
+    <li><strong>Reproduksi Mudah</strong>: Dapat digunakan untuk mengisi data yang sama di berbagai lingkungan (local, staging, testing).</li>
+    <li><strong>Konsistensi</strong>: Semua anggota tim menggunakan data awal yang seragam.</li>
+</ul>
+
+<h2>Kesimpulan</h2>
+<p>Seeder adalah alat penting untuk mempercepat proses pengembangan aplikasi dengan Laravel. Dengan menggunakan seeder, kita bisa mengisi data awal secara cepat, konsisten, dan terkontrol. Pemahaman tentang seeder sangat penting sebelum masuk ke tahap pembuatan factory dan testing otomatis.</p>"
+            ],
+
+
+
+
+
+
+
+
+
+
+            
+            [
+                'course_id' => 16,
                 'urutan' => 3,
                 'judul' => 'Menyisipkan JavaScript dalam HTML',
                 'content' => ''
