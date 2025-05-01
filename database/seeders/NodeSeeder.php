@@ -18,7 +18,6 @@ class NodeSeeder extends Seeder
 
                 ['kode' => 'CategoryBE', 'label' => 'BACKEND', 'roadmap_id' => 1],
                 ['kode' => 'PHP', 'label' => 'PHP', 'roadmap_id' => 1],
-                ['kode' => 'LVL', 'label' => 'LARAVEL', 'roadmap_id' => 1],
 
 
 
@@ -71,12 +70,7 @@ class NodeSeeder extends Seeder
                 ['kode' => 'CategoryFE', 'label' => 'FRONTEND', 'roadmap_id' => 2],
 
 
-
-
                 ['kode' => 'HTML', 'label' => 'HTML', 'roadmap_id' => 2],
-
-
-
 
 
                 ['kode' => 'html1', 'label' => 'Pengenalan HTML', 'roadmap_id' => 2],
@@ -97,10 +91,6 @@ class NodeSeeder extends Seeder
                 ['kode' => 'html3-1', 'label' => 'Elemen Layout Dasar', 'roadmap_id' => 2],
                 ['kode' => 'html3-2', 'label' => 'Table Layout & Grid Sederhana', 'roadmap_id' => 2],
                 ['kode' => 'html3-3', 'label' => 'Elemen dengan Hierarki Semantik yang Benar', 'roadmap_id' => 2],
-
-
-
-
 
 
                 ['kode' => 'CSS', 'label' => 'CSS', 'roadmap_id' => 2],
@@ -139,6 +129,32 @@ class NodeSeeder extends Seeder
                 ['kode' => 'js2-1', 'label' => 'Function', 'roadmap_id' => 2],
                 ['kode' => 'js2-2', 'label' => 'Object & Array', 'roadmap_id' => 2],
                 ['kode' => 'js2-3', 'label' => 'Event Handling', 'roadmap_id' => 2],
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                ['kode' => 'CategoryFS', 'label' => 'FULLSTACK', 'roadmap_id' => 3],
+
+
+                ['kode' => 'LVL', 'label' => 'LARAVEL', 'roadmap_id' => 3],
+
+
+
+                ['kode' => 'lvl1', 'label' => 'pengenalan Laravel', 'roadmap_id' => 3],
+                ['kode' => 'lvl1-1', 'label' => 'Installation', 'roadmap_id' => 3],
+                ['kode' => 'lvl1-2', 'label' => 'Folder Structur', 'roadmap_id' => 3],
+
 
                 ]
         );

@@ -50,7 +50,7 @@ class ConnectionSeeder extends Seeder
                 ['source' => 'php3', 'target' => 'php3-4', 'roadmap_id' => 1],
 
 
-               
+
 
 
 
@@ -68,10 +68,6 @@ class ConnectionSeeder extends Seeder
                 ['source' => 'php5', 'target' => 'php5-1', 'roadmap_id' => 1],
                 ['source' => 'php5', 'target' => 'php5-2', 'roadmap_id' => 1],
                 ['source' => 'php5', 'target' => 'php5-3', 'roadmap_id' => 1],
-
-
-
-
 
 
 
@@ -148,6 +144,22 @@ class ConnectionSeeder extends Seeder
                 ['source' => 'js2', 'target' => 'js2-1', 'roadmap_id' => 2],
                 ['source' => 'js2', 'target' => 'js2-2', 'roadmap_id' => 2],
                 ['source' => 'js2', 'target' => 'js2-3', 'roadmap_id' => 2],
+
+
+
+
+
+
+
+
+
+
+                ['source' => 'CategoryFS', 'target' => 'LVL', 'roadmap_id' => 3 ],
+
+
+                ['source' => 'LVL', 'target' => 'lvl1', 'roadmap_id' => 3 ],
+                ['source' => 'lvl1', 'target' => 'lvl1-1', 'roadmap_id' => 3 ],
+                ['source' => 'lvl1', 'target' => 'lvl1-2', 'roadmap_id' => 3 ],
 
 
 
