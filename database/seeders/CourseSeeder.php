@@ -102,6 +102,11 @@ class CourseSeeder extends Seeder
                 'judul' => 'LARAVEL',
                 'gambar' => 'laravel.png',
             ],
+            [
+                'category_id' => 3,
+                'judul' => 'Routing & contollers',
+                'gambar' => 'laravel.png',
+            ],
 
         ]);
     }
