@@ -171,6 +171,15 @@ class NodeSeeder extends Seeder
 
 
 
+
+
+                ['kode' => 'lvl4', 'label' => 'BLADE', 'roadmap_id' => 3],
+
+                ['kode' => 'lvl4-1', 'label' => 'Pengenalan Blade Templating Engine', 'roadmap_id' => 3],
+                ['kode' => 'lvl4-2', 'label' => 'Basic Syntax Structur', 'roadmap_id' => 3],
+                ['kode' => 'lvl4-3', 'label' => 'Basic Layout', 'roadmap_id' => 3],
+
+
                 ]
         );
     }
