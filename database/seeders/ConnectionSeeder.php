@@ -189,11 +189,11 @@ class ConnectionSeeder extends Seeder
 
 
 
-                // ['source' => 'lvl4', 'target' => 'lvl5', 'roadmap_id' => 3 ],
-                // ['source' => 'lvl5', 'target' => 'lvl5-1', 'roadmap_id' => 3 ],
-                // ['source' => 'lvl5', 'target' => 'lvl5-2', 'roadmap_id' => 3 ],
-                // ['source' => 'lvl5', 'target' => 'lvl5-3', 'roadmap_id' => 3 ],
-                // ['source' => 'lvl5', 'target' => 'lvl5-4', 'roadmap_id' => 3 ],
+                ['source' => 'lvl4', 'target' => 'lvl5', 'roadmap_id' => 3 ],
+                ['source' => 'lvl5', 'target' => 'lvl5-1', 'roadmap_id' => 3 ],
+                ['source' => 'lvl5', 'target' => 'lvl5-2', 'roadmap_id' => 3 ],
+                ['source' => 'lvl5', 'target' => 'lvl5-3', 'roadmap_id' => 3 ],
+                ['source' => 'lvl5', 'target' => 'lvl5-4', 'roadmap_id' => 3 ],
 
 
 
