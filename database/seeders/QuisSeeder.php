@@ -187,12 +187,11 @@ public function update(Request $request, $id)
 
 
 
-            ['course_id' => 16, 'pertanyaan' => 'Apa perintah artisan yang digunakan untuk membuat model baru di Laravel?'],
-            ['course_id' => 16, 'pertanyaan' => 'Apa output yang dihasilkan jika perintah berikut dijalankan?<pre>php artisan make:migration create_produk_table</pre>'],
-            ['course_id' => 16, 'pertanyaan' => 'Apa fungsi dari method <code>run()</code> dalam file seeder di Laravel?'],
-            ['course_id' => 16, 'pertanyaan' => 'Bagaimana cara mengisi data awal ke dalam tabel setelah membuat seeder?'],
-            ['course_id' => 16, 'pertanyaan' => 'Apa yang dimaksud dengan “migration rollback” di Laravel?'],
-            ['course_id' => 16, 'pertanyaan' => 'Apa fungsi dari model di Laravel dalam konteks Eloquent ORM?'],
+            ['course_id' => 16, 'pertanyaan' => 'Apa hasil dari perintah artisan berikut?<pre>php artisan make:model Product</pre>'],
+            ['course_id' => 16, 'pertanyaan' => 'Apa fungsi dari baris berikut dalam model?<pre>protected $fillable = ["name", "price"];</pre>'],
+            ['course_id' => 16, 'pertanyaan' => 'Apa yang dilakukan oleh perintah berikut?<pre>php artisan make:migration create_products_table</pre>'],
+            ['course_id' => 16, 'pertanyaan' => 'Perhatikan kode berikut:<pre>$product = Product::find(5);</pre> Apa yang dilakukan baris tersebut?'],
+            ['course_id' => 16, 'pertanyaan' => 'Apa hasil dari menjalankan perintah berikut?<pre>php artisan db:seed</pre>'],
 
         ]);
     }
