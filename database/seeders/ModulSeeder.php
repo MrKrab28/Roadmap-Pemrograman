@@ -4025,9 +4025,307 @@ php artisan serve</code></pre>
 
 
 
-            
+
             [
-                'course_id' => 14,
+                'course_id' => 15,
+                'urutan' => 1,
+                'judul' => 'Routes',
+                'content' => "
+<h2>Pendahuluan</h2>
+<p>Routing adalah komponen dasar dalam pengembangan aplikasi web. Di Laravel, routing mendefinisikan bagaimana URL yang diterima aplikasi dapat diarahkan ke fungsi atau controller tertentu. Routing di Laravel didefinisikan dalam file <code>routes/web.php</code>.</p>
+
+<h2>Struktur Dasar Routing di Laravel</h2>
+<p>Routing Laravel memberikan kemudahan untuk memetakan URL ke aksi tertentu. Berikut adalah contoh dasar untuk mendefinisikan sebuah route:</p>
+
+<pre><code>Route::get('/home', function () {
+    return view('home');
+});</code></pre>
+<p>Pada contoh ini, kita menggunakan metode GET untuk menangani permintaan dari pengguna yang mengakses URL <code>/home</code>. Ketika permintaan datang, Laravel akan merender halaman <code>home</code>.</p>
+
+<h2>Metode HTTP dalam Routing</h2>
+<p>Laravel mendukung berbagai metode HTTP yang digunakan untuk menangani jenis permintaan yang berbeda. Berikut adalah beberapa metode HTTP yang umum digunakan di Laravel:</p>
+
+<ul>
+    <li><strong>GET</strong>: Digunakan untuk mengambil data atau menampilkan halaman.</li>
+    <li><strong>POST</strong>: Digunakan untuk menerima data yang dikirim oleh pengguna melalui form.</li>
+    <li><strong>PUT/PATCH</strong>: Digunakan untuk memperbarui data yang ada di server.</li>
+    <li><strong>DELETE</strong>: Digunakan untuk menghapus data dari server.</li>
+</ul>
+
+<p>Contoh penggunaan metode POST dalam route:</p>
+
+<pre><code>Route::post('/submit', [FormController::class, 'submit']);</code></pre>
+
+<h2>Routing dengan Parameter Dinamis</h2>
+<p>Laravel memungkinkan kita untuk menggunakan parameter dinamis di dalam URL untuk menangkap data yang dikirimkan oleh pengguna. Contoh berikut menunjukkan cara membuat route yang menangani parameter ID pengguna:</p>
+
+<pre><code>Route::get('/user/{id}', function (\$id) {
+    return 'User ID: ' . \$id;
+});</code></pre>
+
+<p>Ketika pengguna mengakses <code>/user/1</code>, Laravel akan menangkap nilai <code>1</code> dan mengoper nilai tersebut ke dalam fungsi.</p>
+
+<h2>Routing dengan Controller</h2>
+<p>Selain menggunakan route langsung dengan closure, Laravel memungkinkan penggunaan controller untuk memisahkan logika aplikasi dan meningkatkan pengelolaan kode. Berikut adalah contoh route yang mengarah ke sebuah controller:</p>
+
+<pre><code>Route::get('/user/{id}', [UserController::class, 'show']);</code></pre>
+
+<p>Pada contoh ini, Laravel akan memanggil metode <code>show</code> dari <code>UserController</code> ketika pengguna mengakses URL <code>/user/{id}</code>.</p>
+
+<h2>Middleware dalam Routing</h2>
+<p>Middleware di Laravel digunakan untuk memfilter atau memeriksa setiap permintaan yang masuk sebelum mencapai route yang dimaksud. Sebagai contoh, kita dapat menggunakan middleware <code>auth</code> untuk memastikan hanya pengguna yang terautentikasi yang dapat mengakses halaman tertentu:</p>
+
+<pre><code>Route::get('/dashboard', function () {
+    return view('dashboard');
+})->middleware('auth');</code></pre>
+
+<h2>Named Routes</h2>
+<p>Untuk mempermudah pengelolaan URL dalam aplikasi, Laravel mendukung penggunaan named routes. Dengan memberi nama pada sebuah route, kita bisa merujuknya dengan mudah di bagian lain aplikasi:</p>
+
+<pre><code>Route::get('/home', [HomeController::class, 'index'])->name('home');</code></pre>
+
+<p>Dengan memberikan nama <code>home</code>, kita bisa merujuk route ini di mana saja menggunakan fungsi <code>route('home')</code>.</p>
+
+<h2>Kesimpulan</h2>
+<p>Routing di Laravel memberikan fleksibilitas yang luar biasa untuk mengelola URL dan menghubungkannya dengan controller, closure, atau view tertentu. Dengan fitur-fitur seperti middleware, named routes, dan parameter dinamis, Laravel membantu developer membangun aplikasi web yang lebih terstruktur dan mudah dikelola.</p>"
+            ],
+
+
+
+            [
+                'course_id' => 15,
+                'urutan' => 2,
+                'judul' => 'Controllers',
+                'content' => "<h2>Pendahuluan</h2>
+<p>Controller di Laravel berfungsi sebagai penghubung antara model dan view. Dengan menggunakan controller, kita bisa memisahkan logika aplikasi dari tampilan sehingga aplikasi menjadi lebih terstruktur dan mudah dikelola. Di Laravel, controller membantu menangani permintaan dari pengguna, memproses data yang diperlukan, dan mengembalikan hasil ke tampilan.</p>
+
+<h2>Langkah-Langkah Membuat Controller di Laravel</h2>
+<p>Untuk membuat controller di Laravel, kita dapat menggunakan artisan command yang sudah disediakan oleh Laravel. Dengan perintah ini, kita dapat membuat controller dengan mudah, baik controller yang biasa maupun controller resource yang dilengkapi dengan metode CRUD (Create, Read, Update, Delete).</p>
+
+<h3>Membuat Controller dengan Artisan</h3>
+<p>Untuk membuat controller, kita bisa menggunakan perintah berikut pada terminal:</p>
+
+<pre><code>php artisan make:controller NamaController</code></pre>
+
+<p>Perintah ini akan membuat sebuah file controller baru di dalam folder <code>app/Http/Controllers</code> dengan nama <code>NamaController.php</code>.</p>
+
+<h3>Contoh Pembuatan Controller</h3>
+<p>Misalkan kita ingin membuat controller untuk menangani halaman Home. Kita bisa menjalankan perintah berikut:</p>
+
+<pre><code>php artisan make:controller HomeController</code></pre>
+
+<p>Setelah menjalankan perintah tersebut, Laravel akan membuat file <code>HomeController.php</code> di dalam folder <code>app/Http/Controllers</code>.</p>
+
+<h2>Menambahkan Metode pada Controller</h2>
+<p>Setelah controller dibuat, kita dapat menambahkan metode-metode di dalamnya untuk menangani berbagai rute (routes) yang diterima oleh aplikasi. Metode di controller digunakan untuk memproses permintaan dari pengguna dan mengembalikan hasil yang sesuai, baik itu tampilan (view) atau data lainnya.</p>
+
+<h3>Menambahkan Metode di Controller</h3>
+<p>Contoh berikut menunjukkan cara menambahkan metode <code>index</code> pada <code>HomeController</code> untuk menangani rute yang mengarah ke halaman utama:</p>
+
+<pre><code>
+<?php
+
+namespace App\Http\Controllers;
+
+use Illuminate\Http\Request;
+
+class HomeController extends Controller
+{
+    public function index()
+    {
+        return view('home'); // Mengembalikan view 'home'
+    }
+}
+</code></pre>
+
+<p>Metode <code>index()</code> ini akan mengembalikan tampilan (view) bernama <code>home</code>. Ketika pengguna mengakses halaman yang sesuai dengan rute yang mengarah ke <code>HomeController@index</code>, Laravel akan menampilkan halaman <code>home.blade.php</code>.</p>
+
+<h3>Menambahkan Metode Lain pada Controller</h3>
+<p>Kita juga dapat menambahkan metode lain di dalam controller untuk menangani berbagai aksi. Misalnya, jika kita ingin menangani permintaan untuk menampilkan detail produk, kita bisa menambahkan metode <code>show</code> pada controller:</p>
+
+<pre><code>
+public function show(\$id)
+{
+    \$product = Product::find(\$id);
+    return view('product.show', compact('product'));
+}
+</code></pre>
+
+<p>Metode <code>show(\$id)</code> ini menerima parameter <code>\$id</code> yang digunakan untuk mencari produk di database menggunakan model <code>Product</code>. Setelah mendapatkan data produk, metode ini akan mengembalikan tampilan <code>product.show</code> dengan data produk yang ditemukan.</p>
+
+<h2>Menentukan Rute untuk Controller</h2>
+<p>Setelah kita membuat controller dan menambahkan metode, langkah selanjutnya adalah menghubungkan metode di controller dengan rute tertentu. Ini dilakukan di dalam file <code>routes/web.php</code>.</p>
+
+<h3>Menambahkan Rute untuk Metode Controller</h3>
+<p>Untuk menghubungkan rute dengan metode di controller, kita dapat menggunakan metode <code>Route::get()</code>, <code>Route::post()</code>, dan lainnya. Berikut adalah contoh rute yang mengarah ke metode <code>index()</code> pada <code>HomeController</code>:</p>
+
+<pre><code>
+Route::get('/home', [HomeController::class, 'index']);
+</code></pre>
+
+<p>Perintah di atas berarti bahwa ketika pengguna mengakses URL <code>/home</code>, Laravel akan memanggil metode <code>index()</code> pada <code>HomeController</code> untuk memproses permintaan tersebut dan menampilkan tampilan <code>home</code>.</p>
+
+<h3>Rute dengan Parameter</h3>
+<p>Jika kita ingin menangani rute yang menerima parameter dinamis, seperti ID produk, kita bisa menambahkan parameter pada rute sebagai berikut:</p>
+
+<pre><code>
+Route::get('/product/{id}', [ProductController::class, 'show']);
+</code></pre>
+
+<p>Dengan rute ini, Laravel akan memanggil metode <code>show(\$id)</code> pada <code>ProductController</code> dan mengirimkan ID produk yang diminta oleh pengguna.</p>
+
+<h2>Controller Resource</h2>
+<p>Laravel juga menyediakan fitur controller resource yang memudahkan pembuatan controller dengan metode CRUD standar. Untuk membuat controller resource, kita dapat menggunakan perintah berikut:</p>
+
+<pre><code>php artisan make:controller ProductController --resource</code></pre>
+
+<p>Perintah ini akan menghasilkan controller dengan 7 metode standar: <code>index()</code>, <code>create()</code>, <code>store()</code>, <code>show()</code>, <code>edit()</code>, <code>update()</code>, dan <code>destroy()</code>. Controller resource ini sangat berguna untuk aplikasi yang membutuhkan operasi CRUD lengkap.</p>
+
+<h2>Kesimpulan</h2>
+<p>Dengan memahami cara membuat dan menggunakan controller di Laravel, serta menghubungkannya dengan rute, kamu akan dapat memisahkan logika aplikasi dari tampilan dan memudahkan pengelolaan kode. Metode-metode di controller memungkinkan kamu untuk menangani berbagai jenis permintaan dari pengguna, mulai dari menampilkan halaman hingga memproses data dan mengembalikan hasil yang sesuai.</p>"
+            ],
+
+
+
+
+            [
+                'course_id' => 15,
+                'urutan' => 3,
+                'judul' => 'Routing Resource & CRUD Operations',
+                'content' => "<h2>Pendahuluan</h2>
+<p>Di Laravel, routing resource adalah fitur yang sangat membantu untuk menangani operasi CRUD (Create, Read, Update, Delete) secara otomatis dengan hanya mendefinisikan satu baris kode untuk setiap jenis operasi. Dengan menggunakan routing resource, Laravel akan otomatis menangani berbagai rute yang diperlukan untuk CRUD, sehingga pengembang dapat fokus pada logika aplikasi tanpa harus menulis rute secara manual.</p>
+
+<h2>Apa itu Routing Resource?</h2>
+<p>Routing resource di Laravel adalah cara untuk mendefinisikan rute yang menangani berbagai operasi CRUD. Laravel menyediakan metode <code>Route::resource()</code> yang akan menghasilkan rute untuk setiap tindakan yang dibutuhkan dalam operasi CRUD: <code>index</code>, <code>create</code>, <code>store</code>, <code>show</code>, <code>edit</code>, <code>update</code>, dan <code>destroy</code>.</p>
+
+<h2>Membuat Controller dengan Routing Resource</h2>
+<p>Untuk memulai menggunakan routing resource, pertama kita perlu membuat controller yang menangani rute resource. Laravel menyediakan perintah <code>make:controller</code> dengan opsi <code>--resource</code> untuk membuat controller yang sudah dilengkapi dengan metode standar CRUD.</p>
+
+<h3>Contoh Membuat Controller Resource</h3>
+<p>Misalnya kita ingin membuat controller untuk mengelola data <code>Product</code>. Kita dapat menjalankan perintah berikut:</p>
+
+<pre><code>php artisan make:controller ProductController --resource</code></pre>
+
+<p>Perintah ini akan menghasilkan controller <code>ProductController</code> di dalam folder <code>app/Http/Controllers</code> dengan 7 metode standar untuk operasi CRUD.</p>
+
+<h3>Metode CRUD di Controller</h3>
+<p>Controller yang dihasilkan dengan opsi <code>--resource</code> akan otomatis memiliki metode berikut:</p>
+
+<ul>
+    <li><strong>index()</strong>: Menampilkan semua data produk.</li>
+    <li><strong>create()</strong>: Menampilkan formulir untuk menambah produk baru.</li>
+    <li><strong>store()</strong>: Menyimpan data produk baru ke database.</li>
+    <li><strong>show(\$id)</strong>: Menampilkan detail produk berdasarkan ID.</li>
+    <li><strong>edit(\$id)</strong>: Menampilkan formulir untuk mengedit produk berdasarkan ID.</li>
+    <li><strong>update(Request \$request, \$id)</strong>: Memperbarui data produk berdasarkan ID.</li>
+    <li><strong>destroy(\$id)</strong>: Menghapus data produk berdasarkan ID.</li>
+</ul>
+
+<p>Metode-metode ini dihasilkan secara otomatis ketika kita membuat controller dengan perintah <code>--resource</code>. Mari kita lihat bagaimana cara menambahkan rute untuk controller resource ini.</p>
+
+<h2>Menambahkan Rute untuk Controller Resource</h2>
+<p>Setelah membuat controller resource, langkah selanjutnya adalah mendefinisikan rute yang mengarah ke metode-metode tersebut. Di Laravel, kita bisa menggunakan metode <code>Route::resource()</code> di dalam file <code>routes/web.php</code> untuk mendefinisikan rute untuk operasi CRUD.</p>
+
+<h3>Contoh Penggunaan Route::resource</h3>
+<p>Untuk menghubungkan controller <code>ProductController</code> dengan rute CRUD, kita cukup menambahkan baris berikut di file <code>routes/web.php</code>:</p>
+
+<pre><code>
+Route::resource('products', ProductController::class);
+</code></pre>
+
+<p>Perintah ini akan secara otomatis menghasilkan rute untuk setiap metode di <code>ProductController</code>:</p>
+
+<ul>
+    <li><code>GET /products</code> → Menangani <code>index()</code> (menampilkan semua produk).</li>
+    <li><code>GET /products/create</code> → Menangani <code>create()</code> (menampilkan form untuk menambah produk).</li>
+    <li><code>POST /products</code> → Menangani <code>store()</code> (menyimpan produk baru).</li>
+    <li><code>GET /products/{id}</code> → Menangani <code>show(\$id)</code> (menampilkan produk berdasarkan ID).</li>
+    <li><code>GET /products/{id}/edit</code> → Menangani <code>edit(\$id)</code> (menampilkan form untuk mengedit produk).</li>
+    <li><code>PUT/PATCH /products/{id}</code> → Menangani <code>update(\$id)</code> (memperbarui produk berdasarkan ID).</li>
+    <li><code>DELETE /products/{id}</code> → Menangani <code>destroy(\$id)</code> (menghapus produk berdasarkan ID).</li>
+</ul>
+
+<p>Dengan menggunakan <code>Route::resource()</code>, Laravel secara otomatis menangani semua rute yang diperlukan untuk CRUD, yang sangat menghemat waktu pengembangan.</p>
+
+<h2>Contoh Implementasi CRUD dengan Controller Resource</h2>
+<p>Berikut adalah implementasi sederhana untuk beberapa metode di dalam <code>ProductController</code>:</p>
+
+<pre><code>
+<?php
+
+namespace App\Http\Controllers;
+
+use App\Models\Product;
+use Illuminate\Http\Request;
+
+class ProductController extends Controller
+{
+    // Menampilkan semua produk
+    public function index()
+    {
+        \$products = Product::all();
+        return view('products.index', compact('products'));
+    }
+
+    // Menampilkan formulir untuk menambah produk
+    public function create()
+    {
+        return view('products.create');
+    }
+
+    // Menyimpan produk baru
+    public function store(Request \$request)
+    {
+        \$request->validate([
+            'name' => 'required',
+            'price' => 'required|numeric',
+        ]);
+
+        Product::create(\$request->all());
+
+        return redirect()->route('products.index');
+    }
+
+    // Menampilkan detail produk
+    public function show(\$id)
+    {
+        \$product = Product::findOrFail(\$id);
+        return view('products.show', compact('product'));
+    }
+
+    // Menampilkan formulir untuk mengedit produk
+    public function edit(\$id)
+    {
+        \$product = Product::findOrFail(\$id);
+        return view('products.edit', compact('product'));
+    }
+
+    // Memperbarui produk
+    public function update(Request \$request, \$id)
+    {
+        \$product = Product::findOrFail(\$id);
+        \$product->update(\$request->all());
+
+        return redirect()->route('products.index');
+    }
+
+    // Menghapus produk
+    public function destroy(\$id)
+    {
+        \$product = Product::findOrFail(\$id);
+        \$product->delete();
+
+        return redirect()->route('products.index');
+    }
+}
+</code></pre>
+
+<h2>Kesimpulan</h2>
+<p>Dengan menggunakan routing resource di Laravel, kita bisa dengan mudah menangani operasi CRUD dalam aplikasi. Dengan hanya mendefinisikan satu baris kode menggunakan <code>Route::resource()</code>, Laravel secara otomatis akan menghasilkan semua rute yang diperlukan untuk mengelola sumber daya (resource) dengan controller. Ini sangat menghemat waktu dan usaha dalam pembangunan aplikasi web yang berbasis CRUD.</p>"
+            ],
+
+            [
+                'course_id' => 15,
                 'urutan' => 3,
                 'judul' => 'Menyisipkan JavaScript dalam HTML',
                 'content' => ''
