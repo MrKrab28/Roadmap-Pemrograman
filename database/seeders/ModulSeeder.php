@@ -4898,18 +4898,277 @@ HTML'
 
 
 
+
+            [
+                'course_id' => 18,
+                'urutan' => 1,
+                'judul' => 'Direktif Blade (@if, @foreach, @for) ',
+                'content' => '<h2>Pendahuluan</h2>
+<p>Blade adalah template engine Laravel yang memudahkan pembuatan tampilan dinamis. Salah satu fitur utamanya adalah <strong>direktif</strong> seperti <code>@if</code>, <code>@foreach</code>, dan <code>@for</code> yang digunakan untuk logika kondisi dan perulangan langsung di dalam view.</p>
+
+<h2>1. Direktif Kondisional (@if, @elseif, @else, @unless)</h2>
+<p>Direktif ini digunakan untuk membuat alur logika berdasarkan kondisi tertentu.</p>
+<pre><code>@if(\$user->isAdmin())
+    &lt;p&gt;Selamat datang, Admin!&lt;/p&gt;
+@elseif(\$user->isEditor())
+    &lt;p&gt;Halo, Editor!&lt;/p&gt;
+@else
+    &lt;p&gt;Halo, Pengunjung!&lt;/p&gt;
+@endif</code></pre>
+
+<p>Direktif <code>@unless</code> digunakan untuk kondisi negatif:</p>
+<pre><code>@unless(\$user->isAdmin())
+    &lt;p&gt;Anda bukan admin.&lt;/p&gt;
+@endunless</code></pre>
+
+<h2>2. Direktif Perulangan</h2>
+
+<h3>@foreach</h3>
+<pre><code>@foreach(\$products as \$product)
+    &lt;p&gt;{{ \$product->name }}&lt;/p&gt;
+@endforeach</code></pre>
+
+<p>Menggunakan <code>\$loop</code> untuk akses tambahan:</p>
+<pre><code>@foreach(\$products as \$product)
+    &lt;p&gt;{{ \$loop->iteration }}. {{ \$product->name }}&lt;/p&gt;
+@endforeach</code></pre>
+
+<h3>@for</h3>
+<pre><code>@for(\$i = 0; \$i &lt; 5; \$i++)
+    &lt;p&gt;Angka ke-{{ \$i }}&lt;/p&gt;
+@endfor</code></pre>
+
+<h3>@forelse</h3>
+<pre><code>@forelse(\$comments as \$comment)
+    &lt;p&gt;{{ \$comment->body }}&lt;/p&gt;
+@empty
+    &lt;p&gt;Tidak ada komentar.&lt;/p&gt;
+@endforelse</code></pre>
+
+<h2>3. Properti \$loop dalam @foreach</h2>
+<ul>
+    <li><code>\$loop->index</code>: index saat ini (dimulai dari 0)</li>
+    <li><code>\$loop->iteration</code>: iterasi ke-n (dimulai dari 1)</li>
+    <li><code>\$loop->first</code>: true jika item pertama</li>
+    <li><code>\$loop->last</code>: true jika item terakhir</li>
+    <li><code>\$loop->count</code>: jumlah total item</li>
+</ul>
+
+<h2>Kesimpulan</h2>
+<p>Direktif Blade membantu menyisipkan logika ke dalam view dengan cara yang rapi dan efisien. Mahasiswa perlu memahami fungsinya agar bisa membuat tampilan dinamis yang sesuai dengan data yang dikirim dari controller Laravel.</p>'
+            ],
+
+
+
+            [
+                'course_id' => 18,
+                'urutan' => 2,
+                'judul' => 'Data Dinamis Dalam Tampilan Blade ',
+                'content' => "<h2>Pendahuluan</h2>
+<p>Blade adalah <strong>template engine</strong> yang digunakan oleh Laravel untuk membuat tampilan antarmuka pengguna (UI) yang dinamis dan mudah dibaca. Salah satu fitur utama Blade adalah kemampuan untuk menyisipkan data dari controller ke view menggunakan sintaks khusus: <code>{{ }}</code>.</p>
+
+<h2>Mengapa Perlu Data Dinamis?</h2>
+<p>Dalam aplikasi web, informasi yang ditampilkan sering kali berasal dari database atau input pengguna. Misalnya: nama pengguna yang login, daftar produk, atau artikel terbaru. Blade memudahkan proses ini dengan menyisipkan data secara langsung ke dalam HTML.</p>
+
+<h2>Sintaks Dasar: <code>{{ }}</code></h2>
+<p>Untuk menampilkan data dari controller ke dalam view, gunakan tanda kurung kurawal ganda:</p>
+
+<pre><code>&lt;h1&gt;Selamat Datang, {{ \$user-&gt;name }}&lt;/h1&gt;</code></pre>
+
+<p>Blade secara otomatis akan melakukan <strong>escaping</strong> terhadap output untuk mencegah serangan XSS (Cross-site Scripting).</p>
+
+<h2>Contoh Sederhana</h2>
+Controller:
+<pre><code>public function index()
+{
+    \$nama = 'Budi';
+    return view('beranda', compact('nama'));
+}</code></pre>
+
+View <code>beranda.blade.php</code>:
+<pre><code>&lt;p&gt;Halo, {{ \$nama }}!&lt;/p&gt;</code></pre>
+
+Output:
+<pre><code>Halo, Budi!</code></pre>
+
+<h2>Menampilkan Data Objek dan Array</h2>
+
+<p>Blade dapat mengakses properti dari objek dan elemen array:</p>
+
+<pre><code>// Objek
+{{ \$product-&gt;name }}
+
+// Array
+{{ \$user['email'] }}</code></pre>
+
+<h2>Menggunakan {!! !!} untuk HTML</h2>
+<p>Jika Anda ingin menampilkan konten HTML tanpa di-escape, gunakan:</p>
+
+<pre><code>{!! \$post-&gt;content !!}</code></pre>
+
+<p><strong>Peringatan:</strong> Jangan gunakan ini untuk data yang berasal dari input pengguna tanpa validasi, karena rentan terhadap XSS.</p>
+
+<h2>Kesimpulan</h2>
+<p>Menggunakan <code>{{ }}</code> dalam Blade memungkinkan pengembang Laravel untuk menampilkan informasi secara dinamis dan aman. Ini merupakan fondasi penting dalam membuat tampilan web yang interaktif dan terhubung dengan data dari backend Laravel.</p>"
+            ],
+
+
+
+            [
+                'course_id' => 18,
+                'urutan' => 3,
+                'judul' => 'Blade Form & Laravel Form Helper',
+                'content' => '<h2>Pendahuluan</h2>
+<p>Formulir adalah komponen penting dalam aplikasi web, digunakan untuk mengumpulkan data dari pengguna. Laravel menyediakan pendekatan yang terstruktur untuk membangun formulir menggunakan <strong>Blade</strong> dan fitur tambahan bernama <strong>Laravel Form Helper</strong> dari paket <code>laravelcollective/html</code>.</p>
+
+<h2>1. Instalasi Laravel Form Helper</h2>
+<p>Secara default, Laravel tidak menyertakan form helper. Untuk menggunakannya, kita perlu menambahkan package berikut:</p>
+
+<pre><code>composer require laravelcollective/html</code></pre>
+
+<p>Kemudian tambahkan ke <code>config/app.php</code>:</p>
+
+<pre><code>"providers" =&gt; [
+    Collective\\Html\\HtmlServiceProvider::class,
+],
+"aliases" =&gt; [
+    "Form" =&gt; Collective\\Html\\FormFacade::class,
+    "Html" =&gt; Collective\\Html\\HtmlFacade::class,
+]</code></pre>
+
+<h2>2. Menyusun Form Dasar dengan Blade</h2>
+<p>Kamu bisa menulis form secara manual dalam Blade seperti biasa:</p>
+
+<pre><code>&lt;form action="/produk" method="POST"&gt;
+    @csrf
+    &lt;label&gt;Nama Produk:&lt;/label&gt;
+    &lt;input type="text" name="nama"&gt;
+    &lt;button type="submit"&gt;Kirim&lt;/button&gt;
+&lt;/form&gt;
+</code></pre>
+
+<p>Blade menyediakan direktif <code>@csrf</code> untuk menyisipkan token keamanan CSRF secara otomatis.</p>
+
+<h2>3. Menyusun Form dengan Form Helper</h2>
+<p>Jika kamu menggunakan Laravel Form Helper, sintaks form menjadi lebih elegan dan terstruktur:</p>
+
+<pre><code>{!! Form::open(["url" =&gt; "produk"]) !!}
+    {!! Form::label("nama", "Nama Produk") !!}
+    {!! Form::text("nama", null, ["class" =&gt; "form-control"]) !!}
+    {!! Form::submit("Simpan", ["class" =&gt; "btn btn-primary"]) !!}
+{!! Form::close() !!}
+</code></pre>
+
+<h2>4. Field Umum dalam Form Helper</h2>
+<ul>
+    <li><code>Form::text()</code> – input teks</li>
+    <li><code>Form::email()</code> – input email</li>
+    <li><code>Form::password()</code> – input password</li>
+    <li><code>Form::textarea()</code> – input teks panjang</li>
+    <li><code>Form::select()</code> – dropdown</li>
+    <li><code>Form::checkbox()</code> – kotak centang</li>
+    <li><code>Form::radio()</code> – radio button</li>
+    <li><code>Form::file()</code> – upload file</li>
+</ul>
+
+<h2>5. Validasi dan Error Handling</h2>
+<p>Kamu bisa menampilkan error input dengan Blade seperti ini:</p>
+
+<pre><code>@error("nama")
+    &lt;div class="text-danger"&gt;{{ \$message }}&lt;/div&gt;
+@enderror</code></pre>
+
+<p>Laravel akan otomatis menampilkan pesan error validasi berdasarkan data yang dikirimkan.</p>
+
+<h2>Kesimpulan</h2>
+<p>Blade memudahkan pembuatan form dasar dengan HTML biasa, sementara Laravel Form Helper memberi cara yang lebih terstruktur dan rapi dalam menyusun form. Dengan memahami kedua cara ini, pengembang bisa lebih fleksibel dalam membangun antarmuka input yang efisien dan terintegrasi dengan validasi Laravel.</p>'
+            ],
+
+
+
+            [
+                'course_id' => 18,
+                'urutan' => 4,
+                'judul' => '@include',
+                'content' => '<h2>Pendahuluan</h2>
+<p>Dalam pengembangan antarmuka aplikasi web, sangat umum untuk memiliki bagian tampilan yang digunakan berulang-ulang, seperti header, footer, atau sidebar. Laravel Blade menyediakan direktif <code>@include</code> yang memungkinkan kita menyisipkan file Blade kecil (dikenal sebagai <strong>partials</strong>) ke dalam tampilan utama.</p>
+
+<h2>Apa Itu Partial View?</h2>
+<p><strong>Partial view</strong> adalah file Blade kecil yang berisi potongan HTML/tampilan yang digunakan di banyak tempat, sehingga dapat ditulis satu kali dan disisipkan ke berbagai halaman. Ini membantu menjaga kode lebih rapi, terstruktur, dan mudah dirawat.</p>
+
+<h2>Struktur Dasar @include</h2>
+<p>Untuk menyisipkan partial, cukup gunakan sintaks berikut:</p>
+
+<pre><code>@include("nama_file")</code></pre>
+
+<p>Laravel akan mencari file <code>resources/views/nama_file.blade.php</code>. Perhatikan bahwa penulisan nama file tidak menggunakan ekstensi <code>.blade.php</code>.</p>
+
+<h2>Contoh Penggunaan</h2>
+
+<h3>1. Membuat Partial: <code>header.blade.php</code></h3>
+
+<pre><code>&lt;!-- resources/views/layouts/partials/header.blade.php --&gt;
+&lt;header&gt;
+    &lt;h1&gt;Aplikasi Laravel Saya&lt;/h1&gt;
+    &lt;nav&gt;
+        &lt;a href="/"&gt;Home&lt;/a&gt;
+        &lt;a href="/about"&gt;Tentang&lt;/a&gt;
+    &lt;/nav&gt;
+&lt;/header&gt;
+</code></pre>
+
+<h3>2. Menyisipkan ke Tampilan Utama</h3>
+
+<pre><code>&lt;!-- resources/views/layouts/app.blade.php --&gt;
+&lt;html&gt;
+&lt;body&gt;
+
+    @include("layouts.partials.header")
+
+    &lt;div class="container"&gt;
+        @yield("content")
+    &lt;/div&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+<h2>Manfaat Menggunakan @include</h2>
+<ul>
+    <li><strong>DRY (Dont Repeat Yourself)</strong>: Hindari penulisan ulang kode yang sama di banyak tempat.</li>
+    <li><strong>Modularitas</strong>: Memisah bagian-bagian kecil UI ke file terpisah agar lebih mudah dikelola.</li>
+    <li><strong>Pemeliharaan Mudah</strong>: Perubahan di satu file partial otomatis berlaku di seluruh tampilan yang menggunakannya.</li>
+</ul>
+
+<h2>Menyisipkan Partial dengan Data</h2>
+<p>Kamu bisa menyisipkan file partial dan mengirimkan data seperti ini:</p>
+
+<pre><code>@include("layouts.partials.alert", ["type" =&gt; "success"])</code></pre>
+
+<p>Di dalam partial, kamu bisa mengakses data tersebut dengan sintaks Blade:</p>
+
+<pre><code>&lt;div class="alert alert-{{ \$type }}"&gt;
+    {{ \$slot }}
+&lt;/div&gt;
+</code></pre>
+
+<h2>Kesimpulan</h2>
+<p>Direktif <code>@include</code> dalam Blade adalah alat penting untuk membangun antarmuka yang bersih, modular, dan mudah dikelola. Dengan membagi bagian tampilan menjadi partials seperti header, footer, dan lainnya, kamu dapat meningkatkan efisiensi dan keterbacaan kode aplikasi Laravel kamu.</p>'
+            ],
+
+
             
             [
-                'course_id' => 17,
-                'urutan' => 1,
-                'judul' => 'Menyisipkan JavaScript dalam HTML',
-                'content' => ''
+                'course_id' => 18,
+                'urutan' => 2,
+                'judul' => 'Data Dinamis Dalam Tampilan Blade ',
+                'content' => ""
             ],
             [
-                'course_id' => 17,
-                'urutan' => 1,
-                'judul' => 'Menyisipkan JavaScript dalam HTML',
-                'content' => ''
+                'course_id' => 18,
+                'urutan' => 2,
+                'judul' => 'Data Dinamis Dalam Tampilan Blade ',
+                'content' => ""
             ],
 
 

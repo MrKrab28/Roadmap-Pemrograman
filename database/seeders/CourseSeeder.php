@@ -117,6 +117,11 @@ class CourseSeeder extends Seeder
                 'judul' => 'Blade',
                 'gambar' => 'laravel.png',
             ],
+            [
+                'category_id' => 3,
+                'judul' => 'Blade Direktif',
+                'gambar' => 'laravel.png',
+            ],
 
         ]);
     }
