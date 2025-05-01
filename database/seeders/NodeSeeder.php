@@ -161,6 +161,14 @@ class NodeSeeder extends Seeder
                 ['kode' => 'lvl2-2', 'label' => 'Routing Resource & CRUD Operations', 'roadmap_id' => 3],
 
 
+
+                ['kode' => 'lvl3', 'label' => 'Eloquent ORM', 'roadmap_id' => 3],
+                ['kode' => 'lvl3', 'label' => 'Interaksi Model dan Database', 'roadmap_id' => 3],
+                ['kode' => 'lvl3', 'label' => 'migration & struktur tabel', 'roadmap_id' => 3],
+                ['kode' => 'lvl3', 'label' => 'migration & struktur tabel', 'roadmap_id' => 3],
+
+
+
                 ]
         );
     }

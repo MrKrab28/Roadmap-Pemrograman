@@ -4483,7 +4483,7 @@ Produk::create([
             [
                 'course_id' => 16,
                 'urutan' => 3,
-                'judul' => 'migration untuk mendefinisikan struktur tabel database',
+                'judul' => 'migration & struktur tabel',
                 'content' => '<h2>Pendahuluan</h2>
 <p>Dalam Laravel, <strong>migration</strong> adalah fitur yang digunakan untuk membuat, mengubah, dan mengelola struktur tabel dalam database menggunakan kode PHP. Migration mempermudah pengembang untuk menjaga konsistensi struktur database dan melacak perubahannya seiring waktu, terutama dalam tim pengembangan.</p>
 
@@ -4660,7 +4660,7 @@ Produk::factory()->count(50)->create();
 
 
 
-            
+
             [
                 'course_id' => 16,
                 'urutan' => 3,
