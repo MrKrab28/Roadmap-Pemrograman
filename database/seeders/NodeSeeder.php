@@ -156,6 +156,11 @@ class NodeSeeder extends Seeder
                 ['kode' => 'lvl1-2', 'label' => 'Folder Structur', 'roadmap_id' => 3],
 
 
+                ['kode' => 'lvl2', 'label' => 'Routes', 'roadmap_id' => 3],
+                ['kode' => 'lvl2-1', 'label' => 'Controllers', 'roadmap_id' => 3],
+                ['kode' => 'lvl2-2', 'label' => 'Routing Resource & CRUD Operations', 'roadmap_id' => 3],
+
+
                 ]
         );
     }
