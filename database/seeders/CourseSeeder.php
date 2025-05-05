@@ -17,33 +17,33 @@ class CourseSeeder extends Seeder
             [
                 'category_id' => 1,
                 'judul' => 'Pengenalan PHP',
-                'gambar' => 'php_logo.png',
+                'gambar' => 'backend.png',
             ],
             [
                 'category_id' => 2,
                 'judul' => 'Pengenalan HTML',
-                'gambar' => 'html_logo.png',
+                'gambar' => 'frontend.png',
             ],
 
             [
                 'category_id' => 1,
                 'judul' => 'Dasar - Dasar PHP',
-                'gambar' => 'php_logo.png',
+                'gambar' => 'phplogo2.png',
             ],
             [
                 'category_id' => 1,
                 'judul' => 'Menghubungkan PHP dengan Database',
-                'gambar' => 'php_logo.png',
+                'gambar' => 'phpdatabase.jpg',
             ],
             [
                 'category_id' => 1,
                 'judul' => 'Create CRUD Project',
-                'gambar' => 'php_logo.png',
+                'gambar' => 'phpcrud.png',
             ],
             [
                 'category_id' => 1,
                 'judul' => 'Validasi & Security',
-                'gambar' => 'php_logo.png'
+                'gambar' => 'phpsecurity.jpeg'
             ],
 
 
@@ -58,37 +58,37 @@ class CourseSeeder extends Seeder
             [
                 'category_id' => 2,
                 'judul' => 'Content HTML',
-                'gambar' => 'html_logo.png',
+                'gambar' => 'html.png',
             ],
             [
                 'category_id' => 2,
                 'judul' => 'Layout Structur',
-                'gambar' => 'html_logo.png',
+                'gambar' => 'html.png',
             ],
             [
                 'category_id' => 2,
                 'judul' => 'Pengenalan CSS',
-                'gambar' => 'html_logo.png',
+                'gambar' => 'css.png',
             ],
             [
                 'category_id' => 2,
                 'judul' => 'Styling Dasar',
-                'gambar' => 'html_logo.png',
+                'gambar' => 'css.png',
             ],
             [
                 'category_id' => 2,
                 'judul' => 'Responsif Design & Media Queries',
-                'gambar' => 'html_logo.png',
+                'gambar' => 'css.png',
             ],
             [
                 'category_id' => 2,
                 'judul' => 'Pengenalan JavaScript',
-                'gambar' => 'html_logo.png',
+                'gambar' => 'javascript.png',
             ],
             [
                 'category_id' => 2,
                 'judul' => 'Control Alur dengan JavaScript',
-                'gambar' => 'html_logo.png',
+                'gambar' => 'javascript.png',
             ],
 
 
