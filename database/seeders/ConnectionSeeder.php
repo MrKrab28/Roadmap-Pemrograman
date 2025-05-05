@@ -17,7 +17,7 @@ class ConnectionSeeder extends Seeder
             [
 
                 ['source' => 'CategoryBE', 'target' => 'PHP', 'roadmap_id' => 1],
-                ['source' => 'CategoryBE', 'target' => 'LVL', 'roadmap_id' => 1],
+                // ['source' => 'CategoryBE', 'target' => 'LVL', 'roadmap_id' => 1],
 
 
                 ['source' => 'PHP', 'target' => 'php1', 'roadmap_id' => 1],
