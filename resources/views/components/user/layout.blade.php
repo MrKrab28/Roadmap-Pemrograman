@@ -26,139 +26,182 @@
 
         @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800');
 
-        $gr-1: linear-gradient(170deg, #01E4F8 0%, #1D3EDE 100%);
-        $gr-2: linear-gradient(170deg, #B4EC51 0%, #429321 100%);
-        $gr-3: linear-gradient(170deg, #C86DD7 0%, #3023AE 100%);
+      /* Import fonts */
+@import url('https://fonts.googleapis.com/css?family=Oswald:300,400,500,700');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800');
 
-        .gr-1 {
-            background: $gr-1;
-        }
+/* Gradient variables - mengkonversi SCSS ke CSS standard */
+:root {
+    --gr-backend: linear-gradient(170deg, #01E4F8 0%, #1D3EDE 100%);
+    --gr-cardd: linear-gradient(170deg, #ffffff 0%, #1b6409 100%);
+    --gr-frontend: linear-gradient(170deg, #29ABE2 0%, #4F00BC 100%);
+    --gr-fullstack: linear-gradient(170deg, #3281ff 0%, #032056 100%);
+}
 
-        .gr-2 {
-            background: $gr-2;
-        }
+/* Gradient classes */
+.gr-backend {
+    background: var(--gr-backend);
+}
 
-        .gr-3 {
-            background: $gr-3;
-        }
+.gr-frontend {
+    background: var(--gr-frontend);
+}
 
-        .gr-1 * {
-            transition: .5s;
-        }
+.gr-fullstack {
+    background: var(--gr-fullstack);
+}
+.gr-cardd {
+    background: var(--gr-cardd);
+}
 
-        .h-100 {
-            height: 100vh !important;
-        }
+/* Animation transition */
+.card * {
+    transition: .5s;
+}
 
-        .align-middle {
-            position: relative;
-            top: 50%;
-            transform: translateY(-50%);
-        }
+/* Card column styling */
+.category-section {
+    padding: 3rem 0;
+}
 
-        .column {
-            margin-top: 3rem;
-            padding-left: 3rem;
+.category-section h2 {
+    text-align: center;
+    margin-bottom: 3rem;
+    font-family: 'Oswald', sans-serif;
+    color: #333;
+}
 
-            &:hover {
-                padding-left: 0;
+.column {
+    margin-top: 1.5rem;
+    padding-left: 3rem;
+    transition: all 0.3s ease;
+}
 
-                .card .txt {
-                    margin-left: 1rem;
+.column:hover {
+    padding-left: 0;
+}
 
-                    h1,
-                    p {
-                        color: rgba(255, 255, 255, 1);
-                        opacity: 1;
-                    }
-                }
+.column:hover .card .txt {
+    margin-left: 1rem;
+}
 
-                a {
-                    color: rgba(255, 255, 255, 1);
+.column:hover .card .txt h1,
+.column:hover .card .txt p {
+    color: rgba(255, 255, 255, 1);
+    opacity: 1;
+}
 
-                    &:after {
-                        width: 10%;
-                    }
-                }
-            }
-        }
+.column:hover .card a {
+    color: rgba(255, 255, 255, 1);
+}
 
-        .card {
-            min-height: 170px;
-            margin: 0;
-            padding: 1.7rem 1.2rem;
-            border: none;
-            border-radius: 0;
-            color: rgba(0, 0, 0, 1);
-            letter-spacing: .05rem;
-            font-family: 'Oswald', sans-serif;
-            box-shadow: 0 0 3px #000000;
-            /* border-radius: 12px 12px 12px 12px; */
+.column:hover .card a:after {
+    width: 10%;
+}
 
-            .txt {
-                margin-left: -3rem;
-                z-index: 1;
+/* Card styling */
+.card {
+    min-height: 200px;
+    margin: 0;
+    padding: 1.7rem 1.2rem;
+    border: none;
+    color: rgba(0, 0, 0, 1);
+    letter-spacing: .05rem;
+    font-family: 'Oswald', sans-serif;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
 
-                h1 {
-                    font-size: 1.5rem;
-                    font-weight: 300;
-                    text-transform: uppercase;
-                }
+/* Text in card */
+.card .txt {
+    margin-left: -3rem;
+    z-index: 1;
+    position: relative;
+}
 
-                p {
-                    font-size: .7rem;
-                    font-family: 'Open Sans', sans-serif;
-                    letter-spacing: 0rem;
-                    margin-top: 33px;
-                    opacity: 0;
-                    color: rgba(255, 255, 255, 1);
-                }
-            }
+.card .txt h1 {
+    font-size: 1.5rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    color: white;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
 
-            a {
-                z-index: 3;
-                font-size: .7rem;
-                color: rgba(0, 0, 0, 1);
-                margin-left: 1rem;
-                position: relative;
-                bottom: -.5rem;
-                text-transform: uppercase;
+.card .txt p {
+    font-size: .8rem;
+    font-family: 'Open Sans', sans-serif;
+    letter-spacing: 0rem;
+    margin-top: 33px;
+    opacity: 0;
+    color: rgba(255, 255, 255, 1);
+}
 
-                &:after {
-                    content: "";
-                    display: inline-block;
-                    height: 0.5em;
-                    width: 0;
-                    margin-right: -100%;
-                    margin-left: 10px;
-                    border-top: 1px solid rgba(255, 255, 255, 1);
-                    transition: .5s;
-                }
-            }
+/* Read more link */
+.card a {
+    z-index: 3;
+    font-size: .7rem;
+    color: rgba(255, 255, 255, 0.8);
+    margin-left: 1rem;
+    position: relative;
+    bottom: -.5rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
 
-            .ico-card {
-                position: absolute;
-                top: 0;
-                left: 0;
-                bottom: 0;
-                right: 0;
-                width: 100%;
-                height: 100%;
-                overflow: hidden;
-            }
+.card a:after {
+    content: "";
+    display: inline-block;
+    height: 0.5em;
+    width: 0;
+    margin-right: -100%;
+    margin-left: 10px;
+    border-top: 1px solid rgba(255, 255, 255, 1);
+    transition: .5s;
+}
 
-            i {
-                position: relative;
-                right: -50%;
-                top: 60%;
-                font-size: 12rem;
-                line-height: 0;
-                opacity: .2;
-                color: rgba(255, 255, 255, 1);
-                z-index: 0;
-            }
+/* Icon in card */
+.card .ico-card {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
 
-        }
+.card i {
+    position: relative;
+    right: -50%;
+    top: 60%;
+    font-size: 12rem;
+    line-height: 0;
+    opacity: .2;
+    color: rgba(255, 255, 255, 1);
+    z-index: 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .column {
+        padding-left: 1rem;
+        margin-top: 1rem;
+    }
+
+    .card {
+        min-height: 150px;
+    }
+
+    .card .txt h1 {
+        font-size: 1.2rem;
+    }
+}
     </style>
 
 </head>
@@ -218,20 +261,20 @@
 
     <!-- Konten lainnya di sini -->
     <!-- content -->
-    <div class="container mt-3 mb-5">
+    <div class="container mt-5 mb-5">
 
         {{ $slot }}
     </div>
-    <div class="wave py-3" data-aos="zoom-in" data-aos-duration="1000" style="background-color: #29b6f6">
+    {{-- <div class="wave py-3" data-aos="zoom-in" data-aos-duration="1000" style="background-color: #3281ff">
         <hr class="navbar bg-dark">
-    </div>
+    </div> --}}
     <section class=" mt-5 mb-5 ">
-        <header class="mb-5">
+        <header class="mb-5 mt-5">
             <div class="container mb-5" id="about" data-aos="zoom-in" data-aos-duration="1000">
                 <div class="row mb-5">
-                    <h1 class="text-center text-light mb-4">About</h1>
+                    <h1 class="text-center text-dark mb-4 mt-5">About</h1>
                     <h3 class="text-center mb-0"><a href="#"
-                            style=" font-weight: 1000;" class="logo text-light">
+                            style=" font-weight: 1000;" class="logo text-dark">
                             @{{ Artisan<span>.</span><span style="color: #29b6f6;">Compass</span > }}</a></h3>
                     <p class="text-justify text-center mb-5 mt-0">Selamat datang di Artisan.Compass - Rumah bagi para calon
                         developer web masa depan!</p>
@@ -284,15 +327,15 @@
 
                 <!-- Logo dan Tentang Singkat -->
                 <div class="col-md-4 mb-4">
-                    <h5 class="text-white">@{{ Artisan.Compass }}</h5>
-                    <p class="text-light small">Platform belajar pemrograman web terlengkap dengan roadmap yang
+                    <h5 class="text-dark">@{{ Artisan.Compass }}</h5>
+                    <p class="text-dark small">Platform belajar pemrograman web terlengkap dengan roadmap yang
                         terstruktur untuk membantu Anda memulai karier sebagai developer.</p>
                     <div class="social-icons mt-3">
-                        <a href="#" class="text-light me-3"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" class="text-light me-3"><i class="fab fa-twitter"></i></a>
-                        <a href="#" class="text-light me-3"><i class="fab fa-instagram"></i></a>
-                        <a href="#" class="text-light me-3"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="#" class="text-light me-3"><i class="fab fa-github"></i></a>
+                        <a href="#" class="text-dark me-3"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-dark me-3"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-dark me-3"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-dark me-3"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="text-dark me-3"><i class="fab fa-github"></i></a>
                     </div>
                 </div>
 
@@ -308,10 +351,10 @@
 
                 <!-- Kontak dan Newsletter -->
                 <div class="col-md-4 mb-4">
-                    <h5 class="text-white">Newsletter</h5>
-                    <p class="text-light small">Dapatkan update materi dan tips pemrograman terbaru dari kami.</p>
+                    <h5 class="text-dark">Newsletter</h5>
+                    <p class="text-dark small">Dapatkan update materi dan tips pemrograman terbaru dari kami.</p>
 
-                    <p class="text-light small mt-3">
+                    <p class="text-dark small mt-3">
                         <i class="fas fa-envelope me-2"></i> info@artisancompass.id<br>
                         <i class="fas fa-phone me-2"></i> +62 812 3456 7890
                     </p>
@@ -323,12 +366,12 @@
             <!-- Copyright -->
             <div class="row">
                 <div class="col-md-6">
-                    <p class="text-light small mb-0">&copy; 2025 Artisan.Compass. All Rights Reserved.</p>
+                    <p class="text-dark small mb-0">&copy; 2025 Artisan.Compass. All Rights Reserved.</p>
                 </div>
                 <div class="col-md-6 text-md-end">
-                    <a href="#" class="text-light text-decoration-none small me-3">Privacy Policy</a>
-                    <a href="#" class="text-light text-decoration-none small me-3">Terms of Service</a>
-                    <a href="#" class="text-light text-decoration-none small">Sitemap</a>
+                    <a href="#" class="text-dark text-decoration-none small me-3">Privacy Policy</a>
+                    <a href="#" class="text-dark text-decoration-none small me-3">Terms of Service</a>
+                    <a href="#" class="text-dark text-decoration-none small">Sitemap</a>
                 </div>
             </div>
 

@@ -32,22 +32,25 @@ class CategoryController extends Controller
         $courseCompletionStatus = [];
 
         $coursesWithCompletionStatus = $courses->map(function ($course) use ($user) {
-            // Mengecek apakah kursus telah selesai oleh pengguna
+
             $isCompleted = CourseCompletion::where('user_id', $user)
                 ->where('course_id', $course->id)
                 ->where('selesai', true)
                 ->exists();
 
-            // Menambahkan status penyelesaian ke objek kursus
             $course->is_completed = $isCompleted;
 
             return $course;
         });
 
+        $courseSkor = CourseCompletion::where('user_id', $user)
+            ->whereIn('course_id', $courses->pluck('id'))
+            ->get();
         return view('pages.user.category-detail', [
             'category' => $category,
             'courses' => $coursesWithCompletionStatus,
             'courseCompletionStatus' => $courseCompletionStatus,
+            'courseSkor' => $courseSkor,
             'mermaidData' => $category->roadmap ? $this->renderMermaid($category->roadmap) : null
         ]);
     }
@@ -78,7 +81,7 @@ class CategoryController extends Controller
 
 
         $mermaidData .= "classDef node fill:#29b6f6,stroke:000,stroke-width:1px, rx:10px,ry:10px,color:#fff;\n";  // Styling untuk node
-        $mermaidData .= "linkStyle default stroke:#fff,stroke-width:3px,fill:none,stroke-dasharray: 0;\n";
+        $mermaidData .= "linkStyle default stroke:#121212,stroke-width:3px,fill:none,stroke-dasharray: 0;\n";
 
         return $mermaidData;
     }

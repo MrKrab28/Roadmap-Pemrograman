@@ -145,10 +145,10 @@
                 themeVariables: {
                     // edgeLabelBackground: '#fff',
                     // primaryColor: '#29b6f6',
-                    lineColor: '#fff',
-                    color: '#000',
+                    lineColor: '#121212',
+                    color: '#121212',
 
-                    arrowheadColor: '#000' // ⬅️ Ini penting!
+                    arrowheadColor: '#121212' // ⬅️ Ini penting!
                 }
             });
         </script>
@@ -169,36 +169,41 @@
             @foreach ($courses as $course)
                 <div class="col-md-3 column mb-5">
                     @if ($course->is_completed)
-                        <div class="card gr-1" style="background-color: #29b6f6">
+                        <div class="card gr-cardd" style="background-color: #29b6f6">
                             <div class="txt">
                                 <h1 style="word-wrap: break-word">{{ $course->judul }}</h1>
                                 <p>{{ Str::of($course->content)->stripTags()->limit(50) }}</p>
                             </div>
                             <a href="{{ route('user.course-detail', $course->id) }}"> Read more</a>
+                            @php
+                            $skor = $courseSkor->firstWhere('course_id', $course->id);
+                        @endphp
+
+                        <h2 class="text-white text-end"> Score  {{ $skor->skor }}</h2>
                             <div class="ico-card">
                                 <div class="d-flex align-items-center justify-content-end">
                                     <div class="d-flex align-items-end">
                                         <i class="fa-solid fa-check justify-content-start"></i>
+
                                         <p class="text-white">Completed</p>
                                     </div>
-                                    <img src="{{ asset('images/courses/' . $course->gambar) }}"
-                                        style="height: 200px;width: 200px;" alt="">
-
+                                    <img src="{{ asset('images/courses/' . $course->gambar) }}" class="rounded-circle"
+                                        style="height: 80px;width: 50px;" alt="">
                                 </div>
-
                             </div>
                         </div>
                     @else
-                        <div class="card gr-1">
+                        <div class="card gr-backend">
                             <div class="txt">
                                 <h1 style="word-wrap: break-word">{{ $course->judul }}</h1>
                                 <p>{{ Str::of($course->content)->stripTags()->limit(50) }}</p>
                             </div>
                             <a href="{{ route('user.course-detail', $course->id) }}"> Read more</a>
                             <div class="ico-card">
-                                <div class="d-flex align-items-center justify-content-end">
-                                    <img src="{{ asset('images/courses/' . $course->gambar) }}"
-                                        style="height: 200px;width: 200px;" alt="">
+
+                                <div class="d-flex align-items-center justify-content-end ">
+                                    <img src="{{ asset('images/courses/' . $course->gambar) }}" class="rounded-circle"
+                                        style="height: 80px;width: 50px;" alt="">
 
                                 </div>
 
@@ -216,7 +221,7 @@
                 overflow: auto;
                 border: 2px solid #ffffff30;
                 border-radius: 10px;
-                background-color: #ffffff00;
+                background-color: #ffffff;
                 padding: 1rem;
                 margin: auto;
                 box-shadow: 0 0 10px #00000050;
@@ -253,7 +258,7 @@
                 top: 20px;
                 left: 50%;
                 transform: translateX(-50%);
-                background-color: rgba(0, 0, 0, 0.7);
+                background-color: rgba(0, 0, 0, 0.5);
                 padding: 10px;
                 border-radius: 5px;
                 font-size: 16px;
@@ -279,9 +284,9 @@
         </style>
 
         <div class="row mb-5">
-            <h1 class="card-title text-center text-light fs-1">Roadmap</h1>
-            <h1 class="card-title text-center text-light fs-3">{{ $category->nama }}</h1>
-            <h5 class="card-title text-center text-light mt-3 mb-5">{{ $category->deskripsi }}</h5>
+            <h1 class="card-title text-center  fs-1">Roadmap</h1>
+            <h1 class="card-title text-center  fs-3">{{ $category->nama }}</h1>
+            <h5 class="card-title text-center  mt-3 mb-5">{{ $category->deskripsi }}</h5>
             <div id="mermaid-frame">
                 <div class="instructions">
                     <strong>Petunjuk:</strong><br>
