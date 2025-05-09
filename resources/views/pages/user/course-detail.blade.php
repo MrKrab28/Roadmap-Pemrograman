@@ -22,18 +22,33 @@
                 <div class="row mt-5 mb-5 justify-content-center">
 
                     @foreach ($course->materi as $materi)
-                        <div class="col-md-3 col-lg-3 column ">
-                            <div class="card gr-1 " style="height: 250px;">
-                                <div class="txt">
-                                    <h1 style="word-wrap: break-word">{{ $materi->judul }}</h1>
-                                    <p>{{ Str::of($materi->content)->stripTags()->limit(50) }}</p>
-                                </div>
-                                <a href="{{ route('user.materi-detail', $materi->id) }}"> Read more</a>
-                                <div class="ico-card">
-                                    <i class="fa-solid fa-laptop-code"></i>
+                        @if ($materi->reader != null && in_array(auth()->user()->id, json_decode($materi->reader)))
+                            <div class="col-md-3 col-lg-3 column ">
+                                <div class="card gr-backend " style="height: 250px;">
+                                    <div class="txt">
+                                        <h1 style="word-wrap: break-word">{{ $materi->judul }}</h1>
+                                        <p>{{ Str::of($materi->content)->stripTags()->limit(50) }}</p>
+                                    </div>
+                                    <a href="{{ route('user.materi-detail', $materi->id) }}"> Read more</a>
+                                    <div class="ico-card">
+                                        <i class="fa-solid fa-laptop-code"></i>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
+                            @else
+                            <div class="col-md-3 col-lg-3 column ">
+                                <div class="card gr-1 " style="height: 250px;">
+                                    <div class="txt">
+                                        <h1 style="word-wrap: break-word">{{ $materi->judul }}</h1>
+                                        <p>{{ Str::of($materi->content)->stripTags()->limit(50) }}</p>
+                                    </div>
+                                    <a href="{{ route('user.materi-detail', $materi->id) }}"> Read more</a>
+                                    <div class="ico-card">
+                                        <i class="fa-solid fa-laptop-code"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        @endif
                     @endforeach
 
 

@@ -164,9 +164,73 @@
             .swal2-title {
                 color: white !important;
             }
+
+            .range {
+                position: relative;
+                background-color: #333;
+                width: 300px;
+                height: 30px;
+                transform: skew(30deg);
+                font-family: 'Orbitron', monospace;
+
+                &:before {
+                    --width: calc(var(--p) * 1%);
+
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 0;
+                    height: 100%;
+                    background-color: var(--warna, #F3E600);
+                    z-index: 0;
+                    animation: load .5s forwards linear;
+                }
+
+
+                &:after {
+                    counter-reset: progress var(--p);
+                    content: counter(progress) '%';
+                    color: #000;
+                    position: absolute;
+                    left: 5%;
+                    top: 50%;
+                    transform: translateY(-50%) skewX(-30deg);
+                    z-index: 1;
+                }
+
+                &__label {
+                    transform: skew(-30deg) translateY(-100%);
+                    line-height: 1.5;
+                }
+            }
+
+            @keyframes load {
+                to {
+                    width: var(--width);
+                }
+            }
         </style>
         <div class="row justify-content-center mt-5 mb-5">
             @foreach ($courses as $course)
+                @php
+                    $userId = auth()->user()->id;
+                    $totalMateri = $course->materi->count();
+                    $materiDibaca = $course->materi
+                        ->filter(function ($materi) use ($userId) {
+                            $readers = $materi->reader ? json_decode($materi->reader, true) : [];
+                            return in_array($userId, $readers);
+                        })
+                        ->count();
+                    $persentase = $totalMateri > 0 ? ($materiDibaca / $totalMateri) * 100 : 0;
+                    if ($persentase >= 100 && $course->is_completed) {
+                        $warna = '#4CAF50'; // hijau: semua selesai
+                    } elseif ($persentase >= 100) {
+                        $warna = '#FFA500'; // oranye: materi selesai, kuis belum
+                    } else {
+                        $warna = '#F3E600'; // kuning: masih dalam proses
+                    }
+                @endphp
                 <div class="col-md-3 column mb-5">
                     @if ($course->is_completed)
                         <div class="card gr-cardd" style="background-color: #29b6f6">
@@ -176,10 +240,10 @@
                             </div>
                             <a href="{{ route('user.course-detail', $course->id) }}"> Read more</a>
                             @php
-                            $skor = $courseSkor->firstWhere('course_id', $course->id);
-                        @endphp
+                                $skor = $courseSkor->firstWhere('course_id', $course->id);
+                            @endphp
 
-                        <h2 class="text-white text-end"> Score  {{ $skor->skor }}</h2>
+                            <h2 class="text-white text-end position-absolute bottom-0 end-0 me-3   "> Score {{ $skor->skor }}</h2>
                             <div class="ico-card">
                                 <div class="d-flex align-items-center justify-content-end">
                                     <div class="d-flex align-items-end">
@@ -191,6 +255,10 @@
                                         style="height: 80px;width: 50px;" alt="">
                                 </div>
                             </div>
+                        </div>
+
+                        <div class="range mt-2" style="--p:{{ $persentase }}; --warna: {{ $warna }}">
+                            <div class="range__label">Progress</div>
                         </div>
                     @else
                         <div class="card gr-backend">
@@ -209,11 +277,17 @@
 
                             </div>
                         </div>
+                        @if ($materiDibaca > 0)
+                            <div class="range mt-2" style="--p:{{ $persentase }}">
+                                <div class="range__label">Progress</div>
+                            </div>
+                        @endif
                     @endif
-                </div>
-            @endforeach
-        </div>
 
+                </div>
+                @endforeach
+                <h1>Skor Rata-rata: {{ $courses->sum( fn ($course) => $course->courseCompletions->sum('skor') ) / $courses->count()  }}</h1>
+        </div>
         <style>
             #mermaid-frame {
                 width: 100%;

@@ -43,7 +43,7 @@ class DatabaseSeeder extends Seeder
            RoadmapSeeder::class,
            NodeSeeder::class,
            ConnectionSeeder::class,
-            // CompletionSeeder::class
+            CompletionSeeder::class
         ]);
     }
 }

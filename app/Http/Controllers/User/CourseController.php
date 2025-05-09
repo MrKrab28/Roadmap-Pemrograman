@@ -13,7 +13,9 @@ class CourseController extends Controller
 {
     public function index()
     {
-        $courses = Course::all();
+        $courses = Course::with('materi')->get();
+
+
         return view('pages.user.course', [
             'courses' => $courses
         ]);
@@ -47,5 +49,4 @@ class CourseController extends Controller
 
         return redirect()->route('user.course-index')->with('status', 'benar');
     }
-
 }

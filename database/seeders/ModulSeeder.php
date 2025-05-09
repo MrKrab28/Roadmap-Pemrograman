@@ -18,24 +18,28 @@ class ModulSeeder extends Seeder
                 'course_id' => 1,
                 'judul' => 'Apa itu PHP?',
                 'content' => "<p><strong>PHP (Hypertext Preprocessor)</strong> adalah bahasa pemrograman yang digunakan untuk membuat aplikasi web dinamis. PHP pertama kali dikembangkan oleh <strong>Rasmus Lerdorf</strong> pada tahun 1994. PHP awalnya digunakan untuk menghitung jumlah pengunjung pada situs web, namun berkembang menjadi bahasa pemrograman yang digunakan secara luas dalam pengembangan aplikasi web backend.</p><p>PHP adalah bahasa scripting server-side yang artinya kode PHP dijalankan di sisi server dan hasilnya dikirimkan ke browser sebagai HTML.</p>",
+                'reader' => json_encode([1]),
                 'urutan' => 1,
             ],
             [
                 'course_id' => 1,
                 'judul' => "Sejarah",
                 'content' => "<p><strong>PHP pertama kali diciptakan oleh Rasmus Lerdorf</strong> pada tahun 1994 sebagai <strong>Personal Home Page Tools</strong> (PHP Tools). Tujuannya adalah untuk membuat sebuah sistem yang dapat memantau pengunjung di website pribadinya. PHP kemudian berkembang menjadi bahasa pemrograman scripting yang digunakan untuk pengembangan web, dan pada tahun 1995, PHP diperkenalkan ke publik sebagai <strong>PHP/FI</strong>.</p><p>Seiring waktu, PHP terus berkembang dengan tambahan fitur seperti interaksi dengan database, pengolahan form, dan pembuatan aplikasi web dinamis. Versi PHP yang stabil saat ini adalah PHP 8.x yang menawarkan banyak fitur canggih seperti peningkatan performa, keamanan, dan dukungan untuk fitur-fitur modern di pengembangan web.</p>",
+                'reader' => json_encode([1]),
                 'urutan' => 2
             ],
             [
                 'course_id' => 1,
                 'judul' => "Fungsi PHP dalam Pengembangan Web Backend",
                 'content' => "<p>PHP memiliki banyak kegunaan penting dalam pengembangan web backend, antara lain:</p><ul><li><strong>Mengolah Formulir Pengguna:</strong> PHP digunakan untuk mengolah data yang dikirimkan melalui formulir HTML dan kemudian memproses atau menyimpannya dalam database.</li><li><strong>Interaksi dengan Database:</strong> PHP sangat populer untuk menghubungkan aplikasi web dengan database, seperti MySQL atau PostgreSQL, memungkinkan pengambilan, penyimpanan, dan pengolahan data dalam aplikasi web.</li><li><strong>Manajemen Sesi Pengguna:</strong> PHP digunakan untuk mengelola sesi pengguna, seperti login dan autentikasi, sehingga aplikasi web dapat melacak pengguna yang sedang login.</li><li><strong>Generasi Konten Dinamis:</strong> PHP dapat membuat halaman web yang berbeda untuk pengguna berdasarkan input mereka. Misalnya, memberikan pengalaman pengguna yang dipersonalisasi.</li><li><strong>Keamanan Web:</strong> PHP juga menyediakan berbagai fitur untuk mengamankan aplikasi web, termasuk perlindungan terhadap SQL Injection, Cross-Site Scripting (XSS), dan Cross-Site Request Forgery (CSRF).</li></ul>",
+                'reader' => json_encode([1]),
                 'urutan' => 3
             ],
             [
                 'course_id' => 1,
                 'judul' => "Instalasi",
                 'content' => "<p>Agar dapat menjalankan PHP secara lokal, Anda perlu menginstal PHP beserta web server (Apache) dan database (MySQL). Ada beberapa alat yang bisa digunakan untuk ini, di antaranya:</p><ul><li><strong>XAMPP:</strong> XAMPP adalah paket perangkat lunak yang menyediakan Apache, MySQL, PHP, dan Perl dalam satu instalasi. Ini adalah pilihan yang sangat populer di Windows, Linux, dan macOS.</li><li><strong>WAMP:</strong> WAMP adalah paket yang dirancang untuk Windows yang menyediakan Apache, MySQL, dan PHP. WAMP sering digunakan oleh pengembang Windows.</li><li><strong>LAMP:</strong> LAMP adalah paket perangkat lunak untuk Linux yang menyediakan Linux, Apache, MySQL, dan PHP. Ini adalah pilihan umum untuk pengembangan server-side di lingkungan Linux.</li></ul><p>Setelah mengunduh dan menginstal XAMPP, WAMP, atau LAMP, Anda dapat mulai menulis kode PHP di editor teks dan menjalankannya di server lokal Anda. Ini memungkinkan Anda untuk mengembangkan dan menguji aplikasi PHP tanpa harus terhubung ke server web jarak jauh.</p><p>Langkah-langkah dasar instalasi (misalnya, XAMPP):</p><ol><li>Unduh XAMPP dari situs resmi Apache Friends.</li><li>Jalankan installer dan pilih komponen yang ingin Anda instal (Apache, MySQL, PHP, dll).</li><li>Setelah instalasi selesai, buka XAMPP Control Panel dan mulai server Apache dan MySQL.</li><li>Tempatkan file PHP Anda di folder <strong>htdocs</strong> untuk memulai pengujian aplikasi.</li></ol>",
+                'reader' => json_encode([1]),
                 'urutan' => 4
             ],
             [
@@ -43,6 +47,7 @@ class ModulSeeder extends Seeder
                 'judul' => "Pengenalan HTML",
                 'content' => "<h1>Pengertian HTML dan Peranannya dalam Pembuatan Halaman Web</h1>
                 <p><strong>HTML (HyperText Markup Language)</strong> adalah bahasa markup standar untuk membuat halaman web. HTML digunakan untuk menyusun dan menampilkan teks, gambar, video, dan elemen-elemen lainnya di browser.</p><p>HTML bukan bahasa pemrograman, tetapi bahasa yang menyusun struktur halaman web. HTML bekerja bersama CSS (untuk tampilan) dan JavaScript (untuk interaktivitas) dalam membentuk aplikasi web modern.</p><p><strong>Peran HTML:</strong></p><ul><li>Menentukan struktur dasar halaman web</li><li>Menampilkan konten seperti teks dan media</li><li>Menjadi dasar sebelum menambahkan CSS dan JavaScript</li></ul>",
+                'reader' => json_encode([1]),
                 'urutan' => 1
             ],
             [
@@ -59,12 +64,14 @@ class ModulSeeder extends Seeder
           &lt;/body&gt;
         &lt;/html&gt;
         </code></pre><p><strong>Penjelasan:</strong></p><ul><li><code>&lt;!DOCTYPE html&gt;</code>: Menandakan dokumen HTML5</li><li><code>&lt;html&gt;</code>: Tag utama dari seluruh isi halaman</li><li><code>&lt;head&gt;</code>: Berisi informasi meta, judul, link CSS, dll</li><li><code>&lt;body&gt;</code>: Tempat menaruh konten utama seperti teks, gambar, dan lainnya</li></ul>",
-                'urutan' => 2
+        'reader' => json_encode([1]),
+        'urutan' => 2
             ],
             [
                 'course_id' => 2,
                 'judul' => "Elemen Dasar: Tag, Atribut, dan Nilai",
                 'content' => "<p>HTML dibentuk dari <strong>elemen</strong> yang dimulai dengan <strong>tag</strong>. Tag HTML biasanya berpasangan (pembuka dan penutup), dan bisa memiliki <strong>atribut</strong> dengan <strong>nilai</strong> tertentu.</p><p><strong>Contoh elemen HTML:</strong></p><pre><code>&lt;a href=\"https://example.com\" target=\"_blank\"&gt;Kunjungi Website&lt;/a&gt;</code></pre><p><strong>Penjelasan:</strong></p><ul><li><strong>Tag:</strong> &lt;a&gt; dan &lt;/a&gt; digunakan untuk membuat tautan</li><li><strong>Atribut:</strong> <code>href</code> menentukan URL tujuan, <code>target</code> menentukan perilaku jendela</li><li><strong>Nilai:</strong> \"https://example.com\" adalah nilai dari <code>href</code></li></ul><p>Dengan memahami elemen HTML, Anda dapat mulai membangun struktur halaman secara semantik dan rapi.</p>",
+                'reader' => json_encode([1]),
                 'urutan' => 3
             ],
             [
@@ -182,7 +189,8 @@ echo SITE_NAME;
 
 <p>Ini adalah dasar yang wajib kamu kuasai sebelum masuk ke pemrograman lanjutan seperti OOP, manipulasi data, dan penggunaan framework.</p>
 HTML,
-                'urutan' => 1
+'reader' => json_encode([1]),
+'urutan' => 1
             ],
 
 
@@ -269,7 +277,8 @@ var_dump(!\$x);       // false
     <li>Operator membantu kita melakukan operasi matematika dan logika dalam kode.</li>
 </ul>
 <p>Memahami konsep dasar ini akan sangat membantumu dalam memahami alur logika program dan mengembangkan aplikasi web dengan PHP.</p>",
-                'urutan' => 2
+'reader' => json_encode([1]),
+'urutan' => 2
             ],
 
 
@@ -374,7 +383,8 @@ var_dump(!\$x);       // false
                 <li><code>break</code> dan <code>continue</code> berguna untuk mengatur jalannya loop.</li>
             </ul>
             <p>Dengan struktur kontrol, kamu bisa membuat program yang lebih fleksibel dan responsif terhadap kondisi yang berubah.</p>",
-                'urutan' => 3,
+            'reader' => json_encode([1]),
+            'urutan' => 3,
             ],
 
 
@@ -491,7 +501,8 @@ echo totalJumlah(10, 20, 30); // Output: 60
 
 <p>Memahami fungsi adalah dasar penting dalam membuat aplikasi PHP yang terstruktur dan dapat digunakan kembali.</p>
 HTML,
-                'urutan' => 4,
+'reader' => json_encode([1]),
+'urutan' => 4,
             ],
 
 
@@ -672,7 +683,8 @@ HTML,
 
             <p>Memahami array sangat penting karena sering digunakan dalam pemrograman PHP, terutama dalam menangani data yang besar atau kompleks.</p>
             HTML,
-                'urutan' => 5,
+            'reader' => json_encode([1]),
+            'urutan' => 5,
             ],
 
 
@@ -710,6 +722,7 @@ HTML,
                     <li>Jika Anda menggunakan sistem operasi selain Windows, langkah-langkah instalasi mungkin sedikit berbeda. Anda bisa mengunduh versi untuk Linux atau macOS dari situs resmi MySQL.</li>
                     <li>Pastikan Anda memiliki koneksi internet yang stabil saat mengunduh MySQL Installer, karena beberapa komponen mungkin perlu diunduh selama proses instalasi.</li>
                 </ul>",
+                'reader' => json_encode([1]),
                 'urutan' => 1
             ],
 
@@ -751,6 +764,7 @@ HTML,
                     <li>Pastikan menggunakan mode error handling yang tepat, seperti <strong>PDO::ERRMODE_EXCEPTION</strong>, agar error dapat terdeteksi lebih cepat.</li>
                 </ul>",
 
+                'reader' => json_encode([1]),
                 'urutan' => 2
             ],
 
@@ -814,6 +828,7 @@ HTML,
                     echo 'Error: ' . \$sql . '&lt;br&gt;' . \$conn->error;
                 }
                 ?&gt;</code></pre>",
+                'reader' => json_encode([1]),
                 'urutan' => 3
             ],
 
@@ -857,6 +872,7 @@ HTML,
                 }
                 ?&gt;</code></pre>
                 ",
+                'reader' => json_encode([1]),
                 'urutan' => 4
             ],
 
@@ -931,7 +947,8 @@ HTML,
         <h3>📌 Kesimpulan</h3>
         <p>CRUD adalah inti dari sebagian besar aplikasi web. Dengan memahami konsep ini, kamu sudah bisa mulai membangun aplikasi berbasis data menggunakan PHP dan MySQL secara efisien dan terstruktur.</p>
     ",
-                'urutan' => 1,
+    'reader' => json_encode([1]),
+    'urutan' => 1,
             ],
 
 
@@ -1043,7 +1060,8 @@ header("Location: index.php");
         </ul>
         <p>Ini adalah fondasi utama dari hampir semua aplikasi berbasis database.</p>
    ',
-                'urutan' => 2,
+   'reader' => json_encode([1]),
+   'urutan' => 2,
             ],
 
 
@@ -1136,7 +1154,8 @@ header("Location: index.php");
 
         <p>Jangan lupa untuk selalu memvalidasi dan men-sanitize input yang diterima dari pengguna sebelum memprosesnya lebih lanjut ke dalam database!</p>
     ',
-                'urutan' => 3,
+    'reader' => json_encode([1]),
+    'urutan' => 3,
             ],
 
 
@@ -1212,7 +1231,8 @@ echo \$email; // Menghilangkan karakter-karakter berbahaya pada email
     <li>Selalu sanitasi data untuk menghindari risiko XSS dan SQL Injection.</li>
     <li>Gunakan fungsi PHP seperti <code>htmlspecialchars()</code> dan <code>filter_var()</code> untuk validasi dan sanitasi input dari form.</li>
 </ul>",
-                'urutan' => 1,
+'reader' => json_encode([1]),
+'urutan' => 1,
             ],
 
 
@@ -1296,7 +1316,8 @@ if (\$result-&gt;num_rows &gt; 0) {
     <li>Gunakan <strong>prepared statements</strong> untuk memisahkan query SQL dan data input pengguna.</li>
     <li>PHP mendukung prepared statements melalui MySQLi dan PDO.</li>
 </ul>",
-                'urutan' => 2
+'reader' => json_encode([1]),
+'urutan' => 2
             ],
 
 
@@ -1373,7 +1394,8 @@ if (password_verify(\$inputPassword, \$hashedFromDB)) {
     <li>Gunakan <code>password_hash()</code> dan <code>password_verify()</code> untuk memastikan keamanan login pengguna.</li>
     <li>Jangan pernah menyimpan password dalam bentuk teks biasa (plaintext)!</li>
 </ul>",
-                'urutan' => 3,
+'reader' => json_encode([1]),
+'urutan' => 3,
             ],
 
 
@@ -1396,6 +1418,7 @@ if (password_verify(\$inputPassword, \$hashedFromDB)) {
 
             [
                 'course_id' => 7,
+                'reader' => json_encode([1]),
                 'urutan' => 1,
                 'judul' => 'Heading, Paragraph, Lists',
                 'content' =>  '
@@ -1478,6 +1501,7 @@ if (password_verify(\$inputPassword, \$hashedFromDB)) {
 
             [
                 'course_id' => 7,
+                'reader' => json_encode([1]),
                 'urutan' => 2,
                 'judul' => 'Form Input',
                 'content' => '
@@ -1570,6 +1594,7 @@ if (password_verify(\$inputPassword, \$hashedFromDB)) {
 
             [
                 'course_id' => 7,
+                'reader' => json_encode([1]),
                 'urutan' => 3,
                 'judul' => 'Image, Video, & Audio',
                 'content' => '
@@ -1639,6 +1664,7 @@ if (password_verify(\$inputPassword, \$hashedFromDB)) {
 
             [
                 'course_id' => 7,
+                'reader' => json_encode([1]),
                 'urutan' => 4,
                 'judul' => 'Link & Navigation',
                 'content' => '
@@ -1710,6 +1736,7 @@ if (password_verify(\$inputPassword, \$hashedFromDB)) {
 
             [
                 'course_id' => 8,
+                'reader' => json_encode([1]),
                 'urutan' => 1,
                 'judul' => 'Elemen Layout Dasar',
                 'content' => '
@@ -1789,6 +1816,7 @@ if (password_verify(\$inputPassword, \$hashedFromDB)) {
 
             [
                 'course_id' => 8,
+                'reader' => json_encode([1]),
                 'urutan' => 2,
                 'judul' => 'Table Layout & Grid Sederhana',
                 'content' =>  '
@@ -1920,6 +1948,7 @@ if (password_verify(\$inputPassword, \$hashedFromDB)) {
 
             [
                 'course_id' => 8,
+                'reader' => json_encode([1]),
                 'urutan' => 3,
                 'judul' => 'Elemen dengan Hierarki Semantik yang Benar',
                 'content' => '<h2>Pendahuluan</h2>
@@ -2069,6 +2098,7 @@ if (password_verify(\$inputPassword, \$hashedFromDB)) {
 
             [
                 'course_id' => 9,
+                'reader' => json_encode([1]),
                 'urutan' => 1,
                 'judul' => 'Apa Itu CSS?',
                 'content' => "
@@ -2124,6 +2154,7 @@ if (password_verify(\$inputPassword, \$hashedFromDB)) {
 
             [
                 'course_id' => 9,
+                'reader' => json_encode([1]),
                 'urutan' => 2,
                 'judul' => 'Config CSS',
                 'content' => "
@@ -2228,6 +2259,7 @@ p {
             ],
             [
                 'course_id' => 9,
+                'reader' => json_encode([1]),
                 'urutan' => 3,
                 'judul' => 'CSS: selector, properti, dan value',
                 'content' => "<h1>Menyusun Aturan CSS: Selector, Properti, dan Value(nilai)</h1>
@@ -2317,6 +2349,7 @@ h1 {
 
             [
                 'course_id' => 10,
+                'reader' => json_encode([1]),
                 'urutan' => 1,
                 'judul' => 'Menata Text & Font',
                 'content' => '
@@ -2433,6 +2466,7 @@ Pilihan font mempengaruhi nuansa emosional website. Misalnya, situs berita sebai
 
             [
                 'course_id' => 10,
+                'reader' => json_encode([1]),
                 'urutan' => 2,
                 'judul' => 'Padding, Margin, & Border',
                 'content' => '
@@ -2568,6 +2602,7 @@ Pilihan font mempengaruhi nuansa emosional website. Misalnya, situs berita sebai
 
             [
                 'course_id' => 10,
+                'reader' => json_encode([1]),
                 'urutan' => 3,
                 'judul' => 'Background, Gradient, & Image',
                 'content' => '
@@ -2697,6 +2732,7 @@ Pilihan font mempengaruhi nuansa emosional website. Misalnya, situs berita sebai
 
             [
                 'course_id' => 10,
+                'reader' => json_encode([1]),
                 'urutan' => 4,
                 'judul' => 'Width, Height, & Display',
                 'content' => '
@@ -2797,6 +2833,7 @@ span {
 
             [
                 'course_id' => 11,
+                'reader' => json_encode([1]),
                 'urutan' => 1,
                 'judul' => 'Responsif Design',
                 'content' => '
@@ -2847,6 +2884,7 @@ body {
 
             [
                 'course_id' => 11,
+                'reader' => json_encode([1]),
                 'urutan' => 2,
                 'judul' => 'Layout Responsif & Viewport Units',
                 'content' => '
@@ -2945,6 +2983,7 @@ body {
 
             [
                 'course_id' => 11,
+                'reader' => json_encode([1]),
                 'urutan' => 3,
                 'judul' => 'Media queries',
                 'content' => '
@@ -3059,6 +3098,7 @@ body {
 
             [
                 'course_id' => 11,
+                'reader' => json_encode([1]),
                 'urutan' => 4,
                 'judul' => 'Flexbox & Grid',
                 'content' => '
@@ -3170,6 +3210,7 @@ body {
             ],
             [
                 'course_id' => 12,
+                'reader' => json_encode([1]),
                 'urutan' => 1,
                 'judul' => 'Apa itu JavaScript?',
                 'content' =>  '
@@ -3203,6 +3244,7 @@ body {
 
             [
                 'course_id' => 12,
+                'reader' => json_encode([1]),
                 'urutan' => 2,
                 'judul' => 'Struktur Dasar',
                 'content' => '
@@ -3290,6 +3332,7 @@ var status = "Mahasiswa";</code></pre>
 
             [
                 'course_id' => 12,
+                'reader' => json_encode([1]),
                 'urutan' => 3,
                 'judul' => 'Menyisipkan JavaScript dalam HTML',
                 'content' => '
@@ -3393,6 +3436,7 @@ var status = "Mahasiswa";</code></pre>
 
             [
                 'course_id' => 13,
+                'reader' => json_encode([1]),
                 'urutan' => 1,
                 'judul' => 'Structur Control',
                 'content' => '
@@ -3511,6 +3555,7 @@ Selama angka kurang dari atau sama dengan 5, kode akan terus diulang dan angka a
 
             [
                 'course_id' => 13,
+                'reader' => json_encode([1]),
                 'urutan' => 2,
                 'judul' => 'Function',
                 'content' => '
@@ -3615,6 +3660,7 @@ console.log(hitungLuasPersegi(4)); // Output: 16</code></pre>
 
             [
                 'course_id' => 13,
+                'reader' => json_encode([1]),
                 'urutan' => 3,
                 'judul' => 'Object & Array',
                 'content' =>  '
@@ -3722,6 +3768,7 @@ console.log(hitungLuasPersegi(4)); // Output: 16</code></pre>
 
             [
                 'course_id' => 13,
+                'reader' => json_encode([1]),
                 'urutan' => 4,
                 'judul' => 'Event Handling',
                 'content' => '
@@ -3839,6 +3886,7 @@ tombol.addEventListener("click", function() {
 
             [
                 'course_id' => 14,
+                'reader' => json_encode([1]),
                 'urutan' => 1,
                 'judul' => 'Pengenalan Laravel',
                 'content' => '<h2>Apa itu Laravel?</h2>
@@ -3895,6 +3943,7 @@ tombol.addEventListener("click", function() {
 
             [
                 'course_id' => 14,
+                'reader' => json_encode([1]),
                 'urutan' => 2,
                 'judul' => 'Installation',
                 'content' => '
@@ -3966,6 +4015,7 @@ php artisan serve</code></pre>
 
             [
                 'course_id' => 14,
+                'reader' => json_encode([1]),
                 'urutan' => 3,
                 'judul' => 'Folder Structur',
                 'content' => '<h2>Pendahuluan</h2>
@@ -4028,6 +4078,7 @@ php artisan serve</code></pre>
 
             [
                 'course_id' => 15,
+                'reader' => json_encode([1]),
                 'urutan' => 1,
                 'judul' => 'Routes',
                 'content' => "
@@ -4094,6 +4145,7 @@ php artisan serve</code></pre>
 
             [
                 'course_id' => 15,
+                'reader' => json_encode([1]),
                 'urutan' => 2,
                 'judul' => 'Controllers',
                 'content' => "<h2>Pendahuluan</h2>
@@ -4190,6 +4242,7 @@ Route::get('/product/{id}', [ProductController::class, 'show']);
 
             [
                 'course_id' => 15,
+                'reader' => json_encode([1]),
                 'urutan' => 3,
                 'judul' => 'Routing Resource & CRUD Operations',
                 'content' => "<h2>Pendahuluan</h2>
@@ -4330,6 +4383,7 @@ class ProductController extends Controller
 
             [
                 'course_id' => 16,
+                'reader' => json_encode([1]),
                 'urutan' => 1,
                 'judul' => 'Eloquent ORM',
                 'content' => '<h2>Pendahuluan</h2>
@@ -4402,6 +4456,7 @@ protected \$fillable = ["nama", "nim"];
 
             [
                 'course_id' => 16,
+                'reader' => json_encode([1]),
                 'urutan' => 2,
                 'judul' => 'Interaksi Model dan Database',
                 'content' => '<h2>Pendahuluan</h2>
@@ -4482,6 +4537,7 @@ Produk::create([
 
             [
                 'course_id' => 16,
+                'reader' => json_encode([1]),
                 'urutan' => 3,
                 'judul' => 'migration & struktur tabel',
                 'content' => '<h2>Pendahuluan</h2>
@@ -4564,6 +4620,7 @@ return new class extends Migration
 
             [
                 'course_id' => 16,
+                'reader' => json_encode([1]),
                 'urutan' => 4,
                 'judul' => 'Laravel Seeder',
                 'content' => "<h2>Pendahuluan</h2>
@@ -4665,6 +4722,7 @@ Produk::factory()->count(50)->create();
 
             [
                 'course_id' => 17,
+                'reader' => json_encode([1]),
                 'urutan' => 1,
                 'judul' => 'Pengenalan Blade Templating Engine',
                 'content' => '<h2>Apa itu Blade?</h2>
@@ -4730,6 +4788,7 @@ Produk::factory()->count(50)->create();
 
             [
                 'course_id' => 17,
+                'reader' => json_encode([1]),
                 'urutan' => 2,
                 'judul' => 'Basic Syntax Structur',
                 'content' => "<h2>Pendahuluan</h2>
@@ -4810,6 +4869,7 @@ Produk::factory()->count(50)->create();
 
             [
                 'course_id' => 17,
+                'reader' => json_encode([1]),
                 'urutan' => 3,
                 'judul' => 'Basic Layout',
                 'content' => '<h2>Pendahuluan</h2>
@@ -4901,6 +4961,7 @@ HTML'
 
             [
                 'course_id' => 18,
+                'reader' => json_encode([1]),
                 'urutan' => 1,
                 'judul' => 'Direktif Blade (@if, @foreach, @for) ',
                 'content' => '<h2>Pendahuluan</h2>
@@ -4962,6 +5023,7 @@ HTML'
 
             [
                 'course_id' => 18,
+                'reader' => json_encode([1]),
                 'urutan' => 2,
                 'judul' => 'Data Dinamis Dalam Tampilan Blade ',
                 'content' => "<h2>Pendahuluan</h2>
@@ -5016,6 +5078,7 @@ Output:
 
             [
                 'course_id' => 18,
+                'reader' => json_encode([1]),
                 'urutan' => 3,
                 'judul' => 'Blade Form & Laravel Form Helper',
                 'content' => '<h2>Pendahuluan</h2>
@@ -5088,6 +5151,7 @@ Output:
 
             [
                 'course_id' => 18,
+                'reader' => json_encode([1]),
                 'urutan' => 4,
                 'judul' => '@include',
                 'content' => '<h2>Pendahuluan</h2>
@@ -5157,15 +5221,17 @@ Output:
             ],
 
 
-            
+
             [
                 'course_id' => 18,
+                'reader' => json_encode([1]),
                 'urutan' => 2,
                 'judul' => 'Data Dinamis Dalam Tampilan Blade ',
                 'content' => ""
             ],
             [
                 'course_id' => 18,
+                'reader' => json_encode([1]),
                 'urutan' => 2,
                 'judul' => 'Data Dinamis Dalam Tampilan Blade ',
                 'content' => ""
