@@ -21,6 +21,7 @@ return new class extends Migration
             $table->string('judul');
             $table->longText('content');
             $table->integer('urutan');
+            $table->json('reader')->nullable();
 
             $table->foreign('course_id')->references('id')->on('course')->onUpdate('cascade')->onDelete('cascade');
         });
