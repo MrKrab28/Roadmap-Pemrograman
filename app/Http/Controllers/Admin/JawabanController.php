@@ -45,7 +45,7 @@ class JawabanController extends Controller
 
     public function store(Request $request)
     {
-        
+
         $data = $request->validate([
             'jawaban' => 'required',
             'status' => 'required',

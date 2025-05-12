@@ -1,5 +1,12 @@
 <x-user.layout>
     <div class="container mt-5">
+        <div class="row mt-5">
+            <div class="col-md-3">
+                <a class="btn btn-outline-primary" href="{{ route('user.course-detail', $materi->course_id) }}"><i
+                        class="fa-regular fa-circle-left">
+                    </i> Back</a>
+            </div>
+        </div>
         <div class="row mt-5 mb-5">
             <div class="col-md-12">
                 <div class="card">

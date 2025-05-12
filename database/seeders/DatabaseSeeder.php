@@ -39,11 +39,11 @@ class DatabaseSeeder extends Seeder
             CourseSeeder::class,
             ModulSeeder::class,
             QuisSeeder::class,
-           JawbanSeeder::class,
-           RoadmapSeeder::class,
-           NodeSeeder::class,
-           ConnectionSeeder::class,
-            CompletionSeeder::class
+            JawbanSeeder::class,
+            RoadmapSeeder::class,
+            NodeSeeder::class,
+            ConnectionSeeder::class,
+            // CompletionSeeder::class
         ]);
     }
 }

@@ -211,7 +211,14 @@
                 }
             }
         </style>
+        <div class="row mt-5">
+            <div class="col-md-3">
+                <a class="btn btn-outline-primary" href="{{ route('user.index') }}" ><i class="fa-regular fa-circle-left">
+                    </i> Back</a>
+            </div>
+        </div>
         <div class="row justify-content-center mt-5 mb-5">
+
             @foreach ($courses as $course)
                 @php
                     $userId = auth()->user()->id;
@@ -243,7 +250,8 @@
                                 $skor = $courseSkor->firstWhere('course_id', $course->id);
                             @endphp
 
-                            <h2 class="text-white text-end position-absolute bottom-0 end-0 me-3   "> Score {{ $skor->skor }}</h2>
+                            <h2 class="text-white text-end position-absolute bottom-0 end-0 me-3   "> Score
+                                {{ $skor->skor }}</h2>
                             <div class="ico-card">
                                 <div class="d-flex align-items-center justify-content-end">
                                     <div class="d-flex align-items-end">
@@ -285,8 +293,9 @@
                     @endif
 
                 </div>
-                @endforeach
-                <h1>Skor Rata-rata: {{ $courses->sum( fn ($course) => $course->courseCompletions->sum('skor') ) / $courses->count()  }}</h1>
+            @endforeach
+            <h1>Skor Rata-rata:
+                {{ $courses->sum(fn($course) => $course->courseCompletions->sum('skor')) / $courses->count() }}</h1>
         </div>
         <style>
             #mermaid-frame {
