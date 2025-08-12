@@ -15,7 +15,7 @@ return [
     ],
 
 
-
+    
     'Master' => [
         'title' => 'Master',
         'items' => [
